@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="frequency" mtime="1284131119" type="schema" stype="int" owner="fmtx">
+		<local_schema locale="C">
+			<default type="int" value="88100"/>
+		</local_schema>
+	</entry>
+	<entry name="enabled" mtime="1284131119" type="schema" stype="bool" owner="fmtx">
+		<local_schema locale="C">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+</gconf>

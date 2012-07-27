@@ -1,0 +1,29 @@
+<catalogues>
+ <catalogue>
+  <file>variant-catalogues</file>
+  <id>nokia-certified</id>
+ </catalogue>
+ <catalogue>
+  <file>variant-catalogues</file>
+  <id>nokia-system</id>
+ </catalogue>
+ <catalogue>
+  <file>variant-catalogues</file>
+  <id>ovi</id>
+ </catalogue>
+ <catalogue>
+  <file>variant-catalogues</file>
+  <id>maemo-extras</id>
+ </catalogue>
+ <catalogue>
+  <name>Extras</name>
+  <uri>http://repository.maemo.org/extras/</uri>
+  <components>free non-free</components>
+ </catalogue>
+ <catalogue>
+  <name>Community SSU (testing)</name>
+  <uri>http://repository.maemo.org/community-testing/</uri>
+  <dist>fremantle</dist>
+  <components>free non-free</components>
+ </catalogue>
+</catalogues>

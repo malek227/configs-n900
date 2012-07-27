@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="ଚିହ୍ନିତ ସ୍ଥାନ">
+						<longdesc>ଜିକନ୍ଫ-ଏଡିଟର ଚିହ୍ନିତ ସ୍ଥାନଗୁଡ଼ିକର ଫୋଲ୍ଡର</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,71 @@
+#! /bin/sh
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/browserd
+NAME=browserd
+DESC="browser daemon"
+
+RUNUSER="-c user"
+#ENGINE="-i microb"
+export MOZ_CAIRO_NO_BUGGY_REPEAT=1
+MOZ_CAIRO_NO_BUGGY_REPEAT=1
+LD_LIBRARY_PATH=/usr/lib/microb-engine:$LD_LIBRARY_PATH
+
+if [ -f /targets/links/scratchbox.config ]; then
+RUNUSER=""
+fi
+SBOX="1"
+# abort if no executable exists
+
+test -x $DAEMON || exit 0
+
+set -e
+
+if [ -e /etc/osso-af-init/af-defines.sh ]
+then
+    source /etc/osso-af-init/af-defines.sh
+else
+    echo "/etc/osso-af-init/af-defines.sh not found!"
+    SBOX="0"
+    RUNUSER=""
+#    exit 0
+fi
+
+case "$1" in
+start)
+	echo -n "Starting $DESC: "
+	if [ "$SBOX" == "1" ];then
+	start-stop-daemon --start --quiet --exec $VALGRIND $DAEMON $RUNUSER -- -d -b $ENGINE
+	else
+	  echo ""
+	  $DAEMON -d $ENGINE
+	fi
+	echo "$NAME"
+	;;
+
+stop)
+	echo -n "Stopping $DESC: "
+	if [ "$SBOX" == "1" ];then
+	start-stop-daemon --stop --quiet --exec $DAEMON	
+	else
+	  echo ""
+	  #for str in `ps | grep 'browserd -s' | sed '/grep/d' | awk '{print $1}'`;do kill -9 $str; done
+	  kill `ps | grep browserui | sed '/grep/d' | awk '{print $1}'`
+	fi
+	rm -rf /tmp/browser-*
+	echo "$NAME"
+	;;
+
+restart|force-reload)
+	"$0" stop
+	"$0" start
+	;;
+
+*)
+	N=/etc/init.d/$NAME
+	printf "Usage: $N {start|stop|restart|force-reload}\n" >&2
+	exit 1
+	;;
+esac
+
+exit 0

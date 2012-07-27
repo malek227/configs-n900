@@ -1,0 +1,741 @@
+////////////////////////// Ovi Portal /////////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>http://www.ovi.com/services/</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>    
+
+<Pref>
+   <PrefName>siteData-8d195342-9733-488d-afb0-9e679f161bb2</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 0 | post | 3 | username | bridge_uname | text ** 1 | 0 | post | 4 | password | bridge_upass | password ** 0 | SPAN | 42 |  | sign_in_btn |  |  |  | </PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+////////////////////////// Ovi Generic ////////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/acct/account/index.html</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-37a48fae-277d-4640-9ac8-349b6387ee78</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>0 | FORM | 1 |  | loginForm |  |  |  |  ** 0 | FORM | 1 |  | loginForm |  |  |  |  ** 0 | FORM | 1 |  | loginForm |  |  |  | </PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////////// Ovi Share /////////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/idp/samlv20?SAMLRequest=[...]&SigAlg=[...]&Signature=[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>http://share.ovi.com/account/logout?SAMLRequest=[...]&SigAlg=[...]&Signature=[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-d6336a49-2582-4848-8cae-d65d4f046ee8</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 0 | username | username | text ** 1 | 1 | post | 1 | password | password | password ** 1 | 1 | post | 3 | save |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////////// Ovi Sync /////////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://www.ovi.com/services/signin?fromSamlLogin=true</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-840fea08-6c66-4aff-bd22-0bb92e5947b6</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 2 | username | signin_username-field | text ** 1 | 1 | post | 3 | password | signin_password-field | password ** 1 | 1 | post | 4 |  |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////////// Ovi Mail /////////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://mail.ovi.com/[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-ce2f1f7d-8230-458e-88f2-4aa20fb3dfed</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | POST | 2 | username | signin_username-field | text ** 1 | 1 | POST | 3 | password | signin_password-field | password ** 1 | 1 | POST | 5 | login |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////////// Ovi Store /////////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://store.ovi.com/login[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://store.ovi.com/</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-8ae95000-df15-4d10-84a0-f7ef72a4d9b7</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 1 | username | username | text ** 1 | 1 | post | 2 | password | password | password ** 1 | 1 | post | 4 |  | signInBtn | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////// Ovi Login Failure 1 /////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>true</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/forward.jsp</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService&invokeOSFSLogout=false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-6b3383c9-9f47-4deb-9d6d-0c922899ff33</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 0 | username | username | text ** 1 | 1 | post | 1 | password | password | password ** 1 | 1 | post | 3 | save |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+
+/////////////////////// Ovi Login Failure 2 /////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>true</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/forward.jsp?doneURL=[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService&invokeOSFSLogout=false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-982d8f7c-7623-476c-80b7-7e7e9193086e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 0 | username | username | text ** 1 | 1 | post | 1 | password | password | password ** 1 | 1 | post | 3 | save |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////// Ovi Generic Login /////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/acct/account</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-a30e3742-80c4-42b0-a639-c6db26b4b8f3</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 0 | username | username | text ** 1 | 1 | post | 1 | password | password | password ** 1 | 1 | post | 3 | save |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+
+/////////////////// Ovi Generic Login Failure /////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>true</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/acct/AuthenticationServlet?doneURL=[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-aa574510-e9bd-4a6d-b4c2-8190c5f7c089</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 0 | username | username | text ** 1 | 1 | post | 1 | password | password | password ** 1 | 1 | post | 3 | save |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////// Ovi Generic Login /////////////////////// TESTED \\
+
+<Pref>
+   <PrefName>IsALoginFailureURL-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/acct/account?serviceId=Ovicom[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-25e312e8-dd4a-4611-a2a9-3b681abb44df</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 1 | post | 0 | username | username | text ** 1 | 1 | post | 1 | password | password | password ** 1 | 1 | post | 3 | save |  | submit</PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+/////////////////////// Ovi Files Touch Login ///////////////////
+
+<Pref>
+   <PrefName>IsALoginFailureURL-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://files.ovi.com/wrt/touch/login</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://account.nokia.com/fed/engine/logout.jsp?doneURL=https%3A%2F%2Faccount.nokia.com%2Fshareid%2FObLogoutService[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-b9a5a47f-586d-421f-a418-df4d5a986d65</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>0 | INPUT | 0 |  | username | text |  |  |  ** 0 | INPUT | 2 |  | password | password |  |  |  ** 0 | SPAN | 0 |  | signinstr |  |  |  | </PrefStr>
+</Pref>
+
+/////////////////////////////////////////////////////////////////
+
+
+/////////////////////// https://store.ovi.mobi/login ///////////////////
+
+<Pref>
+   <PrefName>IsALoginFailureURL-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://store.ovi.mobi/login</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>http://store.ovi.mobi/</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-0c705ee8-6bbd-4d86-8a39-dc3cbfea2256</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 0 | post | 1 | username | username | text ** 1 | 0 | post | 2 | password | password | password ** 1 | 0 | post | 5 |  |  | submit</PrefStr>
+</Pref>
+
+////////////////////////////////////////////////////////////////////////
+
+/////////////////// https://store.ovi.mobi/login Failure ///////////////
+
+<Pref>
+   <PrefName>IsALoginFailureURL-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>true</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://store.ovi.mobi/login?contentId=[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>http://store.ovi.mobi/</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-b9383315-2f17-4f9a-a56e-418373329ee9</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 0 | post | 1 | username | username | text ** 1 | 0 | post | 2 | password | password | password ** 1 | 0 | post | 5 |  |  | submit</PrefStr>
+</Pref>
+
+////////////////////////////////////////////////////////////////////////
+
+///////////// https://store.ovi.mobi/login download page ///////////////
+
+<Pref>
+   <PrefName>IsALoginFailureURL-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>false</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://store.ovi.mobi/login?accessUri=[...]=&format=mobi&contentId=[...]</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>http://store.ovi.mobi/</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-4c8ef645-11d1-4df6-b1d0-5dc86614ae0f</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 0 | post | 1 | username | username | text ** 1 | 0 | post | 2 | password | password | password ** 1 | 0 | post | 5 |  |  | submit</PrefStr>
+</Pref>
+
+////////////////////////////////////////////////////////////////////////
+
+////////// https://store.ovi.mobi/login failed download page ///////////
+
+<Pref>
+   <PrefName>IsALoginFailureURL-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>bool</PrefType>
+   <PrefStr>true</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>SiteServiceProvider-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>chat.ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerProfile-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>nokiachat</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>ServerName-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>ovi.com</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLoginURL-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>https://store.ovi.mobi/login?contentId=$$$$$</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteLogoutURL-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>http://store.ovi.mobi/</PrefStr>
+</Pref>
+
+<Pref>
+   <PrefName>siteData-794a1037-8889-466d-9e60-b277371bcd7e</PrefName>
+   <PrefType>char</PrefType>
+   <PrefStr>1 | 0 | post | 1 | username | username | text ** 1 | 0 | post | 2 | password | password | password ** 1 | 0 | post | 5 |  |  | submit</PrefStr>
+</Pref>
+
+////////////////////////////////////////////////////////////////////////
+
+
+

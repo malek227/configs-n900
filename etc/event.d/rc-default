@@ -1,0 +1,13 @@
+# rc - runlevel compatibility
+#
+# This task guesses what the "default runlevel" should be and starts the
+# appropriate script.
+
+start on started bme
+console output
+
+script
+        STATE=`cat /tmp/STATE`
+        initctl emit --no-wait $STATE
+end script
+

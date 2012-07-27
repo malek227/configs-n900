@@ -1,0 +1,17 @@
+<gconfentryfile>
+  <!--
+       When editing, synchronize this with debian/...postrm.in
+       so keys would be uninstalled too
+  -->
+
+  <entrylist base="/apps/osso/osso/thumbnailers">
+
+    <entry>
+      <key>sketch@png/command</key>
+      <value><string>/usr/bin/osso-thumb-gdk-pixbuf</string></value>
+    </entry>
+
+  </entrylist>
+
+</gconfentryfile>
+

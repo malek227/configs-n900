@@ -1,0 +1,11 @@
+description	"Single Sign On"
+author		"Tomi Suviola"
+
+console none
+
+start on XSESSIONS_STARTING
+stop on starting shutdown
+
+exec /usr/bin/signond
+
+respawn

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="port" mtime="1284131094" schema="/schemas/system/nokia/location/supl/port"/>
+	<entry name="server" mtime="1284131094" schema="/schemas/system/nokia/location/supl/server"/>
+</gconf>

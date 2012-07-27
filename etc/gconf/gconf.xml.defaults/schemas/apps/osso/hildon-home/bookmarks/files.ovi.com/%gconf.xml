@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1284131104" type="schema" stype="string">
+		<local_schema locale="C">
+			<default type="string">
+				<stringvalue>https://files.ovi.com</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="label" mtime="1284131104" type="schema" stype="string">
+		<local_schema locale="C">
+			<default type="string">
+				<stringvalue>Files on Ovi</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon" mtime="1284131104" type="schema" stype="string">
+		<local_schema locale="C">
+			<default type="string">
+				<stringvalue>/usr/share/bookmark-manager/thumbnails/thumbnail_ovifiles.png</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

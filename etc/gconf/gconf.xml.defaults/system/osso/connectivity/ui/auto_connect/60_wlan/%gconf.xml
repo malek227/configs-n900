@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="network_types" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/60_wlan/network_types"/>
+	<entry name="gettext_catalog" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/60_wlan/gettext_catalog"/>
+	<entry name="not_found_banner" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/60_wlan/not_found_banner"/>
+	<entry name="label" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/60_wlan/label"/>
+</gconf>

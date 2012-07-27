@@ -1,0 +1,13 @@
+#
+# Configuration file for CSD CALL Plugin
+#
+
+#
+# Enable plugin at CSD startup?
+#
+ENABLE=1
+
+#
+# Parameter string passed to the plugin
+#
+#ARGS="autorej=1"

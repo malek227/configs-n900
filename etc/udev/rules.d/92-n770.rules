@@ -1,0 +1,54 @@
+# foo
+KERNEL=="mmcblk*", IMPORT{program}="/lib/udev/mmc_id $env{PHYSDEVPATH}"
+
+KERNEL=="mmcblk*p*", env{SLOT_NUM}!="", NAME="mmcblk$env{SLOT_NUM}p%n"
+KERNEL=="mmcblk*", env{SLOT_NUM}!="", NAME="mmcblk$env{SLOT_NUM}"
+
+#KERNEL=="mmcblk*p*", SYSFS{slot}!="", NAME="mmcblk$sysfs{slot}p%n"
+#KERNEL=="mmcblk*",   SYSFS{slot}!="", NAME="mmcblk$sysfs{slot}"
+KERNEL=="dspctl",    NAME="dspctl/ctl"
+KERNEL=="dspmem",    NAME="dspctl/mem", MODE="0640", GROUP="kmem"
+KERNEL=="dsptwch",   NAME="dspctl/twch", MODE="0640"
+KERNEL=="dsperr",    NAME="dspctl/err", MODE="0440"
+KERNEL=="dsptask[0-9]*", MODE="0666"
+
+KERNEL=="DspBridge", MODE="0666"
+
+KERNEL=="omap-previewer", MODE="0666"
+
+#ACTION=="add", SUBSYSTEM=="firmware", RUN+="/lib/udev/firmware.sh"
+ACTION!="add", GOTO="hotplug_not_add_event"
+
+SUBSYSTEM=="input", ATTRS{name}=="TSC2005 touchscreen", SYMLINK+="input/ts"
+SUBSYSTEM=="input", ATTRS{name}=="omap_twl4030keypad", SYMLINK+="input/keypad"
+SUBSYSTEM=="input", ATTRS{name}=="twl4030_keypad", SYMLINK+="input/keypad"
+SUBSYSTEM=="input", ATTRS{name}=="triton2-pwrbutton", SYMLINK+="input/pwrbutton"
+
+# check if the device has already been claimed by a driver
+ENV{DRIVER}=="?*", SUBSYSTEM!="input", GOTO="hotplug_driver_loaded"
+
+# this driver is broken and should not be loaded automatically (see #398962)
+SUBSYSTEM=="platform", ENV{MODALIAS}=="i82365", GOTO="hotplug_driver_loaded"
+
+# load the drivers
+ENV{MODALIAS}=="?*",	RUN+="/sbin/modprobe --use-blacklist $env{MODALIAS}"
+SUBSYSTEM=="pnp",	ENV{MODALIAS}!="?*", \
+	RUN+="/bin/sh -c 'while read id; do /sbin/modprobe --use-blacklist --all pnp:d$$id; done < /sys$devpath/id'"
+
+# rules for subsystems which lack proper hotplug support
+SUBSYSTEM=="i2o",				RUN+="/sbin/modprobe i2o_block"
+SUBSYSTEM=="mmc",				RUN+="/sbin/modprobe mmc_block"
+
+# From here on follows the hotplug agents which do not load modules
+LABEL="hotplug_driver_loaded"
+
+SUBSYSTEM=="firmware",				RUN+="/lib/udev/firmware.sh"
+
+LABEL="hotplug_not_add_event"
+
+#SUBSYSTEM=="net",				RUN+="net.agent"
+
+# Log every event to /dev/hotplug.log (for debugging).
+#RUN+="logger.agent"
+
+

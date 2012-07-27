@@ -1,0 +1,3 @@
+user ALL = NOPASSWD: /bin/mv -f /var/tmp/.locale.new /etc/osso-af-init/locale
+user ALL = NOPASSWD: /bin/chmod 0755 /etc/osso-af-init/locale
+user ALL = NOPASSWD: /bin/chown 0.0 /etc/osso-af-init/locale

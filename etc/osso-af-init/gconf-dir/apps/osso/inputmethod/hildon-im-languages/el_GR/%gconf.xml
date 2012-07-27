@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="insert-space-after-word" mtime="1339384747" type="bool" value="true"/>
+	<entry name="word-completion" mtime="1339384747" type="bool" value="true"/>
+	<entry name="auto-capitalisation" mtime="1339384747" type="bool" value="true"/>
+</gconf>

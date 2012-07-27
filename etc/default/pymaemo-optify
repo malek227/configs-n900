@@ -1,0 +1,2 @@
+BIND_MOUNTS="/usr/lib/python2.5 /usr/share/pyshared /usr/lib/pyshared /usr/share/python-support /usr/lib/python-support"
+OPT_DIR="/opt/pymaemo"

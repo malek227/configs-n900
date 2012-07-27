@@ -1,0 +1,6 @@
+// Don't open connections in parallel, that brings the little devices
+// down to their knees.
+//
+Acquire::Queue-Mode "access";
+Acquire::https::Verify-Peer "false";
+APT::Install-Recommends 0;

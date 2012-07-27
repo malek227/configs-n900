@@ -1,0 +1,96 @@
+#!/bin/sh
+
+# Copyright (C) 2007-2008 Nokia Corporation. All rights reserved.
+# Author: patrik.flykt@nokia.com
+
+# Read gconf setting
+# $1: the settings key to read
+read_proxy () {
+	test x$1 = x && return
+	gconftool-2 -g /system/osso/connectivity/IAP/$ICD_CONNECTION_ID/$1 \
+		2>/dev/null
+}
+
+# Set proxies in gconf
+# $1: the gconf key to set
+# $2: value to set
+set_proxy () {
+	test x$1 = x && return
+
+	case $1 in
+	use_http_host)
+		key=/system/http_proxy/use_http_host
+		type=boolean ;;
+	ignore_hosts)
+		key=/system/http_proxy/$1
+		type="list --list-type=string" ;;	
+	http_proxy)
+		key=/system/http_proxy/host
+		type=string ;;
+	http_port)
+		key=/system/http_proxy/port
+		type=int ;;
+	*_host|autoconfig_url)
+		key=/system/proxy/$1
+		type=string ;;
+	*_port)
+		key=/system/proxy/$1
+		type=int ;;
+	esac
+	if test x$2 = x
+	then
+	        gconf_unset="$gconf_unset -u $key"
+	else
+	        gconftool-2 -s $key -t $type $2
+	fi
+}
+
+# Set proxy mode
+# $1: mode
+set_mode () {
+	case "$1" in
+	MANUAL)
+		mode=manual ;;
+	AUTOCONF)
+		mode=auto ;;
+	*)
+		mode=none ;;
+	esac
+
+	gconftool-2 -s /system/proxy/mode -t string $mode
+}
+
+# Set use_http_proxy
+# $1: http host or empty string
+set_use () {
+	key=/system/http_proxy/use_http_proxy
+	if test x$1 = x
+	then
+		gconf_unset="$gconf_unset -u $key"
+	else
+		gconftool-2 -s $key -t bool TRUE
+	fi
+}
+
+test x$ICD_CONNECTION_ID = x && exit 0
+
+gconf_unset=""
+
+set_mode	`read_proxy proxytype`
+set_use		`read_proxy proxy_http`
+set_proxy	autoconfig_url		`read_proxy autoconf_url`
+set_proxy	http_proxy		`read_proxy proxy_http`
+set_proxy	http_port		`read_proxy proxy_http_port`
+set_proxy	ignore_hosts		`read_proxy omit_proxy`
+set_proxy	secure_host		`read_proxy proxy_https`
+set_proxy	secure_port		`read_proxy proxy_https_port`
+set_proxy	ftp_host		`read_proxy proxy_ftp`
+set_proxy	ftp_port		`read_proxy proxy_ftp_port`
+set_proxy	socks_host		`read_proxy proxy_socks`
+set_proxy	socks_port		`read_proxy proxy_socks_port`
+set_proxy	rtsp_host		`read_proxy proxy_rtsp`
+set_proxy	rtsp_port		`read_proxy proxy_rtsp_port`
+
+test x"$gconf_unset" != x && gconftool-2 $gconf_unset
+
+exit 0

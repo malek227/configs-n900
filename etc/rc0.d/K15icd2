@@ -1,0 +1,107 @@
+#! /bin/sh
+# 
+#		Written by Nokia based on skeleton code
+#		written by Miquel van Smoorenburg <miquels@cistron.nl>.
+#		Modified for Debian 
+#		by Ian Murdock <imurdock@gnu.ai.mit.edu>.
+#
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+prefix=/usr
+exec_prefix=${prefix}
+sbindir=${exec_prefix}/sbin
+DAEMON=${exec_prefix}/sbin/icd2
+NAME=icd2
+DESC="Internet Connectivity daemon 2"
+unset USE_UPSTART
+INITCTL=/sbin/initctl
+
+test -x $DAEMON || exit 0
+test -x /sbin/initctl && USE_UPSTART=1
+[ -z "$USER" ] && USER=root
+
+case "$1" in
+  start)
+	# kill left-over udhcpc processes, if any
+	if test -x /usr/bin/killall
+	then
+	    /usr/bin/killall -9 udhcpc > /dev/null 2>&1
+        elif test -x /bin/kill -a -x /bin/pidof
+	then
+	    dhcpc_pid=`/bin/pidof udhcpc`
+	    if test x"$dhcpc_pid" != x
+	    then
+		/bin/kill -9 "$dhcpc_pid" > /dev/null 2>&1
+	    fi
+	fi
+
+	# Start daemon, try first with dsmetool and then start-stop-daemon
+	echo -n "Starting $DESC: "
+	if [ -z "$USE_UPSTART" ]; then
+	    dsmetool -m -17 -f "$DAEMON -l2" || \
+		start-stop-daemon --start --quiet --user $USER \
+		--exec "$DAEMON" -- -d -l2
+	else
+	    $INITCTL start $NAME
+	fi
+	if test $? == 0
+	then
+	    echo "$NAME"
+	fi
+	;;
+  stop)
+	# Stop daemon, first try with dsmetool and then start-stop-daemon.
+	# icd2 always returns 0 on shutdown
+	echo -n "Stopping $DESC: "
+	if [ -z "$USE_UPSTART" ]; then
+	    dsmetool -k "$DAEMON -l2" || \
+		start-stop-daemon --stop --quiet --oknodo --user $USER \
+		--exec "$DAEMON"
+	else
+	    $INITCTL stop $NAME
+	fi
+	if test $? == 0
+	then
+	    echo "$NAME"
+	fi
+
+	# Make sure that daemon is dead
+	DEBUG_KILL=0
+	TIMEOUT_COUNT=5
+	SLEEP_TIMEOUT=1
+	PID=`ps ax|grep /usr/sbin/icd2|grep -v grep|awk '{ print $1 }'`
+	if [ ! -z "$PID" ]; then
+	    while [ 1 ];
+	    do
+	      sleep $SLEEP_TIMEOUT
+	      PID=`ps ax|grep /usr/sbin/icd2|grep -v grep|awk '{ print $1 }'`
+	      if [ -z "$PID" ]; then
+		  break
+	      fi
+	      TIMEOUT_COUNT=`expr $TIMEOUT_COUNT - 1`
+	      if [ $TIMEOUT_COUNT -eq 0 ]; then
+		  [ $DEBUG_KILL -ne 0 ] && echo "Killing $NAME ($PID)"
+		  kill -9 $PID
+		  break
+	      fi
+	    done
+	fi
+
+	;;
+  reload|restart|force-reload)
+	#
+	#	If the "reload" option is implemented, move the "force-reload"
+	#	option to the "reload" entry above. If not, "force-reload" is
+	#	just the same as "restart".
+	#
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

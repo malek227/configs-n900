@@ -1,0 +1,29 @@
+description "Service for synchronizing modem state"
+
+author "Pekka Pessi"
+
+start on started dbus
+stop on stopping dbus
+
+service
+respawn
+respawn limit 10 1
+
+emits cellmo poweron starting
+emits cellmo poweron ok --no-wait
+emits cellmo sim code-required
+emits cellmo sim ready 
+emits cellmo sim mode als2 --no-wait
+emits cellmo sim blocked --no-wait
+emits cellmo sim missing --no-wait
+emits cellmo sim locked --no-wait
+emits cellmo reset
+emits cellmo poweroff starting
+emits cellmo poweroff ok --no-wait
+emits cellmo poweroff failed --no-wait
+
+console output
+
+#env SSC_DEBUG=2
+
+exec /usr/sbin/sscd -f

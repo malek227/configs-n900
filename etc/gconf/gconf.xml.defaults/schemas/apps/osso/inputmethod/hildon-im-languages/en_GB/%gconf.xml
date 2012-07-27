@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="dictionary" mtime="1284131090" type="schema" stype="string" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Default Dictionary for en_GB">
+			<default type="string">
+				<stringvalue>en_GB</stringvalue>
+			</default>
+			<longdesc>Default Dictionary for en_GB</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="insert-space-after-word" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Insert space after word">
+			<default type="bool" value="true"/>
+			<longdesc>Insert space after word</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="auto-capitalisation" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Auto capitalisation">
+			<default type="bool" value="true"/>
+			<longdesc>Auto capitalisation</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="next-word-prediction" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Next word prediction support">
+			<default type="bool" value="true"/>
+			<longdesc>The feature predicts the next word for the user in the current
+        selected language</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="word-completion" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Word completion support">
+			<default type="bool" value="true"/>
+			<longdesc>The feature to help the user to complete the word in the current
+        selected language</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

@@ -1,0 +1,18 @@
+# select getty's - don't start on TESTSERVER etc.
+# technically it would be cooler to do this from udev/hal
+start on USER
+start on ACT_DEAD
+
+script
+	[ -x /usr/bin/cal-tool ] && RDFLAGS=`/usr/bin/cal-tool --get-rd-flags`
+	echo $RDFLAGS | grep -q serial-console || exit 0
+	# serial console enabled, go!
+	for console in ttyS0 ttyS1 ttyS2 ttyUSB0;
+	do
+		if [ -c /dev/$console ] && dd of=/dev/$console count=1 bs=1 if=/dev/zero; then
+			initctl start --no-wait $console
+		fi
+	done
+end script
+
+

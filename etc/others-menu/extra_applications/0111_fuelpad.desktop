@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.61
+Type=Application
+Name=Fuelpad
+Exec=/usr/bin/fuelpad
+Icon=fuelpad
+X-Window-Icon=fuelpad
+X-Window-Icon-Dimmed=fuelpad
+X-Osso-Service=org.luukko.fuelpad
+X-Osso-Type=application/x-executable
+Maemo-Display-Name=Fuelpad

@@ -1,0 +1,116 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifiers:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Blue Fn).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By default, xbindkeys does not pay attention to the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+###############################################################
+# NEW as of Sept 2010:
+# Make keyboard active in current window with Fn+Return
+# (you need the /home/user/.kbdactive script, of course!)
+###############################################################
+
+  "/home/user/.kbdactive"
+    m:0x80 + c:36
+    Mod5 + KP_Enter
+
+###############################################################
+
+  "wmctrl -r :ACTIVE: -b toggle,fullscreen"
+    m:0x4 + c:111
+    Control + Up
+
+  "wmctrl -r :ACTIVE: -b toggle,fullscreen"
+    m:0x4 + c:65
+    Control + space
+
+# the enter key is KP_Enter instead of Return (thanks, rebhana!)
+# some applications don't accept KP_Enter in place of Return, hence:
+
+"xvkbd -xsendevent -text '\r'"
+   Shift + KP_Enter
+
+# debernardis and rebhana suggest TAB and Esc
+
+"xvkbd -xsendevent -text '\t'"
+  Shift+Mod5 + Right
+
+"xvkbd -xsendevent -text '\e'"
+  Shift+Mod5 + Left
+
+# F1-F12 mapped to Shift+Fn + keys from upper row (thanks, rebhana):
+
+"xvkbd -xsendevent -text "\[F1]""
+ m:0x81 + c:24
+
+"xvkbd -xsendevent -text "\[F2]""
+ m:0x81 + c:25
+
+"xvkbd -xsendevent -text "\[F3]""
+ m:0x81 + c:26
+
+"xvkbd -xsendevent -text "\[F4]""
+ m:0x81 + c:27
+
+"xvkbd -xsendevent -text "\[F5]""
+ m:0x81 + c:28
+
+"xvkbd -xsendevent -text "\[F6]""
+ m:0x81 + c:29
+
+"xvkbd -xsendevent -text "\[F7]""
+ m:0x81 + c:30
+
+"xvkbd -xsendevent -text "\[F8]""
+ m:0x81 + c:31
+
+"xvkbd -xsendevent -text "\[F9]""
+ m:0x81 + c:32
+
+"xvkbd -xsendevent -text "\[F10]""
+ m:0x81 + c:33
+
+"xvkbd -xsendevent -text "\[F11]""
+ m:0x81 + c:59
+
+"xvkbd -xsendevent -text "\[F12]""
+ m:0x81 + c:22
+
+# Examples of commands:
+
+# specify a mouse button
+#"xterm"
+#  control + b:2
+
+##################################
+# End of xbindkeys configuration #
+##################################

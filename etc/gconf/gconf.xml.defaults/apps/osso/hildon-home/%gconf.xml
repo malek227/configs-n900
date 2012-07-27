@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="bookmark-shortcuts" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmark-shortcuts"/>
+</gconf>

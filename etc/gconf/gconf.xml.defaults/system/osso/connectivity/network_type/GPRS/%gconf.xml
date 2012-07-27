@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gprs_roaming_warning_limit" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/gprs_roaming_warning_limit"/>
+	<entry name="gprs_home_warning_limit" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/gprs_home_warning_limit"/>
+	<entry name="gprs_roaming_notification_enabled" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/gprs_roaming_notification_enabled"/>
+	<entry name="gprs_home_notification_enabled" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/gprs_home_notification_enabled"/>
+	<entry name="gettext_catalog" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/gettext_catalog"/>
+	<entry name="name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/name"/>
+	<entry name="statusbar_dimmed_icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/statusbar_dimmed_icon_name"/>
+	<entry name="statusbar_icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/statusbar_icon_name"/>
+	<entry name="icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/GPRS/icon_name"/>
+</gconf>

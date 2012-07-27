@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="책갈피">
+						<longdesc>gconf 편집기 폴더 책갈피</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

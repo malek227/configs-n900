@@ -1,0 +1,9 @@
+# GTK+ Input Method Modules file
+# Automatically generated file, do not edit
+# Created by /usr/bin/gtk-query-immodules-2.0 from gtk+-2.14.7
+#
+# ModulesPath = /root/.gtk-2.0/2.10.0/arm-unknown-linux-gnueabi/immodules:/root/.gtk-2.0/2.10.0/immodules:/root/.gtk-2.0/arm-unknown-linux-gnueabi/immodules:/root/.gtk-2.0/immodules:/usr/lib/gtk-2.0/2.10.0/arm-unknown-linux-gnueabi/immodules:/usr/lib/gtk-2.0/2.10.0/immodules:/usr/lib/gtk-2.0/arm-unknown-linux-gnueabi/immodules:/usr/lib/gtk-2.0/immodules
+#
+"/usr/lib/gtk-2.0/2.10.0/immodules/hildon-im-module.so" 
+"hildon-input-method" "Hildon Input Method" "hildon-input-method-framework" "/usr/share/locale" "*" 
+

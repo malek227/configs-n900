@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_finger_kb" mtime="1284131122" schema="/schemas/apps/osso/inputmethod/use_finger_kb"/>
+	<entry name="auto_correction" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/auto_correction"/>
+	<entry name="start_recognize_after" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/start_recognize_after"/>
+	<entry name="hwr_punct_mode" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/hwr_punct_mode"/>
+	<entry name="case_correction" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/case_correction"/>
+	<entry name="input_method_plugin" mtime="1284131122" schema="/schemas/apps/osso/inputmethod/input_method_plugin"/>
+	<entry name="space_after" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/space_after"/>
+	<entry name="display_after_entering" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/display_after_entering"/>
+	<entry name="completion_area_pos" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/completion_area_pos"/>
+	<entry name="dual-dictionary" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/dual-dictionary"/>
+	<entry name="handwriting_timeout" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/handwriting_timeout"/>
+	<entry name="ext_kb_long_press_timeout" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/ext_kb_long_press_timeout"/>
+	<entry name="ext_kb_repeat_enabled" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/ext_kb_repeat_enabled"/>
+	<entry name="ext_kb_repeat_interval" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/ext_kb_repeat_interval"/>
+	<entry name="ext_kb_repeat_delay" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/ext_kb_repeat_delay"/>
+	<entry name="ext_kb_layout" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/ext_kb_layout"/>
+	<entry name="ext_kb_model" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/ext_kb_model"/>
+	<entry name="int_kb_level_shifted" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/int_kb_level_shifted"/>
+	<entry name="int_kb_repeat_interval" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/int_kb_repeat_interval"/>
+	<entry name="int_kb_repeat_delay" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/int_kb_repeat_delay"/>
+</gconf>

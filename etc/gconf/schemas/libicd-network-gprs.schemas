@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+	<schemalist>
+		<schema>
+			<key>/schemas/system/osso/connectivity/network_type/GPRS/network_modules</key>
+			<applyto>/system/osso/connectivity/network_type/GPRS/network_modules</applyto>
+			<owner>libicd-network-gprs</owner>
+			<type>list</type>
+			<list_type>string</list_type>
+			<default>[libicd_network_gprs.so]</default>
+			<locale name="C">
+				<short>GPRS network modules</short>
+				<long>Names of the network modules needed for GPRS network type</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/system/osso/connectivity/network_type/GPRS/gprs_roaming_disabled</key>
+			<applyto>/system/osso/connectivity/network_type/GPRS/gprs_roaming_disabled</applyto>
+			<owner>libicd-network-gprs</owner>
+			<type>bool</type>
+			<default>true</default>
+			<locale name="C">
+				<short>GPRS roaming disabled</short>
+				<long>Boolean to set whether GPRS network roaming is disabled from the UI</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/system/osso/connectivity/network_type/GPRS/gprs_no_coverage_timeout</key>
+			<applyto>/system/osso/connectivity/network_type/GPRS/gprs_no_coverage_timeout</applyto>
+			<owner>libicd-network-gprs</owner>
+			<type>int</type>
+			<default>60000</default>
+			<locale name="C">
+				<short>No coverage timeout</short>
+                <long>
+                    Timeout (in milliseconds) telling how long the GPRS
+                    connection can be suspended due to being out of cellular
+                    coverage before the network connection is
+                    disconnected.
+                </long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/system/osso/connectivity/network_type/GPRS/gprs_roaming_notification_period</key>
+			<applyto>/system/osso/connectivity/network_type/GPRS/gprs_roaming_notification_period</applyto>
+			<owner>libicd-network-gprs</owner>
+			<type>string</type>
+			<default>10000000</default>
+			<locale name="C">
+				<short>Notification period for roaming data counters</short>
+                <long>
+                    The roaming data counter dialog is presented as a
+                    warning to the user whenever a multiple of the
+                    notification period is reached. Set to 0 to disable
+                    the notifications.
+                </long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/system/osso/connectivity/network_type/GPRS/gprs_home_notification_period</key>
+			<applyto>/system/osso/connectivity/network_type/GPRS/gprs_home_notification_period</applyto>
+			<owner>libicd-network-gprs</owner>
+			<type>string</type>
+			<default>0</default>
+			<locale name="C">
+				<short>Notification period for home network data counters</short>
+                <long>
+                    The home network data counter dialog is presented
+                    as a warning to the user whenever a multiple of the
+                    notification period is reached. Set to 0 to disable
+                    the notifications.
+                </long>
+			</locale>
+		</schema>
+	</schemalist>
+</gconfschemafile>

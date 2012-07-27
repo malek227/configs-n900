@@ -1,0 +1,11 @@
+#
+# Configuration file for CSD SMS Plugin
+#
+# Enable plugin at CSD startup?
+#
+ENABLE=1
+#
+#
+# Parameter string passed to the plugin
+#
+#ARGS="ISI_SMS_ENABLE_SYSLOG=1 "

@@ -1,0 +1,9 @@
+start on startup
+
+console output
+
+script 
+	echo
+	echo "Welcome to your upstart powered internet tablet."
+	echo
+end script

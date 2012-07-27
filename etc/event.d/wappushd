@@ -1,0 +1,8 @@
+description "Start WAP push handling daemon"
+author "Hannu Mallat"
+
+console none
+
+start on started sms-manager
+
+exec /etc/init.d/wappushd start

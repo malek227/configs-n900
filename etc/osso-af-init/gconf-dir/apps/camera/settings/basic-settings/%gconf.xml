@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last-media-id" mtime="1339868838" type="int" value="1"/>
+	<entry name="last-date" mtime="1339868838" type="int" value="1339868838"/>
+	<entry name="first-boot" mtime="1339334599" type="bool" value="false"/>
+	<entry name="device-id" mtime="1339333376" type="string">
+		<stringvalue>7826b57b6a7cf37478a7281ae233793dbd0b80a902e1d9f407</stringvalue>
+	</entry>
+	<entry name="iso-level" mtime="1339333376" type="int" value="0"/>
+	<entry name="ev-level" mtime="1339333376" type="int" value="4"/>
+	<entry name="wb-mode" mtime="1339333376" type="int" value="0"/>
+	<entry name="scene-mode" mtime="1339333376" type="int" value="0"/>
+	<entry name="author" mtime="1339333376" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="geotag-activation" mtime="1339383727" type="bool" value="false"/>
+	<entry name="storage-device" mtime="1339334583" type="int" value="1"/>
+	<entry name="post-capture-timeout" mtime="1339333375" type="int" value="1"/>
+</gconf>

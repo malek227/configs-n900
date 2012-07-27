@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/url" type="string">
+		<stringvalue>share.ovi.com</stringvalue>
+	</entry>
+	<entry name="label" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/label" type="string">
+		<stringvalue>Share on Ovi</stringvalue>
+	</entry>
+	<entry name="icon" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/icon" type="string">
+		<stringvalue>/usr/share/bookmark-manager/thumbnails/thumbnail_ovishare.png</stringvalue>
+	</entry>
+</gconf>

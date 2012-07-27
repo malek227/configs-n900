@@ -1,0 +1,22 @@
+description "starting Camera Daemon (video0)"
+author "Stefan Kost"
+
+console output
+
+start on started dbus
+stop on starting shutdown
+
+pre-start script
+    rm -rf /tmp/omap3camd0-installed
+end script
+
+post-start script
+    # Block until the daemon has registered itself to driver
+    while [ ! -e /tmp/omap3camd0-installed ]; do
+        sleep 1
+    done
+    rm -rf /tmp/omap3camd0-installed
+end script
+
+exec /usr/sbin/omap3camd -d /dev/video0 -f /tmp/omap3camd0-installed
+respawn

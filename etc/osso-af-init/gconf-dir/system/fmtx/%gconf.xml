@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="enabled" mtime="1340959258" type="bool" value="false"/>
+	<entry name="frequency" mtime="1340959258" type="int" value="88100"/>
+</gconf>

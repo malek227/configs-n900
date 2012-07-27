@@ -1,0 +1,17 @@
+description "Start and stop Hildon Startup Progress"
+
+start on started xomap
+stop on started hildon-desktop
+
+console none
+
+env PID=/var/run/hildon-startup-progress.pid
+
+pre-start script
+	DISPLAY=:0 /usr/bin/nice -n 5 /usr/bin/hildon-startup-progress &
+	echo $! > $PID
+end script
+
+post-stop script
+	kill -9 `cat $PID`
+end script

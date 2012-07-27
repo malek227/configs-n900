@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/apps/osso/rtcom-messaging-ui/enable_delivery_reports</key>
+      <applyto>/apps/osso/rtcom-messaging-ui/enable_delivery_reports</applyto>
+      <owner>rtcom-messaging-ui</owner>
+      <type>bool</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Enable delivery reports</short>
+        <long>Do we want to receive delivery reports of sent SMS messages.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/osso/rtcom-messaging-ui/sms_center_user_defined</key>
+      <applyto>/apps/osso/rtcom-messaging-ui/sms_center_user_defined</applyto>
+      <owner>rtcom-messaging-ui</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>User defined SMS center</short>
+        <long>The SMS center number defined by the user.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/osso/rtcom-messaging-ui/sms_center_sim_selected</key>
+      <applyto>/apps/osso/rtcom-messaging-ui/sms_center_sim_selected</applyto>
+      <owner>rtcom-messaging-ui</owner>
+      <type>bool</type>
+      <default>1</default>
+      <locale name="C">
+        <short>SIM card SMSC number selected</short>
+        <long>Is the SIM cards SMSC number selected as active SMSC number.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/osso/rtcom-messaging-ui/default_smiley_theme</key>
+      <applyto>/apps/osso/rtcom-messaging-ui/default_smiley_theme</applyto>
+      <owner>rtcom-messaging-ui</owner>
+      <type>string</type>
+      <default>user/default</default>
+      <locale name="C">
+        <short>Default smiley theme</short>
+        <long>The name of the default smiley theme for conversations.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

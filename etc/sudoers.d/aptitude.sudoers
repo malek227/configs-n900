@@ -1,0 +1,1 @@
+%users ALL = NOPASSWD: /usr/bin/aptitude

@@ -1,0 +1,52 @@
+#!/bin/sh
+
+NAME=jenirokd
+DAEMON=/usr/bin/$NAME
+DAEMONUSER=user
+CURRENTUSER=`whoami`
+PARAMS=$2
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+START_STOP_DAEMON=`which start-stop-daemon`
+
+if [ "$CURRENTUSER" != "root" ] && [ "$CURRENTUSER" != "$DAEMONUSER" ]; then
+  echo "Invalid user"
+  exit 1
+fi
+
+d_start() {
+    if [ "$CURRENTUSER" == "root" ]; then
+      su - $DAEMONUSER -c "$START_STOP_DAEMON --start --background --exec $DAEMON -- $PARAMS"
+    else
+      $START_STOP_DAEMON --start --background --exec $DAEMON -- $PARAMS
+    fi
+}
+
+d_stop() {
+    if [ "$CURRENTUSER" == "root" ]; then
+      su - $DAEMONUSER -c "$START_STOP_DAEMON --stop --user $DAEMONUSER --oknodo --exec $DAEMON"
+    else
+      $START_STOP_DAEMON --stop --user $DAEMONUSER --oknodo --exec $DAEMON
+    fi
+}
+
+case "$1" in
+  start)
+        echo "Starting daemon: "$NAME
+	d_start
+	;;
+  stop)
+        echo "Stopping daemon: "$NAME
+	d_stop
+	;;
+  restart)
+        echo "Restarting daemon: "$NAME
+	d_stop
+	d_start
+	;;
+
+  *)
+	echo "Usage: "$0" {start|stop|restart}"
+	exit 1
+esac
+
+exit 0

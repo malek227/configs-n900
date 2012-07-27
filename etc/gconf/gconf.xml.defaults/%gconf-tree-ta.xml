@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="புத்தககுறிகள்்">
+						<longdesc>gconf-editor புத்தக குறிகள் அடைவு</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+USER=`whoami`
+
+if [ "x$USER" = "xroot" ]; 
+then
+  export SESSION_BUS_ADDRESS_FILE=/tmp/session_bus_address.user
+  export SESSION_BUS_PID_FILE=/tmp/dbus_session_bus.pid.user
+else
+  export SESSION_BUS_ADDRESS_FILE=/tmp/session_bus_address.$USER
+  export SESSION_BUS_PID_FILE=/tmp/dbus_session_bus.pid.$USER
+fi
+
+if test -e "/tmp/ACT_DEAD" ;
+then
+  echo "Starting dbus-session: acting dead"
+  dbus-launch > /tmp/dbus-info
+else
+  echo "Starting dbus-session: user session"
+  dbus-launch --exit-with-session > /tmp/dbus-info
+fi
+eval `cat /tmp/dbus-info`
+
+rm -f ${SESSION_BUS_ADDRESS_FILE}
+cat >> ${SESSION_BUS_ADDRESS_FILE} << EOF
+export DBUS_SESSION_BUS_ADDRESS='$DBUS_SESSION_BUS_ADDRESS'
+EOF
+
+rm -f ${SESSION_BUS_PID_FILE}
+cat >> ${SESSION_BUS_PID_FILE} << EOF
+export DBUS_SESSION_BUS_PID='$DBUS_SESSION_BUS_PID'
+EOF
+
+source $SESSION_BUS_ADDRESS_FILE

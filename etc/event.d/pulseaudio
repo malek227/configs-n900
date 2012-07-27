@@ -1,0 +1,66 @@
+description "pulseaudio"
+author "Maemo Multimedia <multimedia@maemo.org>"
+
+start on started dbus
+start on started dbus-actdead
+
+stop on starting shutdown
+
+console none
+
+pre-start script
+	if [ -e /proc/sys/fs/suid_dumpable ]; then
+		echo 1 > /proc/sys/fs/suid_dumpable
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_ch0gain ]; then
+		chown pulse:pulse /sys/devices/platform/omap-mcbsp.2/st_ch0gain
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_ch1gain ]; then
+		chown pulse:pulse /sys/devices/platform/omap-mcbsp.2/st_ch1gain
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_enable ]; then
+		chown pulse:pulse /sys/devices/platform/omap-mcbsp.2/st_enable
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_taps ]; then
+		chown pulse:pulse /sys/devices/platform/omap-mcbsp.2/st_taps
+	fi
+end script
+
+post-start script
+	if [ -e /var/run/pulse/.esd_auth ]; then
+		chown pulse:pulse-access /var/run/pulse/.esd_auth
+		chmod 640 /var/run/pulse/.esd_auth
+	fi
+
+	if [ -e /var/run/pulse/.pulse-cookie ]; then
+		chown pulse:pulse-access /var/run/pulse/.pulse-cookie
+		chmod 640 /var/run/pulse/.pulse-cookie
+	fi
+end script
+
+post-stop script
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_ch0gain ]; then
+		chown root:root /sys/devices/platform/omap-mcbsp.2/st_ch0gain
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_ch1gain ]; then
+		chown root:root /sys/devices/platform/omap-mcbsp.2/st_ch1gain
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_enable ]; then
+		chown root:root /sys/devices/platform/omap-mcbsp.2/st_enable
+	fi
+
+	if [ -e /sys/devices/platform/omap-mcbsp.2/st_taps ]; then
+		chown root:root /sys/devices/platform/omap-mcbsp.2/st_taps
+	fi
+end script
+
+exec /usr/bin/pulseaudio --system --high-priority
+
+respawn
+

@@ -1,0 +1,3 @@
+start on stopped rcS-late
+console output
+exec /etc/init.d/pymaemo-optify start

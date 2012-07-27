@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="modules" mtime="1284131099" schema="/schemas/system/osso/connectivity/policy/modules"/>
+</gconf>

@@ -1,0 +1,17 @@
+# Script by Alan 'qole' Bruce
+# with help from DaithiF on ubuntuforums.org for 
+# the xprop | awk command to return the active window.
+
+# For some reason, you need to call wmctrl twice to get the
+# keyboard to work, but whatever works, eh?
+
+ACTIVEWINID=`xprop -root | awk '/NET_ACTIVE_WINDOW/ { print $5; exit }'`
+#zenity --display=:0 --info --title="Information" --text="Hopefully #you have keyboard focus now. Clear this dialog." &
+#while [ "x$TWOWIN" = "x" ] ; do
+  # wait for Zenity dialog to pop up...
+#  export TWOWIN=`wmctrl -l | grep -i Information | awk '{print $1}'`
+#done
+sudo /sbin/qobi-wmhint-fix $ACTIVEWINID
+sudo /usr/bin/set-focus $ACTIVEWINID
+#wmctrl -i -r $ACTIVEWINID -b toggle,fullscreen
+#wmctrl -i -r $ACTIVEWINID -b toggle,fullscreen

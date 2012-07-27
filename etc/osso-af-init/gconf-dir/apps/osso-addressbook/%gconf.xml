@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="contact-order" mtime="1340934661" type="int" value="0"/>
+	<entry name="home-applets" mtime="1340934393" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>osso-abook-applet-87</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>osso-abook-applet-96</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>osso-abook-applet-55</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>osso-abook-applet-59</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>osso-abook-applet-gabble/jabber/tr4pd00r_40gmail_2ecom0-im@ddg.gg</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>osso-abook-applet-48</stringvalue>
+		</li>
+	</entry>
+	<entry name="last-imsi" mtime="1339333522" type="string">
+		<stringvalue>240084704146589</stringvalue>
+	</entry>
+	<entry name="voicemail-vcard" mtime="1339333522" type="string">
+		<stringvalue>BEGIN:VCARD
+VERSION:3.0
+UID:osso-abook-vmbx
+END:VCARD</stringvalue>
+	</entry>
+	<entry name="voicemail-numbers" mtime="1339333522" type="list" ltype="string">
+	</entry>
+</gconf>

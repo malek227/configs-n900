@@ -1,0 +1,10 @@
+# This file autoconfigures any new Phonet network interface
+# from the Phonet line discipline.
+
+SUBSYSTEM!="net", GOTO="phonet_utils_netif_end"
+ACTION!="add", GOTO="phonet_utils_netif_end"
+
+ENV{INTERFACE}=="phonet[0-9]*", RUN+="/lib/phonet-utils/netif-up $env{INTERFACE}"
+ENV{INTERFACE}=="usbpn[0-9]*", RUN+="/lib/phonet-utils/netif-up $env{INTERFACE}"
+
+LABEL="phonet_utils_netif_end"

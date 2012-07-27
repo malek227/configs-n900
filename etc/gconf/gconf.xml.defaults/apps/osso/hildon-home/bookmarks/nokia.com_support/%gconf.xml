@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/url"/>
+	<entry name="label" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/label"/>
+	<entry name="icon" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/icon"/>
+</gconf>

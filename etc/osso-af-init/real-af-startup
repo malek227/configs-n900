@@ -1,0 +1,193 @@
+#!/bin/sh
+#
+# This file is part of osso-af-startup.
+#
+# Copyright (C) 2004-2008 Nokia Corporation. All rights reserved.
+#
+# Contact: Gabriel Schulhof <gabriel.schulhof@nokia.cm>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License 
+# version 2 as published by the Free Software Foundation. 
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+# 02110-1301 USA
+
+source_if_is wizard-background-defs.sh
+
+if ! type wizback_method 2> /dev/null; then
+  wizback_method() # args ignored
+  {
+    return 0
+  }
+fi
+
+case "$1" in
+start)
+  if [ -e $HOME/first-boot-flag ]; then
+    touch /tmp/first-boot-flag-tmp
+  fi
+
+  # this is used by the input methods for disabling features in startup
+  touch /tmp/im_disable_tools_menu
+
+  echo "Running xset770 -- the future of xset!"
+  # disable keyrepeat for select, fullscreen, menu, plus, minus, escape
+  # (code 104 is Return for the slide keyboard)
+  xset770 -r Return 0 -r F4 0 -r F6 0 -r F7 0 -r F8 0 -r Escape 0 -r 104 0
+
+  # block here if device lock is on
+  if [ -x /sbin/devlock-blocker ]; then
+    /sbin/devlock-blocker
+  fi
+
+  # wait for the session bus
+  /usr/sbin/waitdbus session
+  if [ $? -gt 0 ]; then
+    echo "$0: Error, the D-BUS session bus did not start"
+    exit 2
+  fi
+  source $SESSION_BUS_ADDRESS_FILE
+
+  source_if_is tracker.sh start
+
+  if [ -x /etc/osso-af-init/maemo-launcher ]; then
+    /etc/osso-af-init/maemo-launcher start
+  fi
+
+  source_if_is startup-greeting.sh start
+
+  # we need to start VKB
+  source_if_is keyboard.defs
+  source_if_is keyboard.sh start
+
+  # start clipboard daemon 
+  source_if_is clipboard.sh start
+
+  if [ -e $HOME/first-boot-flag ]; then
+    ADVANCE_STEPS=1
+
+    source_if_is wizard-background.sh start
+
+    if [ -x $AF_INIT_DIR/startup-wizard.sh ]; then
+      wizback_method advance 1
+      source $AF_INIT_DIR/startup-wizard.sh start
+
+      if [ "x$AFTER_SUW_RESTART_NEEDED" != "x0" ]; then
+      	source $AF_INIT_DIR/af-defines.sh ;# re-read locale variables
+      	# show progress animation
+      	if ! [ -f /etc/osso-af-init/wizard-background-defs.sh ]; then
+        	/usr/sbin/anim-shower 17000 &
+      	fi
+      	# restart processes because the locale might have changed
+      	source $AF_INIT_DIR/after-suw-process-restart.sh
+      fi
+    else
+      ADVANCE_STEPS=`expr $ADVANCE_STEPS + 1`
+    fi
+
+    # Give Backup a chance to restore settings automatically
+    if [ -x $AF_INIT_DIR/osso-backup-startup.sh ]; then
+      if ! $AF_INIT_DIR/osso-backup-startup.sh check; then
+        wizback_method set_descriptions_visible false
+
+        # Need to wrap osso-backup-startup.sh into an 'if',
+        # otherwise this script will die when backup exits
+        # non-zero (such as on user cancel)
+        if $AF_INIT_DIR/osso-backup-startup.sh; then
+          echo -n ''
+        fi
+
+        wizback_method set_descriptions_visible true
+      fi
+    fi
+
+    if test "x$OSSO_PRODUCT_HARDWARE" != "xRX-48"; then
+      if [ -x $AF_INIT_DIR/osso-connectivity-ui-gwwizard-startup.sh \
+           -a ! -f /tmp/suw-user-cancelled.tmp ]; then
+
+        wizback_method advance 1
+
+        $AF_INIT_DIR/osso-connectivity-ui-gwwizard-startup.sh start
+
+      else
+        ADVANCE_STEPS=`expr $ADVANCE_STEPS + 1`
+      fi
+
+      if [ -f $TMPDIR/launch-operator-wizard.tmp \
+           -a ! -f /tmp/suw-user-cancelled.tmp ]; then
+        if [ -x $AF_INIT_DIR/operator-wizard.sh ]; then
+
+          wizback_method advance 1
+
+          $AF_INIT_DIR/operator-wizard.sh start
+        fi
+        rm -f $TMPDIR/launch-operator-wizard.tmp
+      else
+        ADVANCE_STEPS=`expr $ADVANCE_STEPS + 1`
+      fi
+    fi
+
+    wizback_method advance $ADVANCE_STEPS
+    wizback_method set_descriptions_visible false
+    sleep 1
+
+    if [ -x /usr/bin/rhapsody-installer.sh ]; then
+      /usr/bin/rhapsody-installer.sh
+    fi
+
+    # It is important to make sure all the newly created files have reached
+    # the storage media before removing first-boot-flag.
+    sync
+    rm -f $HOME/first-boot-flag
+    rm -f /tmp/suw-user-cancelled.tmp
+    touch /tmp/.check_auto_install
+
+    source_if_is startup-greeting.sh firstboot
+
+    wizback_method quit
+
+  else
+    source_if_is startup-wizard.sh start
+
+    # Give Backup a chance to finish restoring task
+    if [ -f $HOME/.osso-backup/last-restore.xml ]; then
+      if [ -x $AF_INIT_DIR/osso-backup-finish-restore.sh ]; then
+        touch /tmp/run-osso-backup-finish-restore
+        # $AF_INIT_DIR/osso-backup-finish-restore.sh
+      fi
+    fi
+  fi
+
+  rm -f /tmp/im_disable_tools_menu
+
+  ;;
+stop)
+
+  if [ -x $AF_INIT_DIR/osso-media-server.sh ]; then
+    $AF_INIT_DIR/osso-media-server.sh stop
+  fi
+
+  source_if_is tracker.sh stop
+
+  ;;
+restart)
+  echo "$0: not implemented"
+  exit 1
+  ;;
+force-reload)
+  echo "$0: not implemented"
+  exit 1
+  ;;
+*)
+  echo "Usage: $0 {start|stop}"
+  exit 1
+  ;;
+esac

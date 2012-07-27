@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="method" mtime="1284131094" schema="/schemas/system/nokia/location/method"/>
+	<entry name="disclaimer-accepted" mtime="1284131094" schema="/schemas/system/nokia/location/disclaimer-accepted"/>
+	<entry name="network-disabled" mtime="1284131094" schema="/schemas/system/nokia/location/network-disabled"/>
+	<entry name="gps-disabled" mtime="1284131094" schema="/schemas/system/nokia/location/gps-disabled"/>
+</gconf>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="exec_arg" mtime="1284131105" schema="/schemas/desktop/gnome/applications/terminal/exec_arg"/>
+	<entry name="exec" mtime="1284131105" schema="/schemas/desktop/gnome/applications/terminal/exec"/>
+</gconf>

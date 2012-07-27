@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="needs_terminal" mtime="1284131105" schema="/schemas/desktop/gnome/url-handlers/info/needs_terminal"/>
+	<entry name="command" mtime="1284131105" schema="/schemas/desktop/gnome/url-handlers/info/command"/>
+	<entry name="enabled" mtime="1284131105" schema="/schemas/desktop/gnome/url-handlers/info/enabled"/>
+</gconf>

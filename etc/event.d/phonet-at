@@ -1,0 +1,11 @@
+description "Phonet AT commands bridge"
+author "Remi Denis-Courmont"
+
+start on G_NOKIA_READY
+stop on G_NOKIA_REMOVE
+
+console none
+service
+respawn
+
+exec /usr/bin/pnatd -r /dev/ttyGS2

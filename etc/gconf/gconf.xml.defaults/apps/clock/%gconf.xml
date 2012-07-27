@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="alarm-time" mtime="1284131108" schema="/schemas/apps/clock/alarm-time"/>
+	<entry name="alarm-custom" mtime="1284131108" schema="/schemas/apps/clock/alarm-custom"/>
+	<entry name="alarm-tone3" mtime="1284131108" schema="/schemas/apps/clock/alarm-tone3"/>
+	<entry name="alarm-tone2" mtime="1284131108" schema="/schemas/apps/clock/alarm-tone2"/>
+	<entry name="alarm-tone1" mtime="1284131108" schema="/schemas/apps/clock/alarm-tone1"/>
+	<entry name="alarm-tone" mtime="1284131108" schema="/schemas/apps/clock/alarm-tone"/>
+	<entry name="auto-sync" mtime="1284131108" schema="/schemas/apps/clock/auto-sync"/>
+	<entry name="time-format" mtime="1284131108" schema="/schemas/apps/clock/time-format"/>
+	<entry name="default-location" mtime="1284131108" schema="/schemas/apps/clock/default-location"/>
+	<entry name="home-location" mtime="1284131108" schema="/schemas/apps/clock/home-location"/>
+</gconf>

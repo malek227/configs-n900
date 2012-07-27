@@ -1,0 +1,131 @@
+#!/bin/sh
+# udhcpc script to use with ICD
+
+RESOLV_CONF="/var/run/resolv.conf.$interface"
+LEASE_PARAMS=/var/run/dhcp-params.conf
+
+case "$1" in
+
+static | bound | renew)
+	[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+	[ -n "$subnet" ] && NETMASK="netmask $subnet"
+
+	if [ "$1" = renew ]; then
+	    if [ -f $LEASE_PARAMS ]; then
+		head -1 $LEASE_PARAMS | grep "^${interface} ${ip} ${router} ${subnet} ${domain} ${dns}$" > /dev/null
+		if [ $? -eq 0 ]; then
+		    exit 0
+		fi
+	    fi
+	fi
+
+	/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+
+	if [ -n "$router" ]
+	then
+	    if netstat -rn | egrep "^0.0.0.0 *${router} .*${interface}$" > /dev/null
+	    then
+		:
+	    else
+	        while /sbin/route del default gw 0.0.0.0 dev $interface
+		do
+		  :
+		done
+
+		router_rev=""
+		for i in $router
+		do
+		  router_rev="$i $router_rev"
+		done
+
+		succeeded=no
+		for i in $router_rev
+		do
+		  if netstat -rn | egrep "^0.0.0.0 *${i} .*${interface}$" > /dev/null
+		  then
+		      succeeded=yes
+		  else
+		      /sbin/route add default gw $i dev $interface
+		      if [ "$?" == 0 ]
+		      then
+			  succeeded=yes
+		      fi
+		  fi
+		done
+
+		if [ $succeeded != yes ]
+		then
+		    echo -n "Failed to set up default route for " >&2
+		    echo "$interface: $ip/$subnet broadcast $broadcast" >&2
+		fi
+
+	    fi
+	fi
+
+	for ns in $dns
+	do
+	  if egrep "^nameserver[\t ]*${ns}" $RESOLV_CONF > /dev/null
+	  then
+	      continue
+	  else
+	      echo -n > $RESOLV_CONF.tmp
+	      [ -n "$domain" ] && echo domain $domain >> $RESOLV_CONF.tmp
+	      for i in $dns
+	      do
+		echo nameserver $i >> $RESOLV_CONF.tmp
+	      done
+
+	      mv $RESOLV_CONF.tmp $RESOLV_CONF
+
+	      # Clear dnsmasq cache after getting new nameservers
+	      kill -SIGHUP `pidof dnsmasq`
+	      break
+	  fi
+	done
+
+	/usr/bin/dbus-send \
+	    --system \
+	    --dest=com.nokia.icd \
+	    /com/nokia/icd/autoconf \
+	    com.nokia.icd.autoconf.autoconf_changed \
+	    string:$interface string:DHCP string:CONNECTED
+
+	if [ "$1" = bound -o "$1" = renew ]; then
+	    echo "${interface} ${ip} ${router} ${subnet} ${domain} ${dns}" > $LEASE_PARAMS
+	fi
+	;;
+deconfig)
+	/sbin/ifconfig $interface 0.0.0.0
+	rm -f $LEASE_PARAMS > /dev/null
+	/usr/bin/dbus-send \
+	    --system \
+	    --dest=com.nokia.icd \
+	    /com/nokia/icd/autoconf \
+	    com.nokia.icd.autoconf.autoconf_changed \
+	    string:$interface string:DHCP string:DISCONNECTED
+	;;
+zeroconf)
+	/sbin/ifconfig $interface:1 \
+	    $ip broadcast 169.254.255.255 netmask 255.255.0.0
+	/sbin/route add -net 224.0.0.0 netmask 240.0.0.0 dev $interface:1
+	/usr/bin/dbus-send \
+	    --system \
+	    --dest=com.nokia.icd \
+	    /com/nokia/icd/autoconf \
+	    com.nokia.icd.autoconf.autoconf_changed \
+	    string:$interface string:LINKLOCAL string:CONNECTED
+	;;
+zeroconf.deconfig)
+	/sbin/ifconfig $interface:1 $ip 0.0.0.0
+	/sbin/route del -net 224.0.0.0 netmask 240.0.0.0 dev $interface:1
+	/usr/bin/dbus-send \
+	    --system \
+	    --dest=com.nokia.icd \
+	    /com/nokia/icd/autoconf \
+	    com.nokia.icd.autoconf.autoconf_changed \
+	    string:$interface string:LINKLOCAL string:DISCONNECTED
+	;;
+zeroconf.dhcpup)
+	;;
+esac
+

@@ -1,0 +1,7 @@
+# ttyS0 - getty
+#
+stop on starting shutdown
+
+exec /sbin/getty 115200 ttyS0
+
+respawn

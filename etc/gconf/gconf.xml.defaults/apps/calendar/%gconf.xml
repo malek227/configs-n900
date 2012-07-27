@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="calendar-alarm-tone" mtime="1284131115" schema="/schemas/apps/calendar/calendar-alarm-tone"/>
+	<entry name="default-view" mtime="1284131115" schema="/schemas/apps/calendar/default-view"/>
+	<entry name="week-start" mtime="1284131115" schema="/schemas/apps/calendar/week-start"/>
+	<entry name="hide-done-tasks" mtime="1284131115" schema="/schemas/apps/calendar/hide-done-tasks"/>
+	<entry name="remove-items" mtime="1284131115" schema="/schemas/apps/calendar/remove-items"/>
+	<entry name="autocleanup-cookie" mtime="1284131115" schema="/schemas/apps/calendar/autocleanup-cookie"/>
+	<entry name="first-boot" mtime="1284131115" schema="/schemas/apps/calendar/first-boot"/>
+</gconf>

@@ -1,0 +1,4 @@
+#!/bin/sh
+# osso-gtk.defs - Gtk, Pango, IM definitions for all applications 
+# using Gtk in AF.
+export GTK2_RC_FILES=/etc/hildon/theme/gtk-2.0/gtkrc

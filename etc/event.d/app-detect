@@ -1,0 +1,15 @@
+author "Janos Kovacs"
+description "This init script starts the policy application detector"
+
+start on started hildon-desktop
+stop on stopping xomap
+
+console output
+
+script 
+        echo "Starting app-detect"
+	source /etc/osso-af-init/af-defines.sh
+        exec /usr/bin/app-detect -p 1 > /dev/null
+end script
+
+respawn

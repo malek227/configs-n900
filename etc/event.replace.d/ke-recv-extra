@@ -1,0 +1,9 @@
+description "starting hulda"
+author "Philippe De Swert"
+start on started hildon-desktop
+stop on ACT_DEAD
+console none
+script
+        export RUNLEVEL=2
+        exec /etc/init.d/hulda start
+end script

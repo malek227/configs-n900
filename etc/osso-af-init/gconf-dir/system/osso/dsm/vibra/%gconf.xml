@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="touchscreen_vibra_enabled" mtime="1340148701" type="bool" value="false"/>
+</gconf>

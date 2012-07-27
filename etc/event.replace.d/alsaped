@@ -1,0 +1,17 @@
+author "Janos Kovacs"
+description "This init script starts the alsa policy enforcement daemon"
+
+start on started dbus
+start on started dbus-actdead
+stop on stopping dbus
+stop on stopping dbus-actdead
+
+console output
+
+script 
+        echo "Starting alsaped"
+        /usr/sbin/waitdbus system
+        exec /usr/sbin/alsaped -p 4 -f /usr/share/policy/etc/current/alsaped.conf
+end script
+
+respawn

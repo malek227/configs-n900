@@ -1,0 +1,2 @@
+user ALL = NOPASSWD: /sbin/initctl stop sscd
+user ALL = NOPASSWD: /bin/touch /var/run/pin-query-done

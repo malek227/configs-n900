@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/system/osso/af/keyboard-attached</key>
+      <applyto>/system/osso/af/keyboard-attached</applyto>
+      <owner>ke-recv-extra</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+       <short>tells whether an external hardware keyboard
+              is present</short>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

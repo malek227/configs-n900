@@ -1,0 +1,2 @@
+user ALL = NOPASSWD: /usr/bin/mafw.sh
+user ALL = NOPASSWD: /usr/bin/mafw.sh

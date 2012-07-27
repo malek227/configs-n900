@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="mode" mtime="1340946244" type="string">
+		<stringvalue>none</stringvalue>
+	</entry>
+</gconf>

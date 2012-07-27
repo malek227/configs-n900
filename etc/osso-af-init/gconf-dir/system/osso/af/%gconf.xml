@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="mmc-used-over-usb" mtime="1340959173" type="bool" value="false"/>
+	<entry name="mmc-device-present" mtime="1340959172" type="bool" value="true"/>
+	<entry name="mmc-cover-open" mtime="1340959172" type="bool" value="false"/>
+	<entry name="internal-mmc-used-over-usb" mtime="1340834445" type="bool" value="false"/>
+	<entry name="internal-mmc-device-present" mtime="1340834443" type="bool" value="true"/>
+	<entry name="internal-mmc-cover-open" mtime="1340834443" type="bool" value="false"/>
+	<entry name="usb-device-name" mtime="1340858544" type="string">
+		<stringvalue>USB device</stringvalue>
+	</entry>
+	<entry name="slide-open" mtime="1340959186" type="bool" value="true"/>
+	<entry name="usb-mode" mtime="1340920117" type="string">
+		<stringvalue>idle</stringvalue>
+	</entry>
+	<entry name="usb-cable-attached" mtime="1340920117" type="bool" value="false"/>
+	<entry name="mmc-mount-point" mtime="1340834443" type="string">
+		<stringvalue>/media/mmc1</stringvalue>
+	</entry>
+	<entry name="mmc-device-name" mtime="1340834443" type="string">
+		<stringvalue>/dev/mmcblk1</stringvalue>
+	</entry>
+	<entry name="keyboard-attached" mtime="1340834439" type="bool" value="false"/>
+</gconf>

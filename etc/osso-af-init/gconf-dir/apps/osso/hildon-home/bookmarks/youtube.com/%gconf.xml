@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/youtube.com/url" type="string">
+		<stringvalue>http://m.youtube.com/?client=mv-nokia-maemo</stringvalue>
+	</entry>
+	<entry name="label" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/youtube.com/label" type="string">
+		<stringvalue>YouTube - Broadcast Yourself</stringvalue>
+	</entry>
+	<entry name="icon" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/youtube.com/icon" type="string">
+		<stringvalue>/usr/share/bookmark-manager/thumbnails/thumbnail_youtube.png</stringvalue>
+	</entry>
+</gconf>

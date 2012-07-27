@@ -1,0 +1,212 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          dbus
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      1
+# Short-Description: D-Bus systemwide message bus
+# Description:       D-Bus is a simple interprocess messaging system, used
+#                    for sending messages between applications.
+### END INIT INFO
+# -*- coding: utf-8 -*-
+# Debian init.d script for D-BUS
+# Copyright © 2003 Colin Walters <walters@debian.org>
+# Copyright © 2005 Sjoerd Simons <sjoerd@debian.org>
+# Copyright © 2008 Nokia Corporation. All rights reserved.
+
+set -e
+
+DAEMON=/usr/bin/dbus-daemon
+UUIDGEN=/usr/bin/dbus-uuidgen
+UUIDGEN_OPTS=--ensure
+NAME=dbus
+DAEMONUSER=messagebus
+PIDDIR=/var/run/dbus
+PIDFILE=$PIDDIR/pid
+DESC="system message bus"
+EVENTDIR=/etc/dbus-1/event.d
+MACHINE_ID=/var/lib/dbus/machine-id
+
+test -x $DAEMON || exit 0
+
+. /lib/lsb/init-functions
+
+# Source defaults file; edit that file to configure this script.
+PARAMS=""
+if [ -e /etc/default/dbus ]; then
+  . /etc/default/dbus
+fi
+
+if [ -n "$ENABLED" ]; then
+    log_warning_msg "The ENABLED option in /etc/default/$NAME has been deprecated."
+    log_warning_msg "Please remove this setting from the configuration file."
+    log_warning_msg "To disable the service use a runlevel editor like sysv-rc-conf or bum instead."
+fi
+
+if [ ! -d /scratchbox  -a -x /usr/sbin/dsmetool ]; then
+  USE_DT=1
+else
+  USE_DT=""
+fi
+
+create_machineid() {
+  # Create machine-id file if it does not exist (this is the first boot) or
+  # empty (due to an unclean reboot).
+  if [ ! -f $MACHINE_ID -o ! -s $MACHINE_ID ]; then
+    # machine-id file does not exist or is empty
+    if [ -x $UUIDGEN ]; then
+      if [ -f $MACHINE_ID ]; then
+         # machine-id file is empty, remove it to make dbus-uuidgen happy
+         rm $MACHINE_ID
+      fi
+      # generate machine-id file
+      $UUIDGEN $UUIDGEN_OPTS
+    else
+      log_warning_msg "The machine-id file cannot be created."
+    fi
+  fi
+}
+
+dependent_services()
+{
+  # Do nothing if we are called by init
+  [ ! -z $runlevel ] && return 
+
+  # Determine current runlevel
+  r=$(/sbin/runlevel) || true
+  r=${r#*\ }
+
+  # Do nothing if we can't determine the runlevel (e.g. inside chroots)
+  [ "$r" = "unknown" ] && return
+
+  if [ "$1" = "stop" ] ; then
+    param="--reverse"
+    action="stop"
+  else
+    param=""
+    action="start"
+  fi
+
+  # Get the list of services active in this runlevel
+  if [ -d /etc/rc${r}.d/ ] ; then # sysv-rc
+    services=$(grep -s -l "^# Required-Start:.*dbus" /etc/rc${r}.d/S??* | sort $param)
+  elif [ -f /etc/runlevel.conf ] ; then # file-rc
+    list=$(grep -s -l "^# Required-Start:.*dbus" /etc/init.d/* || true)
+    services=$( for i in $list ; do
+      grep -E "^[[:digit:]]{2}[[:space:]]+([0-9,S]+|[-])[[:space:]]+.*$r.*[[:space:]]+$i$" /etc/runlevel.conf
+    done  | sort $param | awk '{print $4}' )
+  else
+    services=""
+    log_warning_msg "Unable to determine dependent services: unknown init system"
+  fi
+
+  # Start the services in the correct order
+  for i in $services ; do
+    service=$(basename $i)
+    service=${service#S??}
+    invoke-rc.d $service $action || true
+  done
+
+}
+
+
+start_it_up()
+{
+  # PID dir is made also in dsmetool case, so that system.conf
+  # does not need changes
+  if [ ! -d $PIDDIR ]; then
+    mkdir -p $PIDDIR
+    chown $DAEMONUSER:$DAEMONUSER $PIDDIR
+  fi
+
+  if [ -e $PIDFILE ]; then
+    PIDDIR=/proc/$(cat $PIDFILE)
+    if [ -d ${PIDDIR} -a  "$(readlink -f ${PIDDIR}/exe)" = "${DAEMON}" ]; then 
+      log_success_msg "$DESC already started; not starting."
+      return
+    else
+      log_success_msg "Removing stale PID file $PIDFILE."
+      rm -f $PIDFILE
+    fi
+  fi
+
+  create_machineid
+
+  log_daemon_msg "Starting $DESC" "$NAME"
+if [ "x$USE_DT" = "x" ]; then
+  # Use S-S-D
+  start-stop-daemon --start --quiet --pidfile $PIDFILE \
+    --user $DAEMONUSER --exec $DAEMON -- --system $PARAMS --fork
+else
+   # Use dsmetool
+   /usr/sbin/dsmetool -r "$DAEMON --system $PARAMS" -n -5
+fi
+  log_end_msg $?
+  if [ -d $EVENTDIR ]; then
+      if [ -x /usr/sbin/waitdbus ]; then
+        # wait for system bus before starting services (HAL, etc)
+        /usr/sbin/waitdbus system
+      fi
+      run-parts --arg=start $EVENTDIR || true
+  fi
+  dependent_services start
+}
+
+shut_it_down()
+{
+  dependent_services stop
+  if [ -d $EVENTDIR ]; then
+      run-parts --reverse --arg=stop $EVENTDIR || true
+  fi
+  log_daemon_msg "Stopping $DESC" "$NAME"
+if [ "x$USE_DT" = "x" ]; then
+  start-stop-daemon --stop --retry 5 --quiet --oknodo --pidfile $PIDFILE \
+    --user $DAEMONUSER
+  # We no longer include these arguments so that start-stop-daemon
+  # can do its job even given that we may have been upgraded.
+  # We rely on the pidfile being sanely managed
+  # --exec $DAEMON -- --system $PARAMS
+else
+  # stop with dsmetool
+  /usr/sbin/dsmetool -k "$DAEMON --system $PARAMS"
+fi
+  log_end_msg $?
+  rm -f $PIDFILE
+}
+
+reload_it()
+{
+  create_machineid
+  log_action_begin_msg "Reloading $DESC config"
+  dbus-send --print-reply --system --type=method_call \
+            --dest=org.freedesktop.DBus \
+            / org.freedesktop.DBus.ReloadConfig > /dev/null
+  # hopefully this is enough time for dbus to reload it's config file.
+  log_action_end_msg $?
+}
+
+case "$1" in
+  start)
+    start_it_up
+  ;;
+  stop)
+    shut_it_down
+  ;;
+  reload|force-reload)
+    reload_it
+  ;;
+  restart)
+    shut_it_down
+    sleep 1 # XXX why?
+    start_it_up
+  ;;
+  status)
+    status_of_proc -p $PIDFILE $DAEMON $NAME && exit 0 || exit $?
+    ;;
+  *)
+    echo "Usage: /etc/init.d/$NAME {start|stop|reload|restart|force-reload|status}" >&2
+    exit 2
+  ;;
+esac
+

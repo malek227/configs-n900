@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GPE File manager
+Comment=GPE File manager
+Exec=gpe-filemanager
+Terminal=0
+Type=Application
+Icon=gpe-filemanager
+Categories=Application;Utility;GPE;
+StartupNotify=true
+X-Osso-Service=org.handhelds.gpe_filemanager
+X-Osso-Type=application/x-executable
+X-HildonDesk-ShowInToolbar=true

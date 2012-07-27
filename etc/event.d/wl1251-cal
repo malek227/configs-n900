@@ -1,0 +1,10 @@
+description "wl1251-cal"
+
+start on TEST
+start on LOCAL
+
+pre-start script
+        modprobe wl12xx||true
+end script
+
+exec /usr/bin/wl1251-cal

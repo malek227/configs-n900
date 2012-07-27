@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="devicelock_total_failed" mtime="1284131123" type="schema" stype="int" owner="mce">
+		<local_schema locale="C" short_desc="Total number of failed unlock attempts.">
+			<default type="int" value="0"/>
+			<longdesc>Total number of failed unlock attempts.  This is just kept for statistical purposes.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="devicelock_failed" mtime="1284131123" type="schema" stype="int" owner="mce">
+		<local_schema locale="C" short_desc="Number of failed unlock attempts since last successful unlock.">
+			<default type="int" value="0"/>
+			<longdesc>Number of failed unlock attempts since last successful unlock.  0 means that the device is unlocked.  A count &gt; 0 means that the device is locked.</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

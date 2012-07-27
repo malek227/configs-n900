@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="recent_types" mtime="1340935323" type="list" ltype="float">
+	</entry>
+	<entry name="recent_tags" mtime="1340935323" type="list" ltype="string">
+	</entry>
+	<entry name="custom_date_to" mtime="1340935868" type="float" value="-1"/>
+	<entry name="custom_date_from" mtime="1340935868" type="float" value="-1"/>
+	<entry name="slideshow_interval" mtime="1340935868" type="int" value="3000"/>
+	<entry name="sort_type" mtime="1340935868" type="int" value="1"/>
+	<entry name="grouped" mtime="1340935868" type="bool" value="true"/>
+	<entry name="grid_icon" mtime="1340935868" type="bool" value="false"/>
+</gconf>

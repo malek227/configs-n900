@@ -1,0 +1,10 @@
+# DO NOT EDIT!  This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine
+
+gtk-theme-name="Kiwi"
+gtk-icon-theme-name="nuoveXT2"
+gtk-font-name="Droid Sans 14"
+gtk-toolbar-style=0
+gtk-cursor-theme-name="(null)"
+gtk-cursor-theme-size=16
+include "/home/user/.gtkrc-2.0.mine"

@@ -1,0 +1,122 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:		iphbd
+# Required-Start:	$remote_fs $syslog dbus
+# Required-Stop:	$remote_fs $syslog dbus
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description:	IP heartbeat daemon
+# Description:		This init script starts the IP heartbeat daemon software
+#			used on the maemo platform.
+### END INIT INFO
+#
+# Startup script for the iphbd.
+#
+# Contact Person: Raimo Vuonnala <raimo.vuonnala@nokia.com>
+#
+# Copyright (C) 2008 Nokia Corporation.
+# 
+# This is free software; see /usr/share/common-licenses/LGPL-2.1 for license
+# conditions.  There is NO  warranty;  not even for MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.
+
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/bin/iphbd
+NAME=iphbd
+DESC="IP Heartbeat Daemon"
+INITFILE=/etc/init.d/$NAME
+DSMETOOL=/usr/sbin/dsmetool
+IPHBD_DAEMON_OPTS=""
+REL=`uname -r`
+#REL2=`echo "$REL" | awk -F - '{ print $1 }'`
+#if [ "$REL" != 2.6.25 ]; then
+#    echo "$0: Wrong kernel version, only $REL supported"
+#    exit 0
+#fi
+
+# abort if no executable exists
+test -x $DAEMON || exit 0
+
+# Include iphbd defaults if available
+if [ -f /etc/default/iphbd ] ; then
+	. /etc/default/iphbd
+fi
+
+set -e
+
+
+# only use dsmetool if it exists
+test -x $DSMETOOL || USE_DSMETOOL=no
+
+
+if [ -e /etc/osso-af-init/af-defines.sh ]
+then
+  source /etc/osso-af-init/af-defines.sh
+fi
+
+if [ -d /etc/osso-af-init ]
+then 
+  if [ -f /etc/osso-af-init/*.defs ]; then
+    for i in /etc/osso-af-init/*.defs
+    do
+      source $i
+    done
+  fi
+fi
+
+
+start_iphbd()
+{
+    printf "Inserting module /lib/modules/$REL/iphb.ko..."
+    insmod /lib/modules/$REL/iphb.ko
+    printf "Starting daemon $NAME..."
+    if [ x"$USE_DSMETOOL" = xno ]; then
+	start-stop-daemon --start --quiet  \
+	    --exec $DAEMON -- $IPHBD_DAEMON_OPTS
+    else
+	dsmetool -U root -f "$DAEMON $IPHBD_DAEMON_OPTS"
+    fi
+}
+
+stop_iphbd()
+{
+    printf "Stopping daemon $NAME..."
+    if [ x"$USE_DSMETOOL" = xno ]; then
+	start-stop-daemon --stop --oknodo --quiet  \
+	    $DAEMON
+    else
+	dsmetool -U root -k "$DAEMON $IPHBD_DAEMON_OPTS"
+    fi
+    sleep 2
+    printf "Removing module iphb..."
+    rmmod iphb
+
+}
+
+case "$1" in
+start)
+        printf "Starting $DESC: $NAME...\n"
+	start_iphbd
+        ;;
+
+stop)
+        printf "Stopping: $DESC: $NAME....\n"
+	stop_iphbd
+        printf ".\n"
+        ;;
+
+restart|force-reload)
+        printf "Restarting $DESC: $NAME"
+	stop_iphbd
+        sleep 2
+	start_iphbd
+        ;;
+
+*)
+        printf "Usage: $INITFILE {start|stop|restart|force-reload}\n" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

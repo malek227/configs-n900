@@ -1,0 +1,5 @@
+telepathy-stream-engine "phone"
+tonegend "phone"
+voicehost "phone"
+hildon-welcome "animation"
+. "x-maemo"

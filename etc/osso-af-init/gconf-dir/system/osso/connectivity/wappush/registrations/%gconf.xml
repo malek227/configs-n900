@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="1" mtime="1339333376" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>x-oma-application:ulp.ua</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>com.nokia.Location.Proxy</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/com/nokia/location/proxy</stringvalue>
+		</li>
+	</entry>
+	<entry name="0" mtime="1339333376" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>x-oma-cp</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>com.nokia.omacp</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/com/nokia/omacp</stringvalue>
+		</li>
+	</entry>
+</gconf>

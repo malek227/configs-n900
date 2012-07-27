@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/url" type="string">
+		<stringvalue>maemo.nokia.com/features/maemo-browser/gestures/</stringvalue>
+	</entry>
+	<entry name="label" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/label" type="string">
+		<stringvalue>Maemo Browser - Interaction Modes</stringvalue>
+	</entry>
+	<entry name="icon" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/icon" type="string">
+		<stringvalue>/usr/share/bookmark-manager/thumbnails/thumbnail_maemobrowser.png</stringvalue>
+	</entry>
+</gconf>

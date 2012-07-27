@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="dictionary" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/fr_FR/dictionary"/>
+	<entry name="insert-space-after-word" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/en_GB/insert-space-after-word"/>
+	<entry name="auto-capitalisation" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/en_GB/auto-capitalisation"/>
+	<entry name="next-word-prediction" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/en_GB/next-word-prediction"/>
+	<entry name="word-completion" mtime="1284131090" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/en_GB/word-completion"/>
+</gconf>

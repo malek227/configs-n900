@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_finger_kb" mtime="1339384747" type="bool" value="false"/>
+	<entry name="int_kb_layout" mtime="1339384747" type="string">
+		<stringvalue>fise</stringvalue>
+	</entry>
+	<entry name="dual-dictionary" mtime="1339384747" type="bool" value="true"/>
+	<entry name="available_languages" mtime="1339333381" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>cs_CZ</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>it_IT</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>no_NO</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>nl_NL</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>da_DK</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>fi_FI</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>el_GR</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>pt_PT</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>ru_RU</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>fr_FR</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>en_GB</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>en_US</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>fr_CA</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>pl_PL</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>de_DE</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>es_MX</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>sv_SE</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>es_ES</stringvalue>
+		</li>
+	</entry>
+	<entry name="int_kb_model" mtime="1339333374" type="string">
+		<stringvalue>nokiarx51</stringvalue>
+	</entry>
+	<entry name="slide-layout" mtime="1339333373" type="string">
+		<stringvalue>Finnish, Swedish</stringvalue>
+	</entry>
+</gconf>

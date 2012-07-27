@@ -1,0 +1,75 @@
+#!/bin/sh
+#
+# This file is part of osso-af-startup.
+#
+# Copyright (C) 2004-2006 Nokia Corporation. All rights reserved.
+#
+# Contact: Gabriel Schulhof <gabriel.schulhof@nokia.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License 
+# version 2 as published by the Free Software Foundation. 
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+# 02110-1301 USA
+
+SCRIPT=/etc/osso-af-init/real-af-startup
+
+case "$1" in
+start)
+        # We stop the progressbar here since only root can do it.
+        # 
+        # XXX - once non-root users can stop it, the following line
+        #       can be moved to $SCRIPT 
+        #
+        /etc/init.d/fb-progress.sh stop
+
+	# in case of first boot, start services requiered by
+	# startup wizards. Touch a temporary flag file so these
+	# services won't start twice
+	
+	# first remove the tmp flag if it is already there. This 
+	# happens if we get back to this runlevel without rebooting
+	
+	if [ -e /tmp/first-boot-flag-tmp ]; then
+	  # It is important to make sure all the newly created files have
+	  # reached the storage media before removing first-boot-flag-tmp.
+	  sync
+	  rm -rf /tmp/first-boot-flag-tmp
+	fi
+
+	if [ -e /home/user/first-boot-flag ]; then
+	  /etc/init.d/dnsmasq start
+	  /etc/init.d/btcond start
+	  /etc/init.d/bluez-utils start
+	  /etc/init.d/wlancond start
+	fi
+
+        if [ -x /etc/init.d/startup-greeting.sh ]; then
+          /etc/init.d/startup-greeting.sh start
+        fi
+
+        su - user $SCRIPT start
+        ;;
+
+stop)   su - user $SCRIPT stop
+        ;;
+restart)
+        echo "$0: not implemented"
+        exit 1
+        ;;
+force-reload)
+        echo "$0: not implemented"
+        exit 1
+        ;;
+*)      echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac

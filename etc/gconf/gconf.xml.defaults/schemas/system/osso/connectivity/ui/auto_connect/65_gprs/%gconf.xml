@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="network_types" mtime="1284131118" type="schema" stype="list" owner="connui-cellular" list_type="string">
+		<local_schema locale="C" short_desc="Auto connect Device PSD option network types">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>GPRS</stringvalue>
+				</li>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="label" mtime="1284131118" type="schema" stype="string" owner="connui-cellular">
+		<local_schema locale="C" short_desc="Auto connect Device PSD option label">
+			<default type="string">
+				<stringvalue>%s</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

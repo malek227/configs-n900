@@ -1,0 +1,6 @@
+#!/bin/sh
+
+. /etc/osso-af-init/af-defines.sh
+
+exec /usr/bin/mc-await-disconnect
+

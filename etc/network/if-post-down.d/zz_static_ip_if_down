@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Copyright (C) 2009 Nokia Corporation. All rights reserved.
+# A workaround to take down interface when it's configured with a static IP (NB#138487).
+
+set -e
+
+if [ "$MODE" != stop ]; then
+    exit 0
+fi
+
+if [ "$ICD_CONNECTION_TYPE" != WLAN_INFRA ] && [ "$ICD_CONNECTION_TYPE" != WLAN_ADHOC ]; then
+    exit 0
+fi
+
+ifconfig $IFACE down
+
+exit 0

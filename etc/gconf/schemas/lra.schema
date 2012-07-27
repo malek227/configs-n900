@@ -1,0 +1,16 @@
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/osso/applet/languageregional/available_languages</key>
+      <applyto>/apps/osso/applet/languageregional/available_languages</applyto>
+      <owner>osso-applet-languageregional</owner>
+      <type>list</type>
+      <default>[]</default>
+	<list_type>string</list_type>
+       <locale name="C">
+			<short>Available languages</short>
+        <long>Available languages</long>
+      </locale>
+    </schema>
+</schemalist>
+</gconfschemafile>

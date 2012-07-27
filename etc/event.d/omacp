@@ -1,0 +1,24 @@
+author "Jukka Saunamaki"
+description "This init script registers ota-settings for wappushd"
+
+start on started hildon-desktop
+stop on stopped dbus
+
+console output
+
+script
+	set +e
+        echo "Registering ota-settings for wappushd"
+	dbus-send --system --print-reply --dest=com.nokia.wappush /com/nokia/wappush com.nokia.wappush.register string:'x-oma-cp' string:'com.nokia.omacp' string:'/com/nokia/omacp' >> /tmp/omacp.tmp
+	rc=$?
+	if [ $rc -ne 0 ] ; then
+	    echo "Failed to register to wappushd"
+	else
+            echo "Succeeded to register to wappushd"
+	fi
+        ls /var/spool/sms/ota-settings/* > /dev/null 2>&1
+	rc=$?
+	if [ $rc -eq 0 ] ; then
+            /usr/sbin/ota-settings -b -s -d 30 
+	fi
+end script

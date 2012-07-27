@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last_used_network" mtime="1340765025" type="string">
+		<stringvalue>Telenor Mobilsurf</stringvalue>
+	</entry>
+	<entry name="last_used_attrs" mtime="1340765025" type="int" value="83886080"/>
+	<entry name="last_used_type" mtime="1340765025" type="string">
+		<stringvalue>GPRS</stringvalue>
+	</entry>
+</gconf>

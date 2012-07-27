@@ -1,0 +1,6 @@
+start on startup
+stop on starting xomap
+
+console output
+
+exec /etc/init.d/fb-progress.sh start

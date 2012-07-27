@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ask_password" mtime="946685548" type="bool" value="false"/>
+	<entry name="type" mtime="946685548" type="string">
+		<stringvalue>GPRS</stringvalue>
+	</entry>
+	<entry name="ipv4_autodns" mtime="946685548" type="bool" value="true"/>
+	<entry name="ipv4_type" mtime="946685548" type="string">
+		<stringvalue>AUTO</stringvalue>
+	</entry>
+	<entry name="name" mtime="946685548" type="string">
+		<stringvalue>Telenor Mobilsurf</stringvalue>
+	</entry>
+	<entry name="sim_imsi" mtime="946685548" type="string">
+		<stringvalue>240084704146589</stringvalue>
+	</entry>
+	<entry name="gprs_password" mtime="946685548" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="gprs_username" mtime="946685548" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="gprs_accesspointname" mtime="946685548" type="string">
+		<stringvalue>services.telenor.se</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/url" type="string">
+		<stringvalue>maemo.nokia.com/maemo-select</stringvalue>
+	</entry>
+	<entry name="icon" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/icon" type="string">
+		<stringvalue>/usr/share/bookmark-manager/thumbnails/thumbnail_maemo.png</stringvalue>
+	</entry>
+	<entry name="label" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/label" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+</gconf>

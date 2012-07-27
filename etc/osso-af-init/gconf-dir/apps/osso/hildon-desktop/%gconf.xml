@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ui_can_rotate" mtime="1339384614" type="bool" value="true"/>
+	<entry name="orientation_lock" mtime="1339384614" type="bool" value="false"/>
+	<entry name="scroll_vertical" mtime="1340094619" type="bool" value="true"/>
+	<entry name="menu_edit_disabled" mtime="1340094619" type="bool" value="false"/>
+</gconf>

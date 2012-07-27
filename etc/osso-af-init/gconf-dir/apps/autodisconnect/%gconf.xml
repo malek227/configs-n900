@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="version" mtime="1339368066" type="string">
+		<stringvalue>0.4.7</stringvalue>
+	</entry>
+	<entry name="param_notifications" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_running_options" mtime="1339456960" type="int" value="0"/>
+	<entry name="param_bluetooth_interval" mtime="1339456960" type="int" value="40"/>
+	<entry name="param_bluetooth_enable" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_idle_network_mode_duration" mtime="1339456960" type="int" value="0"/>
+	<entry name="param_idle_network_mode_type" mtime="1339456960" type="string">
+		<stringvalue>none</stringvalue>
+	</entry>
+	<entry name="param_connection_gprs" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_connection_wlan" mtime="1339456960" type="bool" value="false"/>
+	<entry name="param_exception_im_accounts" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_exception_voip" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_exception_openvpn" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_exception_ssh" mtime="1339456960" type="bool" value="true"/>
+	<entry name="param_wlan_traffic" mtime="1339456960" type="int" value="2048"/>
+	<entry name="param_gprs_traffic" mtime="1339456960" type="int" value="2048"/>
+	<entry name="param_wlan_pre_interval" mtime="1339456960" type="int" value="30"/>
+	<entry name="param_gprs_pre_interval" mtime="1339456960" type="int" value="30"/>
+	<entry name="param_wlan_interval" mtime="1339456960" type="int" value="5"/>
+	<entry name="param_gprs_interval" mtime="1339456960" type="int" value="5"/>
+</gconf>

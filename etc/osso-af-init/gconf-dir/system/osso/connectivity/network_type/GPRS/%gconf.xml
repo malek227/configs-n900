@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gprs_home_tx_bytes" mtime="1340946250" type="string">
+		<stringvalue>5718330</stringvalue>
+	</entry>
+	<entry name="gprs_home_rx_bytes" mtime="1340946250" type="string">
+		<stringvalue>80079047</stringvalue>
+	</entry>
+</gconf>

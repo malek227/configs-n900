@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Copyright (C) 2008 Nokia Corporation. All rights reserved.
+# Author: patrik.flykt@nokia.com
+
+test x$ICD_PROXY_UNSET = x && exit 0
+
+gconftool-2 -s /system/proxy/mode -t string none
+gconftool-2 \
+    -u /system/http_proxy/use_http_host \
+    -u /system/proxy/autoconfig_url \
+    -u /system/http_proxy/host \
+    -u /system/http_proxy/port \
+    -u /system/http_proxy/ignore_hosts \
+    -u /system/proxy/secure_host \
+    -u /system/proxy/secure_port \
+    -u /system/proxy/ftp_host \
+    -u /system/proxy/ftp_port \
+    -u /system/proxy/socks_host \
+    -u /system/proxy/socks_port \
+    -u /system/proxy/rtsp_host \
+    -u /system/proxy/rtsp_port
+
+exit 0

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="modules" mtime="1284131099" type="schema" stype="list" owner="icd" list_type="string">
+		<local_schema locale="C">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>libicd_policy_merge.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_ask.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_any.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_change.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_add.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_always_online.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_one.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_restart.so</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>libicd_policy_nw_disconnect.so</stringvalue>
+				</li>
+			</default>
+			<longdesc>Name of the policy modules in priority order</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

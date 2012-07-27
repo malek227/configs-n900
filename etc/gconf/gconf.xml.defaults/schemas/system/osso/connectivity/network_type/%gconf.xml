@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="search_interval" mtime="1284131099" type="schema" stype="int" owner="icd">
+		<local_schema locale="C">
+			<default type="int" value="600"/>
+			<longdesc>Search interval in seconds while not connected. When no connection are active avaiable connections are searched and autoconnected regularly. This specifies the interval between scans and measured in seconds. Zero disables the feature.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="change_while_connected" mtime="1284131099" type="schema" stype="bool" owner="icd">
+		<local_schema locale="C">
+			<default type="bool" value="true"/>
+			<longdesc>Automatic connection switch</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="auto_connect" mtime="1284131099" type="schema" stype="list" owner="icd" list_type="string">
+		<local_schema locale="C">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>WLAN_INFRA</stringvalue>
+				</li>
+			</default>
+			<longdesc>Comma separated list of network types to connect to automatically</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

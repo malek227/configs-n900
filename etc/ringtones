@@ -1,0 +1,46 @@
+[SMS]
+"Message 1" /usr/share/sounds/Message1.aac
+"Message 2" /usr/share/sounds/Message2.aac
+"Message 3" /usr/share/sounds/Message3.aac
+"Message 4" /usr/share/sounds/Message4.aac
+"Message 5" /usr/share/sounds/Message5.aac
+"Beep"      /usr/share/sounds/Beep.aac
+
+[IM]
+"Chat 1"    /usr/share/sounds/chat-msg_in_bg.wav
+"Chat 2"    /usr/share/sounds/chat-msg_in_bg_2.wav
+"Chat 3"    /usr/share/sounds/chat-msg_in_bg_3.wav
+"Chat 4"    /usr/share/sounds/chat-msg_in_bg_4.wav
+"Beep"      /usr/share/sounds/Beep.aac
+
+[EMAIL]
+"Email 1"   /usr/share/sounds/Emailalert1.aac
+"Email 2"   /usr/share/sounds/Emailalert2.aac
+"Beep"      /usr/share/sounds/Beep.aac
+
+
+[RINGTONE]
+"Astrosphere"	/home/user/MyDocs/.sounds/Ringtones/Astrosphere.aac
+"Astrum"	/home/user/MyDocs/.sounds/Ringtones/Astrum.aac
+"Atmos"		/home/user/MyDocs/.sounds/Ringtones/Atmos.aac
+"Beep"          /usr/share/sounds/Beep.aac
+"Bicycle"	/home/user/MyDocs/.sounds/Ringtones/Bicycle.aac
+"Earthen"	/home/user/MyDocs/.sounds/Ringtones/Earthen.aac
+"Electra"	/home/user/MyDocs/.sounds/Ringtones/Electra.aac
+"Flying Colours" /home/user/MyDocs/.sounds/Ringtones/FlyingColours.aac
+"Gradient"	/home/user/MyDocs/.sounds/Ringtones/Gradient.aac
+"Ice Tone"	/home/user/MyDocs/.sounds/Ringtones/IceTone.aac
+"Low"		/home/user/MyDocs/.sounds/Ringtones/Low.aac
+"Lumina"	/home/user/MyDocs/.sounds/Ringtones/Lumina.aac
+"Mirror Image"	/home/user/MyDocs/.sounds/Ringtones/MirrorImage.aac
+"Nokia Tune"    /usr/share/sounds/NokiaTune.aac
+"Outer Space"	/home/user/MyDocs/.sounds/Ringtones/OuterSpace.aac
+"Ploptic"	/home/user/MyDocs/.sounds/Ringtones/Ploptic.aac
+"Solenoid"	/home/user/MyDocs/.sounds/Ringtones/Solenoid.aac
+"Sublite"       /home/user/MyDocs/.sounds/Ringtones/Sublite.aac
+"Sublunar"	/home/user/MyDocs/.sounds/Ringtones/Sublunar.aac
+"Telegraph"	/home/user/MyDocs/.sounds/Ringtones/Telegraph.aac
+"Temporal"	/home/user/MyDocs/.sounds/Ringtones/Temporal.aac
+"Terrestial"	/home/user/MyDocs/.sounds/Ringtones/Terrestial.aac
+"Tinker"	/home/user/MyDocs/.sounds/Ringtones/Tinker.aac
+"Transcend"	/home/user/MyDocs/.sounds/Ringtones/Transcend.aac

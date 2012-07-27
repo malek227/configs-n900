@@ -1,0 +1,8 @@
+#!/bin/sh
+# Xsession user settings
+source /etc/osso-af-init/af-defines.sh
+source /etc/osso-af-init/osso-gtk.defs
+source /etc/resource_limits.conf
+
+xset770 -r Return 0 -r F4 0 -r F6 0 -r F7 0 -r F8 0 -r Escape 0 -r 104 0
+

@@ -1,0 +1,39 @@
+description "starting clockd"
+
+author "Raimo Vuonnala"
+
+start on MOUNTS_OK
+
+stop on stopping dbus
+stop on stopping dbus-actdead
+
+console none 
+
+respawn
+
+
+pre-start script
+  /usr/sbin/waitdbus system
+end script
+
+script
+
+  DAEMON=/usr/bin/clockd
+  NAME=clockd
+  CLOCKD_DAEMON_OPTS=""
+
+  # abort if no executable exists
+  test -x $DAEMON || exit 0
+
+  echo "Starting $NAME..."
+
+  # Include clockd defaults if available
+  if [ -f /etc/clockd/clockd-settings.default ] ; then
+     echo "Setting $NAME defaults..."
+     . /etc/clockd/clockd-settings.default
+  fi
+
+  exec $DAEMON $CLOCKD_DAEMON_OPTS
+
+end script
+

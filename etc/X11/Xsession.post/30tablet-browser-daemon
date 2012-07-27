@@ -1,0 +1,9 @@
+#!/bin/sh
+export MOZ_CAIRO_NO_BUGGY_REPEAT=1
+LD_LIBRARY_PATH=/usr/lib/microb-engine:$LD_LIBRARY_PATH
+
+if test -x /usr/sbin/dsmetool; then
+/usr/sbin/dsmetool -c 3 -T 180 -m -17 -t "/usr/sbin/browserd -d"
+else
+run-standalone.sh /usr/sbin/browserd -d -b
+fi

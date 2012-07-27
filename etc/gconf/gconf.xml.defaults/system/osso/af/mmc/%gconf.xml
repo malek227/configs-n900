@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="internal-mmc-corrupted" mtime="1284131123" schema="/schemas/system/osso/af/mmc/internal-mmc-corrupted"/>
+	<entry name="mmc-corrupted" mtime="1284131123" schema="/schemas/system/osso/af/mmc/mmc-corrupted"/>
+</gconf>

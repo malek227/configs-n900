@@ -1,0 +1,107 @@
+#! /bin/sh
+
+ITAB_ORIG=/etc/inittab
+ITAB_TMP=/etc/inittab_tmp
+ITAB=$ITAB_ORIG
+
+#set -e
+
+# If inittab changed
+changed=''
+
+# We are going to change /etc/inittab, which is a crucial file and the
+# change has to be done atomically, because we have to guarantee that
+# /etc/inittab is always in consistent state. Otherwise an unclean
+# reboot would result in inconsistent /etc/inittab and the system would
+# not boot properly.
+#
+# Thus, we create a copy of /etc/inittab, then modify the copy, then
+# synchronize the FS to make sure the changes have reached the media,
+# and then rename the copy to /etc/inittab. This is a standard
+# technique.
+need_change_inittab() {
+	if [ "$changed" != "Yes" ]; then
+		ITAB=/etc/inittab_tmp
+		cp $ITAB_ORIG $ITAB_TMP
+		ITAB=$ITAB_TMP
+		changed='Yes'
+	fi
+}
+
+case "$1" in
+  start)
+	[ -x /usr/bin/cal-tool ] && RDFLAGS=`/usr/bin/cal-tool --get-rd-flags`
+	console=''
+	if  echo $RDFLAGS | grep -q serial-console; then
+	    console='Yes'
+	fi
+
+	if [ -c /dev/ttyUSB0 ] && [ "$console" == "Yes" ]; then
+		if grep -q '^#T1.*ttyUSB0.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^#\(T1.*ttyUSB0.*\)/\1/' $ITAB
+		fi
+	else
+		if grep -q '^T1.*ttyUSB0.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^\(T1.*ttyUSB0.*\)/#\1/' $ITAB
+		fi
+	fi
+
+	#test if we can read ttyS1, we have serial console there device on ttyS0
+	if [ -c /dev/ttyS1 ] && [ "$console" == "Yes" ] && dd of=/dev/ttyS1 count=1 bs=1 if=/dev/zero ; then
+		if grep -q '^#T2.*ttyS1.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^#\(T2.*ttyS1.*\)/\1/' $ITAB
+		fi
+		if grep -q '^T0.*ttyS0.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^\(T0.*ttyS0.*\)/#\1/' $ITAB
+		fi
+	else
+		if grep -q '^T2.*ttyS1.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^\(T2.*ttyS1.*\)/#\1/' $ITAB
+		fi
+		#and check serial console on ttyS0
+
+		if [ -c /dev/ttyS0 ] && [ "$console" == "Yes" ] && dd of=/dev/ttyS0 count=1 bs=1 if=/dev/zero ; then
+		    if grep -q '^#T0.*ttyS0.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^#\(T0.*ttyS0.*\)/\1/' $ITAB
+		    fi
+		else
+		    if grep -q '^T0.*ttyS0.*' $ITAB ; then
+			need_change_inittab;
+			sed -ie 's/^\(T0.*ttyS0.*\)/#\1/' $ITAB
+		    fi
+		fi
+	fi
+
+	#MODE=`/usr/sbin/chroot /mnt/initfs cal-tool --get-rd-mode`
+	MODE=enabled
+	if [ x$MODE = xenabled ]; then
+		if grep -q '^root:!SU.odxvRwp3Vs' /etc/passwd; then
+			/usr/sbin/usermod -U root
+		fi
+	else
+		if grep -q '^root:SU.odxvRwp3Vs' /etc/passwd; then
+			/usr/sbin/usermod -L root
+		fi
+	fi
+
+	if [ "$changed" = "Yes" ]; then
+		sync
+		mv $ITAB_TMP $ITAB_ORIG
+		telinit Q
+	fi;
+	;;
+  stop|reload|restart|force-reload)
+	;;
+  *)
+	echo "Usage: $0 start" >&2
+	exit 1
+	;;
+esac
+
+exit 0

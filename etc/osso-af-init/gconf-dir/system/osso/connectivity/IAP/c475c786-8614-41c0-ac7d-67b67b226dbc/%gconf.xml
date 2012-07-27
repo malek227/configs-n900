@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="name" mtime="1339334621" type="string">
+		<stringvalue>linksys</stringvalue>
+	</entry>
+	<entry name="EAP_wpa_preshared_key" mtime="1339334618" type="list" ltype="int">
+		<li type="int" value="103"/>
+		<li type="int" value="71"/>
+		<li type="int" value="148"/>
+		<li type="int" value="94"/>
+		<li type="int" value="23"/>
+		<li type="int" value="131"/>
+		<li type="int" value="42"/>
+		<li type="int" value="184"/>
+		<li type="int" value="9"/>
+		<li type="int" value="127"/>
+		<li type="int" value="140"/>
+		<li type="int" value="38"/>
+		<li type="int" value="151"/>
+		<li type="int" value="76"/>
+		<li type="int" value="31"/>
+		<li type="int" value="202"/>
+		<li type="int" value="144"/>
+		<li type="int" value="216"/>
+		<li type="int" value="169"/>
+		<li type="int" value="160"/>
+		<li type="int" value="82"/>
+		<li type="int" value="129"/>
+		<li type="int" value="34"/>
+		<li type="int" value="249"/>
+		<li type="int" value="66"/>
+		<li type="int" value="122"/>
+		<li type="int" value="90"/>
+		<li type="int" value="162"/>
+		<li type="int" value="27"/>
+		<li type="int" value="240"/>
+		<li type="int" value="67"/>
+		<li type="int" value="54"/>
+	</entry>
+	<entry name="type" mtime="1339334618" type="string">
+		<stringvalue>WLAN_INFRA</stringvalue>
+	</entry>
+	<entry name="wlan_ssid" mtime="1339334618" type="list" ltype="int">
+		<li type="int" value="108"/>
+		<li type="int" value="105"/>
+		<li type="int" value="110"/>
+		<li type="int" value="107"/>
+		<li type="int" value="115"/>
+		<li type="int" value="121"/>
+		<li type="int" value="115"/>
+	</entry>
+	<entry name="wlan_hidden" mtime="1339334618" type="bool" value="false"/>
+	<entry name="ipv4_type" mtime="1339334618" type="string">
+		<stringvalue>AUTO</stringvalue>
+	</entry>
+	<entry name="proxytype" mtime="1339334618" type="string">
+		<stringvalue>NONE</stringvalue>
+	</entry>
+	<entry name="EAP_wpa_preshared_passphrase" mtime="1339334618" type="string">
+		<stringvalue>foobarbaz</stringvalue>
+	</entry>
+	<entry name="wlan_security" mtime="1339334618" type="string">
+		<stringvalue>WPA_PSK</stringvalue>
+	</entry>
+</gconf>

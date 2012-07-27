@@ -1,0 +1,68 @@
+#!/bin/sh
+
+set -e
+
+DOTDIR=/var/lib/funambol
+IDMAP=$DOTDIR/idmap-db-v1
+ANCHOR=$DOTDIR/anchor-db-v1
+
+case "$1" in
+    start)
+
+    if [ ! -d $DOTDIR ]; then
+	mkdir -p $DOTDIR
+	chmod 777 $DOTDIR
+    fi
+
+    rmfiles=
+    trap 'rm -rf $rmfiles' 0
+
+    test -f "$IDMAP" || {
+        rmfiles="$IDMAP $rmfiles"
+	sqlite3 "$IDMAP" "\
+create table idmap(clientname VARCHAR(127) NOT NULL,\
+                   clientdbname VARCHAR(127) NOT NULL,\
+                   luid VARCHAR(127) NOT NULL,\
+                   serverdbname VARCHAR(127) NOT NULL,\
+                   guid VARCHAR(127) NOT NULL);\
+create table guidsequence(key INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,\
+                          dummy INTEGER);\
+create unique index cli2srv on idmap ( clientname, clientdbname, luid );\
+create unique index srv2cli on idmap ( serverdbname, guid );"
+	chown user $IDMAP
+	chgrp users $IDMAP
+	chmod 644 $IDMAP
+    }
+    
+    test -f "$ANCHOR" || {
+	rmfiles="$ANCHOR $rmfiles"
+	sqlite3 "$ANCHOR" "\
+create table anchor(sourcename VARCHAR(127) NOT NULL,\
+                    clientname VARCHAR(127) NOT NULL,\
+                    clientanchor VARCHAR(127) NOT NULL,\
+                    serveranchor VARCHAR(127) NOT NULL);\
+create unique index anchorindex on anchor ( sourcename, clientname );"
+	chown user $ANCHOR
+	chgrp users $ANCHOR
+	chmod 644 $ANCHOR
+    }
+    
+    trap - 0
+    sync
+    ;;
+
+    stop)
+    # Nothing to do
+    ;;
+
+    reload|restart|force-reload)
+    echo "Not implemented. "
+    ;;
+
+    *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+
+esac
+

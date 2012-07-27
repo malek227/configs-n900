@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="dictionary" mtime="1339384748" type="string">
+		<stringvalue>sv_SE</stringvalue>
+	</entry>
+	<entry name="insert-space-after-word" mtime="1339384748" type="bool" value="true"/>
+	<entry name="word-completion" mtime="1339384748" type="bool" value="true"/>
+	<entry name="auto-capitalisation" mtime="1339384748" type="bool" value="true"/>
+</gconf>

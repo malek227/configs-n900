@@ -1,0 +1,21 @@
+pwd
+cd /home/user/.debian
+cd /home/user/MyDocs/
+ls
+ls -al
+ls .debian
+cd
+pwd
+ls .debian
+ls /mnt/
+cd
+source .zshrc
+cd
+pwd
+ls
+cd /
+ls
+source .zshrc
+ls -al
+source /.zshrc
+zsh4

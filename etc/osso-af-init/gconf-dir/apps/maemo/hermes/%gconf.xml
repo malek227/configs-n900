@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="twitter_secret" mtime="1339369400" type="string">
+		<stringvalue>wBwyJsQIZFsKMhCA0S9C0b5KmWSz07T3z0KWpKs</stringvalue>
+	</entry>
+	<entry name="twitter_key" mtime="1339369400" type="string">
+		<stringvalue>pBpcz09kp71jnEdZWqjQ</stringvalue>
+	</entry>
+	<entry name="linkedin_secret" mtime="1339369400" type="string">
+		<stringvalue>uk--OtmWcxER-Yh6Py5p0VeLPNlDJSMaXj1xfHILoFzrK7fM9eepNo5RbwGdkRo_</stringvalue>
+	</entry>
+	<entry name="linkedin_key" mtime="1339369400" type="string">
+		<stringvalue>1et4G-VtmtqNfY7gF8PHtxMOf0KNWl9ericlTEtdKJeoA4ubk4wEQwf8lSL8AnYE</stringvalue>
+	</entry>
+	<entry name="gravatar_key" mtime="1339369400" type="string">
+		<stringvalue>b14ec179822b</stringvalue>
+	</entry>
+	<entry name="gravatar_email" mtime="1339369400" type="string">
+		<stringvalue>maemohermes@wendt.se</stringvalue>
+	</entry>
+	<entry name="facebook_secret" mtime="1339369400" type="string">
+		<stringvalue>19f7538edd96b6870f2da7e84a6390a4</stringvalue>
+	</entry>
+	<entry name="facebook_key" mtime="1339369400" type="string">
+		<stringvalue>5916f12942feea4b3247d42a84371112</stringvalue>
+	</entry>
+</gconf>

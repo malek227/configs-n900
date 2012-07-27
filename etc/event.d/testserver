@@ -1,0 +1,11 @@
+start on TEST
+start on LOCAL
+
+stop on starting shutdown
+
+console output
+script
+	mount -t debugfs debugfs /sys/kernel/debug
+        exec /etc/init.d/testserver start
+end script
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="enable-sound-effects" mtime="1339427559" type="bool" value="false"/>
+	<entry name="disable-show-on-focus-pressed" mtime="1339427559" type="bool" value="false"/>
+	<entry name="disable-hide-on-lenscover-close" mtime="1339427559" type="bool" value="false"/>
+	<entry name="disable-show-on-lenscover-open" mtime="1339427559" type="bool" value="false"/>
+</gconf>

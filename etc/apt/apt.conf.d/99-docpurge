@@ -1,0 +1,4 @@
+DPkg
+{
+Post-Invoke {"if [ -x /usr/sbin/docpurge ]; then /usr/sbin/docpurge; else exit 0; fi";};
+};

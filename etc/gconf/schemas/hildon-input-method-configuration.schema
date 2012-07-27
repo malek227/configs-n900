@@ -1,0 +1,114 @@
+<gconfschemafile>
+	<schemalist>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/have-internal-keyboard</key>
+			<applyto>/apps/osso/inputmethod/have-internal-keyboard</applyto>
+			<owner>hildon-input-method</owner>
+			<type>bool</type>
+			<default>true</default>
+			<locale name="C">
+				<short>Have internal keyboard</short>
+				<long>Have internal keyboard</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/slide-layout</key>
+			<applyto>/apps/osso/inputmethod/slide-layout</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>Finnish, Swedish</default>
+			<locale name="C">
+				<short>Slide keyboard layout</short>
+				<long>Slide keyboard layout</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/int_kb_layout</key>
+			<applyto>/apps/osso/inputmethod/int_kb_layout</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>fise</default>
+			<locale name="C">
+				<short>Slide keyboard layout abbreviation name</short>
+				<long>Slide keyboard layout abbreviation name</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/int_kb_model</key>
+			<applyto>/apps/osso/inputmethod/int_kb_model</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>nokiarx51</default>
+			<locale name="C">
+				<short>Slide keyboard model name</short>
+				<long>Slide keyboard model name</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/hildon-im-languages/translation-library/function</key>
+			<applyto>/apps/osso/inputmethod/hildon-im-languages/translation-library/function</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>libi18n_locale_resolve_simple</default>
+			<locale name="C">
+				<short>Endonyms resolver</short>
+				<long>Endonyms resolver</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/hildon-im-languages/translation-library/name</key>
+			<applyto>/apps/osso/inputmethod/hildon-im-languages/translation-library/name</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>/usr/lib/libi18n-locale-resolver.so.0</default>
+			<locale name="C">
+				<short>Endonyms resolver</short>
+				<long>Endonyms resolver</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/hildon-im-languages/language-0</key>
+			<applyto>/apps/osso/inputmethod/hildon-im-languages/language-0</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>en_GB</default>
+			<locale name="C">
+				<short>Default language</short>
+				<long>Default language</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/default-plugins/hw-keyboard</key>
+			<applyto>/apps/osso/inputmethod/default-plugins/hw-keyboard</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>hildon_keyboard_assistant</default>
+			<locale name="C">
+				<short>Default plugin for HW keyboard</short>
+				<long>The default plugin for hardware keyboard trigger</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/default-plugins/stylus</key>
+			<applyto>/apps/osso/inputmethod/default-plugins/stylus</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>hildon_western_fkb</default>
+			<locale name="C">
+				<short>Default plugin for stylus</short>
+				<long>The default plugin for stylus trigger</long>
+			</locale>
+		</schema>
+		<schema>
+			<key>/schemas/apps/osso/inputmethod/default-plugins/finger</key>
+			<applyto>/apps/osso/inputmethod/default-plugins/finger</applyto>
+			<owner>hildon-input-method</owner>
+			<type>string</type>
+			<default>hildon_western_fkb</default>
+			<locale name="C">
+				<short>Default plugin for finger</short>
+				<long>The default plugin for finger trigger</long>
+			</locale>
+		</schema>
+	</schemalist>
+</gconfschemafile>

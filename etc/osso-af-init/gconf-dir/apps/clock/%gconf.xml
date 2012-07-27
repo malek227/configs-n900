@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="alarm-custom" mtime="1339427143" type="string">
+		<stringvalue>/home/user/MyDocs/.sounds/permanent/_Cool__Candys__Muckartwist__K_S_Studiowmv.mp3</stringvalue>
+	</entry>
+	<entry name="alarm-tone" mtime="1339427143" type="string">
+		<stringvalue>/home/user/MyDocs/.sounds/permanent/_Cool__Candys__Muckartwist__K_S_Studiowmv.mp3</stringvalue>
+	</entry>
+	<entry name="alarm-time" mtime="1340924446" type="int" value="380"/>
+	<entry name="auto-sync" mtime="1339334685" type="bool" value="true"/>
+	<entry name="home-location" mtime="1339333348" type="int" value="386"/>
+	<entry name="time-format" mtime="1339334685" type="bool" value="true"/>
+</gconf>

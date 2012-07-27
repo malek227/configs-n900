@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ ! -e /etc/hildon-input-method.configured ]
+then
+	/usr/bin/hildon-input-method-configurator
+	if test "x$_SBOX_DIR" = "x";then
+		sudo touch /etc/hildon-input-method.configured
+	else
+		fakeroot touch /etc/hildon-input-method.configured
+	fi
+fi
+
+/usr/sbin/dsmetool -t "/usr/bin/hildon-input-method"

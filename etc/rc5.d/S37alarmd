@@ -1,0 +1,101 @@
+#! /bin/sh
+
+# ============================================================================
+#
+#  This file is part of Alarmd
+#
+#  Copyright (C) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+#
+#  Contact: Simo Piiroinen <simo.piiroinen@nokia.com>
+#
+#  Alarmd is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU Lesser General Public License
+#  version 2.1 as published by the Free Software Foundation.
+#
+#  Alarmd is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+#  Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public
+#  License along with Alarmd; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+#  02110-1301 USA
+#
+# ============================================================================
+
+### BEGIN INIT INFO
+# Provides:             alarmd
+# Required-Start:       $remote_fs $syslog dbus clockd
+# Required-Stop:        $remote_fs $syslog dbus clockd
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description:    Alarm daemon
+# Description:          This init script starts the alarm daemon software
+#                       used on the maemo platform.
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/alarmd.wrapper
+NAME=alarmd
+DESC="Alarm Daemon"
+INITFILE=/etc/init.d/$NAME
+DSMETOOL=/usr/sbin/dsmetool
+DAEMON_OPTS=""
+
+# abort if simple command fails
+set -e
+
+# abort if no executable exists
+test -x $DAEMON
+
+# only use dsmetool if it exists
+test -x $DSMETOOL || USE_DSMETOOL="no"
+
+start_alarmd()
+{
+  if [ -h /targets/links/scratchbox.config ]; then
+    echo "SCRATCHBOX: you need to start $DAEMON manually"
+  elif [ "$USE_DSMETOOL" = "no" ]; then
+    start-stop-daemon --start --quiet --exec $DAEMON -- $DAEMON_OPTS
+  else
+    $DSMETOOL -U user -G users -f "$DAEMON $DAEMON_OPTS"
+  fi
+}
+
+stop_alarmd()
+{
+  if [ -h /targets/links/scratchbox.config ]; then
+    echo "SCRATCHBOX: you need to stop $DAEMON manually"
+  elif [ "$USE_DSMETOOL" = "no" ]; then
+    start-stop-daemon --stop --oknodo --quiet --exec $DAEMON
+  else
+    $DSMETOOL -U user -G users -k "$DAEMON $DAEMON_OPTS"
+  fi
+}
+
+case "$1" in
+  start)
+    printf "Starting $DESC: $NAME\n"
+    start_alarmd
+    ;;
+
+  stop)
+    printf "Stopping: $DESC: $NAME\n"
+    stop_alarmd
+    ;;
+
+  restart|force-reload)
+    printf "Restarting $DESC: $NAME\n"
+    stop_alarmd
+    sleep 2
+    start_alarmd
+    ;;
+
+  *)
+    printf >&2 "Usage: $INITFILE {start|stop|restart|force-reload}\n"
+    exit 1
+    ;;
+esac
+
+exit 0

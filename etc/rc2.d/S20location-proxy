@@ -1,0 +1,47 @@
+#! /bin/sh -e
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DESC="Location proxy"
+NAME="location-proxy"
+DAEMON=/usr/bin/$NAME
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+USER=root
+
+test -x $DAEMON || exit 0
+
+do_start() {
+  start-stop-daemon --start --quiet --pidfile $PIDFILE \
+    --user $USER --exec $DAEMON -- $DAEMON_OPTS
+}
+
+do_stop() {
+  start-stop-daemon --stop --quiet --pidfile $PIDFILE \
+    --oknodo --user $USER --exec $DAEMON
+}
+
+case "$1" in
+  start)
+	echo -n "Starting $DESC: $NAME"
+	do_start
+	echo "."
+	;;
+  stop)
+	echo -n "Stopping $DESC: $NAME"
+	do_stop
+	echo "."
+	;;
+  restart|force-reload)
+	echo -n "Restarting $DESC: $NAME"
+	do_stop
+	sleep 1
+	do_start
+	echo "."
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

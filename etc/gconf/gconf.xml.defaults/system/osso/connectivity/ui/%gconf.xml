@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gprs_data_warning_roaming_acknowledged" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/gprs_data_warning_roaming_acknowledged"/>
+	<entry name="gprs_data_warning_home_acknowledged" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/gprs_data_warning_home_acknowledged"/>
+</gconf>

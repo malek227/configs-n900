@@ -1,0 +1,14 @@
+# 
+# /etc/default/iphbd
+# This is a configuration file for /etc/init.d/iphbd; it allows you to
+# perform common modifications to the behavior of the iphb daemon
+# startup without editing the init script
+#
+export IPHBD_DAEMON_OPTS=""
+#  -d enables debug mode, can be toggled with sending SIGUSR1 to iphbd
+#  -a enables simple mode (where all clients are ALWAYS waken up at the same time)
+#  -k disables TCP keepalive queuing
+#  -w does not wake from kernel signal
+#  NN interval is the heartbeat in seconds (default 30), minumum is 3 secs
+#     (value 0 is to run iphbd in a 'dummy' mode that does not sync clients;
+#      this can be used for power measurements)

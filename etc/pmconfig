@@ -1,0 +1,11 @@
+# Power management configuration file
+enable_off_mode 1
+sleep_while_idle 1
+sr_vdd1_autocomp 0
+sr_vdd2_autocomp 0
+clocks_off_while_idle 1
+voltage_off_while_idle 1
+scaling_governor ondemand
+scaling_max_freq 600000
+scaling_min_freq 125000
+sleep_ind 1

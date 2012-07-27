@@ -1,0 +1,11 @@
+description "Location Proxy"
+author "Quanyi Sun"
+
+#console output
+
+start on started hildon-desktop
+stop on starting shutdown
+stop on ACT_DEAD
+
+exec /usr/bin/location-proxy --no-detach
+respawn

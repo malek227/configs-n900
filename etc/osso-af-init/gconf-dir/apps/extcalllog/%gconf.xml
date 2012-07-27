@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="limit" mtime="1339384931" type="int" value="30"/>
+</gconf>

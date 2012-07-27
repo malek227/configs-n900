@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="tree_view" mtime="1339384278" type="bool" value="false"/>
+	<entry name="alarm_id" mtime="1339333558" type="int" value="0"/>
+	<entry name="fetch_external_images" mtime="1339333557" type="bool" value="false"/>
+	<entry name="reply_type" mtime="1339333557" type="int" value="2"/>
+	<entry name="prefer_formatted_text" mtime="1339333557" type="bool" value="true"/>
+	<entry name="play_sound_msg_arrive" mtime="1339333557" type="bool" value="false"/>
+	<entry name="msg_size_limit" mtime="1339333557" type="int" value="100"/>
+	<entry name="update_interval" mtime="1339333557" type="int" value="30"/>
+	<entry name="update_when_connected_by" mtime="1339333557" type="int" value="1"/>
+	<entry name="auto_add_to_contacs" mtime="1339333557" type="bool" value="true"/>
+	<entry name="notifications" mtime="1339333557" type="bool" value="true"/>
+	<entry name="auto_update" mtime="1339333557" type="bool" value="true"/>
+	<entry name="latest_save_attachment_path" mtime="1339333557" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="latest_inset_image_path" mtime="1339333557" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="latest_attach_file_path" mtime="1339333557" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="show_bcc" mtime="1339333557" type="bool" value="false"/>
+	<entry name="show_cc" mtime="1339333557" type="bool" value="false"/>
+	<entry name="device_name" mtime="1340835111" type="string">
+		<stringvalue>Nokia N900</stringvalue>
+	</entry>
+</gconf>

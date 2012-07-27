@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="callui_dbus_interface" mtime="1284131122" type="schema" stype="list" owner="hildon-desktop" list_type="string">
+		<local_schema locale="C" short_desc="Call UI D-Bus interface for desktop live search.">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>com.nokia.CallUI</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>/com/nokia/CallUI</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>ShowDialpad</stringvalue>
+				</li>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="addressbook_dbus_interface" mtime="1284131122" type="schema" stype="list" owner="hildon-desktop" list_type="string">
+		<local_schema locale="C" short_desc="Addressbook D-Bus interface for desktop live search.">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>com.nokia.osso_addressbook</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>/com/nokia/osso_addressbook</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>search_append</stringvalue>
+				</li>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="disable_phone_gesture" mtime="1284131122" type="schema" stype="bool" owner="hildon-desktop">
+		<local_schema locale="C" short_desc="Disable showing CallUI when desktop is rotated to portrait.">
+			<default type="bool" value="true"/>
+		</local_schema>
+	</entry>
+</gconf>

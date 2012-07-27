@@ -1,0 +1,32 @@
+description "starting bluetooth daemon"
+author "Johan Hedberg"
+
+console none
+
+start on XSESSIONS_STARTING
+stop on stopped xomap
+
+pre-start script
+	BT_CONF=/etc/bluetooth/main.conf
+	NAME_FIXED="/etc/bluetooth/.name-fixed"
+	OSSO_PRODUCT_INFO="/usr/bin/osso-product-info"
+
+	if [ -e $NAME_FIXED ]; then
+		exit 0;
+	fi
+
+	if [ ! -x $OSSO_PRODUCT_INFO ]; then
+		exit 0;
+	fi
+
+	FULL_NAME=`$OSSO_PRODUCT_INFO -q OSSO_PRODUCT_FULL_NAME` || true
+
+	if [ ! -z "$FULL_NAME" ]; then
+		sed -i -e "s/^Name =.*/Name = $FULL_NAME/" $BT_CONF
+		touch $NAME_FIXED
+	fi
+end script
+
+exec /usr/sbin/bluetoothd -n
+
+respawn

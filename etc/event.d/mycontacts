@@ -1,0 +1,12 @@
+description "starts MyContacts"
+
+start on started hildon-desktop
+
+#respawn
+
+console none
+
+script
+	exec su - user -c "exec /opt/crochik/mycontacts"
+end script
+

@@ -1,0 +1,15 @@
+start on stopped rcS
+
+console output
+
+respawn
+
+pre-start script
+    if [ ! -d /var/run/sshd ] ; then
+        mkdir /var/run/sshd
+        chmod 755 /var/run/sshd
+    fi
+end script
+
+exec /usr/sbin/sshd -D
+

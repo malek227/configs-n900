@@ -1,0 +1,282 @@
+#!/bin/sh
+# Copyright(C) 2006 Nokia Corporation.
+
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License version 2 as
+#  published by the Free Software Foundation.
+
+#  This program is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#  General Public License for more details.
+
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301
+#  USA
+
+
+
+umask 022
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MODULES="twl4030-vibra
+dspbridge
+iommu2
+omap3-iommu
+omap34xxcam-mod
+omap_previewer_hack
+board-rx51-camera
+et8ek8
+ad5820
+adp1653
+vs6555
+uinput"
+
+if [ -L /var/run ]
+then
+	rm -f /var/run
+	mkdir /var/run
+fi
+
+mount -n -t proc proc /proc
+mount -n -t sysfs sysfs /sys
+mount -n -t tmpfs -o size=1M,noatime tmpfs /tmp
+mount -n -t tmpfs -o size=256k,mode=0755,nosuid,noatime tmpfs /var/run
+
+#MODE=`getbootstate`
+
+# This doesn't really belong here, but we have start this so early
+start_bootchart(){
+	if [ -e /bootchart -a -e /etc/init.d/bootchart ]
+	then
+		/etc/init.d/bootchart start
+	fi
+}
+
+start_softupd()
+{
+    	echo "Starting software updater"
+	/etc/init.d/softupd.rcS
+}
+
+in_flash_mode()
+{
+	grep update /proc/component_version 1>/dev/null 2>/dev/null
+}
+
+mount_devpts() {
+	TTYGRP=5
+	TTYMODE=620
+
+	if [ ! -d /dev/pts ]
+	then
+	    mkdir /dev/pts
+	fi
+
+	if [ ! -c /dev/ptmx ]
+	then
+	    mknod /dev/ptmx c 5 2
+		chmod 666 /dev/ptmx
+	fi
+
+	mount -n -t devpts -ogid=$TTYGRP,mode=$TTYMODE devpts /dev/pts
+	rm -rf /var/tmp/*
+}
+
+# I hate this hack.  -- Md
+make_extra_nodes () {
+    if [ "$(echo /lib/udev/devices/*)" != "/lib/udev/devices/*" ]; then
+	cp -a /lib/udev/devices/* /dev/
+    fi
+  grep '^[^#]' /etc/udev/links.conf | \
+  while read type name arg1; do
+    [ "$type" -a "$name" -a ! -e "/dev/$name" -a ! -L "/dev/$name" ] ||continue
+    case "$type" in
+    L)
+      ln -s $arg1 /dev/$name
+      ;;
+    D)
+      mkdir -p /dev/$name
+      ;;
+    M)
+      mknod /dev/$name $arg1 && chmod 600 /dev/$name
+      ;;
+    *)
+      echo "unparseable line ($type $name $arg1)"
+      ;;
+    esac
+  done
+}
+
+load_extra_modules () {
+    echo -n "Loading extra modules..."
+    for i in $MODULES; do
+	echo "Loading $i"
+	modprobe -q $i ||:
+    done
+    echo "done."
+}
+
+# Mount home and paging partitions if they are available
+mount_mmc(){
+   device=$1
+   swap=$device"p1"
+   home=$device"p2"
+   test=$device"p3"
+
+   if [ -e $test ]
+   then
+      echo "Mounting partition $swap for paging"
+      # swap disabled as a workaround for Xorg bug, per NB#111807.
+      swapon $swap
+      modprobe ext3
+      echo "Mounting partition $home as home directory"
+      mount -t ext3 -o noatime,commit=1,data=writeback $home /home
+   else
+      echo "No paging partition available as $swap"
+      echo "No home partition available as $home"
+   fi
+}
+
+prepare_start_udev()
+{
+	. /etc/udev/udev.conf
+
+	if [ -z "$tmpfs_size" ]; then
+		tmpfs_size="1M"
+	fi
+
+	ACTION=add
+	echo -n "Mounting a tmpfs over /dev..."
+	mount -n -o size=$tmpfs_size,mode=0755,noatime -t tmpfs none /dev
+	echo "done."
+	mkdir -p /dev/.udev/db /dev/.udev/queue
+	echo "" > /sys/kernel/uevent_helper
+	echo -n "Creating extra device nodes... "
+	make_extra_nodes
+	echo "done."
+}
+
+start_udev()
+{
+    	prepare_start_udev
+	/sbin/udevd --daemon
+}
+
+make_nodes()
+{
+	echo -n "Creating device nodes... "
+
+	if [ -x /sbin/udevtrigger ]; then
+		/sbin/udevtrigger
+	else
+		/sbin/udevadm trigger
+		#wait for all events
+		/sbin/udevadm settle
+	fi
+	echo "done."
+}
+
+# When modifying this script, do not forget that between the time that
+# the new /dev has been mounted and udevtrigger has been run there will be
+# no /dev/null. This also means that you cannot use the "&" shell command.
+
+	start_bootchart
+
+if in_flash_mode; then
+	start_softupd
+	reboot
+fi
+
+# here only in non-flash mode
+
+# No need to start udev before softupd anymore
+
+	start_udev
+	make_nodes
+	load_extra_modules
+
+mount_devpts
+mount -n -o size=64M,nosuid,nodev,noatime -t tmpfs tmpfs /dev/shm
+
+# mount_mmc "/dev/mmcblk0"
+
+/sbin/hwclock -s || true
+
+# cannot collect product data if we are under SDK
+# it should not be run there, but explicit check is better
+
+OPI=`which osso-product-info`
+
+if [ x$OPI != x ]; then
+
+	# Make sure /etc/hostname and /etc/hosts exist and are not empty. They do not
+	# exist if this is the very first boot, and they may be empty if power cut
+	# happended before the contents has reached the media.
+	if [ ! -f /etc/hostname  -o ! -s /etc/hostname -o ! -f /etc/hosts -o ! -s /etc/hosts ]; then
+		hostname="`$OPI -qOSSO_PRODUCT_SHORT_NAME | sed 's/ /-/g'`"
+		echo $hostname > /etc/hostname
+		echo "127.0.0.1 $hostname localhost" > /etc/hosts
+		chmod 644 /etc/hosts
+	fi
+
+	# Similarly, make sure /etc/issue and /etc/issue.net are fine
+	if [ ! -f /etc/issue -o ! -s /etc/issue -o ! -f /etc/issue.net -o ! -s /etc/issue.net -o -f /home/user/first-boot-flag ]; then
+		full_name=`$OPI -qOSSO_PRODUCT_RELEASE_FULL_NAME`
+		echo "$full_name \n \l" > /etc/issue
+		echo "" >> /etc/issue
+		echo "$full_name %h" > /etc/issue.net
+	fi
+fi
+
+# Note, normally we would have to sync the FS to make sure the files have
+# reached the media. But because the files are small, they would be either
+# empty or non-existing in case of an unclean reboot, and we handle both
+# cases.
+
+hostname -F /etc/hostname
+ifup lo &
+
+#echo /sbin/udevsend > /proc/sys/kernel/hotplug
+
+#: > /var/run/utmp
+#chmod 664 /var/run/utmp
+#chgrp utmp /var/run/utmp
+
+rm -f /etc/mtab
+cat /proc/mounts > /etc/mtab
+
+echo 0 > /proc/sys/net/ipv4/conf/all/accept_redirects
+echo 0 > /proc/sys/net/ipv4/conf/default/accept_redirects
+echo 1 > /proc/sys/net/ipv4/conf/all/rp_filter
+echo 1 > /proc/sys/net/ipv4/conf/default/rp_filter
+echo 1 > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
+echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+echo "49152 65535" > /proc/sys/net/ipv4/ip_local_port_range
+echo 6000 > /sys/class/bluetooth/hci0/idle_timeout
+
+# adjust other kernel parameters to minimize memory consumption
+# and optimize IO pressure
+echo 16 > /proc/sys/kernel/pty/max
+echo 1024 > /proc/sys/kernel/threads-max
+echo 8192 > /proc/sys/fs/file-max
+echo 100 > /proc/sys/vm/swappiness
+echo 5 > /proc/sys/vm/page-cluster
+echo 500 > /proc/sys/vm/dirty_expire_centisecs
+echo 65536 > /proc/sys/net/core/rmem_default
+echo 16384 > /proc/sys/net/core/wmem_default
+echo 20 > /proc/sys/net/unix/max_dgram_qlen
+
+# Finalize SSU in case it has been interrupted by power failure
+if test -x /usr/libexec/ham-rescue.sh; then
+  /usr/libexec/ham-rescue.sh
+fi
+
+# Disable sysrq to avoid accidental console-carbage resets.
+echo 0 > /proc/sys/kernel/sysrq
+
+echo "/what/me/worry" > /proc/sys/kernel/core_pattern
+echo 1 > /proc/sys/kernel/panic
+echo 1 > /proc/sys/kernel/panic_on_oops
+
+exit 0

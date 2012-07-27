@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sms-button" mtime="1284131107" schema="/schemas/apps/osso-addressbook/sms-button"/>
+	<entry name="video-button" mtime="1284131107" schema="/schemas/apps/osso-addressbook/video-button"/>
+	<entry name="map-helper" mtime="1284131107" schema="/schemas/apps/osso-addressbook/map-helper"/>
+	<entry name="voicemail-numbers" mtime="1284131107" schema="/schemas/apps/osso-addressbook/voicemail-numbers"/>
+	<entry name="voicemail-vcard" mtime="1284131107" schema="/schemas/apps/osso-addressbook/voicemail-vcard"/>
+	<entry name="last-imsi" mtime="1284131107" schema="/schemas/apps/osso-addressbook/last-imsi"/>
+	<entry name="home-applets" mtime="1284131107" schema="/schemas/apps/osso-addressbook/home-applets"/>
+	<entry name="name-order" mtime="1284131107" schema="/schemas/apps/osso-addressbook/name-order"/>
+	<entry name="contact-order" mtime="1284131107" schema="/schemas/apps/osso-addressbook/contact-order"/>
+	<entry name="self-avatar-imported" mtime="1284131107" schema="/schemas/apps/osso-addressbook/self-avatar-imported"/>
+	<entry name="self-vcard" mtime="1284131107" schema="/schemas/apps/osso-addressbook/self-vcard"/>
+</gconf>

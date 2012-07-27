@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="disclaimer-accepted" mtime="1339385990" type="bool" value="false"/>
+	<entry name="network-disabled" mtime="1340006068" type="bool" value="true"/>
+	<entry name="gps-disabled" mtime="1340006068" type="bool" value="true"/>
+	<entry name="sim_imsi" mtime="1339333386" type="string">
+		<stringvalue>240084704146589</stringvalue>
+	</entry>
+</gconf>

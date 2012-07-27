@@ -1,0 +1,27 @@
+#! /bin/sh
+
+FMTX_ENABLED=`gconftool -g /system/fmtx/enabled | grep false`
+
+case "$1" in
+start)
+	if [ FMTX_ENABLED ] ; then
+	echo "Starting FMTX-daemon"
+	fmtxd -d
+	fi
+	;;
+stop)
+	killall fmtxd
+	;;
+restart)
+	echo "$0: not implemented"
+	exit 1
+	;;
+force-reload)
+	echo "$0: not implemented"
+	exit 1
+	;;
+*)	echo "Usage: $0 {start|stop}"
+	exit 1
+	;;
+esac
+

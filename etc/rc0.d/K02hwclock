@@ -1,0 +1,81 @@
+#!/bin/sh
+#
+# This file is part of osso-af-startup.
+#
+# Copyright (C) 2004-2007 Nokia Corporation. All rights reserved.
+#
+# Contact: Gabriel Schulhof <gabriel.schulhof@nokia.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2 as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+# 02110-1301 USA
+#
+### BEGIN INIT INFO
+# Provides:          hwclock
+# Required-Start:
+# Required-Stop:
+# Default-Start:     S 1 2 3 4 5
+# Default-Stop:      0 6
+# Short-Description: Hardware clock sync
+# Description:       Syncronizes the system clock to the hardware clock
+#                    at shutdown and the hardware clock to the system
+#                    clock at bootup
+### END INIT INFO
+# -*- coding: utf-8 -*-
+# Debian init.d script for hwclock
+# Copyright Nokia Corporation 2008
+
+start()
+{
+  if test -x "/sbin/hwclock"; then
+    echo -n 'Synching hardware clock to system time ... '
+    /sbin/hwclock -s
+    if test "x$?" = "x0"; then
+      echo "OK"
+    else
+      echo "FAILED"
+    fi
+  fi
+}
+
+stop()
+{
+  if test -x "/sbin/hwclock"; then
+    echo -n 'Synching system time to hardware clock ... '
+    /sbin/hwclock -w
+    if test "x$?" = "x0"; then
+      echo "OK"
+    else
+      echo "FAILED"
+    fi
+  fi
+}
+
+case "$1" in
+  start)
+    start
+  ;;
+  restart)
+  stop
+  start
+  ;;
+  force-reload)
+  ;;
+  stop)
+    stop
+  ;;
+  *)
+    echo "Usage: /etc/init.d/$NAME {start|stop|restart}" >&2
+    exit 2
+  ;;
+esac

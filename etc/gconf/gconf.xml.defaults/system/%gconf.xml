@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="warranty" mtime="1284131098" schema="/schemas/system/warranty"/>
+</gconf>

@@ -1,0 +1,15 @@
+description "shutdown splashscreen"
+author "Tuomo Tanskanen <ext-tuomo.1.tanskanen@nokia.com>"
+
+console output
+
+start on stopping dbus
+start on stopping dbus-actdead
+
+script
+	[ $(pidof splashscreen-util) ] && exit 0
+	echo "yes" > /tmp/splashscreen-already-running
+	exec su - user -c "/usr/bin/splashscreen-util --shutdown --sound --no-window"
+end script
+
+service

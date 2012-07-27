@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="selected" mtime="1339483285" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>00:17:B0:11:2D:31</stringvalue>
+		</li>
+	</entry>
+	<entry name="visible" mtime="1340219276" type="bool" value="true"/>
+	<entry name="enabled" mtime="1340222613" type="bool" value="false"/>
+</gconf>

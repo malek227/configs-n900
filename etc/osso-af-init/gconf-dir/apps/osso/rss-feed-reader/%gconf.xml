@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last_refresh" mtime="1340201729" type="int" value="1340201729"/>
+	<entry name="last-vpane-pos" mtime="1340774824" type="int" value="200"/>
+	<entry name="last-itemlist-mode" mtime="1340774824" type="bool" value="true"/>
+	<entry name="refresh-state" mtime="1340846791" type="int" value="0"/>
+	<entry name="ns_pb" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_photo" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_cc" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_ag" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_admin" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_syn" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_content" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_slash" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_fm" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_dc" mtime="1339334756" type="bool" value="true"/>
+	<entry name="ns_blogChannel" mtime="1339334756" type="bool" value="true"/>
+	<entry name="start-first-time" mtime="1339334756" type="string">
+		<stringvalue>1275995416</stringvalue>
+	</entry>
+	<entry name="last-showfolders" mtime="1339334756" type="bool" value="true"/>
+	<entry name="last-window-maximized" mtime="1339478053" type="bool" value="false"/>
+	<entry name="disable-toolbar" mtime="1339334756" type="bool" value="false"/>
+	<entry name="disable-toolbar-fullscreen" mtime="1339334756" type="bool" value="false"/>
+	<entry name="open-feeds-to" mtime="1339478192" type="int" value="1"/>
+	<entry name="item-sort-order" mtime="1339334756" type="int" value="1"/>
+	<entry name="item-sort-key" mtime="1339334756" type="int" value="0"/>
+	<entry name="update-type" mtime="1339478192" type="int" value="0"/>
+	<entry name="update-interval" mtime="1339478192" type="int" value="2"/>
+	<entry name="automatic-update" mtime="1339478192" type="bool" value="true"/>
+	<entry name="zoom-level" mtime="1339334756" type="int" value="100"/>
+	<entry name="image-cache-size" mtime="1339478192" type="int" value="4"/>
+	<entry name="image-cache" mtime="1339334756" type="string">
+		<stringvalue>/home/user/.osso_rss_feed_reader/cache/images</stringvalue>
+	</entry>
+	<entry name="alarm_id" mtime="1340846789" type="bool" value="false"/>
+</gconf>

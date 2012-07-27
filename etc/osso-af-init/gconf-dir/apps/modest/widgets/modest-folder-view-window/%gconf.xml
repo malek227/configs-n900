@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="tree_view_indentation" mtime="1339384278" type="int" value="30"/>
+</gconf>

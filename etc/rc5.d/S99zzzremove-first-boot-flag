@@ -1,0 +1,65 @@
+#!/bin/sh
+#
+# This file is part of osso-af-startup.
+#
+# Copyright (C) 2004-2007 Nokia Corporation. All rights reserved.
+#
+# Contact: Gabriel Schulhof <gabriel.schulhof@nokia.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2 as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+# 02110-1301 USA
+#
+### BEGIN INIT INFO
+# Provides:		zzzremove-first-boot-flag
+# Required-Start:	$all
+# Required-Stop:
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 2 3 4 5 6
+# Short-Description:	Remove first-boot-flag.
+# Description:		Removes /tmp/first-boot-flag-tmp, concluding
+#			the first boot.
+### END INIT INFO
+#
+# Init startup kludge to notify, via D-Bus,
+# that a runlevel has run all the init-scripts
+#
+# Copyright © 2007 Nokia Corporation.  All rights reserved.
+#
+# @author David Weinehall <david.weinehall@nokia.com>
+
+FIRST_BOOT_FLAG_TMP=/tmp/first-boot-flag-tmp
+INITFILE=/etc/init.d/zzzremove-first-boot-flag
+
+case "$1" in
+start|restart|force-reload)
+	printf "Removing $FIRST_BOOT_FLAG_TMP"
+	if test -e $FIRST_BOOT_FLAG_TMP; then
+	  rm -f $FIRST_BOOT_FLAG_TMP
+	fi
+	printf ".\n"
+	;;
+
+stop)
+	;;
+
+status)
+	;;
+
+*)
+	printf "Usage: $INITFILE {start|stop|restart|force-reload}\n" >&2
+	exit 1
+	;;
+esac
+
+exit 0

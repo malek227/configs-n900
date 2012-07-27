@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="service" mtime="1284131107" type="schema" stype="string" owner="libnavigation">
+		<local_schema locale="C" short_desc="Map &amp; Navigation provider">
+			<default type="string">
+				<stringvalue>com.nokia.Navigation.NokiaMapsProvider</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

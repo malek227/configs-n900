@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="inhibit_blank_mode" mtime="1340148701" type="int" value="1"/>
+	<entry name="enable_power_saving" mtime="1340148701" type="bool" value="true"/>
+	<entry name="display_dim_timeout" mtime="1340148701" type="int" value="10"/>
+	<entry name="display_brightness" mtime="1340956944" type="int" value="4"/>
+</gconf>

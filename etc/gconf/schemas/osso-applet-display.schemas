@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/display_dim_timeout</key>
+      <applyto>/system/osso/dsm/display/display_dim_timeout</applyto>
+      <owner>osso-applet-display</owner>
+      <type>int</type>
+      <default>30</default>
+      <locale name="C">
+        <short>Timeout for display dimming</short>
+	<long>This key contains the timeout for display dimming in seconds.
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/display_blank_timeout</key>
+      <applyto>/system/osso/dsm/display/display_blank_timeout</applyto>
+      <owner>osso-applet-display</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Timeout for display blanking</short>
+	<long>This key contains the timeout for display blanking in seconds.
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/display_brightness</key>
+      <applyto>/system/osso/dsm/display/display_brightness</applyto>
+      <owner>osso-applet-display</owner>
+      <type>int</type>
+      <default>4</default>
+      <locale name="C">
+	<short>Display brightness level.</short>
+	<long>
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/display_brightness_level_step</key>
+      <applyto>/system/osso/dsm/display/display_brightness_level_step</applyto>
+      <owner>osso-applet-display</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Minimum step of brightness.</short>
+	<long>
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/max_display_brightness_levels</key>
+      <applyto>/system/osso/dsm/display/max_display_brightness_levels</applyto>
+      <owner>osso-applet-display</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+        <short>Maximum brightness level.</short>
+	<long>
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/possible_display_dim_timeouts</key>
+      <applyto>/system/osso/dsm/display/possible_display_dim_timeouts</applyto>
+      <owner>osso-applet-display</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[10, 30, 60, 120]</default>
+      <locale name="C">
+        <short>Possible timeouts for display dimming</short>
+	<long>This key contains the allowed values for display dimming timeout.
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/possible_display_blank_timeouts</key>
+      <applyto>/system/osso/dsm/display/possible_display_blank_timeouts</applyto>
+      <owner>osso-applet-display</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[30, 60, 120, 300]</default>
+      <locale name="C">
+        <short>Possible timeouts for display blanking</short>
+	<long>This key contains the allowed values for display blanking timeout.
+        </long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/locks/touchscreen_keypad_autolock_enabled</key>
+      <applyto>/system/osso/dsm/locks/touchscreen_keypad_autolock_enabled</applyto>
+      <owner>osso-applet-display</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Should tklock be enabled when display is blanked.</short>
+	<long>If true, touch screen and keypad lock will be enabled, when
+	  display is blanked
+        </long>
+      </locale>
+    </schema>
+    <schema>
+	    <key>/schemas/system/osso/dsm/vibra/touchscreen_vibra_enabled</key>
+	    <applyto>/system/osso/dsm/vibra/touchscreen_vibra_enabled</applyto>
+	    <owner>osso-applet-display</owner>
+	    <type>bool</type>
+	    <default>true</default>
+	    <locale name="C">
+		    <short>Should touchscreen vibration be enabled</short>
+		    <long>If true, touch screen vibrate will be enabled
+		    </long>
+	    </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/inhibit_blank_mode</key>
+      <applyto>/system/osso/dsm/display/inhibit_blank_mode</applyto>
+      <owner>OSSO</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Inhibit display blanking mode</short>
+	<long>No inhibit blanking (0); If the charger connected, inhibit display blanking (1);</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/osso/dsm/display/enable_power_saving</key>
+      <applyto>/system/osso/dsm/display/enable_power_saving</applyto>
+      <owner>osso-applet-display</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Enable power saving mode for display</short>
+	<long>Enable power saving, true; Disable power saving, false</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternDeviceOn</key>
+      <applyto>/system/osso/dsm/leds/PatternDeviceOn</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Should a led pattern be shown when the device is on.</short>
+	<long>If true, a led pattern will be shown always when the device
+	  is on.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternCommunicationCall</key>
+      <applyto>/system/osso/dsm/leds/PatternCommunicationCall</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Should a led pattern be shown when there's an incoming
+	  call.</short>
+	<long>If true, a led pattern will be shown when an incoming call is
+	  received.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternCommunicationSMS</key>
+      <applyto>/system/osso/dsm/leds/PatternCommunicationSMS</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Should a led pattern be shown when there's an SMS message received.</short>
+	<long>If true, a led pattern will be shown when an SMS message is
+	  received.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternBatteryCharging</key>
+      <applyto>/system/osso/dsm/leds/PatternBatteryCharging</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Should a led pattern be shown when the device is charged.</short>
+	<long>If true, a led pattern will be shown always when the device
+	  is being charged.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternBatteryFull</key>
+      <applyto>/system/osso/dsm/leds/PatternBatteryFull</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Should a led pattern be shown when the battery is full and charger connected.</short>
+	<long>If true, a led pattern will be shown always when the device
+	  battery is full and the charger is still connected.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternCommunicationEmail</key>
+      <applyto>/system/osso/dsm/leds/PatternCommunicationEmail</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Should a led pattern be shown when new email is received.</short>
+	<long>If true, a led pattern will be shown when new email has been
+	  received.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternCommunicationIM</key>
+      <applyto>/system/osso/dsm/leds/PatternCommunicationIM</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Should a led pattern be shown when instant messages are
+	  received.</short>
+	<long>If true, a led pattern will be shown when new instant messages
+	  are received.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/osso/dsm/leds/PatternCommonNotification</key>
+      <applyto>/system/osso/dsm/leds/PatternCommonNotification</applyto>
+      <owner>OSSO</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Should PatternCommonNotification led patterns be shown.</short>
+        <long>If true, a led pattern may be enabled for PatternCommonNotification events.</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

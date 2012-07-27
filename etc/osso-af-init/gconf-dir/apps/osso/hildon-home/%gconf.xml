@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="task-shortcuts-back" mtime="1339382058" type="int" value="0"/>
+	<entry name="task-bookmarks-size" mtime="1339382058" type="int" value="96"/>
+	<entry name="task-shortcuts-size" mtime="1339382058" type="int" value="100"/>
+	<entry name="task-shortcuts" mtime="1340934393" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>panucci.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>catorise-image-viewer.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>fapman.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>nokia-maps.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>gpodder.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>hildon-control-panel.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>glogarchive.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>bouncebounce.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>timeshop.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>catorise-rtcom-messaging-ui.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>mediaplayer.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>gigfinder.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>gpe-filemanager.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>osso-xterm.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>worldclock.desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="bookmark-shortcuts" mtime="1340934393" type="list" ltype="string">
+	</entry>
+</gconf>

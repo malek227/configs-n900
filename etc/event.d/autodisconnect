@@ -1,0 +1,21 @@
+#
+# App : AutoDisconnect
+# Url : https://garage.maemo.org/projects/autodisconnect/
+# Version: 0.4
+# Author: Aymeric Brisse <aymeric.brisse@gmail.com>
+# License: GNU General Public License
+#
+
+author "Aymeric Brisse"
+description "This init script starts the AutoDisconnect Bluetooth Checker"
+
+console none
+start on started bluetoothd
+stop on stopping bluetoothd
+
+script	
+        exec su user -c "/opt/autodisconnect/autodisconnect-bluetooth-check &"
+end script
+
+
+

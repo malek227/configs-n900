@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last_video_library_view_state" mtime="1340926684" type="int" value="14"/>
+	<entry name="last_playing_song" mtime="1340926655" type="int" value="79"/>
+	<entry name="last_playing_video" mtime="1340926670" type="int" value="46"/>
+	<entry name="all_songs_amount" mtime="1340925692" type="int" value="1717"/>
+	<entry name="all_songs_amount_for_shuffle_all" mtime="1340925692" type="int" value="1249"/>
+	<entry name="last_playing_view_state" mtime="1340926662" type="int" value="12"/>
+</gconf>

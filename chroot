@@ -1,0 +1,4 @@
+export SHELL=/bin/zsh
+export CHROOTUSER=user
+export GTK_MODULES=libgtkstylus.so
+#export DEBUSER=

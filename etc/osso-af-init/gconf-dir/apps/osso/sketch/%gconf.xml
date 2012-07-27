@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="new_height" mtime="1340632063" type="int" value="320"/>
+	<entry name="new_width" mtime="1340632063" type="int" value="752"/>
+	<entry name="folder" mtime="1340632063" type="string">
+		<stringvalue>/home/user/MyDocs/.images</stringvalue>
+	</entry>
+</gconf>

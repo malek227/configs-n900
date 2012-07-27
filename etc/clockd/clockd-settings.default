@@ -1,0 +1,45 @@
+
+# 
+# /etc/clockd/clockd-settings.default
+# This is a configuration file for /etc/init.d/clockd; it allows you to
+# perform common modifications to the behavior of the clock daemon
+# startup without editing the init script
+
+
+#
+# CLOCKD_DAEMON_OPTS is the commandline arguments passed to clockd:
+#  -d enables debug mode, can be toggled with sending SIGUSR1 to clockd
+export CLOCKD_DAEMON_OPTS=""
+
+#
+#
+#
+# CLOCKD_NET_TIME controls cell network time setting.
+# Values:
+#    disabled    The configuration does not have cellmodem or
+#                enabling automatic network time setting is not allowed;
+#                API time_is_operator_time_accessible() returns false.               
+#    yes         By default automatic setting is enabled.
+#                Can be controlled via libtime API time_set_autosync()
+#    no          By default automatic setting is disabled.
+#                Can be controlled via libtime API time_set_autosync()
+#
+export CLOCKD_NET_TIME=yes
+
+
+#
+# CLOCKD_TIME_FORMAT sets the initial time format. See strftime.
+# The leading % is not necessary.
+# Typical settings:
+#   R for 24 hour clock
+#   r for 12 hour clock
+export CLOCKD_TIME_FORMAT=r
+
+
+#
+# CLOCKD_DEFAULT_TZ is the default time zone provided to libtime
+# users. This is an opaque string - clockd only gives it to
+# clients via libtime
+#
+export CLOCKD_DEFAULT_TZ="327"
+

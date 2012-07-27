@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/osso/browser/engine</key>
+      <applyto>/apps/osso/browser/engine</applyto>
+      <owner>browser-ui</owner>
+      <type>string</type>
+      <default>microb</default>
+      <locale name="C">
+        <short>Browser default engine</short>
+	<long>Setting browser default engine</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/browser/hidden</key>
+      <applyto>/apps/osso/browser/hidden</applyto>
+      <owner>browser-ui</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Browser hidden menu</short>
+	<long>Setting browser hidden menu</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

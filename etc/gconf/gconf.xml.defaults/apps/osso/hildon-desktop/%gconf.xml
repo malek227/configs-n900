@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="callui_dbus_interface" mtime="1284131122" schema="/schemas/apps/osso/hildon-desktop/callui_dbus_interface"/>
+	<entry name="addressbook_dbus_interface" mtime="1284131122" schema="/schemas/apps/osso/hildon-desktop/addressbook_dbus_interface"/>
+	<entry name="disable_phone_gesture" mtime="1284131122" schema="/schemas/apps/osso/hildon-desktop/disable_phone_gesture"/>
+</gconf>

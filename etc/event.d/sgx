@@ -1,0 +1,30 @@
+description "SGX Driver"
+author "Oliver McFadden"
+
+start on started hal
+stop on stopping hal
+
+console output
+
+pre-start script
+	echo "Starting SGX Driver" > /dev/console
+
+	test -f /targets/links/scratchbox.config && exit 0
+
+	# FIXME: RX-71
+	if [ -n "$(grep RX-51 /proc/component_version)" ]; then
+		echo 0 > /sys/devices/platform/omapdss/overlay0/enabled
+		size=$(cat /sys/class/graphics/fb0/size)
+		echo 0 > /sys/class/graphics/fb0/size
+		echo 1 > /sys/class/graphics/fb0/rotate_type
+		echo $size > /sys/class/graphics/fb0/size
+		echo 1 > /sys/devices/platform/omapdss/overlay0/enabled
+	fi
+
+	modprobe omaplfb
+	modprobe pvrsrvkm
+	/usr/sbin/pvrsrvinit
+	chown user /dev/pvrsrvkm
+end script
+
+service

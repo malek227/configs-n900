@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="bookmark-shortcuts" mtime="1284131104" type="schema" stype="list" list_type="string">
+		<local_schema locale="C">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>maemo.nokia.com_maemo-select</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>facebook.com</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>twitter.com</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>link.ovi.mobi_n900ovistore</stringvalue>
+				</li>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

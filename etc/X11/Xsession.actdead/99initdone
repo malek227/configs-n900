@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sleep 15
+dbus-send --system --type=signal /com/nokia/startup/signal com.nokia.startup.signal.init_done
+echo "Actdead: Init-done signal sent"
+

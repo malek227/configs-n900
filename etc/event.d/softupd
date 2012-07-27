@@ -1,0 +1,15 @@
+description "Softupd"
+
+start on G_NOKIA_READY
+stop on G_NOKIA_REMOVE
+
+console output
+
+script
+	echo "Starting softupd"
+	/usr/sbin/waitdbus system
+	exec /usr/sbin/softupd
+end script
+
+console output
+respawn

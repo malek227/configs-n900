@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gettext_catalog" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_ADHOC/gettext_catalog"/>
+	<entry name="name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_ADHOC/name"/>
+	<entry name="statusbar_dimmed_icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_ADHOC/statusbar_dimmed_icon_name"/>
+	<entry name="statusbar_icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_ADHOC/statusbar_icon_name"/>
+	<entry name="icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_ADHOC/icon_name"/>
+</gconf>

@@ -1,0 +1,4 @@
+start on started hildon-desktop
+script
+	/etc/init.d/jenirokd start -boot
+end script 

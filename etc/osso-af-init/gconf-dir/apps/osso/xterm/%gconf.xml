@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="font_size_delta" mtime="1340685095" type="int" value="4"/>
+	<entry name="background" mtime="1340154800" type="string">
+		<stringvalue>#000009</stringvalue>
+	</entry>
+	<entry name="foreground" mtime="1340154800" type="string">
+		<stringvalue>#cccccc</stringvalue>
+	</entry>
+	<entry name="font_size" mtime="1340154800" type="int" value="16"/>
+	<entry name="font_name" mtime="1340154800" type="string">
+		<stringvalue>Fixed Medium Semi-Condensed</stringvalue>
+	</entry>
+</gconf>

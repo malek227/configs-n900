@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sms-button" mtime="1284131107" type="schema" stype="bool" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Show SMS button only for mobiles">
+			<default type="bool" value="false"/>
+			<longdesc>Whether or not we should display the SMS button in contact starter only for mobile numbers.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="video-button" mtime="1284131107" type="schema" stype="bool" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Show video call button">
+			<default type="bool" value="true"/>
+			<longdesc>Whether or not we should display the video call button in contact starter.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="map-helper" mtime="1284131107" type="schema" stype="string" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Name of the map helper program.">
+			<default type="string">
+				<stringvalue>nokia-maps</stringvalue>
+			</default>
+			<longdesc>Short name of the map helper program installed in /usr/lib/osso-addressbook/map-helpers, e.g. &quot;nokia-maps&quot; or &quot;browser-maps&quot;.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="voicemail-numbers" mtime="1284131107" type="schema" stype="list" owner="osso-addressbook" list_type="string">
+		<local_schema locale="C" short_desc="Voicemail numbers">
+			<longdesc>Phone numbers of preferred voicemail boxes.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="voicemail-vcard" mtime="1284131107" type="schema" stype="string" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Voicemail vCard">
+			<longdesc>Description of the voicemail contact.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="last-imsi" mtime="1284131107" type="schema" stype="string" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Last IMSI">
+			<longdesc>Id code of the last inserted SIM card.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="home-applets" mtime="1284131107" type="schema" stype="list" owner="osso-addressbook" list_type="string">
+		<local_schema locale="C" short_desc="Home Applets">
+			<longdesc>UID list of contacts with a desktop shortcut.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="name-order" mtime="1284131107" type="schema" stype="int" owner="osso-addressbook">
+		<local_schema locale="nl">
+			<default type="int" value="1"/>
+		</local_schema>
+		<local_schema locale="ru">
+			<default type="int" value="1"/>
+		</local_schema>
+		<local_schema locale="fi">
+			<default type="int" value="1"/>
+		</local_schema>
+		<local_schema locale="C" short_desc="Name order when sorting">
+			<default type="int" value="0"/>
+			<longdesc>
+          Display method: 0 = given name first; 1 = family name first, separated by comma;
+          2 = family name first, separated by space; 3 = nickname.
+        </longdesc>
+		</local_schema>
+		<local_schema locale="de">
+			<default type="int" value="1"/>
+		</local_schema>
+		<local_schema locale="sv">
+			<default type="int" value="1"/>
+		</local_schema>
+		<local_schema locale="no">
+			<default type="int" value="1"/>
+		</local_schema>
+	</entry>
+	<entry name="contact-order" mtime="1284131107" type="schema" stype="int" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Contact order">
+			<default type="int" value="0"/>
+			<longdesc>Contact order: 0 = name; 1 = presence.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="self-avatar-imported" mtime="1284131107" type="schema" stype="bool" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Is self avatar imported">
+			<default type="bool" value="false"/>
+			<longdesc>Is the user&apos;s avatar already imported from an IM account into the Me-card.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="self-vcard" mtime="1284131107" type="schema" stype="string" owner="osso-addressbook">
+		<local_schema locale="C" short_desc="Me-card">
+			<default type="string">
+				<stringvalue></stringvalue>
+			</default>
+			<longdesc>The VCard of the user.</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gconfschemafile xmlns:confml="http://www.s60.com/xml/confml/2">
+  <schemalist>
+    <!--Settings for tutorial-home.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/tutorial-home.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/tutorial-home.desktop/view</applyto>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/tutorial-home.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/tutorial-home.desktop/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[0,408]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of tutorial-home.desktop settings-->
+    <!--Settings for ovi-promotion-widget.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/ovi-promotion-widget.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/ovi-promotion-widget.desktop/view</applyto>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/ovi-promotion-widget.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/ovi-promotion-widget.desktop/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[155,344]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of ovi-promotion-widget.desktop settings-->
+    <!--Settings for google-search-widget.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/google-search-widget.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/google-search-widget.desktop/view</applyto>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/google-search-widget.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/google-search-widget.desktop/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[552,127]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of google-search-widget.desktop settings-->
+    <!--Settings for calendar-home-applet.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/calendar-home-applet.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/calendar-home-applet.desktop/view</applyto>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/calendar-home-applet.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/calendar-home-applet.desktop/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[119,142]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of calendar-home-applet.desktop settings-->
+  </schemalist>
+</gconfschemafile>

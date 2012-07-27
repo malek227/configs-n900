@@ -1,0 +1,12 @@
+description "starting iphb"
+author "Raimo Vuonnala"
+
+console none
+start on XSESSIONS_STARTING
+stop on stopping xomap
+
+script
+   # Give time to xsessions to proceed up to PIN query
+   sleep 5
+   /etc/init.d/iphbd start
+end script

@@ -1,0 +1,2 @@
+#! /bin/sh
+sudo touch /var/run/pin-query-done

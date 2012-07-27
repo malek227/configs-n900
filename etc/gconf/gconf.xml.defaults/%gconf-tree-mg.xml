@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Tobin-drohy">
+						<longdesc>Rohin&apos;ny lahatahirin&apos;ny gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

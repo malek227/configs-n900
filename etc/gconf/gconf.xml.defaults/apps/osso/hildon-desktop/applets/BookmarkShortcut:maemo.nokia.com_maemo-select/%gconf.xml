@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="position" mtime="1284131104" schema="/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:maemo.nokia.com_maemo-select/position"/>
+	<entry name="view" mtime="1284131104" schema="/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:maemo.nokia.com_maemo-select/view"/>
+</gconf>

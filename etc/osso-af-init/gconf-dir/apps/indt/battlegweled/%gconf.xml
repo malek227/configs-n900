@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="serverip" mtime="1339486065" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="createserver" mtime="1339486065" type="bool" value="true"/>
+</gconf>

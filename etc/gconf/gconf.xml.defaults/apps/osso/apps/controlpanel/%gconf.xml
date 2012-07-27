@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="group_ids" mtime="1284131106" schema="/schemas/apps/osso/apps/controlpanel/group_ids"/>
+	<entry name="groups" mtime="1284131106" schema="/schemas/apps/osso/apps/controlpanel/groups"/>
+</gconf>

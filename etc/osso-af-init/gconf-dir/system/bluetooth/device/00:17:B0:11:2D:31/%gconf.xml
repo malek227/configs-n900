@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="icon" mtime="1339483285" type="string">
+		<stringvalue>control_bluetooth_phone</stringvalue>
+	</entry>
+	<entry name="class" mtime="1339483285" type="int" value="16769540"/>
+	<entry name="name" mtime="1339483285" type="string">
+		<stringvalue>Mediaspelaren</stringvalue>
+	</entry>
+	<entry name="services" mtime="1339483284" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>telephony</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>object transfer</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>networking</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00000002-0000-1000-8000-0002ee000002</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>SPP</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>DUN</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>OPP</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>FTP</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>HSP-AG</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>HFP-AG</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>SAP</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00001200-0000-1000-8000-00805f9b34fb</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00005001-0000-1000-8000-0002ee000001</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00005002-0000-1000-8000-0002ee000001</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00005003-0000-1000-8000-0002ee000001</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00005557-0000-1000-8000-0002ee000001</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>00005601-0000-1000-8000-0002ee000001</stringvalue>
+		</li>
+	</entry>
+</gconf>

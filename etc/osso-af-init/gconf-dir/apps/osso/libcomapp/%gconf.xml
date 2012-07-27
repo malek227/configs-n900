@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="osso_sketch" mtime="1340632358" type="int" value="0"/>
+	<entry name="osso_notes" mtime="1340095898" type="int" value="0"/>
+</gconf>

@@ -1,0 +1,3 @@
+user ALL = NOPASSWD: /usr/bin/hildon-input-method-configurator.bin
+user ALL = NOPASSWD: /bin/touch /etc/hildon-input-method.configured
+user ALL = NOPASSWD: /bin/rm /etc/hildon-input-method.configured

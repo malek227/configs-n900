@@ -1,0 +1,13 @@
+<powerkeymenu path="/">
+ <menuitem priority="401" name="Swappolube">
+    <icon>swappolube</icon>
+    <callback service="com.nokia.HildonDesktop.AppMgr" 
+              path="/com/nokia/HildonDesktop/AppMgr" 
+              interface="com.nokia.HildonDesktop.AppMgr" 
+              method="LaunchApplication" 
+              bus="session" 
+              autostart="true">
+        <argument type="string">swappolube</argument>
+    </callback>
+ </menuitem>
+</powerkeymenu>

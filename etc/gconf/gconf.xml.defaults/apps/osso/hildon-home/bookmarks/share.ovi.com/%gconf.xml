@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/url"/>
+	<entry name="label" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/label"/>
+	<entry name="icon" mtime="1284131104" schema="/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/icon"/>
+</gconf>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="list" mtime="1284131122" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/list"/>
+	<entry name="current" mtime="1284131122" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/current"/>
+	<entry name="language-1" mtime="1284131122" schema="/schemas/apps/osso/inputmethod/hildon-im-languages/language-1"/>
+</gconf>

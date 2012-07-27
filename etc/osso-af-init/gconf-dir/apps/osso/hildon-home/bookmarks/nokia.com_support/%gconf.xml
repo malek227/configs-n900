@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="url" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/url" type="string">
+		<stringvalue>nokia.com/support</stringvalue>
+	</entry>
+	<entry name="label" mtime="1340934384" schema="/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/label" type="string">
+		<stringvalue>Nokia Support</stringvalue>
+	</entry>
+	<entry name="icon" mtime="1340934383" schema="/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/icon" type="string">
+		<stringvalue>/usr/share/bookmark-manager/thumbnails/thumbnail_support.png</stringvalue>
+	</entry>
+</gconf>

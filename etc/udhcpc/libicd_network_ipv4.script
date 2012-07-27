@@ -1,0 +1,4 @@
+#!/bin/sh
+# Place your script to /etc/maemo-dhcp.d directory so that it gets run.
+
+run-parts -a "$1" /etc/maemo-dhcp.d

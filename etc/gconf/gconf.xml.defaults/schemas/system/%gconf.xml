@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="warranty" mtime="1284131098" type="schema" stype="string" owner="warranty">
+		<local_schema locale="C">
+			<default type="string">
+				<stringvalue>invalid</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

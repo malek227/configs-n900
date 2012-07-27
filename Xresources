@@ -1,0 +1,341 @@
+/*~/etc/Xresources                                                           {{{
+     File: Xresources
+   Author: Magnus Woldrich <m@japh.se>
+  Created: 2008-04-24
+  Updated: 2012-06-05 08:36:55
+
+Grouped by subject.
+A lot of different hosts use this file. You will not find any color
+definitions here; see the "additional rc's" block below.
+
+I've patched[0] urxvt to allow for redefinition of the full 256 color
+table. This is a feature that XTerm supports just fine (see resource
+dynamicColors and VT100.allowColorOps). See Colorcoke[1] for how a user
+may change them; see Term::ExtendedColor::Xresources[2] for how you'd do
+it programmatically.
+
+I use three or even up to four different fonts in all standard terminals; one
+per fontface.
+I change fonts on the fly in urxvt and xterm; see pickyfont[3]
+
+[0]: https://github.com/trapd00r/rxvt-unicode
+[1]: https://github.com/trapd00r/colorcoke
+[2]: https://github.com/trapd00r/Term-ExtendedColor-Xresources
+[3]: https://github.com/trapd00r/pickyfont
+}}}*/
+! additional rc                                                              {{{
+#include "/home/scp1/etc/Xcolors/nancy.Xresources"
+!#include "/home/scp1/etc/Xcolors/trapd00r_new.Xresources"
+!include "/home/scp1/etc/Xcolors/better_defaults.Xresources"
+!#include "/home/scp1/etc/Xcolors/matrix.Xresources"
+!#include "/home/scp1/etc/Xcolors/random_selection.Xresources"
+!#include "/home/scp1/etc/Xcolors/rasi.Xresources"
+!#include "/home/scp1/etc/Xcolors/rasta.Xresources"
+!#include "/home/scp1/etc/Xcolors/tango.Xresources"
+!#include "/home/scp1/etc/Xcolors/trapd00r_correct_ansi.Xresources"
+!#include "/home/scp1/etc/Xcolors/trapd00r_default.Xresources"
+!#include "/home/scp1/etc/Xcolors/trasmatta.Xresources"
+!#include "/home/scp1/etc/Xcolors/xterm_default.Xresources"
+!}}}
+! fonts                                                                      {{{
+!#define FONT_NORMAL     xft:Neep Alt:style=SemiCondensed:pixelsize=11,xft:Anonymous Pro:style=Regular:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+!#define FONT_BOLD       xft:Neep Alt:style=Bold SemiCondensed:pixelsize=11
+!#define FONT_ITALIC     -misc-fixed-medium-r-normal--9-90-75-75-c-60-iso8859-1,6x9
+!#define FONT_BOLDITALIC -misc-fixed-medium-r-normal--7-70-75-75-c-50-koi8
+
+! fonts                                                                      {{{
+#define FONT_NORMAL     xft:Anonymous Pro:style=Regular:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+#define FONT_BOLD       xft:Anonymous Pro:style=Bold:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+#define FONT_ITALIC     6x9
+#define FONT_BOLDITALIC -nil-profont-medium-r-normal--10-100-72-72-c-50-iso8859-1
+
+!#define FONT_NORMAL     xft:Anonymous Pro:style=Regular:pixelsize=10:antialias=1:hinting=1:hintstyle=
+!#define FONT_BOLD       xft:Anonymous Pro:style=Bold:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+!#define FONT_ITALIC     xft:Anonymous Pro:style=Italic:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+!#define FONT_BOLDITALIC xft:DejaVu Sans Mono:style=Book:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+
+!#define FONT_NORMAL     6x10
+!#define FONT_BOLD       -fontforge-proggytinysz-bold-r-normal--10-80-96-96-c-60-iso8859-1
+!#define FONT_ITALIC     -b&h-lucidatypewriter-bold-r-normal-sans-10-100-75-75-m-60-iso10646-1
+!#define FONT_BOLDITALIC xft:DejaVu Sans Mono:style=Book:pixelsize=10:antialias=1:hinting=1:hintstyle=3
+!}}}
+! vte                                                                        {{{
+  vte*font:       FONT_NORMAL
+  vte*boldFont:   FONT_BOLD
+  vte*italicFont: FONT_ITALIC
+  vte*background: #121212
+  vte*foreground: #d6d6d6
+  vte*scrollBar:  false
+!}}}
+! vim                                                                        {{{
+vim*font:                         FONT_NORMAL
+vim*boldFont:                     FONT_BOLD
+vim*italicFont:                   FONT_ITALIC
+vim*boldItalicFont:               FONT_BOLDITALIC
+vim*background:                   #121212
+vim*foreground:                   #d6d6d6
+vim*scrollBar:                    false
+!}}}
+! XTerm                                                                      {{{
+XTerm*allowColorOps:       1
+XTerm*allowFontOps:        1
+XTerm*allowTcapOps:        1
+XTerm*allowTitleOps:       1
+XTerm*allowWindowOps:      1
+XTerm*dynamicColors:       1
+
+XTerm*faceName:            FONT_NORMAL
+XTerm*font:                FONT_NORMAL
+XTerm*boldFont:            FONT_BOLD
+XTerm*italicFont:          FONT_ITALIC
+XTerm*foreground:          #FFFFFF
+XTerm*background:          #121212
+XTerm*colorBD:             #FFFFFF
+XTerm*colorBDMode:         1
+XTerm*colorMode:           1
+XTerm*colorUL:             #FFFFFF
+XTerm*colorULMode:         1
+
+XTerm*jumpScroll:          1
+XTerm*metaSendsEscape:     1
+XTerm*multiScroll:         1
+XTerm*vt100.scrollBar:     0
+XTerm*SaveLines:           2500
+XTerm*scrollBar:           0
+
+/* http://shallowsky.com/linux/noaltscreen.html */
+XTerm*titeInhibit:         1
+!}}}
+! urxvt                                                                      {{{
+URxvt.letterSpace: 0
+URxvt.selection.pattern-0:        ( at .*? line \\d+[,.])
+URxvt.selection-autotransform.0:  s/^ at (.*?) line (\\d+)[,.]$/:e \\Q$1\E\\x0d:$2\\x0d/
+URxvt.keysym.C-Up:      \033[1;5A
+!}}}
+! host: shiva                                                                {{{
+! XXX
+shiva.keysym.M-S-q: command:\033]710;10x20\007
+
+shiva.iso14755:             1
+shiva.iso14755_52:          1
+
+shiva.skipBuiltinGlyphs:    1
+shiva.insecure:             1
+
+shiva.buffered:             0
+shiva.intensityStyles:      1
+shiva.fading:               12 
+shiva.fadeColor:            #000016
+shiva.internalBorder:       1
+shiva.externalBorder:       0
+shiva.background:           #010101
+shiva.borderColor:          #1b1d1e
+shiva.colorBD:              #7e6449
+shiva.colorIT:              #7c7e49
+shiva.colorRV:              #121212
+shiva.colorUL:              #FF8F00
+shiva.underlineColor:       #de5105
+
+shiva.cursorColor2:         #201526
+shiva.cursorColor:          #e5e5e5
+!shiva.cursorUnderline:      1
+
+!shiva.cursorColor2:          #87af00
+!shiva.cursorColor:         #18181b
+
+shiva.foreground:           #fff
+shiva.pointerColor2:        #0092FF
+shiva.pointerColor:         #252525
+!shiva.font:                 FONT_NORMAL,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso10646-1,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-1,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-10,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-13,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-14,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-15,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-2,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-3,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-4,-adobe-courier-medium-o-normal--12-120-75-75-m-70-iso8859-9,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso10646-1,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-10,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-13,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-14,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-15,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-2,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-3,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-4,-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-9,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso10646-1,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-1,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-10,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-13,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-14,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-15,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-2,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-3,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-4,-adobe-helvetica-medium-o-normal--12-120-75-75-p-67-iso8859-9,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso10646-1,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-10,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-13,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-14,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-15,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-2,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-3,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-4,-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-9,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso10646-1,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-1,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-10,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-13,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-14,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-15,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-2,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-3,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-4,-adobe-new century schoolbook-medium-i-normal--12-120-75-75-p-70-iso8859-9,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso10646-1,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-1,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-10,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-13,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-14,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-15,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-2,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-3,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-4,-adobe-new century schoolbook-medium-r-normal--12-120-75-75-p-70-iso8859-9,-adobe-symbol-medium-r-normal--12-120-75-75-p-74-adobe-fontspecific,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso10646-1,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-1,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-10,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-13,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-14,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-15,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-2,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-3,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-4,-adobe-times-medium-i-normal--12-120-75-75-p-63-iso8859-9,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso10646-1,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-1,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-10,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-13,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-14,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-15,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-2,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-3,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-4,-adobe-times-medium-r-normal--12-120-75-75-p-64-iso8859-9,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso10646-1,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-1,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-10,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-13,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-14,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-15,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-2,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-3,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-4,-adobe-utopia-regular-i-normal--12-120-75-75-p-67-iso8859-9,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso10646-1,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-1,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-10,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-13,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-14,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-15,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-2,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-3,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-4,-adobe-utopia-regular-r-normal--12-120-75-75-p-67-iso8859-9,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso10646-1,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-1,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-10,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-13,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-14,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-15,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-2,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-3,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-4,-b&h-lucida-medium-i-normal-sans-12-120-75-75-p-71-iso8859-9,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso10646-1,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-1,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-10,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-13,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-14,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-15,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-2,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-3,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-4,-b&h-lucida-medium-r-normal-sans-12-120-75-75-p-71-iso8859-9,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso10646-1,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-1,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-10,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-13,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-14,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-15,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-2,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-3,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-4,-b&h-lucidabright-medium-i-normal--12-120-75-75-p-67-iso8859-9,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso10646-1,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-1,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-10,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-13,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-14,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-15,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-2,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-3,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-4,-b&h-lucidabright-medium-r-normal--12-120-75-75-p-68-iso8859-9,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso10646-1,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-1,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-10,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-13,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-14,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-15,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-2,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-3,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-4,-b&h-lucidatypewriter-medium-r-normal-sans-12-120-75-75-m-70-iso8859-9,-bitstream-charter-medium-i-normal--12-120-75-75-p-65-iso8859-1,-bitstream-charter-medium-r-normal--12-120-75-75-p-67-iso8859-1,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso10646-1,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-1,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-10,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-13,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-14,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-15,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-16,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-2,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-3,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-4,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-5,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-7,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-8,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-iso8859-9,-misc-fixed-medium-r-semicondensed--12-110-75-75-c-60-koi8-r,-misc-fixed-medium-r-semicondensed--12-90-100-100-c-60-iso8859-1,-nil-profont-medium-r-normal--12-120-72-72-c-60-iso8859-1,-schumacher-clean-medium-i-normal--12-120-75-75-c-60-iso646.1991-irv,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso10646-1,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-1,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-10,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-13,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-14,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-15,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-16,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-2,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-3,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-4,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-5,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-7,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-8,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso8859-9,-schumacher-clean-medium-r-normal--12-120-75-75-c-60-koi8-r,-schumacher-clean-medium-r-normal--12-120-75-75-c-70-iso646.1991-irv,-schumacher-clean-medium-r-normal--12-120-75-75-c-80-iso646.1991-irv,-windows-speedy-medium-r-normal--12-90-96-96-c-70-iso8859-1,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-13,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-15,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-16,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-2,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-5,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-7,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-9,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-koi8-r,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-koi8-u,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-microsoft-cp1251,-xos4-terminus-medium-r-normal--12-120-72-72-c-60-paratype-pt154
+!shiva.font:                 FONT_NORMAL,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso10646-1,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-1,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-10,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-13,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-14,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-15,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-2,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-3,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-4,-adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-9,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso10646-1,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-1,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-10,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-13,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-14,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-15,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-2,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-3,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-4,-adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-9,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso10646-1,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-1,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-10,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-13,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-14,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-15,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-2,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-3,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-4,-adobe-helvetica-medium-o-normal--11-80-100-100-p-57-iso8859-9,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso10646-1,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-1,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-10,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-13,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-14,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-15,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-2,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-3,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-4,-adobe-helvetica-medium-r-normal--11-80-100-100-p-56-iso8859-9,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso10646-1,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-1,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-10,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-13,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-14,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-15,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-2,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-3,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-4,-adobe-new century schoolbook-medium-i-normal--11-80-100-100-p-60-iso8859-9,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso10646-1,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-1,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-10,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-13,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-14,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-15,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-2,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-3,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-4,-adobe-new century schoolbook-medium-r-normal--11-80-100-100-p-60-iso8859-9,-adobe-symbol-medium-r-normal--11-80-100-100-p-61-adobe-fontspecific,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso10646-1,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-1,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-10,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-13,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-14,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-15,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-2,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-3,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-4,-adobe-times-medium-i-normal--11-80-100-100-p-52-iso8859-9,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso10646-1,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-1,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-10,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-13,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-14,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-15,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-2,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-3,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-4,-adobe-times-medium-r-normal--11-80-100-100-p-54-iso8859-9,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso10646-1,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-1,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-10,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-13,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-14,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-15,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-2,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-3,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-4,-b&h-lucida-medium-i-normal-sans-11-80-100-100-p-62-iso8859-9,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso10646-1,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-1,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-10,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-13,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-14,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-15,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-2,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-3,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-4,-b&h-lucida-medium-r-normal-sans-11-80-100-100-p-63-iso8859-9,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso10646-1,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-1,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-10,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-13,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-14,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-15,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-2,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-3,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-4,-b&h-lucidabright-medium-i-normal--11-80-100-100-p-63-iso8859-9,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso10646-1,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-1,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-10,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-13,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-14,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-15,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-2,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-3,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-4,-b&h-lucidabright-medium-r-normal--11-80-100-100-p-63-iso8859-9,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso10646-1,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-1,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-10,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-13,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-14,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-15,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-2,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-3,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-4,-b&h-lucidatypewriter-medium-r-normal-sans-11-80-100-100-m-70-iso8859-9,-bitstream-charter-medium-i-normal--11-80-100-100-p-60-iso8859-1,-bitstream-charter-medium-r-normal--11-80-100-100-p-61-iso8859-1,-erus-erusfont-medium-r-normal--11-80-100-100-c-60-iso10646-1,-nil-profont-medium-r-normal--11-110-72-72-c-60-iso8859-1,-windows-montecarlo-medium-r-normal--11-110-72-72-c-60-microsoft-cp1252,-windows-proggyopti-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-proggysquare-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-proggysquaresz-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-speedy-medium-r-normal--11-80-96-96-c-70-iso8859-1
+shiva.font:                 FONT_NORMAL,-windows-speedy-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-proggysquaresz-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-proggysquare-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-proggyopti-medium-r-normal--11-80-96-96-c-70-iso8859-1,-windows-montecarlo-medium-r-normal--11-110-72-72-c-60-microsoft-cp1252,-windows-montecarlo-bold-r-normal--11-110-72-72-c-60-microsoft-cp1252,-nil-profont-medium-r-normal--11-110-72-72-c-60-iso8859-1,-erus-erusfont-medium-r-normal--11-80-100-100-c-60-iso10646-1,-erus-erusfont-bold-r-normal--11-80-100-100-c-60-iso10646-1,-bitstream-charter-medium-r-normal--11-80-100-100-p-61-iso8859-1,-bitstream-charter-medium-i-normal--11-80-100-100-p-60-iso8859-1,-bitstream-charter-bold-r-normal--11-80-100-100-p-69-iso8859-1,-bitstream-charter-bold-i-normal--11-80-100-100-p-68-iso8859-1,xft:Urdu Nastaliq Unicode:style=Regular:pixelsize=11:antialias=1:hinting=1:hintstyle=3,xft:APL385 Unicode:style=Regular:pixelsize=11:antialias=1:hinting=1:hintstyle=3:minspace=false,xft:unifont:style=Medium:pixelsize=11:antialias=0:hinting=0:minspace=false
+shiva.boldFont:             FONT_BOLD,xft:APL385 Unicode:style=Regular:pixelsize=11:antialias=1:hinting=1:hintstyle=3:embolden=1
+shiva.italicFont:           FONT_ITALIC
+shiva.boldItalicFont:       FONT_BOLDITALIC
+
+shiva.cutchars:             "()*,<>[]{}|'"
+shiva.matcher.button:       1
+shiva.matcher.launcher.1:   /usr/bin/firefox
+shiva.matcher.launcher.2:   gvim +$2 $1
+shiva.matcher.pattern.1:    \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+shiva.matcher.pattern.2:    \\B(/\\S+?):(\\d+)(?=:|$)
+shiva.underlineURLs:        true
+shiva.urlLauncher:          /usr/bin/firefox
+
+URxvt.keysym.M-u:           perl:mark-yank-urls:activate_mark_mode
+URxvt.perl-ext:             selection,mark-yank-urls
+URxvt.perl-eval:            $^O
+URxvt.perl-ext-common:      default,matcher
+URxvt.perl-lib:             /home/scp1/dev/urxvt-extensions
+
+shiva.jumpScroll:           true
+shiva.loginShell:           true
+shiva.saveLines:            10485
+shiva.scrollBack:           true
+shiva.scrollKey:            true
+shiva.scrollTtyKeypress:    true
+shiva.scrollTtyOutput:      false
+shiva.scrollWithBuffer:     true
+shiva.skipScroll:           true
+shiva.trippleclickwords:    true
+shiva.urgentOnBell:         false
+
+shiva.chdir:                /home/scp1/dev/_vim_shit_i_comitted_in_this_WRONG_repo_FIXIT
+shiva.pasteableTabs:        true
+shiva.pointerBlank:         true
+shiva.pointerBlankDelay:    2
+shiva.scrollstyle:          next
+shiva.scrollBar:            false
+shiva.depth:                2
+
+!shiva.hold:                 0
+/* http://shallowsky.com/linux/noaltscreen.html */
+!shiva.secondaryScroll:      true
+!shiva.secondaryScreen:      false
+
+!}}}
+! host: india                                                                {{{
+india.background:           #030303
+india.borderColor:          #0E0E0E
+india.colorRV:              #333333
+india.colorUL:              #FF8F00
+india.cursorColor2:         #252525
+india.cursorColor:          #eb122e
+india.foreground:           #ffffff
+india.pointerColor:         #cb1c13
+india.underlineColor:       #cb1c13
+
+india*font:                FONT_NORMAL
+india*boldFont:            FONT_BOLD
+india*italicFont:          FONT_ITALIC
+india*boldItalicFont:      FONT_ITALIC_BOLD
+
+india.cutchars:             "()*,<>[]{}|'"
+india.matcher.button:       1
+india.matcher.launcher.1:   /usr/bin/firefox
+india.matcher.pattern.1:    \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+india.matcher.pattern.2:    \\B(/\\S+?):(\\d+)(?=:|$)
+india.underlineURLs:        false
+india.urlLauncher:          /usr/bin/firefox
+
+india.perl-lib:             /usr/lib/urxvt/perl
+india.perl-ext-common:      default,matcher
+india.perl-eval:            $^O
+
+india.jumpScroll:           true
+india.loginShell:           true
+india.pasteableTabs:        true
+india.pointerBlank:         true
+india.pointerBlankDelay:    2
+india.saveLines:            1024
+india.scrollBack:           true
+india.scrollKey:            true
+india.scrollTtyKeypress:    true
+india.scrollTtyOutput:      false
+india.scrollWithBuffer:     true
+india.scrollstyle:          next
+india.skipScroll:           true
+india.trippleclickwords:    true
+india.urgentOnBell:         true
+
+india.scrollBar:            false
+india.depth:                32
+
+india.keysym.M-u:           perl:mark-yank-urls:activate_mark_mode
+india.perl-ext:             selection,mark-yank-urls
+india.perl-eval:            $^O
+india.perl-ext-common:      default,matcher
+india.perl-lib:             /home/scp1/dev/urxvt-extensions
+
+!india.hold:                 0
+!india.secondaryScreen:     true
+!india.secondaryScroll:     true
+!}}}
+! host: rambo                                                                {{{
+rambo.font:                xft:Droid Sans Mono Slashed:style=Regular:pixelsize=32:antialias=1:hinting=1
+rambo.boldFont:            xft:Droid Sans Mono Slashed:pixelsize=32:antialias=1:hinting=1:embolden=1
+rambo.italicFont:          xft:Droid Sans Mono Slashed:pixelsize=32:antialias=1:hinting=1:slant=italic
+rambo.boldItalicFont:      -xos4-terminus-bold-r-normal--32-320-72-72-c-160-koi8-u
+
+rambo.chdir:               /mnt/Mvids
+
+rambo.background:          #000000
+rambo.borderColor:         #000000
+rambo.colorBD:             #FFFFFF
+rambo.colorIT:             #FFFFFF
+rambo.colorRV:             #333333
+rambo.colorUL:             #FF8F00
+rambo.cursorColor2:        #252525
+rambo.cursorColor:         #EB122E
+rambo.foreground:          #ffffff
+rambo.pointerColor2:       #0092FF
+rambo.pointerColor:        #252525
+rambo.underlineColor:      #0E0E0E
+rambo.scrollBar:            false
+rambo.depth:                32
+!}}}
+! ratmenu                                                                    {{{
+ratmenu*align:                    center
+ratmenu*bgcolor:                  #080808
+ratmenu*fgcolor:                  #eb122e
+ratmenu*font:                     PROFONT_HUGE
+ratmenu*persist:                  false
+ratmenu*style:                    dreary
+!}}}
+! mplay                                                                      {{{
+mplay*background:        #ffffff
+mplay*foreground:        #cb1c13
+mplay*scrollbar:         false
+mplay*color0:            #000000
+mplay*color1:            #93a0b2
+!}}}
+! xfontsel                                                                   {{{
+XFontSel*sampleText.background:       TEXTBG
+XFontSel*menu*showUnselectable:       false
+XFontSel*MenuButton.shadowWidth:      0
+XFontSel*Toggle*ToggleStyle:          check
+XFontSel*MenuButton*Justify:          left
+XFontSel*MenuButton*MenuButtonStyle:  select
+
+.xfontsel.pane.commandBox.quitButton.background:  #252525
+.xfontsel.pane.commandBox.quitButton.foreground:  snow
+.xfontsel.pane.commandBox.ownButton.background:   orange3
+.xfontsel.pane.commandBox.ownButton.foreground:   snow
+.xfontsel.pane.commandBox.countLabel.background:  snow
+.xfontsel.pane.viewPort.sampleText.background:    #252525
+.xfontsel.pane.viewPort.sampleText.foreground:    snow
+.xfontsel.pane.fieldBox.field0.background:        #252525
+.xfontsel.pane.fieldBox.field0.foreground:        snow
+.xfontsel.pane.fieldBox.field1.background:        #252525
+.xfontsel.pane.fieldBox.field1.foreground:        snow
+.xfontsel.pane.fieldBox.field2.background:        #252525
+.xfontsel.pane.fieldBox.field2.foreground:        snow
+.xfontsel.pane.fieldBox.field3.background:        #252525
+.xfontsel.pane.fieldBox.field3.foreground:        snow
+.xfontsel.pane.fieldBox.field4.background:        #252525
+.xfontsel.pane.fieldBox.field4.foreground:        snow
+.xfontsel.pane.fieldBox.field5.background:        #252525
+.xfontsel.pane.fieldBox.field5.foreground:        snow
+.xfontsel.pane.fieldBox.field6.background:        #252525
+.xfontsel.pane.fieldBox.field6.foreground:        snow
+.xfontsel.pane.fieldBox.field7.background:        #252525
+.xfontsel.pane.fieldBox.field7.foreground:        snow
+.xfontsel.pane.fieldBox.field8.background:        #252525
+.xfontsel.pane.fieldBox.field8.foreground:        snow
+.xfontsel.pane.fieldBox.field9.background:        #252525
+.xfontsel.pane.fieldBox.field9.foreground:        snow
+.xfontsel.pane.fieldBox.field10.background:       #252525
+.xfontsel.pane.fieldBox.field10.foreground:       snow
+.xfontsel.pane.fieldBox.field11.background:       #252525
+.xfontsel.pane.fieldBox.field11.foreground:       snow
+.xfontsel.pane.fieldBox.field12.background:       #252525
+.xfontsel.pane.fieldBox.field12.foreground:       snow
+.xfontsel.pane.fieldBox.field13.background:       #252525
+.xfontsel.pane.fieldBox.field13.foreground:       snow
+.xfontsel.pane.fieldBox.foreground:               #000000
+.xfontsel.pane.fieldBox.MenuButton.borderWidth:   1
+.xfontsel.pane.fieldBox.MenuButton.internalHeight:1
+.xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
+.xfontsel.pane.fieldBox.MenuButton.shapeStyle:    rectangle
+!}}}
+! vim: set fdm=marker et sw=2 tw=0:

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="orig_device_lock" mtime="1340096028" type="bool" value="false"/>
+	<entry name="orig_autolock_period" mtime="1340096028" type="int" value="1000"/>
+	<entry name="autolock_period" mtime="1340096028" type="int" value="1000"/>
+	<entry name="device_lock" mtime="1340096028" type="bool" value="false"/>
+	<entry name="appletactive" mtime="1340096031" type="bool" value="false"/>
+</gconf>

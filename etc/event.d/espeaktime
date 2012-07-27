@@ -1,0 +1,13 @@
+description "espeaktime daemon"
+author "Alex Badea"
+
+service
+console none
+
+start on started hildon-desktop
+stop on stopping shutdown
+
+# Note, run-standalone.sh does not exec its argument;
+# we work around that by explicitly saying "exec",
+# to make job stopping work.
+exec /usr/bin/run-standalone.sh exec /usr/bin/espeaktimed > /dev/null 2>&1

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_finger_kb" mtime="1284131122" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Use virtual Finger Keyboard">
+			<default type="bool" value="false"/>
+			<longdesc>This feature enables/disables the use of the Finger Keyboard</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="auto_correction" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Auto correction">
+			<default type="bool" value="true"/>
+			<longdesc>Automatically correct &quot; .&quot; or &quot;  &quot; to &quot;. &quot;</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="start_recognize_after" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Number of characters stroked before HWR start to recognize">
+			<default type="int" value="2"/>
+			<longdesc>Number of characters stroked before HWR start to recognize</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="hwr_punct_mode" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Punctuation mode state.">
+			<default type="bool" value="false"/>
+			<longdesc>Punctuation/special characters mode state.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="case_correction" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Case correction">
+			<default type="bool" value="true"/>
+			<longdesc>Automatically correct case of character entered with handwriting
+        recognition input mode</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="input_method_plugin" mtime="1284131122" type="schema" stype="string" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Current input method">
+			<default type="string">
+				<stringvalue>hildon_keyboard_assistant</stringvalue>
+			</default>
+			<longdesc>ID of the selected input method.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="space_after" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Auto space insertion">
+			<default type="bool" value="false"/>
+			<longdesc>A space will be automatically inserted after each time the user
+        has selected a candidate from the word completion</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="display_after_entering" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Number of characters">
+			<default type="int" value="1"/>
+			<longdesc>The number of characters the word completion needs to make
+        prediction base on.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="completion_area_pos" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Word completion position">
+			<default type="bool" value="false"/>
+			<longdesc>It defines where the word completion will be placed in VKB.</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="dual-dictionary" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Dual Dictionary support">
+			<default type="bool" value="false"/>
+			<longdesc>The feature to help user enable dual dictionary for word completion</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="handwriting_timeout" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Idle time for recognition">
+			<default type="int" value="400"/>
+			<longdesc>The amount of time elapses after the user releases its styllus to
+        start recognition</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="ext_kb_long_press_timeout" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Timeout for level translation when long-pressing a key">
+			<default type="int" value="600"/>
+			<longdesc>Time in miliseconds before level translation occurs in a character key when it is held pressed</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="ext_kb_repeat_enabled" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Enables key repeating and disables level translation on external keyboard">
+			<default type="bool" value="false"/>
+			<longdesc>Defines whether character keys are repeated or translated to other levels when long-pressed</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="ext_kb_repeat_interval" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="External keyboard repeat interval">
+			<default type="int" value="50"/>
+			<longdesc>Interval in milliseconds between repeated key events</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="ext_kb_repeat_delay" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="External keyboard repeat delay">
+			<default type="int" value="600"/>
+			<longdesc>Delay in milliseconds before the first repeated key is recognize</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="ext_kb_layout" mtime="1284131090" type="schema" stype="string" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="External keyboard layout">
+			<default type="string">
+				<stringvalue>us</stringvalue>
+			</default>
+			<longdesc>The xkb layout of the external keyboard</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="ext_kb_model" mtime="1284131090" type="schema" stype="string" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="External keyboard model">
+			<default type="string">
+				<stringvalue>nokiasu8w</stringvalue>
+			</default>
+			<longdesc>The xkb model of the external keyboard</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="int_kb_level_shifted" mtime="1284131090" type="schema" stype="bool" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Level shift the internal keyboard layout">
+			<default type="bool" value="true"/>
+			<longdesc>When level shifted, the alternative keyset of a separate layer is used</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="int_kb_repeat_interval" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Internal keyboard repeat interval">
+			<default type="int" value="50"/>
+			<longdesc>Interval in milliseconds between repeated key events</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="int_kb_repeat_delay" mtime="1284131090" type="schema" stype="int" owner="hildon-input-method">
+		<local_schema locale="C" short_desc="Internal keyboard repeat delay">
+			<default type="int" value="600"/>
+			<longdesc>Delay in milliseconds before the first repeated key is recognize</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

@@ -1,0 +1,122 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          as-daemon
+# Required-Start:    $remote-fs $syslog dbus iphbd
+# Required-Stop:     $remote-fs $syslog dbus iphbd
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: ActiveSync daemon
+# Description:       ActiveSync daemon manages your ActiveSync account
+### END INIT INFO
+
+DAEMON_BINARY=/usr/sbin/as-daemon
+DESC="Active Sync daemon"
+DAEMON_DEFAULT_USER=user
+EXCHANGE_SERVER_KEY="/apps/activesync/ActiveSyncAccount1/connection/exchange_server"
+SETUP_ACTIVE_KEY="/apps/activesync/setup"
+SETTINGS_ACTIVE_KEY="/apps/activesync/settings"
+FULLSYNC_ACTIVE_KEY="/apps/activesync/ActiveSyncAccount1/statistics/full_sync_action"
+ACCOUNT_PATH="/apps/activesync/ActiveSyncAccount1"
+TEMP_ACCOUNT_PATH="/apps/activesync/ActiveSyncAccount1Temp"
+
+# Check if --chuid shall be passed to start-stop-daemon
+case "`whoami`" in
+    root)
+        # Launch daemon on start-up or by DBus message
+        DAEMON_USER=$DAEMON_DEFAULT_USER
+        CHUID="--chuid $DAEMON_DEFAULT_USER"
+        ;;
+
+    *)
+        # Run daemon as non-privileged user so chuid is not required (even is not required)
+        DAEMON_USER=`whoami`
+        ;;
+esac
+
+MAIL_BASE_PATH="/home/$DAEMON_USER/.qmf"
+
+RUN_WRAPPER=/usr/bin/run-standalone.sh
+
+PIDFILE=/var/lock/as-daemon.pid
+
+LOG_ON_FILE="/home/$DAEMON_USER/logmfeon"
+LOG_OFF_FILE="/home/$DAEMON_USER/logmfeoff"
+
+. /lib/lsb/init-functions
+
+test -x $DAEMON_BINARY || exit 0
+
+case "$1" in
+    start)
+        gconftool-2 --recursive-unset $TEMP_ACCOUNT_PATH > /dev/null 2>&1
+        gconftool-2 -st int $SETTINGS_ACTIVE_KEY 0
+        setupactive=`gconftool-2 -g $SETUP_ACTIVE_KEY 2>/dev/null`
+
+        if [ -f $LOG_ON_FILE ] ; then
+            log_action_msg "Turn debug logging on"
+            gconftool-2 -s --type=int /apps/activesync/AsDaemon/Syslog/MinLogLevel 0
+            gconftool-2 -s --type=int /apps/activesync/modest/Syslog/MinLogLevel 0
+            gconftool-2 -s --type=int /apps/activesync/AsProvider/Syslog/MinLogLevel 0
+            gconftool-2 -s --type=int /apps/activesync/AsBackup/Syslog/MinLogLevel 0
+            gconftool-2 -s --type=int /apps/activesync/asapplet/Syslog/MinLogLevel 0
+            gconftool-2 -s --type=int /apps/activesync/AsStatusApplet/Syslog/MinLogLevel 0
+            gconftool-2 -s --type=int /apps/activesync/ascntui/Syslog/MinLogLevel 0
+            rm $LOG_ON_FILE
+        fi
+
+        if [ -f $LOG_OFF_FILE ] ; then
+            log_action_msg "Turn debug logging off"
+            gconftool-2 -u /apps/activesync/AsDaemon/Syslog/MinLogLevel
+            gconftool-2 -u /apps/activesync/modest/Syslog/MinLogLevel
+            gconftool-2 -u /apps/activesync/AsProvider/Syslog/MinLogLevel
+            gconftool-2 -u /apps/activesync/AsBackup/Syslog/MinLogLevel
+            gconftool-2 -u /apps/activesync/asapplet/Syslog/MinLogLevel
+            gconftool-2 -u /apps/activesync/AsStatusApplet/Syslog/MinLogLevel
+            gconftool-2 -u /apps/activesync/ascntui/Syslog/MinLogLevel
+            rm $LOG_OFF_FILE
+        fi
+
+        if [ $setupactive -a $setupactive = "true" ] ; then
+            log_warning_msg "ActiveSync account configuration was failed"
+            gconftool-2 --recursive-unset $ACCOUNT_PATH > /dev/null 2>&1
+            gconftool-2 -u $SETUP_ACTIVE_KEY > /dev/null 2>&1
+            rm -r $MAIL_BASE_PATH 2>/dev/null
+        else
+            servername=`gconftool-2 -g $EXCHANGE_SERVER_KEY 2>/dev/null`
+            if [ $servername ] ; then
+
+                log_begin_msg "Starting $DESC..."
+                gconftool-2 -u $FULLSYNC_ACTIVE_KEY
+                /sbin/start-stop-daemon --start --quiet --pidfile $PIDFILE $CHUID --exec $RUN_WRAPPER -- $DAEMON_BINARY -D --pidfile=$PIDFILE
+                log_end_msg $?
+            else
+                rm -r $MAIL_BASE_PATH 2>/dev/null
+                log_success_msg "ActiveSync account doesn't exists. Do nothing."
+            fi
+        fi
+    ;;
+
+    stop)
+        log_begin_msg "Stopping $DESC..."
+        /sbin/start-stop-daemon --stop --quiet --pidfile $PIDFILE
+        log_end_msg $?
+    ;;
+    restart)
+        log_begin_msg "Restarting $DESC..."
+        /sbin/start-stop-daemon --stop --quiet --pidfile $PIDFILE
+        sleep 2
+        /sbin/start-stop-daemon --start --quiet --pidfile $PIDFILE  $CHUID --exec $RUN_WRAPPER -- $DAEMON_BINARY -D --pidfile=$PIDFILE
+        log_end_msg $?
+    ;;
+    force-reload)
+        log_begin_msg "Reloading $DESC..."
+        /sbin/start-stop-daemon --stop --quiet --oknodo --signal HUP --pidfile $PIDFILE
+        log_end_msg $?
+    ;;
+
+    *)
+        log_success_msg "Usage: /etc/init.d/as-daemon {start|stop|restart|force-reload}"
+    exit 1
+esac
+
+exit 0

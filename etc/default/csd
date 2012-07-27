@@ -1,0 +1,56 @@
+#
+# Configuration file for Cellular Services Daemon (CSD)
+#
+
+#
+# Enable CSD at startup?
+#
+ENABLE=1
+
+#
+# CSD plugin directory
+#
+#PLUGINDIR="/usr/lib/csd/plugins"
+
+#
+# Isolate all plugins to separate process contexts
+#
+#ISOLATE_PLUGINS=1
+
+#
+# Set nice level
+#
+#NICE=-20
+
+#
+# Set SCHED_FIFO real-time priority
+#
+#REALTIME=1
+
+#
+# Lock into memory
+#
+LOCKMEM=1
+
+#
+# Set minimum priority of messages sent to syslog
+#
+#  0 = LOG_EMERG
+#  7 = LOG_DEBUG
+#
+#LOGLEVEL=5 # LOG_NOTICE
+
+#
+# Allow debug printing to console
+#
+#CONSOLE=1
+
+#
+# Protection from OOM killer
+#
+OOM_ADJUST=-17
+
+#
+# Override CSD parameters (disables above options and plugin scanning)
+#
+#CSD_ARGS=""

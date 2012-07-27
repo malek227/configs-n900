@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gconfschemafile xmlns:confml="http://www.s60.com/xml/confml/2">
+  <schemalist>
+    <!--List of application shortcuts-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/task-shortcuts</key>
+      <applyto>/apps/osso/hildon-home/task-shortcuts</applyto>
+      <owner>hildon-desktop</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[osso-addressbook.desktop,modest.desktop,rtcom-call-ui.desktop]</default>
+      <locale name="C"/>
+    </schema>
+    <!--Settings for osso-addressbook.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/TaskShortcut:osso-addressbook.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/TaskShortcut:osso-addressbook.desktop/view</applyto>
+      <owner>controlpanel</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/TaskShortcut:osso-addressbook.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/TaskShortcut:osso-addressbook.desktop/position</applyto>
+      <owner>hildon-desktop</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[583,100]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of osso-addressbook.desktop settings-->
+    <!--Settings for modest.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/TaskShortcut:modest.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/TaskShortcut:modest.desktop/view</applyto>
+      <owner>controlpanel</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/TaskShortcut:modest.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/TaskShortcut:modest.desktop/position</applyto>
+      <owner>hildon-desktop</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[583,220]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of modest.desktop settings-->
+    <!--Settings for rtcom-call-ui.desktop-->
+    <!--Home view where shortcut is visible-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/TaskShortcut:rtcom-call-ui.desktop/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/TaskShortcut:rtcom-call-ui.desktop/view</applyto>
+      <owner>controlpanel</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C"/>
+    </schema>
+    <!--Position of shortcut-->
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/TaskShortcut:rtcom-call-ui.desktop/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/TaskShortcut:rtcom-call-ui.desktop/position</applyto>
+      <owner>hildon-desktop</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[583,340]</default>
+      <locale name="C"/>
+    </schema>
+    <!--End of rtcom-call-ui.desktop settings-->
+  </schemalist>
+</gconfschemafile>

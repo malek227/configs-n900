@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Disable ICMP echo reply for GPRS. This is done because some cellular
+# operators do not have any firewall for cellular traffic. The idea
+# here is that by disabling ping replies, the other end might stop
+# flooding us junk which in turn will save power.
+# This is not done for WLAN as there is typically is a NAT box between
+# the device and the internet. That NAT box will typically prevent
+# ICMP echo requests entering the device.
+
+set -e
+
+if [ "$IFACE" = lo ]; then
+	exit 0
+fi
+
+if [ "$MODE" != start ]; then
+	exit 0
+fi
+
+if [ "$ICD_CONNECTION_TYPE" != GPRS ]; then
+	exit 0
+fi
+
+echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+exit 0

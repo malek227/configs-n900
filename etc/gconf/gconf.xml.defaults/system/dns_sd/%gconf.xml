@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="extra_domains" mtime="1284131105" schema="/schemas/system/dns_sd/extra_domains"/>
+	<entry name="display_local" mtime="1284131105" schema="/schemas/system/dns_sd/display_local"/>
+</gconf>

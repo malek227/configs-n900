@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ "${LOCALE_SET_BY_SUW}" = "yes" ] ;
+then
+  USER=`whoami`
+
+  if [ "x$USER" = "xroot" ]; 
+  then
+    export SESSION_BUS_ADDRESS_FILE=/tmp/session_bus_address.user
+    export SESSION_BUS_PID_FILE=/tmp/dbus_session_bus.pid.user
+  else
+    export SESSION_BUS_ADDRESS_FILE=/tmp/session_bus_address.$USER
+    export SESSION_BUS_PID_FILE=/tmp/dbus_session_bus.pid.$USER
+  fi
+
+  if test -e $SESSION_BUS_PID_FILE ;
+  then
+    . $SESSION_BUS_PID_FILE
+    kill -15 $DBUS_SESSION_BUS_PID > /dev/null 2>&1
+    kill -15 `pidof dbus-launch` > /dev/null 2>&1
+    sleep 2
+    . /etc/X11/Xsession.d/01dbus
+  else
+    echo "$0: session bus pid file ($SESSION_BUS_PID_FILE) does not exist?" 
+  fi
+fi

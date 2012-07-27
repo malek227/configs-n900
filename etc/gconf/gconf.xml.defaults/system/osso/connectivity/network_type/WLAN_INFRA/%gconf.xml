@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gettext_catalog" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/gettext_catalog"/>
+	<entry name="name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/name"/>
+	<entry name="statusbar_dimmed_icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/statusbar_dimmed_icon_name"/>
+	<entry name="statusbar_icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/statusbar_icon_name"/>
+	<entry name="icon_name_signal_4" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/icon_name_signal_4"/>
+	<entry name="icon_name_signal_3" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/icon_name_signal_3"/>
+	<entry name="icon_name_signal_2" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/icon_name_signal_2"/>
+	<entry name="icon_name_signal_1" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/icon_name_signal_1"/>
+	<entry name="icon_name_signal_0" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/icon_name_signal_0"/>
+	<entry name="icon_name" mtime="1284131118" schema="/schemas/system/osso/connectivity/network_type/WLAN_INFRA/icon_name"/>
+</gconf>

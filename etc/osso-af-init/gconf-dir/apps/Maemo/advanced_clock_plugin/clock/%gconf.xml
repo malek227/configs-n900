@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="digit_image_set" mtime="1339599194" type="string">
+		<stringvalue>test-png</stringvalue>
+	</entry>
+	<entry name="use_digit_images" mtime="1339599194" type="bool" value="false"/>
+	<entry name="alarm_indicator_icon" mtime="1339599194" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="custom_format" mtime="1339599194" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="time_zone" mtime="1339599194" type="string">
+		<stringvalue>America/Antigua</stringvalue>
+	</entry>
+	<entry name="offset" mtime="1339599194" type="int" value="14400"/>
+	<entry name="country" mtime="1339599194" type="string">
+		<stringvalue>Antigua and Barbuda</stringvalue>
+	</entry>
+	<entry name="city" mtime="1339599194" type="string">
+		<stringvalue>Saint John&apos;s</stringvalue>
+	</entry>
+	<entry name="pad_zeros" mtime="1339599194" type="bool" value="true"/>
+	<entry name="twelve_hour_mode" mtime="1339599193" type="bool" value="false"/>
+	<entry name="text_scaling" mtime="1339599194" type="float" value="1"/>
+	<entry name="color_b" mtime="1339599193" type="float" value="0"/>
+	<entry name="color_g" mtime="1339599193" type="float" value="1"/>
+	<entry name="color_r" mtime="1339599193" type="float" value="0.5490196078431373"/>
+	<entry name="font_name" mtime="1339599194" type="string">
+		<stringvalue>Droid Sans</stringvalue>
+	</entry>
+	<entry name="show_seconds" mtime="1339599193" type="bool" value="false"/>
+	<entry name="fill" mtime="1339599193" type="bool" value="true"/>
+	<entry name="alarm_indicator_enabled" mtime="1339599193" type="bool" value="true"/>
+</gconf>

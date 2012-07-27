@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="noise_height" mtime="1339433913" type="int" value="0"/>
+	<entry name="noise_level" mtime="1339433913" type="int" value="0"/>
+	<entry name="difficulty_level" mtime="1339433913" type="int" value="0"/>
+	<entry name="running" mtime="1339433913" type="bool" value="false"/>
+</gconf>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sync-usb-mode" mtime="1340834444" type="bool" value="false"/>
+</gconf>

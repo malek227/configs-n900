@@ -1,0 +1,12 @@
+description	"DNS forwarder"
+author		"Jukka Rissanen"
+
+start on started wlancond
+stop on starting shutdown
+stop on ACT_DEAD
+
+console none
+	
+exec /usr/sbin/dnsmasq -k -i lo -a 127.0.0.1 -z
+
+respawn

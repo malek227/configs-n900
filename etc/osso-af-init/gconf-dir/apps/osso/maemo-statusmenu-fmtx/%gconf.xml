@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="always_visible" mtime="1340094619" type="bool" value="false"/>
+</gconf>

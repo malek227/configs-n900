@@ -1,0 +1,9 @@
+description         "Active Sync Daemon"
+
+start on started hildon-desktop
+
+pre-start script
+        /usr/sbin/waitdbus system
+end script
+
+exec /etc/init.d/as-daemon-0 start

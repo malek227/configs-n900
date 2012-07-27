@@ -1,0 +1,14 @@
+description "theme symbolic link validity check"
+author "Peter Aradi"
+
+#start it before hildon-desktop loads
+start on MOUNTS_OK
+console none
+
+#script checks if theme symbolic link is broken
+#in that case it restores the symlink to the default theme
+script
+	if [ ! -e /etc/hildon/theme/index.theme ]; then
+		/usr/bin/personalisation /usr/share/themes/default;
+	fi
+end script

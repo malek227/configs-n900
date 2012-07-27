@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/osso/browser/skin_file</key>
+      <applyto>/apps/osso/browser/skin_file</applyto>
+      <owner>browser-ui</owner>
+      <type>string</type>
+      <default>default.zip</default>
+      <locale name="C">
+        <short>Browser skin file setting</short>
+	<long>Setting browser default skin file</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

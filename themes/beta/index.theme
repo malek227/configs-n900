@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-Hildon-Metatheme
+Name=Digital Nature
+Icon=/usr/share/themes/beta/images/qgn_plat_theme_thumbnail.png
+Encoding=UTF-8
+
+[X-Hildon-Metatheme]
+GtkTheme=beta
+IconTheme=default
+X-MatchboxTheme=beta
+X-AdditionalRCFiles=maemo_af_desktop
+X-OperaSkin=default.zip

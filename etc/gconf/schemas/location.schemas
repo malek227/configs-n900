@@ -1,0 +1,118 @@
+<gconfschemafile>
+  <schemalist>    
+    <schema>
+      <key>/schemas/system/nokia/location/gps-disabled</key>
+      <applyto>/system/nokia/location/gps-disabled</applyto>
+      <owner>liblocation</owner>
+      <type>bool</type>
+      <default>FALSE</default>
+      <locale name="C">
+        <short>A boolean value that tells whether the gps receiver is disabled 
+         or enabled</short>
+         <long>A boolean value that tells whether the gps receiver is disabled 
+         or enabled. The default value is false, i.e., the gps receiver is 
+         enabled. If the value of both gps_disabled and network_disabled are 
+         set to true, the location-control.h API method 
+         location_gpsd_control_start causes the enable dialog to be shown. 
+         If the user decides to enable GPS in the dialog, gps_disabled is 
+         set to false and the system behaves accordingly.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/nokia/location/network-disabled</key>
+      <applyto>/system/nokia/location/network-disabled</applyto>
+      <owner>liblocation</owner>
+      <type>bool</type>
+      <default>FALSE</default>
+      <locale name="C">
+        <short>A boolean value that tells whether the network-based methods 
+        are is disabled or enabled</short>
+        <long>A boolean value that tells whether the network-based methods 
+        are is disabled or enabled. The default value is false, i.e., 
+        network-based methods are enabled. This setting enables both AGPS 
+        and cellular network –based positioning. If the value of both 
+        gps_disabled and network_disabled are set to true, the 
+        location-control.h API method location_gpsd_control_start causes 
+        the enable dialog to be shown. If the user decides to enable network 
+        in the dialog, network_disabled is set to false and the system 
+        behaves accordingly.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/nokia/location/disclaimer-accepted</key>
+      <applyto>/system/nokia/location/disclaimer-accepted</applyto>
+      <owner>liblocation</owner>
+      <type>bool</type>
+      <default>FALSE</default>
+      <locale name="C">
+        <short>A boolean value that tells whether the user has accepted 
+        the location disclaimer or not</short>
+        <long>A boolean value that tells whether the user has accepted 
+        the location disclaimer or not. The default value is false, i.e., 
+        the user has not accepted the disclaimer. Until the user accepts 
+        the disclaimer the device shows the disclaimer dialog whenever 
+        an application tries to get location data through the location-*.h API. 
+        When set to true, the device doesn’t show the dialog any more.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/nokia/location/method</key>
+      <applyto>/system/nokia/location/method</applyto>
+      <owner>liblocation</owner>
+      <type>pair</type>
+      <car_type>string</car_type>
+      <cdr_type>string</cdr_type>
+      <default>(com.nokia.Location,las)</default>
+      <locale name="C">
+        <short>A pair of string values that tell the D-Bus service name of the 
+        currently active location daemon and the location method used within 
+        that daemon</short>
+        <long>A pair of string values that tell the D-Bus service name of the 
+        currently active location daemon and the location method used within 
+        that daemon. For BlueTooth devices the location method is the address 
+        of the BlueTooth device. For integrated GPS and cellular network –based 
+        location the location method is always las. The default value is 
+        (com.nokia.Location, las). Examples:
+        Integrated GPS and cellular:
+        (com.nokia.Location, las)
+        BlueTooth GPS:
+        (org.freedesktop.Gypsy, 00:0D:B5:34:52:F6)
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/nokia/location/supl/server</key>
+      <applyto>/system/nokia/location/supl/server</applyto>
+      <owner>liblocation</owner>
+      <type>string</type>
+      <default>supl.nokia.com</default>
+      <locale name="C">
+        <short>The name of the external SUPL server</short>
+        <long>The name of the external SUPL server. Used for A-GPS
+	and network based positioning.
+        </long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/system/nokia/location/supl/port</key>
+      <applyto>/system/nokia/location/supl/port</applyto>
+      <owner>liblocation</owner>
+      <type>int</type>
+      <default>7275</default>
+      <locale name="C">
+        <short>The port number of the external SUPL server</short>
+        <long>The port number of the external SUPL server. 
+        </long>
+      </locale>
+    </schema>    
+
+  </schemalist>
+</gconfschemafile>

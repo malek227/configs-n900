@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="PatternCommonNotification" mtime="1340006039" type="bool" value="true"/>
+	<entry name="PatternBatteryCharging" mtime="1340006039" type="bool" value="true"/>
+	<entry name="PatternCommunicationIM" mtime="1340006039" type="bool" value="false"/>
+	<entry name="PatternCommunicationEmail" mtime="1340006039" type="bool" value="false"/>
+	<entry name="PatternCommunicationSMS" mtime="1340006039" type="bool" value="true"/>
+	<entry name="PatternCommunicationCall" mtime="1340006039" type="bool" value="true"/>
+	<entry name="PatternDeviceOn" mtime="1340006039" type="bool" value="true"/>
+</gconf>

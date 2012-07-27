@@ -1,0 +1,27 @@
+description "Launch PIN query"
+author "Pekka Pessi"
+
+start on cellmo sim code-required
+
+respawn limit 3 30
+
+script
+    test "$SSC_WAS_READY" = 1 && exit 0
+    test -r /var/run/pin-query-done || exit 0
+    test -z "$EMERGENCY_CALL_STOPPED" || exit 0
+
+    dbus-send --system --type=method_call --print-reply \
+    	      --dest=com.nokia.mce \
+	      /com/nokia/mce/request \
+	      com.nokia.mce.request.req_vibrator_pattern_activate \
+	      string:PatternPinCodeRequired
+    ( sleep 3 ;
+      dbus-send --system --type=method_call --print-reply \
+    	      --dest=com.nokia.mce \
+	      /com/nokia/mce/request \
+	      com.nokia.mce.request.req_vibrator_pattern_deactivate \
+	      string:PatternPinCodeRequired
+    ) &
+    exec startup-pin-query
+end script
+

@@ -1,0 +1,18 @@
+#! /bin/sh
+
+description     "FMRX Enabler for N900 Hardware"
+author          "Martin Grimme"
+
+start on started dbus
+start on started dbus-actdead
+
+stop on stopping dbus-actdead
+stop on stopping dbus
+
+console none
+
+script
+    exec /usr/libexec/n900-fmrx-enabler --nodaemon
+end script
+respawn
+

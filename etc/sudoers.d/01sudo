@@ -1,0 +1,20 @@
+Defaults env_check+="HOME DISPLAY"
+Defaults env_keep+="HOME DISPLAY"
+Defaults env_reset
+user ALL = NOPASSWD: /usr/sbin/gainroot
+user ALL = NOPASSWD: /usr/sbin/mmc-mount /dev/mmcblk0 /media/mmc1
+user ALL = NOPASSWD: /usr/sbin/mmc-mount /dev/mmcblk0p1 /media/mmc1
+user ALL = NOPASSWD: /bin/umount /media/mmc1,/bin/umount -l /media/mmc1
+user ALL = NOPASSWD: /usr/sbin/osso-usb-mass-storage-enable.sh, /usr/sbin/osso-usb-mass-storage-disable.sh
+user ALL = NOPASSWD: /sbin/mkdosfs /dev/mmcblk0*, /usr/sbin/mmc-rename /dev/mmcblk0*
+user ALL = NOPASSWD: /etc/init.d/af-base-apps stop , /etc/osso-af-init/gconf-daemon.sh stop
+user ALL = NOPASSWD: /etc/init.d/af-base-apps start , /etc/osso-af-init/gconf-daemon.sh start
+user ALL = NOPASSWD: /etc/init.d/osso-systemui restart
+user ALL = NOPASSWD: /usr/sbin/gconf-clean.sh
+user ALL = NOPASSWD: /usr/sbin/chroot /mnt/initfs /usr/bin/retutime *
+user ALL = NOPASSWD: /sbin/insmod /mnt/initfs/lib/modules/current/g_file_storage.ko stall=0 file=/dev/mmcblk0
+user ALL = NOPASSWD: /sbin/insmod /mnt/initfs/lib/modules/current/g_ether.ko
+user ALL = NOPASSWD: /sbin/rmmod g_file_storage
+user ALL = NOPASSWD: /sbin/rmmod g_ether
+user ALL = NOPASSWD: /usr/sbin/osso-backup-restore-locale
+user ALL = (install) NOPASSWD: /usr/bin/app-installer-tool

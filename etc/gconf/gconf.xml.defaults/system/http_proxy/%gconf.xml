@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ignore_hosts" mtime="1284131105" schema="/schemas/system/http_proxy/ignore_hosts"/>
+	<entry name="authentication_password" mtime="1284131105" schema="/schemas/system/http_proxy/authentication_password"/>
+	<entry name="authentication_user" mtime="1284131105" schema="/schemas/system/http_proxy/authentication_user"/>
+	<entry name="use_authentication" mtime="1284131105" schema="/schemas/system/http_proxy/use_authentication"/>
+	<entry name="port" mtime="1284131105" schema="/schemas/system/http_proxy/port"/>
+	<entry name="host" mtime="1284131105" schema="/schemas/system/http_proxy/host"/>
+	<entry name="use_http_proxy" mtime="1284131105" schema="/schemas/system/http_proxy/use_http_proxy"/>
+</gconf>

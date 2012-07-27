@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="size" mtime="1339333376" type="int" value="8"/>
+	<entry name="sound-mode" mtime="1339333376" type="int" value="0"/>
+</gconf>

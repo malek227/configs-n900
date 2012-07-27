@@ -1,0 +1,124 @@
+description "starting bme"
+author "Simo Piiroinen"
+
+console output
+
+start on started dsme
+stop on starting shutdown
+
+service
+nice -1
+
+env LOGGER='/usr/bin/logger -s -tBME'
+env STOP_FLAG=/tmp/bme.was.stopped
+
+env SYSFS_VBUS_PATH=/sys/class/i2c-adapter/i2c-1/1-0048/twl4030_usb/vbus
+env BACKLIGHT_PATH=/sys/class/backlight/acx565akm/brightness
+
+pre-start script
+  set +e
+  $LOGGER -pdaemon.notice 'pre-start'
+
+  case $(cat /tmp/STATE) in
+  USER)
+        if [ -e /var/lib/ke-recv/usb_phonet_mode ]; then
+          modprobe g_nokia || true
+          initctl emit G_NOKIA_READY
+        else
+          modprobe g_file_storage luns=2 stall=0 removable || true
+        fi
+        ;;
+  ACT_DEAD)
+        modprobe g_file_storage luns=2 stall=0 || true
+        ;;
+  *)
+  	$LOGGER -pdaemon.notice 'skip modprobe g_*'
+	;;
+  esac
+
+  if ! /usr/sbin/waitfordsme ; then
+     $LOGGER -pdaemon.crit 'waitfordsme failed'
+     exit 1
+  fi
+
+  # check dead battery pre-charge
+  # (or poweroff if battery can't be charged)
+  if [ $(cat $SYSFS_VBUS_PATH) -eq 1 ]; then
+    $LOGGER -pdaemon.notice 'starting battery precharge'
+
+    # Minimize power usage during pre-charge
+    echo 0 > $BACKLIGHT_PATH
+
+    # Drive yellow led with device charging pattern to improve UX
+    # Must be done before actually running the "bme-RX-51 -b" - its slow
+	
+    # Clearing LED-state to be sure
+    echo "disabled" > /sys/class/i2c-adapter/i2c-2/2-0032/engine1_mode
+    echo "disabled" > /sys/class/i2c-adapter/i2c-2/2-0032/engine2_mode
+    echo 0 > /sys/class/leds/lp5523:r/brightness
+    echo 0 > /sys/class/leds/lp5523:g/brightness
+    echo 0 > /sys/class/leds/lp5523:b/brightness
+
+    # Setting yellow light pattern and running it
+    echo "load" > /sys/class/i2c-adapter/i2c-2/2-0032/engine1_mode
+    echo "000001100" > /sys/class/i2c-adapter/i2c-2/2-0032/engine1_leds
+    echo "9d804000427f0d7f7f007f0042000000" > /sys/class/i2c-adapter/i2c-2/2-0032/engine1_load
+    echo "load" > /sys/class/i2c-adapter/i2c-2/2-0032/engine2_mode
+    echo "000000000" > /sys/class/i2c-adapter/i2c-2/2-0032/engine2_leds
+    echo "9d800000" > /sys/class/i2c-adapter/i2c-2/2-0032/engine2_load
+    echo "run" > /sys/class/i2c-adapter/i2c-2/2-0032/engine2_mode
+    echo "run" > /sys/class/i2c-adapter/i2c-2/2-0032/engine1_mode
+    echo 20 > /sys/class/leds/lp5523:r/led_current
+    echo 2 > /sys/class/leds/lp5523:g/led_current
+    echo 0 > /sys/class/leds/lp5523:b/led_current
+
+    /usr/sbin/bme_RX-51 -b
+    case $? in
+      0)
+        $LOGGER -pdaemon.notice 'precharge -> ok'
+	;;
+      2)
+        $LOGGER -pdaemon.crit 'precharge -> power off'
+	# power off request has been sent to dsme
+
+        # Turn off charging-LED to avoid "ghost charging" when cable removed
+        echo "disabled" > /sys/class/i2c-adapter/i2c-2/2-0032/engine1_mode
+        echo "disabled" > /sys/class/i2c-adapter/i2c-2/2-0032/engine2_mode
+        echo 0 > /sys/class/leds/lp5523:r/brightness
+        echo 0 > /sys/class/leds/lp5523:g/brightness
+        echo 0 > /sys/class/leds/lp5523:b/brightness
+
+	exit 1
+	;;
+      *)
+        $LOGGER -pdaemon.crit 'precharge -> failure'
+	# some mystery failure, continue startup
+	;;
+    esac
+  fi
+end script
+
+script
+  set +e
+  $LOGGER -pdaemon.notice 'start'
+  exec /usr/sbin/bme_RX-51
+end script
+
+# create flag file if bme is stopped on purpose (via upstart)
+pre-stop script
+  set +e
+  $LOGGER -pdaemon.notice 'pre-stop'
+  touch $STOP_FLAG
+end script
+
+# reboot the device if flag file is not present (bme crashed)
+post-stop script
+  set +e
+  $LOGGER -pdaemon.notice 'post-stop'
+  if [ -e $STOP_FLAG ]; then
+    rm $STOP_FLAG
+  else
+    $LOGGER -pdaemon.crit "crash detected -> rebooting"
+    /usr/sbin/dsmetool --reboot
+  fi
+end script

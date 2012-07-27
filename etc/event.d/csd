@@ -1,0 +1,76 @@
+description "CSD"
+author "Pekka Pessi"
+
+start on started dbus
+stop on stopping dbus
+
+console output
+
+pre-start script 
+    test -x /usr/sbin/waitdbus || exit 0
+    /usr/sbin/waitdbus system
+end script
+
+env PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+respawn limit 10 5
+respawn
+
+script
+    DAEMON=/usr/sbin/csd
+    PLUGINDIR=/usr/lib/csd/plugins
+    DEFAULTS=/etc/default/csd
+    ENABLE=1 LOGLEVEL= REALTIME= LOCKMEM= ISOLATE_PLUGINS=
+
+    test -r $DEFAULTS && . $DEFAULTS
+    test -n "$ENABLE" -a "$ENABLE" != "0" || exit 0
+
+    PLUGINS= PRETTY=
+
+    if [ -z "$CSD_ARGS" ]; then
+        CSD_ARGS="${LOGLEVEL:+ -l$LOGLEVEL}${LOCKMEM:+ -m}${REALTIME:+ -r$REALTIME}"
+
+        for PLUGIN in $PLUGINDIR/libcsd-*.so $PLUGINDIR/libcsd-*.so.1.0.0
+        do
+    	PLUGIN=${PLUGIN##*/libcsd-}
+    	PLUGIN=${PLUGIN%%.so}
+    	PLUGIN=${PLUGIN%%.so.1.0.0}
+    	ENABLE= LOGLEVEL= ISOLATE= LOCKMEM= REALTIME= ARGS=
+
+    	test -f "${DEFAULTS}-${PLUGIN}" && . "${DEFAULTS}-${PLUGIN}"
+
+    	if [ -n "$ENABLE" ]; then
+     	   PLUGINS="$PLUGINS -p $PLUGIN${ARGS:+:$ARGS}"
+	   PRETTY="$PRETTY $PLUGIN"
+     	   [ -n "$ISOLATE" ] &&
+    	   echo "csd: isolating plugin ${PLUGIN} not supported" >&2
+    	fi
+        done
+    fi
+
+    # If the .pid file is there, csd was not killed cleanly by upstart
+    if [ -e /var/run/csd.pid ] ; then
+       echo "Detected csd crash, reset cellular modem"
+       cmt-reset
+       rm /var/run/csd.pid
+    fi
+    
+    PID=$$
+    echo $PID > /var/run/csd.pid
+    echo "Starting csd[$PID] ${PRETTY}"
+
+    if [ -n "$OOM_ADJUST" ]; then
+       echo $OOM_ADJUST > /proc/$PID/oom_adj
+    fi
+
+    test "$CONSOLE" = 1 ||
+    exec > /dev/null 2>&1 </dev/null
+
+    exec ${NICE:+nice -n $NICE} $DAEMON ${CSD_ARGS} ${PLUGINS}
+end script
+
+pre-stop script
+    if [ -e /var/run/csd.pid ] ; then
+       rm /var/run/csd.pid
+    fi
+end script

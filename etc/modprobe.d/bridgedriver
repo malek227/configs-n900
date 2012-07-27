@@ -1,0 +1,2 @@
+options bridgedriver shm_size=0x400000 phys_mempool_base=0 base_img=/lib/dsp/baseimage.dof
+

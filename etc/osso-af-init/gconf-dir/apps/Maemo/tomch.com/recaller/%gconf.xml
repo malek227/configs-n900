@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="reminders" mtime="1340846859" type="bool" value="false"/>
+	<entry name="autorec" mtime="1340846859" type="bool" value="true"/>
+	<entry name="format" mtime="1340846859" type="string">
+		<stringvalue>aac</stringvalue>
+	</entry>
+	<entry name="folder" mtime="1340846859" type="string">
+		<stringvalue>/home/user/MyDocs</stringvalue>
+	</entry>
+	<entry name="audiosource" mtime="1340846859" type="string">
+		<stringvalue>Phone</stringvalue>
+	</entry>
+</gconf>

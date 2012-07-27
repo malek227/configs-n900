@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="usb-device-name" mtime="1284131123" schema="/schemas/system/osso/af/usb-device-name"/>
+	<entry name="usb-mode" mtime="1284131123" schema="/schemas/system/osso/af/usb-mode"/>
+	<entry name="launch-on-camera" mtime="1284131123" schema="/schemas/system/osso/af/launch-on-camera"/>
+	<entry name="on-camera-out" mtime="1284131123" schema="/schemas/system/osso/af/on-camera-out"/>
+	<entry name="mmc-swap" mtime="1284131123" schema="/schemas/system/osso/af/mmc-swap"/>
+	<entry name="internal-mmc-swap" mtime="1284131123" schema="/schemas/system/osso/af/internal-mmc-swap"/>
+	<entry name="slide-open" mtime="1284131123" schema="/schemas/system/osso/af/slide-open"/>
+	<entry name="camera-has-turned" mtime="1284131123" schema="/schemas/system/osso/af/camera-has-turned"/>
+	<entry name="camera-is-out" mtime="1284131123" schema="/schemas/system/osso/af/camera-is-out"/>
+	<entry name="internal-mmc-device-present" mtime="1284131123" schema="/schemas/system/osso/af/internal-mmc-device-present"/>
+	<entry name="mmc-device-present" mtime="1284131123" schema="/schemas/system/osso/af/mmc-device-present"/>
+	<entry name="internal-mmc-used-over-usb" mtime="1284131123" schema="/schemas/system/osso/af/internal-mmc-used-over-usb"/>
+	<entry name="mmc-used-over-usb" mtime="1284131123" schema="/schemas/system/osso/af/mmc-used-over-usb"/>
+	<entry name="mmc-cover-open" mtime="1284131123" schema="/schemas/system/osso/af/mmc-cover-open"/>
+	<entry name="usb-cable-attached" mtime="1284131123" schema="/schemas/system/osso/af/usb-cable-attached"/>
+	<entry name="keyboard-attached" mtime="1284131122" schema="/schemas/system/osso/af/keyboard-attached"/>
+</gconf>

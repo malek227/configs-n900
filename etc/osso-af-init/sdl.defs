@@ -1,0 +1,4 @@
+#!/bin/sh
+# SDL system wide environment variables
+
+export SDL_AUDIODRIVER="pulse"

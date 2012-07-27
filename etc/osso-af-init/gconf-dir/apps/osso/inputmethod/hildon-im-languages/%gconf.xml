@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="current" mtime="1340075568" type="int" value="1"/>
+	<entry name="language-1" mtime="1339384748" type="string">
+		<stringvalue>sv_SE</stringvalue>
+	</entry>
+	<entry name="language-0" mtime="1339384748" type="string">
+		<stringvalue>en_US</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gettext_catalog" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN human readable name gettext catalog">
+			<default type="string">
+				<stringvalue>osso-connectivity-ui</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN human readable name">
+			<default type="string">
+				<stringvalue>conn_mngr_fi_type_wlan</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="statusbar_dimmed_icon_name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN dimmed statusbar icon name">
+			<default type="string">
+				<stringvalue>statusarea_internetconnection_no</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="statusbar_icon_name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN statusbar icon name">
+			<default type="string">
+				<stringvalue>general_wlan</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name_signal_4" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN icon name with signal strength 4">
+			<default type="string">
+				<stringvalue>general_wlan</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name_signal_3" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN icon name with signal strength 3">
+			<default type="string">
+				<stringvalue>connectivity_wlan_signal_good</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name_signal_2" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN icon name with signal strength 2">
+			<default type="string">
+				<stringvalue>connectivity_wlan_signal_fair</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name_signal_1" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN icon name with signal strength 1">
+			<default type="string">
+				<stringvalue>connectivity_wlan_signal_fair</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name_signal_0" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN icon name with signal strength 1">
+			<default type="string">
+				<stringvalue>statusarea_internetconnection_no</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN icon name">
+			<default type="string">
+				<stringvalue>general_wlan</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

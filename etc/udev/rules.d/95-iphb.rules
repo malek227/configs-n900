@@ -1,0 +1,4 @@
+# TCP keepalive handler device (a.k.a IP heartbeat)
+
+KERNEL=="iphb", MODE="0600"
+

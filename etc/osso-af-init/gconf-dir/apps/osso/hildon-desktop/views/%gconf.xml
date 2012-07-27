@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="5" mtime="1340934409" type="string">
+		<stringvalue>/home/user/MyDocs/wallpapers/ultimate-walls-landscape-16.jpg</stringvalue>
+	</entry>
+	<entry name="active" mtime="1340934409" schema="/schemas/apps/osso/hildon-desktop/views/active" type="list" ltype="int">
+		<li type="int" value="1"/>
+		<li type="int" value="2"/>
+		<li type="int" value="3"/>
+		<li type="int" value="4"/>
+		<li type="int" value="5"/>
+		<li type="int" value="6"/>
+		<li type="int" value="7"/>
+		<li type="int" value="8"/>
+		<li type="int" value="9"/>
+	</entry>
+	<entry name="current" mtime="1340959257" schema="/schemas/apps/osso/hildon-desktop/views/current" type="int" value="1"/>
+</gconf>

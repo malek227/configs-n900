@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="internal-mmc-corrupted" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the internal memory card is corrupted">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="mmc-corrupted" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the external memory card is corrupted">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+</gconf>

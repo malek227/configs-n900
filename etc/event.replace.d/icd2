@@ -1,0 +1,16 @@
+description "starting icd2"
+author "Jukka Rissanen"
+
+console none
+
+start on started wlancond
+stop on ACT_DEAD
+stop on stopping dbus
+
+pre-start script
+	/usr/sbin/waitdbus system
+end script
+
+exec /usr/sbin/icd2 -l2
+
+respawn

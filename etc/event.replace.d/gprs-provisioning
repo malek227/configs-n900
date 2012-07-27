@@ -1,0 +1,17 @@
+author "Ismo Puustinen"
+description "This script runs GPRS bootup provisioning"
+
+start on cellmo sim ready
+
+script 
+
+    prefix=/usr
+    exec_prefix=${prefix}
+    sbindir=${exec_prefix}/sbin
+
+    echo "Running GPRS provisioning"
+    ${exec_prefix}/sbin/gprs-provisioning
+
+end script
+
+console none

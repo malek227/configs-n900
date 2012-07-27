@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="command" mtime="1339369400" type="string">
+		<stringvalue>dbus-send --type=method_call --dest=com.nokia.osso_browser /com/nokia/osso_browser com.nokia.osso_browser.load_url string:&quot;%s&quot;</stringvalue>
+	</entry>
+</gconf>

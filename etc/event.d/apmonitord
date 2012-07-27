@@ -1,0 +1,15 @@
+author "Kirill Plyashkevich"
+description "This init script starts the advanced power monitor daemon"
+
+start on started hildon-desktop
+stop on starting shutdown
+
+console none
+exec python -OO /opt/maemo/usr/lib/advanced-power-monitor/apmdaemon.py start >> /tmp/apmonitord.log
+respawn
+
+post-stop script
+  if [ -d /home/user ]; then
+    mv /tmp/apmonitord.log /home/user/apmonitord.log
+  fi
+end script

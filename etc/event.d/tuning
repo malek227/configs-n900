@@ -1,0 +1,21 @@
+description "N900 tuning"
+author "swappolube editor"
+
+
+console output
+
+start on started hildon-desktop
+
+
+script
+       echo "1" > /proc/sys/vm/oom_kill_allocating_task
+       echo "0" > /proc/sys/vm/page-cluster
+       echo "1" > /proc/sys/vm/laptop_mode
+       echo "0" > /proc/sys/vm/dirty_expire_centisecs
+       echo "0" > /proc/sys/net/ipv4/tcp_timestamps
+       echo "0" > /proc/sys/vm/dirty_writeback_centisecs
+       echo "1" > /proc/sys/net/ipv4/tcp_no_metrics_save
+       echo "95" > /proc/sys/vm/dirty_ratio
+       echo "30" > /proc/sys/vm/swappiness
+       echo "60" > /proc/sys/vm/dirty_background_ratio
+end script

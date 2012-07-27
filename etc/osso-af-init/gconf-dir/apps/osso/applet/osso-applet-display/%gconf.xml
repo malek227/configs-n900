@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="inhibit_blank_mode" mtime="1339334745" type="int" value="0"/>
+	<entry name="powersave_on" mtime="1339334745" type="bool" value="true"/>
+	<entry name="vibra_on" mtime="1339334745" type="bool" value="false"/>
+	<entry name="lock_screen" mtime="1339334745" type="bool" value="false"/>
+	<entry name="brightness_period" mtime="1339334745" type="int" value="10"/>
+	<entry name="original_brightness" mtime="1339334745" type="int" value="4"/>
+	<entry name="brightness" mtime="1339334747" type="int" value="4"/>
+	<entry name="appletactive" mtime="1339334747" type="bool" value="false"/>
+</gconf>

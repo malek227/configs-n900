@@ -1,0 +1,8 @@
+description "Creating sync databases"
+author "Hannu Mallat"
+
+console none
+
+start on started hildon-desktop
+
+exec /etc/init.d/funambol-cpp-api start

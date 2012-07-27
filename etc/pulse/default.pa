@@ -1,0 +1,90 @@
+.fail
+
+###################################
+#       PA initialization         #
+###################################
+
+load-module module-native-protocol-unix
+load-module module-simple-protocol-unix
+
+### Automatically restore the volume of streams and devices
+load-module module-stream-restore fallback_table=/etc/pulse/x-maemo-stream-restore.table restore_muted=no restore_device=no sink_volume_table=/etc/pulse/x-maemo-sink-volume.table
+load-module module-rescue-streams
+load-module module-suspend-on-idle timeout=5
+
+### Automatically augment property information from .desktop files
+### stored in /usr/share/application
+load-module module-augment-properties
+
+load-module module-null-sink sink_name=sink.null
+
+###################################
+#       default sink/src          #
+###################################
+
+### Default static drivers
+load-module module-alsa-sink-old sink_name=sink.hw0 device=hw:0  rate=48000 fragment_size=1920 fragments=4 alt_fragment_size=960 alt_fragments=2
+load-module module-alsa-sink-volume sink_name=sink.hw0 mixer_load=HP_DAC,Headphone,Earphone mixer=HP_DAC device=hw:0
+update-sink-proplist sink.hw0 module-suspend-on-idle.timeout=1
+set-sink-volume 1 0
+
+load-module module-alsa-source-old source_name=source.hw0 device=hw:0 rate=48000 fragment_size=1920 fragments=4 alt_fragment_size=960 alt_fragments=4
+update-source-proplist source.hw0 module-suspend-on-idle.timeout=1
+
+### Nokia audio enhancements modules
+.ifexists module-nokia-voice.so
+load-module module-nokia-voice master_sink=sink.hw0 master_source=source.hw0 dbus_type=system
+.endif
+.ifexists module-nokia-music.so
+load-module module-nokia-music sink_name=sink.music master_sink=sink.voice.raw
+set-default-sink sink.music
+.endif
+.ifexists module-nokia-record.so
+load-module module-nokia-record source_name=source.record master_source=source.voice.raw
+set-default-source source.record
+.endif
+
+### Bluetooth OMAP SCO over PCM
+.nofail
+
+load-module module-alsa-sink-old sink_name=sink.hw1 hw_volume=true device=hw:0,1 rate=8000 channels=1 fragment_size=80 fragments=2
+load-module module-alsa-source-old source_name=source.hw1 device=hw:0,1 rate=8000 channels=1 fragment_size=80 fragments=2
+
+### Automatically load driver modules for Bluetooth hardware
+load-module module-bluetooth-discover sco_sink=sink.hw1 sco_source=source.hw1
+
+### Sink for playing ringtones to both IHF and BT/HSP
+load-module module-combine sink_name=sink.hw0andhw1 slaves=sink.hw0,sink.hw1 slave_amps=0,-28 resample_method=trivial adjust_time=1
+
+###################################
+#         other modules           #
+###################################
+
+.ifexists module-esound-protocol-unix.so
+load-module module-esound-protocol-unix
+.endif
+
+.ifexists module-native-protocol-tcp.so
+load-module module-native-protocol-tcp auth-anonymous=1
+.endif
+
+.ifexists module-zeroconf-publish.so
+load-module module-zeroconf-publish
+.endif
+
+.ifexists module-zeroconf-discover.so
+load-module module-zeroconf-discover
+.endif
+
+.ifexists module-policy-enforcement.so
+load-module module-policy-enforcement null_sink_name=sink.null
+.endif
+
+.ifexists module-nokia-audiots.so
+load-module module-nokia-audiots hw_sink_name=sink.hw0 port=3001
+.endif
+
+load-module module-match table=/etc/pulse/x-maemo-match.table key=application.name
+
+#Run on port 4712
+#load-module module-cli-protocol-tcp

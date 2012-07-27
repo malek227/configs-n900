@@ -1,0 +1,14 @@
+description "Sms-manager"
+author "Jukka Saunamaki"
+
+start on started dbus
+stop on stopping dbus
+
+#console output
+
+pre-start script
+	/usr/sbin/waitdbus system
+end script
+
+exec /usr/sbin/sms-manager 
+respawn

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Cherry checks for .cherry_state anyway, but testing here makes it faster
+if [ ! -f /home/user/.cherry_state ] ; then
+  . /etc/X11/Xsession.d/04b_start_matchbox
+  /usr/bin/cherry 1>&2
+  . /etc/X11/Xsession.d/06stop_matchbox
+fi
+

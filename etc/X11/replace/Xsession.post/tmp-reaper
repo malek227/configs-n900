@@ -1,0 +1,5 @@
+#!/bin/sh
+# this script is part of osso-af-utils
+
+/usr/sbin/temp-reaper &
+

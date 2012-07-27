@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="frequency" mtime="1284131119" schema="/schemas/system/fmtx/frequency"/>
+	<entry name="enabled" mtime="1284131119" schema="/schemas/system/fmtx/enabled"/>
+</gconf>

@@ -1,0 +1,67 @@
+[Default Applications]
+# Browser supported mime types
+application/x-javascript=hildon-browser.desktop
+application/x-shockwave-flash=hildon-browser.desktop
+image/ico=hildon-browser.desktop
+image/pjpeg=hildon-browser.desktop
+image/xbm=hildon-browser.desktop
+image/x-ms-bmp=hildon-browser.desktop
+image/x-windows-bmp=hildon-browser.desktop
+image/x-xbitmap=hildon-browser.desktop
+image/svg+xml=hildon-browser.desktop
+text/css=hildon-browser.desktop
+text/html=hildon-browser.desktop
+text/sgml=hildon-browser.desktop
+text/x-dtd=hildon-browser.desktop
+
+# Media player supported mime types
+application/vnd.ms-wpl=hildon-mediaplayer.desktop
+application/x-ms-asx=hildon-mediaplayer.desktop
+audio/mp3=hildon-mediaplayer.desktop
+audio/mpeg=hildon-mediaplayer.desktop
+audio/wav=hildon-mediaplayer.desktop
+audio/x-amr=hildon-mediaplayer.desktop
+audio/x-m4a=hildon-mediaplayer.desktop
+audio/x-mp2=hildon-mediaplayer.desktop
+audio/x-mp3=hildon-mediaplayer.desktop
+audio/x-mpegurl=hildon-mediaplayer.desktop
+audio/x-ms-wax=hildon-mediaplayer.desktop
+audio/x-ms-wma=hildon-mediaplayer.desktop
+audio/x-scpls=hildon-mediaplayer.desktop
+audio/x-wav=hildon-mediaplayer.desktop
+video/3gpp=hildon-mediaplayer.desktop
+video/avi=hildon-mediaplayer.desktop
+video/mpeg=hildon-mediaplayer.desktop
+video/x-mp4=hildon-mediaplayer.desktop
+video/x-ms-asf=hildon-mediaplayer.desktop
+video/x-msvideo=hildon-mediaplayer.desktop
+
+# Image viewer
+image/bmp=hildon-image-viewer.desktop
+image/gif=hildon-image-viewer.desktop
+image/jpeg=hildon-image-viewer.desktop
+image/png=hildon-image-viewer.desktop
+image/tiff=hildon-image-viewer.desktop
+image/wbmp=hildon-image-viewer.desktop
+image/x-ico=hildon-image-viewer.desktop
+
+# Sketch
+sketch/png=hildon-osso_sketch.desktop
+
+# Notes
+text/note=hildon-osso_notes.desktop
+text/plain=hildon-osso_notes.desktop
+
+# Application manager
+application/x-install-instructions=hildon-hildon-application-manager.desktop
+
+# Address book
+text/x-vcard=hildon-osso-addressbook.desktop
+
+# Others
+application/x-pkcs12=hildon-maemosec_certman_mimehandler.desktop
+application/x-x509-ca-cert=hildon-maemosec_certman_mimehandler.desktop
+application/x-osso-applet-certman=hildon-maemosec_certman_mimehandler.desktop
+application/news_reader=hildon-osso_rss_feed_reader.desktop
+application/game=hildon-chess_startup.desktop
+application/pdf=hildon-osso_pdfviewer.desktop

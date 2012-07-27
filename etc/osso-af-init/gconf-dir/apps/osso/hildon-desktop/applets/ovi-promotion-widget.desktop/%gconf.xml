@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="view" mtime="1340934400" schema="/schemas/apps/osso/hildon-desktop/applets/ovi-promotion-widget.desktop/view" type="int" value="2"/>
+	<entry name="position" mtime="1340934400" schema="/schemas/apps/osso/hildon-desktop/applets/ovi-promotion-widget.desktop/position" type="list" ltype="int">
+		<li type="int" value="155"/>
+		<li type="int" value="344"/>
+	</entry>
+</gconf>

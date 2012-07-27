@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="visualization" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/visualization"/>
+	<entry name="videosrc" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/videosrc"/>
+	<entry name="audiosrc_description" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/audiosrc_description"/>
+	<entry name="audiosrc" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/audiosrc"/>
+	<entry name="videosink" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/videosink"/>
+	<entry name="chataudiosink_description" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/chataudiosink_description"/>
+	<entry name="chataudiosink" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/chataudiosink"/>
+	<entry name="musicaudiosink_description" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/musicaudiosink_description"/>
+	<entry name="musicaudiosink" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/musicaudiosink"/>
+	<entry name="audiosink_description" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/audiosink_description"/>
+	<entry name="audiosink" mtime="1284131103" schema="/schemas/system/gstreamer/0.10/default/audiosink"/>
+</gconf>

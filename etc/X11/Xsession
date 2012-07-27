@@ -1,0 +1,20 @@
+#!/bin/sh
+
+iterate_scripts() {
+    scripts=/etc/X11/Xsession.$1
+    SESSIONFILES=`run-parts -l $scripts`
+    if [ -n "$SESSIONFILES" ]; then 
+        for SESSIONFILE in $SESSIONFILES; do 
+            . $SESSIONFILE 
+        done 
+    fi 
+}
+
+if [ -e /tmp/ACT_DEAD ]; then 
+    iterate_scripts "actdead"
+else
+    iterate_scripts "d"
+    iterate_scripts "post"
+fi
+
+exit 0

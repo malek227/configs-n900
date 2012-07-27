@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="calendar-alarm-tone" mtime="1284131115" type="schema" stype="string" owner="calendar">
+		<local_schema locale="C">
+			<default type="string">
+				<stringvalue>/usr/share/sounds/ui-calendar_alarm_default.aac</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="default-view" mtime="1284131115" type="schema" stype="int" owner="calendar">
+		<local_schema locale="C">
+			<default type="int" value="5"/>
+		</local_schema>
+	</entry>
+	<entry name="week-start" mtime="1284131115" type="schema" stype="int" owner="calendar">
+		<local_schema locale="C">
+			<default type="int" value="7"/>
+		</local_schema>
+	</entry>
+	<entry name="hide-done-tasks" mtime="1284131115" type="schema" stype="int" owner="calendar">
+		<local_schema locale="C">
+			<default type="int" value="0"/>
+		</local_schema>
+	</entry>
+	<entry name="remove-items" mtime="1284131115" type="schema" stype="int" owner="calendar">
+		<local_schema locale="C">
+			<default type="int" value="9"/>
+		</local_schema>
+	</entry>
+	<entry name="autocleanup-cookie" mtime="1284131115" type="schema" stype="int" owner="calendar">
+		<local_schema locale="C">
+			<default type="int" value="0"/>
+		</local_schema>
+	</entry>
+	<entry name="first-boot" mtime="1284131115" type="schema" stype="int" owner="calendar">
+		<local_schema locale="C">
+			<default type="int" value="2"/>
+		</local_schema>
+	</entry>
+</gconf>

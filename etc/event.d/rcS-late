@@ -1,0 +1,145 @@
+description "late rcS actions"
+
+start on started hal
+stop on stopping hal
+
+console none
+
+script
+    #mount /home; fix ext3 and retry mounting if 1st attempt fails
+    mount_home ()
+    {
+    /bin/mount /home && grep -q "/home ext3 rw" /proc/mounts
+    if [ $? -eq 0 ]
+    then
+      return 0
+    else
+      grep -q "/home ext3 ro" /proc/mounts
+      if [ $? -eq 0 ]
+      then
+        umount /home
+      fi
+      HOME_DEV=`grep "/home ext3" /etc/fstab | cut -d' ' -f1`
+      fsck.ext3 -y $HOME_DEV >> /var/lib/fsck_ext3_home.log 2>&1
+      sync
+      /bin/mount /home && grep -q "/home ext3 rw" /proc/mounts
+      return $?
+    fi
+    }
+
+    ACT_DEAD=0
+    HOME_MOUNTED=0
+    
+    #check act_dead
+    if [ -e /tmp/ACT_DEAD ]; then
+      ACT_DEAD=1
+    fi
+
+    # Generate fstab and mount /home
+    . /etc/default/mount-opts
+
+    fstab=/etc/fstab
+    tmp_fstab=/tmp/fstab
+
+    sfdisk -l /dev/mmcblk0 | /bin/busybox awk \
+    	-v home_opts="$home_opts" -v fat_opts="$fat_opts" \
+	-f /usr/lib/genfstab.awk > $tmp_fstab
+
+    cmp -s $tmp_fstab $fstab || cp $tmp_fstab $fstab
+    rm -f $tmp_fstab
+
+    if [ $ACT_DEAD -eq 0 ]; then
+      /sbin/swapon -a || echo "Failed to enable paging partition."
+      # Setup lowmem module
+      echo 32768  > /proc/sys/vm/lowmem_deny_watermark_pages
+      echo 98304  > /proc/sys/vm/lowmem_notify_high_pages
+      echo 131072 > /proc/sys/vm/lowmem_notify_low_pages
+      echo 1024   > /proc/sys/vm/lowmem_nr_decay_pages
+      # Exclude some UIDs from memory allocation denial.
+      # 30000 is messagebus, 30001 could be used by Matchbox
+      echo "30000 30001 30002 30003" > /proc/sys/vm/lowmem_allowed_uids
+    fi
+
+    mount_home && HOME_MOUNTED=1
+   
+    # If failed to mount /home and system has been already optified - reboot 
+    if [ $HOME_MOUNTED -eq 0 ]
+    then
+      if [ -e /var/lib/maemo-optify-firstboot-do-not-clean-home-opt ]; then
+        telinit 6
+      fi
+    else
+      [ ! -d /home/opt ] && mkdir /home/opt
+      [ ! -d /opt ] && mkdir /opt
+    fi   
+ 
+    if [ $ACT_DEAD -eq 0 ]
+    then
+      if [ $HOME_MOUNTED -eq 1 ]
+      then
+        if [ -x /usr/sbin/maemo-optify-firstboot.sh ]; then
+            . /usr/sbin/maemo-optify-firstboot.sh
+        fi
+      fi
+    fi    
+    
+    /bin/mount /opt || echo "Failed to mount(bind) /opt."
+      
+    if [ $ACT_DEAD -eq 0 ]
+    then
+      if [ $HOME_MOUNTED -eq 1 ]
+      then
+        if [ -x /usr/sbin/maemo-optify-auto-opt.sh ]; then
+            . /usr/sbin/maemo-optify-auto-opt.sh
+        fi
+      fi
+      
+      if [ -d /home/preinstalled -a -d /home/user ]
+      then 
+        rm -rf /home/user
+      fi     
+    
+      if [ ! -d /home/user ]
+      then
+        if [ -d /home/preinstalled ]
+        then
+          mv /home/preinstalled /home/user
+        else
+          mkdir /home/user
+        fi
+        cd /etc/skel
+        cp -a . /home/user
+        chown -R user:users /home/user
+        sync
+      fi
+    fi
+
+    if [ ! -d /home/user ]
+    then
+      mkdir /home/user
+      chown user:users /home/user
+      sync
+    fi
+
+    # We can safely continue booting now.
+    initctl emit MOUNTS_OK
+
+    # Adjust flushing of memory card buffers
+    echo 40 > /proc/sys/vm/dirty_ratio
+    echo 10 > /proc/sys/vm/dirty_background_ratio
+
+    # Initialize PRNG pool with the HW RNG. Slow, but that's ok.
+    URANDOM_POOLSZ=512
+    if [ -e /dev/hwrng ]; then
+      echo "Seeding entropy pool"
+      dd if=/dev/hwrng of=/dev/urandom bs=$URANDOM_POOLSZ count=1
+    fi
+
+    # Data for the panic info driver
+    mount -t debugfs nodev /sys/kernel/debug
+    modprobe panic_info_buff
+    sleep 1
+    osso-product-info > /sys/kernel/debug/panic_info_buff
+end script
+
+normal exit 0

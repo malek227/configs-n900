@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="method" mtime="1284131094" type="schema" stype="pair" owner="liblocation" car_type="string" cdr_type="string">
+		<local_schema locale="C" short_desc="A pair of string values that tell the D-Bus service name of the 
+        currently active location daemon and the location method used within 
+        that daemon">
+			<default type="pair">
+				<car type="string">
+					<stringvalue>com.nokia.Location</stringvalue>
+				</car>
+				<cdr type="string">
+					<stringvalue>las</stringvalue>
+				</cdr>
+			</default>
+			<longdesc>A pair of string values that tell the D-Bus service name of the 
+        currently active location daemon and the location method used within 
+        that daemon. For BlueTooth devices the location method is the address 
+        of the BlueTooth device. For integrated GPS and cellular network –based 
+        location the location method is always las. The default value is 
+        (com.nokia.Location, las). Examples:
+        Integrated GPS and cellular:
+        (com.nokia.Location, las)
+        BlueTooth GPS:
+        (org.freedesktop.Gypsy, 00:0D:B5:34:52:F6)
+        </longdesc>
+		</local_schema>
+	</entry>
+	<entry name="disclaimer-accepted" mtime="1284131094" type="schema" stype="bool" owner="liblocation">
+		<local_schema locale="C" short_desc="A boolean value that tells whether the user has accepted 
+        the location disclaimer or not">
+			<default type="bool" value="false"/>
+			<longdesc>A boolean value that tells whether the user has accepted 
+        the location disclaimer or not. The default value is false, i.e., 
+        the user has not accepted the disclaimer. Until the user accepts 
+        the disclaimer the device shows the disclaimer dialog whenever 
+        an application tries to get location data through the location-*.h API. 
+        When set to true, the device doesn’t show the dialog any more.
+        </longdesc>
+		</local_schema>
+	</entry>
+	<entry name="network-disabled" mtime="1284131094" type="schema" stype="bool" owner="liblocation">
+		<local_schema locale="C" short_desc="A boolean value that tells whether the network-based methods 
+        are is disabled or enabled">
+			<default type="bool" value="false"/>
+			<longdesc>A boolean value that tells whether the network-based methods 
+        are is disabled or enabled. The default value is false, i.e., 
+        network-based methods are enabled. This setting enables both AGPS 
+        and cellular network –based positioning. If the value of both 
+        gps_disabled and network_disabled are set to true, the 
+        location-control.h API method location_gpsd_control_start causes 
+        the enable dialog to be shown. If the user decides to enable network 
+        in the dialog, network_disabled is set to false and the system 
+        behaves accordingly.
+        </longdesc>
+		</local_schema>
+	</entry>
+	<entry name="gps-disabled" mtime="1284131094" type="schema" stype="bool" owner="liblocation">
+		<local_schema locale="C" short_desc="A boolean value that tells whether the gps receiver is disabled 
+         or enabled">
+			<default type="bool" value="false"/>
+			<longdesc>A boolean value that tells whether the gps receiver is disabled 
+         or enabled. The default value is false, i.e., the gps receiver is 
+         enabled. If the value of both gps_disabled and network_disabled are 
+         set to true, the location-control.h API method 
+         location_gpsd_control_start causes the enable dialog to be shown. 
+         If the user decides to enable GPS in the dialog, gps_disabled is 
+         set to false and the system behaves accordingly.
+         </longdesc>
+		</local_schema>
+	</entry>
+</gconf>

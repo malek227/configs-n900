@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="group_ids" mtime="1284131106" type="schema" stype="list" owner="controlpanel" list_type="string">
+		<local_schema locale="C">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>personalisation</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>connectivity</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>general</stringvalue>
+				</li>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="groups" mtime="1284131106" type="schema" stype="list" owner="controlpanel" list_type="string">
+		<local_schema locale="C">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>copa_ia_personalisation</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>copa_ia_connectivity</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>copa_ia_general</stringvalue>
+				</li>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

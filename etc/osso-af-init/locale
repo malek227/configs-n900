@@ -1,0 +1,14 @@
+#!/bin/sh
+
+unset LC_ALL
+export LANG=en_US
+export LC_TIME=en_US
+export LC_MESSAGES=en_US
+export LC_NUMERIC=en_US
+export LC_MONETARY=en_US
+export LC_PAPER=en_US
+export LC_NAME=en_US
+export LC_ADDRESS=en_US
+export LC_TELEPHONE=en_US
+export LC_MEASUREMENT=en_US
+export LC_IDENTIFICATION=en_US

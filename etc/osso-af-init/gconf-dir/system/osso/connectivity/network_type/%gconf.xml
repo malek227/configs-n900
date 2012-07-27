@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="change_while_connected" mtime="1339370546" type="bool" value="true"/>
+	<entry name="search_interval" mtime="1339370546" type="int" value="600"/>
+	<entry name="auto_connect" mtime="1339370546" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>*</stringvalue>
+		</li>
+	</entry>
+</gconf>

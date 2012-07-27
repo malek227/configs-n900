@@ -1,0 +1,9 @@
+user ALL = NOPASSWD: /bin/umount /media/mmc2 
+user ALL = NOPASSWD: /usr/sbin/osso-prepare-partition.sh *
+user ALL = NOPASSWD: /sbin/mkdosfs *
+user ALL = NOPASSWD: /etc/init.d/ke-recv stop
+user ALL = NOPASSWD: /etc/init.d/hildon-desktop stop
+user ALL = NOPASSWD: /etc/init.d/mediaplayer-daemon stop
+user ALL = NOPASSWD: /etc/init.d/metalayer-crawler0 stop
+user ALL = NOPASSWD: /etc/init.d/icd2 stop
+user ALL = NOPASSWD: /usr/bin/killall gconfd-2

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="autoconfig_url" mtime="1284131105" schema="/schemas/system/proxy/autoconfig_url"/>
+	<entry name="socks_port" mtime="1284131105" schema="/schemas/system/proxy/socks_port"/>
+	<entry name="socks_host" mtime="1284131105" schema="/schemas/system/proxy/socks_host"/>
+	<entry name="ftp_port" mtime="1284131105" schema="/schemas/system/proxy/ftp_port"/>
+	<entry name="ftp_host" mtime="1284131105" schema="/schemas/system/proxy/ftp_host"/>
+	<entry name="secure_port" mtime="1284131105" schema="/schemas/system/proxy/secure_port"/>
+	<entry name="secure_host" mtime="1284131105" schema="/schemas/system/proxy/secure_host"/>
+	<entry name="mode" mtime="1284131105" schema="/schemas/system/proxy/mode"/>
+</gconf>

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          csd
+# Required-Start:
+# Required-Stop:
+# Default-Start:     
+# Default-Stop:      
+# Short-Description: Cellular services daemon
+# Description:       Fake init script for the cellular services daemon
+### END INIT INFO
+
+# Fake init script used to reload plugins
+
+test -n "$SBOX_UNAME_MACHINE" && exit 0
+
+if test -x /usr/sbin/waitdbus && ! initctl list | egrep '^dbus .*running' ; then
+   exit 0
+fi
+
+case "$1" in
+    start)
+	initctl start csd
+	;;
+    stop)
+	initctl stop csd
+	;;
+    reload|force-reload|restart)
+	initctl stop csd
+	initctl start csd
+	;;
+    *)
+	echo "Usage: /etc/init.d/csd {start|stop|restart|reload|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0

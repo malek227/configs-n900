@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="position_portrait" mtime="1340934413" type="list" ltype="int">
+		<li type="int" value="224"/>
+		<li type="int" value="64"/>
+	</entry>
+	<entry name="view" mtime="1340934395" type="int" value="7"/>
+	<entry name="position" mtime="1340934395" type="list" ltype="int">
+		<li type="int" value="224"/>
+		<li type="int" value="64"/>
+	</entry>
+	<entry name="modified" mtime="1340934395" type="string">
+		<stringvalue>1340934260</stringvalue>
+	</entry>
+</gconf>

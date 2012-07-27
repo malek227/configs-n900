@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gconfschemafile xmlns:confml="http://www.s60.com/xml/confml/2">
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmark-shortcuts</key>
+      <applyto>/apps/osso/hildon-home/bookmark-shortcuts</applyto>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[maemo.nokia.com_maemo-select,facebook.com,twitter.com,link.ovi.mobi_n900ovistore]</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:link.ovi.mobi_n900ovistore/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:link.ovi.mobi_n900ovistore/view</applyto>
+      <type>int</type>
+      <default>4</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:link.ovi.mobi_n900ovistore/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:link.ovi.mobi_n900ovistore/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[180,207]</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:maemo.nokia.com_maemo-select/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:maemo.nokia.com_maemo-select/view</applyto>
+      <type>int</type>
+      <default>4</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:maemo.nokia.com_maemo-select/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:maemo.nokia.com_maemo-select/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[446,156]</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:facebook.com/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:facebook.com/view</applyto>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:facebook.com/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:facebook.com/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[312,127]</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:twitter.com/view</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:twitter.com/view</applyto>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-desktop/applets/BookmarkShortcut:twitter.com/position</key>
+      <applyto>/apps/osso/hildon-desktop/applets/BookmarkShortcut:twitter.com/position</applyto>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[72,127]</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/share.ovi.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_ovishare.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/share.ovi.com/label</applyto>
+      <type>string</type>
+      <default>Share on Ovi</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/share.ovi.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/share.ovi.com/url</applyto>
+      <type>string</type>
+      <default>share.ovi.com</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/files.ovi.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/files.ovi.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_ovifiles.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/files.ovi.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/files.ovi.com/label</applyto>
+      <type>string</type>
+      <default>Files on Ovi</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/files.ovi.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/files.ovi.com/url</applyto>
+      <type>string</type>
+      <default>https://files.ovi.com</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/ovi.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/ovi.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_ovi.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/ovi.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/ovi.com/label</applyto>
+      <type>string</type>
+      <default>Ovi by Nokia</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/ovi.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/ovi.com/url</applyto>
+      <type>string</type>
+      <default>ovi.com</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/nokia.com_support/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_support.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/nokia.com_support/label</applyto>
+      <type>string</type>
+      <default>Nokia Support</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/nokia.com_support/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/nokia.com_support/url</applyto>
+      <type>string</type>
+      <default>nokia.com/support</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/www.nokia.com_we/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/www.nokia.com_we/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_environment.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/www.nokia.com_we/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/www.nokia.com_we/label</applyto>
+      <type>string</type>
+      <default>Nokia Environment</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/www.nokia.com_we/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/www.nokia.com_we/url</applyto>
+      <type>string</type>
+      <default>www.nokia.com/we</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_maemo.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/label</applyto>
+      <type>string</type>
+      <default>Maemo Select</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/maemo.nokia.com_maemo-select/url</applyto>
+      <type>string</type>
+      <default>maemo.nokia.com/maemo-select</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/flickr.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/flickr.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_flickr.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/flickr.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/flickr.com/label</applyto>
+      <type>string</type>
+      <default>Flickr</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/flickr.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/flickr.com/url</applyto>
+      <type>string</type>
+      <default>flickr.com</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/facebook.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/facebook.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_facebook.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/facebook.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/facebook.com/label</applyto>
+      <type>string</type>
+      <default>Facebook</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/facebook.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/facebook.com/url</applyto>
+      <type>string</type>
+      <default>facebook.com</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/twitter.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/twitter.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_twitter.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/twitter.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/twitter.com/label</applyto>
+      <type>string</type>
+      <default>Twitter</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/twitter.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/twitter.com/url</applyto>
+      <type>string</type>
+      <default>twitter.com</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_maemobrowser.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/label</applyto>
+      <type>string</type>
+      <default>Maemo Browser - Interaction Modes</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/maemo.nokia.com_features_maemo-browser_gestures_/url</applyto>
+      <type>string</type>
+      <default>maemo.nokia.com/features/maemo-browser/gestures/</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/link.ovi.mobi_n900ovistore/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/link.ovi.mobi_n900ovistore/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_ovistore.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/link.ovi.mobi_n900ovistore/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/link.ovi.mobi_n900ovistore/label</applyto>
+      <type>string</type>
+      <default>Ovi Store</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/link.ovi.mobi_n900ovistore/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/link.ovi.mobi_n900ovistore/url</applyto>
+      <type>string</type>
+      <default>http://link.ovi.mobi/n900ovistore</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/youtube.com/icon</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/youtube.com/icon</applyto>
+      <type>string</type>
+      <default>/usr/share/bookmark-manager/thumbnails/thumbnail_youtube.png</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/youtube.com/label</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/youtube.com/label</applyto>
+      <type>string</type>
+      <default>YouTube - Broadcast Yourself</default>
+      <locale name="C"/>
+    </schema>
+    <schema>
+      <key>/schemas/apps/osso/hildon-home/bookmarks/youtube.com/url</key>
+      <applyto>/apps/osso/hildon-home/bookmarks/youtube.com/url</applyto>
+      <type>string</type>
+      <default>http://m.youtube.com/?client=mv-nokia-maemo</default>
+      <locale name="C"/>
+    </schema>
+  </schemalist>
+</gconfschemafile>

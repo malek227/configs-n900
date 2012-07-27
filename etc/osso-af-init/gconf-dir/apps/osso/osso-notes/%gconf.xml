@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="format_underline" mtime="1340095898" type="bool" value="false"/>
+	<entry name="format_italic" mtime="1340095898" type="bool" value="false"/>
+	<entry name="format_bold" mtime="1340095898" type="bool" value="false"/>
+	<entry name="file_format" mtime="1340095898" type="int" value="1"/>
+	<entry name="alignment" mtime="1340095898" type="int" value="0"/>
+	<entry name="text_colour_blue" mtime="1340095898" type="int" value="0"/>
+	<entry name="text_colour_green" mtime="1340095898" type="int" value="0"/>
+	<entry name="text_colour_red" mtime="1340095898" type="int" value="0"/>
+	<entry name="font_size" mtime="1340095898" type="int" value="12"/>
+	<entry name="font_face" mtime="1340095898" type="string">
+		<stringvalue>Sans</stringvalue>
+	</entry>
+	<entry name="default_folder" mtime="1340095898" type="string">
+		<stringvalue>/home/user/MyDocs/.documents</stringvalue>
+	</entry>
+	<entry name="last_open" mtime="1340095898" type="string">
+		<stringvalue>file://file:///home/user/MyDocs/.documents</stringvalue>
+	</entry>
+	<entry name="last_save" mtime="1340095898" type="string">
+		<stringvalue>file://file://file:///home/user/MyDocs/.documents</stringvalue>
+	</entry>
+	<entry name="restore_type" mtime="1340095898" type="int" value="1"/>
+</gconf>

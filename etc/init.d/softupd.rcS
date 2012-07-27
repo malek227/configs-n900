@@ -1,0 +1,49 @@
+#!/bin/sh
+
+in_flash_mode()
+{
+	grep update /proc/component_version 1>/dev/null 2>/dev/null
+}
+
+create_fraw()
+{
+    local dev="/dev/fraw"
+    local major=$(cat /proc/devices | grep fraw | cut -d' ' -f 1)
+
+    if [ x$major = x ]; then
+	echo "Could not find major number for fraw"
+	return 0
+    fi
+
+    [ -e $dev ] && rm -f $dev
+    mknod $dev c $major 0
+}
+
+start_update_mode()
+{
+
+    echo "Starting software updater"
+
+    modprobe vfat
+    modprobe ext3
+
+    modprobe omap_hsmmc
+    modprobe mmc_block
+
+    local start=$(date +%s)
+    local elapsed=0
+    while [ $(find /sys/class/mmc_host/mmc1 -name 'block*' -maxdepth 2 | \
+                wc -l) -eq 0 -a $elapsed -lt 3 ]; do
+       elapsed=$(($(date +%s) - start))
+    done
+
+    modprobe g_softupd
+
+    create_fraw
+    softupd --standalone -s
+}
+
+if in_flash_mode; then
+	start_update_mode
+	reboot
+fi

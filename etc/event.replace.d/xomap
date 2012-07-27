@@ -1,0 +1,25 @@
+description "Xorg Server"
+author "Oliver McFadden"
+
+start on started sgx
+stop on stopping sgx
+
+console output
+
+pre-start script
+	echo "Starting Xorg Server" > /dev/console
+	XORG_OPTIONS="-logfile /tmp/Xorg.0.log -logverbose 1 -nolisten tcp -noreset -s 0 -core"
+	exec /usr/sbin/dsmetool -n -8 -r "/usr/bin/Xorg $XORG_OPTIONS"
+end script
+
+post-start script
+	DISPLAY=:0 /usr/sbin/waitx
+end script
+
+post-stop script
+	if [ -d /home/user ]; then
+		cp /tmp/Xorg.0.log /home/user
+	fi
+end script
+
+service

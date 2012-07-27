@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="devicelock_total_failed" mtime="1284131123" schema="/schemas/system/osso/dsm/locks/devicelock_total_failed"/>
+	<entry name="devicelock_failed" mtime="1284131123" schema="/schemas/system/osso/dsm/locks/devicelock_failed"/>
+</gconf>

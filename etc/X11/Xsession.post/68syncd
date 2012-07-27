@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# @file 68syncd
+# This file is part of MaeSync.
+#
+# Copyright (C) 2008 Nokia Corporation. All rights reserved.
+# 
+# Contact: Biris Ilias <ilias.biris@nokia.com>
+#
+# This software, including documentation, is protected by copyright
+# controlled by Nokia Corporation. All rights are reserved. Copying,
+# including reproducing, storing, adapting or translating, any or all
+# of this material requires the prior written consent of Nokia Corporation.
+# This material also contains confidential information which may not be
+# disclosed to others without the prior written consent of Nokia.
+#
+
+if [ -r /etc/osso-af-init/af-defines.sh ]; then
+  unset AF_DEFINES_SOURCED
+  source /etc/osso-af-init/af-defines.sh
+else
+  echo "$0: /etc/osso-af-init/af-defines.sh is not readable!"
+  exit 1
+fi
+
+/usr/sbin/dsmetool -n 10 -f "/usr/bin/syncd"

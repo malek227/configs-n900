@@ -1,0 +1,237 @@
+ls
+cd /home/user
+ls
+vim .zshrc
+exit
+vim .zshrc
+exit
+ls
+clear
+cd
+ls++
+ls --group-directories-first --color=always --time=ctime --time-style=+%s -hlv
+ls --group-directories-first --color=auto --time=ctime --time-style=+%s -hLv
+vim .zshrc
+exit
+ls
+which ls
+\ls
+\ls --version
+vim .zshrc
+exit
+cd
+ls
+vim .zshrc
+vim .zshrc
+zsh4
+exit
+clear
+acs bash
+acs '^bash'
+clear
+acs '^bash'
+clear
+acs \^bash
+exit
+vim .zshrc
+clear
+zsh4
+clear
+exit
+clear
+ls
+clear
+vim .zshrc
+zsh4
+exit
+vim .zshrc
+zsh4
+exit
+clear
+vim .zshrc
+zsh4
+exit
+vim .zshrc
+zsh4
+exit
+cd
+ls
+vim .zshrc
+zsh4
+exit
+ls --group-directories-first --color=auto --time=ctime --time-style=+%s -hLv
+exit
+vim .zshrc
+source .zshrc
+ls
+clear
+ls
+vim .zshrc
+exit
+ls
+ls
+ls -al
+cd
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+vim .zshrc
+ls
+ls -al
+vim .zshrc
+zsh4
+exit
+exit
+pwd
+cd
+ls
+grep termi .zshrc
+root
+p
+whoami
+sudo vim /etc/zshrc
+ls
+ls -al
+exit
+sudo vim /etc/zsh/zshrc
+exit
+pwd
+exit
+exit
+exit
+echo $CHROOT
+exit
+sudo vim /var/run/on*.rc
+which vim
+vim
+/home/user/bin/vim /var/run/*.rc
+run-help /home/user/bin/vim
+/home/user/bin/vim /var/run/*.rc
+ls
+cd var
+ls
+cd run
+ls
+sudo vim motd
+sudo which vim
+sudo rm /usr/bin/vim
+sudo which vim
+ls
+sudo su
+sudo vim motd
+ls
+which vim
+aptitude
+ls
+pwd
+sudo su
+sudo su
+sudo su
+cd
+sudo su
+exit
+\:q
+\:q
+exit
+exit
+cd bin
+pwd
+exit
+which debbie
+exit
+exit
+pwd
+exit
+cd
+cd
+vim .zshrc
+locale
+vim .zshrc
+exit
+vim .zshrc
+exit
+vim .zshrc
+exit
+pwd
+ls
+vim .zshrc
+exit
+ls
+exit
+echo $HOST
+exit
+sudo vim /etc/xdg/lxsession/LXDE/auto*
+cd
+ls
+clear
+ls
+TERM=xterm top
+exit
+lllllllllllll
+LLHHDDAEEFF
+lll
+xxv
+exit
+exit
+exit
+exit
+vim --version
+echo $PATH
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+vim --version
+which vim
+which vi
+vi --version
+exit
+blender
+pwd
+debbie blender
+exit
+sudo apt-get install bende
+sudo
+sudo apt-get install blender
+pwd
+sudo apt-cache update
+apt
+dpkg
+apt-cache
+exit
+ls /
+ls / -A
+exit
+exit
+exit
+acs herrie
+exit
+exit
+exit
+exit
+exit
+adfll.....
+adxx
+äaaaddf#
+ffa
+addb
+daaaxv
+mvdaa+++++90
+vl
+vv
+leafpad /etc/xdg/lxsession/LXDE/autostart
+vim /etc/xdg/lxsession/LXDE/autostart
+vim /etc/xdg/lxsession/LXDE/autostart
+vim /etc/xdg/lxsession/LXDE/autostart
+vim /etc/xdg/lxsession/LXDE/config
+vim /etc/xdg/openbox/autostart.sh
+vim /etc/xdg/lxsession/LXDE/de
+vim /etc/xdg/lxsession/LXDE/default
+vim /etc/xdg/lxsession/LXDE/desktop.conf
+vim /etc/X11/ratpoison/ratpoisonmenu
+vim /etc/X11/xinit/x*
+vim /etc/X11/Xresources/x11-common
+vim /etc/X11/Xsession
+vim /etc/X11/Xsession.d/9*
+dddd

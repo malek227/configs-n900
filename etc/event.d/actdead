@@ -1,0 +1,7 @@
+
+start on ACT_DEAD
+
+console output
+script
+	echo hello act-dead
+end script

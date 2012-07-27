@@ -1,0 +1,82 @@
+#!/bin/sh
+#
+# This file is part of osso-af-startup.
+#
+# Copyright (C) 2004-2006 Nokia Corporation. All rights reserved.
+#
+# Contact: Gabriel Schulhof <gabriel.schulhof@nokia.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2 as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+# 02110-1301 USA
+
+CONNECTIVITY_UI_SCRIPT=$AF_INIT_DIR/osso-connectivity-ui.sh
+case "$1" in
+start)
+
+  source $SESSION_BUS_ADDRESS_FILE
+
+  if [ -f /tmp/run-osso-backup-finish-restore ]; then
+    $AF_INIT_DIR/osso-backup-finish-restore.sh
+    rm -f /tmp/run-osso-backup-finish-restore
+  fi
+
+  if [ -x $CONNECTIVITY_UI_SCRIPT ]; then
+    source $CONNECTIVITY_UI_SCRIPT start
+  fi
+
+  if [ -x /usr/bin/hwkbd-reconfig ]; then
+	  /usr/bin/hwkbd-reconfig
+  fi
+
+  if [ -x $AF_INIT_DIR/osso-media-server.sh ]; then
+    $AF_INIT_DIR/osso-media-server.sh start &
+  fi
+
+  if [ -f /tmp/.check_auto_install ]; then
+    dbus-send --system --dest=com.nokia.ke_recv --type=method_call \
+      --print-reply /com/nokia/ke_recv/check_auto_install \
+      com.nokia.ke_recv.foo
+    rm -f /tmp/.check_auto_install
+  fi
+
+  ;;
+stop)
+
+  source $AF_INIT_DIR/clipboard.sh stop
+  source $AF_INIT_DIR/keyboard.sh stop
+
+  # Kill controlpanel if it is still running, fixes NB#83038
+  CPANELPID=`pidof controlpanel`
+  if [ "x$CPANELPID" != "x" ]; then
+    kill $CPANELPID
+  fi
+
+  if [ -x $CONNECTIVITY_UI_SCRIPT ]; then
+    source $CONNECTIVITY_UI_SCRIPT stop
+  fi
+
+  ;;
+restart)
+  echo "$0: not implemented"
+  exit 1
+  ;;
+force-reload)
+  echo "$0: not implemented"
+  exit 1
+  ;;
+*)
+  echo "Usage: $0 {start|stop}"
+  exit 1
+  ;;
+esac

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+LOCALE_FILE=/etc/osso-af-init/af-defines.sh
+
+if [ ! -e /var/dont_start_suw ]; then
+        # 1>&2 redirects g_debugs to syslog
+
+	if test -f $LOCALE_FILE -a -r $LOCALE_FILE; then
+		source $LOCALE_FILE
+	fi
+
+	export LOCALE_SET_BY_SUW="no"
+
+	OLD_LC_NUMERIC=$LC_NUMERIC
+	OLD_LC_MESSAGES=$LC_MESSAGES
+
+	/usr/bin/osso_startup_wizard 1>&2
+
+	if test -f $LOCALE_FILE -a -r $LOCALE_FILE; then
+		source $LOCALE_FILE
+	fi
+
+	if test "x$LC_NUMERIC" != "x$OLD_LC_NUMERIC" -o "x$LC_MESSAGES" != "x$OLD_LC_MESSAGES"; then
+		export LOCALE_SET_BY_SUW="yes"
+	fi
+fi

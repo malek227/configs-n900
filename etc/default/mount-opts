@@ -1,0 +1,4 @@
+# Options for mounting user's filesystems
+
+home_opts="rw,noatime,errors=continue,commit=1,data=writeback"
+fat_opts="noauto,nodev,noexec,nosuid,noatime,nodiratime,utf8,uid=29999,shortname=mixed,dmask=000,fmask=0133,rodir"

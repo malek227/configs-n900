@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="usb-device-name" mtime="1284131123" type="schema" stype="string" owner="ke-recv">
+		<local_schema locale="C" short_desc="Name of the connected USB peripheral">
+			<default type="string">
+				<stringvalue>unknown</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="usb-mode" mtime="1284131123" type="schema" stype="string" owner="ke-recv">
+		<local_schema locale="C" short_desc="Current USB mode">
+			<default type="string">
+				<stringvalue>idle</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="launch-on-camera" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="Wether to launch anything">
+			<default type="bool" value="true"/>
+			<longdesc>This key decides whether camd should launch anything when camera pops-out</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="on-camera-out" mtime="1284131123" type="schema" stype="list" owner="ke-recv" list_type="string">
+		<local_schema locale="C" short_desc="Services to launch">
+			<default type="list" ltype="string">
+				<li type="string">
+					<stringvalue>org.freedesktop.Telepathy.StreamEngine</stringvalue>
+				</li>
+				<li type="string">
+					<stringvalue>com.nokia.osso_voip_ui</stringvalue>
+				</li>
+			</default>
+			<longdesc>List of DBUS services to launch when the camera pops-out</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="mmc-swap" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether swapping is enabled
+                     for the external card">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="internal-mmc-swap" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether swapping is enabled
+                     for the internal card">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="slide-open" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the slide keyboard is open">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="camera-has-turned" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the camera has turned">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="camera-is-out" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the camera is out">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="internal-mmc-device-present" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the internal memory card device
+              file is present">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="mmc-device-present" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the external memory card device
+               file is present">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="internal-mmc-used-over-usb" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the internal memory card is used over USB">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="mmc-used-over-usb" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the external memory card is used over USB">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="mmc-cover-open" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the memory card cover is open or not">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="usb-cable-attached" mtime="1284131123" type="schema" stype="bool" owner="ke-recv">
+		<local_schema locale="C" short_desc="tells whether the USB cable is attached or not">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+	<entry name="keyboard-attached" mtime="1284131122" type="schema" stype="bool" owner="ke-recv-extra">
+		<local_schema locale="C" short_desc="tells whether an external hardware keyboard               is present">
+			<default type="bool" value="false"/>
+		</local_schema>
+	</entry>
+</gconf>

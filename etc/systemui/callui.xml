@@ -1,0 +1,11 @@
+<powerkeymenu path="/">
+ <menuitem priority="400" name="voip_ap_feature_name">
+  <po>rtcom-call-ui</po>
+  <callback service="com.nokia.CallUI"
+	    path="/com/nokia/CallUI"
+	    interface="com.nokia.CallUI" method="top_application"
+	    bus="session" autostart="true">
+    <argument type="boolean">true</argument>
+  </callback>
+ </menuitem>
+</powerkeymenu>

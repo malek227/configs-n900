@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="unsupported_hw" mtime="1284131115" schema="/schemas/system/osso/connectivity/BT/hsp/unsupported_hw"/>
+</gconf>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="position" mtime="1284131104" type="schema" stype="list" list_type="int">
+		<local_schema locale="C">
+			<default type="list" ltype="int">
+				<li type="int" value="312"/>
+				<li type="int" value="127"/>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="view" mtime="1284131104" type="schema" stype="int">
+		<local_schema locale="C">
+			<default type="int" value="2"/>
+		</local_schema>
+	</entry>
+</gconf>

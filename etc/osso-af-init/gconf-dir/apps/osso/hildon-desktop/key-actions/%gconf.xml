@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="disable_edit" mtime="1340094619" type="bool" value="false"/>
+</gconf>

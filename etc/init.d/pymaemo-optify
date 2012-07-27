@@ -1,0 +1,49 @@
+#!/bin/sh
+
+DESC="PyMaemo optification"
+
+OPT_DIR="/opt/pymaemo"
+if [ -f /etc/default/pymaemo-optify ]; then
+    . /etc/default/pymaemo-optify
+fi
+
+mount_optify()
+{
+    for d in $BIND_MOUNTS; do
+        # remove any temporary mount --move targets
+        rmdir $d.move.* 2>/dev/null
+        mkdir -p $d $OPT_DIR/$d
+        grep -q " $d " /proc/mounts || mount --bind $OPT_DIR/$d $d
+    done
+}
+
+umount_optify()
+{
+    for d in $BIND_MOUNTS; do
+        grep -q " $d " /proc/mounts && umount $d
+        if grep -q " $d " /proc/mounts; then
+            echo "WARNING: \"$d\" could not be umounted, using mount --move" >&2
+            tmpdir=`mktemp -d $d.move.XXXXXX` || continue
+            chmod 755 $tmpdir
+            mount --move $d $tmpdir
+        fi
+    done
+}
+
+case "$1" in
+start)
+    echo "Starting $DESC"
+    mount_optify
+;;
+stop)
+    echo "Stopping $DESC"
+    umount_optify
+;;
+restart)
+    echo "Restarting $DESC"
+    umount_optify
+    mount_optify
+;;
+esac
+
+exit 0

@@ -1,0 +1,110 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:		clockd
+# Required-Start:	$remote_fs $syslog dbus
+# Required-Stop:	$remote_fs $syslog dbus
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description:	Clock daemon
+# Description:		This init script starts the clock daemon software
+#			used on the maemo platform.
+### END INIT INFO
+#
+# Startup script for the clockd.
+#
+# Contact Person: Raimo Vuonnala <raimo.vuonnala@nokia.com>
+#
+# Copyright (C) 2008 Nokia Corporation.
+# 
+# This is free software; see /usr/share/common-licenses/LGPL-2.1 for license
+# conditions.  There is NO  warranty;  not even for MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.
+
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/bin/clockd
+NAME=clockd
+DESC="Clock Daemon"
+INITFILE=/etc/init.d/$NAME
+DSMETOOL=/usr/sbin/dsmetool
+CLOCKD_DAEMON_OPTS=""
+
+# abort if no executable exists
+test -x $DAEMON || exit 0
+
+# Include clockd defaults if available
+if [ -f /etc/clockd/clockd-settings.default ] ; then
+        echo "Setting defaults..."
+	. /etc/clockd/clockd-settings.default
+fi
+
+set -e
+
+
+# only use dsmetool if it exists
+test -x $DSMETOOL || USE_DSMETOOL=no
+
+
+if [ -e /etc/osso-af-init/af-defines.sh ]
+then
+  source /etc/osso-af-init/af-defines.sh
+fi
+
+if [ -d /etc/osso-af-init ]
+then 
+  if [ -f /etc/osso-af-init/*.defs ]; then
+    for i in /etc/osso-af-init/*.defs
+    do
+      source $i
+    done
+  fi
+fi
+
+start_clockd()
+{
+    if [ x"$USE_DSMETOOL" = xno ]; then
+	start-stop-daemon --start --quiet  \
+	    --exec $DAEMON -- $CLOCKD_DAEMON_OPTS
+    else
+	dsmetool -f "$DAEMON $CLOCKD_DAEMON_OPTS"
+    fi
+}
+
+stop_clockd()
+{
+    if [ x"$USE_DSMETOOL" = xno ]; then
+	start-stop-daemon --stop --oknodo --quiet  \
+	    $DAEMON
+    else
+	dsmetool -k "$DAEMON $CLOCKD_DAEMON_OPTS"
+    fi
+}
+
+case "$1" in
+start)
+        printf "Starting $DESC: $NAME"
+	start_clockd
+        printf ".\n"
+        ;;
+
+stop)
+        printf "Stopping: $DESC: $NAME"
+	stop_clockd
+        printf ".\n"
+        ;;
+
+restart|force-reload)
+        printf "Restarting $DESC: $NAME"
+	stop_clockd
+        sleep 2
+	start_clockd
+        printf ".\n"
+        ;;
+
+*)
+        printf "Usage: $INITFILE {start|stop|restart|force-reload}\n" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

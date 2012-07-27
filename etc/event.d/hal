@@ -1,0 +1,26 @@
+description	"Hardware Abstraction Layer"
+author		"Michael Biebl"
+
+start on started dbus
+start on started dbus-actdead
+
+stop on stopping dbus-actdead
+stop on stopping dbus
+
+console none
+
+pre-start script
+	# Make HAL's temporary directory and correct permissions
+	if [ ! -d /var/run/hald ]; then
+		mkdir -p /var/run/hald
+	fi
+	chown haldaemon:haldaemon /var/run/hald
+	echo "Starting hal daemon" >/dev/console
+end script
+
+script
+	source /etc/resource_limits.conf
+	exec /usr/sbin/hald --verbose=no --daemon=no --use-syslog
+end script
+respawn
+

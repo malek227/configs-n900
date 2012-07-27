@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="name" mtime="1339887768" type="string">
+		<stringvalue>NETGEAR</stringvalue>
+	</entry>
+	<entry name="type" mtime="1339887762" type="string">
+		<stringvalue>WLAN_INFRA</stringvalue>
+	</entry>
+	<entry name="wlan_ssid" mtime="1339887762" type="list" ltype="int">
+		<li type="int" value="78"/>
+		<li type="int" value="69"/>
+		<li type="int" value="84"/>
+		<li type="int" value="71"/>
+		<li type="int" value="69"/>
+		<li type="int" value="65"/>
+		<li type="int" value="82"/>
+	</entry>
+	<entry name="wlan_hidden" mtime="1339887762" type="bool" value="false"/>
+	<entry name="ipv4_type" mtime="1339887762" type="string">
+		<stringvalue>AUTO</stringvalue>
+	</entry>
+	<entry name="proxytype" mtime="1339887762" type="string">
+		<stringvalue>NONE</stringvalue>
+	</entry>
+	<entry name="wlan_security" mtime="1339887762" type="string">
+		<stringvalue>NONE</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,19 @@
+description "loading bluetooth data"
+author "Ville Tervo"
+
+console none
+
+start on starting bluetoothd
+start on starting testserver
+
+script
+	SYSINFO_TOOL=/usr/bin/sysinfo-tool
+
+	if [ -x $SYSINFO_TOOL ] ; then
+		if bdaddr=$($SYSINFO_TOOL -g /certs/npc/esn/bt_id) ; then
+			echo $bdaddr | sed 's/\(..\)/\1:/g;s/:$//' > /sys/devices/platform/hci_h4p/bdaddr
+			exit 0
+		fi
+	fi
+
+end script

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="search_interval" mtime="1284131099" schema="/schemas/system/osso/connectivity/network_type/search_interval"/>
+	<entry name="change_while_connected" mtime="1284131099" schema="/schemas/system/osso/connectivity/network_type/change_while_connected"/>
+	<entry name="auto_connect" mtime="1284131099" schema="/schemas/system/osso/connectivity/network_type/auto_connect"/>
+</gconf>

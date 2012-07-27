@@ -1,0 +1,15 @@
+#
+# Force CMT power off in act dead state
+#
+
+start on ACT_DEAD
+console none
+
+script
+	echo inactive > /sys/devices/platform/gpio-switch/cmt_rst/state
+	echo inactive > /sys/devices/platform/gpio-switch/cmt_en/state
+	echo inactive > /sys/devices/platform/gpio-switch/cmt_apesleepx/state
+	echo active   > /sys/devices/platform/gpio-switch/cmt_rst/state
+end script
+
+post-stop exec sleep 1

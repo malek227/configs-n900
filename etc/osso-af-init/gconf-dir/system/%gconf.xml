@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="aspectratio" mtime="1340834424" type="string">
+		<stringvalue>WIDE</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="network_types" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/65_gprs/network_types"/>
+	<entry name="label" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/65_gprs/label"/>
+</gconf>

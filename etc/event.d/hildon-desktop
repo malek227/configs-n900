@@ -1,0 +1,18 @@
+description "Fake job for hildon-desktop"
+author "Pekka Lundstrom <pekka.lundstrom@nokia.com"
+console none
+
+start on XSESSIONS_STARTING
+stop on stopped xsession
+
+pre-start script
+    [ -e /tmp/ACT_DEAD ] && exit 1
+
+    while [ ! -e /tmp/hildon-desktop/desktop-started.stamp ]
+    do
+        sleep 2
+    done
+    # This is to make sure it's really functional by the time user
+    # gets to use it.
+    sleep 5
+end script

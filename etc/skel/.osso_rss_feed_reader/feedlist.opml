@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Liferea Feed List Export</title>
+  </head>
+  <body>
+    <outline text="Twitter / WeAreMaemo" title="Twitter / WeAreMaemo" description="Twitter / WeAreMaemo" type="rss" htmlUrl="http://twitter.com/WeAreMaemo" xmlUrl="http://twitter.com/statuses/user_timeline/22755899.rss" updateInterval="40" id="ojpkykk" sortColumn="time"/>
+    <outline text="maemo - Twitter Search" title="maemo - Twitter Search" description="maemo - Twitter Search" type="atom" htmlUrl="http://search.twitter.com/search?q=maemo" xmlUrl="http://search.twitter.com/search.atom?q=maemo" updateInterval="-1" id="jxpvqif" sortColumn="time"/>
+  </body>
+</opml>

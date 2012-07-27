@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="server" mtime="1340006068" type="string">
+		<stringvalue>supl.nokia.com</stringvalue>
+	</entry>
+</gconf>

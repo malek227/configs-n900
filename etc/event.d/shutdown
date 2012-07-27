@@ -1,0 +1,11 @@
+console none
+script
+	if [ -e /tmp/shutdown ]; then
+		exec /etc/init.d/minishutdown 
+	elif [ -e /tmp/reboot ]; then
+		exec /etc/init.d/minireboot
+	else
+		exec /etc/init.d/minishutdown
+	fi
+end script
+

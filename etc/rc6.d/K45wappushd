@@ -1,0 +1,59 @@
+#! /bin/sh
+# 
+#               Written by Nokia based on skeleton code
+#               written by Miquel van Smoorenburg <miquels@cistron.nl>.
+#               Modified for Debian 
+#               by Ian Murdock <imurdock@gnu.ai.mit.edu>.
+#
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+prefix=/usr
+exec_prefix=${prefix}
+sbindir=${exec_prefix}/sbin
+DAEMON=${exec_prefix}/sbin/wappushd
+NAME=wappushd
+DESC="WAP push daemon"
+
+test -x $DAEMON || exit 0
+
+set -e
+
+case "$1" in
+  start)
+        # Start daemons
+        echo -n "Starting $DESC: "
+        if [ -x /usr/sbin/dsmetool ]; then
+            dsmetool -m -17 -f "$DAEMON -b" 
+        else
+            start-stop-daemon --start --quiet --user $USER \
+                --exec "$DAEMON" -- 
+        fi
+        echo "$NAME"
+        ;;
+  stop)
+        echo -n "Stopping $DESC: "
+        if [ -x /usr/sbin/dsmetool ]; then
+            dsmetool -k "$DAEMON -b"
+        else
+            start-stop-daemon --stop --quiet --oknodo --user $USER \
+                --exec "$DAEMON"
+        fi
+        echo "$NAME"
+        ;;
+  reload|restart|force-reload)
+        #
+        #       If the "reload" option is implemented, move the "force-reload"
+        #       option to the "reload" entry above. If not, "force-reload" is
+        #       just the same as "restart".
+        #
+        "$0" stop
+        "$0" start
+        ;;
+  *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,1177 @@
+MCC	MNC	SERVICE PROVIDER NAME	ACCESS TYPE	IAP NAME	GPRS ACCESSPOINT NAME	GPRS AUTOLOGIN (X = YES)	USERNAME	PASSWORD	<empty>	<empty>	GPRS MMS/WAP GATEWAY PROXY	GPRS MMS/WAP GATEWAY PORT	IP ADDRESS (IF NOT FETCHED FROM SERVER)	PRIMARY DNS ADDRESS (IF NOT FETCHED FROM SERVER)	SECONDARY DNS ADDRESS (IF AVAILABLE)	<empty>
+202	1	COSMOTE	INTERNET	Cosmote internet	3g-internet									195.167.65.194			
+202	1	COSMOTE	MMS	Cosmote MMS-GPRS	mms						10.10.10.20	8080					http://195.167.65.220:8002	
+202	10	WIND	INTERNET	WIND Internet	gint.b-online.gr							9201					
+202	10	WIND	MMS	WIND MMS	mnet.b-online.gr		mms	mms			192.168.200.11	9401					http://192.168.200.95/servlets/mms	
+202	5	Vodafone GR	INTERNET	Web Vodafone	internet.vodafone.gr												
+202	5	vodafone GR	MMS	Vf MMS	mms.vodafone.net		user	pass			213.249.019.049	5080					http://mms.vodafone.gr	
+202	9	Q-Telecom	MMS	Q-Telecom MMS	q-mms.myq.gr						192.168.080.134	8080					http://mms.myq.gr	
+204	16	T-Mobile NL	INTERNET	T-Mobile Internet	internet												
+204	16	T-Mobile NL	MMS	T-Mobile MMS	mms		tmobilemms	tmobilemms			10.10.10.11	8080					http://t-mobilemms	
+204	20	Orange	INTERNET	Orange ISP GPRS	internet												
+204	20	Orange	MMS	Orange MMS	mms						10.250.255.183	5080					http://mms.orange.nl:8002	
+204	4	Vodafone NL	INTERNET	Vodafone GPRS	live.vodafone.com		vodafone	vodafone			192.168.251.150	8799					
+204	8	KPN NL	INTERNET	Mail en Java	portalmmm.nl												
+204	8	KPN NL	MMS	KPN MMS	portalmmm.nl						10.10.100.20	5080					http://mp.mobiel.kpn/mmsc	
+206	1	Proximus	INTERNET	Proximus Internet	internet.proximus.be												
+206	1	Proximus	MMS	MMS	event.proximus.be		mms	mms			10.55.14.75	8080					http://mmsc.proximus.be/mms	
+206	10	Mobistar	INTERNET	Mobistar Internet	mworld.be												
+206	10	Mobistar	MMS	Mobistar MMS	mms.be						212.65.63.143	8080					http://mmsc.mobistar.be	
+206	20	Base	INTERNET	Base Mobile Internet	gprs.base.be		base	base									
+206	20	Base	MMS	BASE MMS	mms.base.be		base	base			217.72.235.1	8080					http://mmsc.base.be	
+208	1	NRJ Mobile Orange	INTERNET	NRJWEB Orange	ofnew.fr		orange	orange									
+208	1	NRJ Mobile Orange	MMS	NRJMMS Orange	orange.acte		orange	orange			192.168.010.200	8080					http://mms.orange.fr	
+208	1	Orange F	INTERNET	Orange France	orange		orange	orange									
+208	1	Orange F	MMS	Orange acte	orange.acte		orange	orange			192.168.10.200	8080					http://mms.orange.fr	
+208	1	Virgin	INTERNET	VM GPRS	ofnew.fr		orange	orange			192.168.10.100	8080					
+208	1	Virgin	MMS	VM acte GPRS	orange.acte		orange	orange			192.168.10.200	8080					http://mms.orange.fr	
+208	10	F SFR	INTERNET	Vodafone Live!	wapsfr						195.115.25.129	8080					http://live.vodafone.com	
+208	10	F SFR	MMS	MMS	mmssfr						10.151.0.1	8080					http://mms1	
+208	10	NRJ	INTERNET	NRJWEB	internetnrj												
+208	10	NRJ	MMS	NRJMMS	mmsnrj						192.168.21.5	8080					http://mmsnrj	
+208	2	NRJ Mobile SFR	INTERNET	NRJWEB SFR	internetnrj												
+208	2	NRJ Mobile SFR	MMS	NRJMMS SFR	mmsnrj						10.143.156.5	8080					http://mmsnrj	
+208	20	BOUYGTEL	INTERNET	Bouygtel Mail	ebouygtel.com												
+208	20	BOUYGTEL	MMS	Bouygtel MMS	mmsbouygtel.com						62.201.129.226	8080					http://mms.bouyguestelecom.fr/mms/wapenc	
+212	1	MonaCell	MMS	MMS GPRS	orange.acte		orange	orange			192.168.10.200	80					http://mms.orange.fr	
+212	1	Monacell	INTERNET	Orange	orange.fr		orange	orange									
+213	3	STA	INTERNET	STA GPRS	internet												
+213	3	STA	MMS	STA MMS	mms						192.168.021.050	3130					http://mms.ad/mmsc	
+214	1	Vodafone ES	INTERNET	INTERNET	airtelnet.es		vodafone	vodafone									
+214	1	Vodafone ES	MMS	MMS VODAFONE	mms.vodafone.net		wap@wap	wap125			212.73.32.10	80					http://mmsc.vodafone.es/servlets/mms	
+214	2	Movistar	INTERNET	Telefonica	telefonica.es		telefonica	telefonica											
+214	2	Movistar	MMS	movistar MMS	mms.movistar.es		MOVISTAR@mms	MOVISTAR			10.138.255.5	8080					http://mms.movistar.com	
+214	3	Orange	INTERNET	Orange Internet	internet		orange	orange									
+214	3	Orange	MMS	Orange MMS	orangemms		orange	orange			wapmms.orange.es	8080					http://mms.orange.es	
+214	7	Movistar	INTERNET	Telefonica	telefonica.es		telefonica	telefonica									
+214	7	Movistar	MMS	movistar MMS	mms.movistar.es		MOVISTAR@mms	MOVISTAR			10.138.255.5	8080					http://mms.movistar.com	
+216	1	pannon	INTERNET	Pannon Internet	net												
+216	1	pannon	MMS	Pannon MMS	mms						84.225.255.1	8080					http://mmsc.pgsm.hu/	
+216	30	T-Mobile H	INTERNET	T-Mobile WAP	wap		wap	Wap			212.51.126.2	8080					
+216	30	T-Mobile H	MMS	T-Mobile MMS	mms		mms	mms			212.51.126.10	8080					http://mms.t-mobile.hu/servlets/mms	
+216	70	Vodafone HU	INTERNET	VF Internet	internet.vodafone.net		vodawap	vodawap									
+216	70	Vodafone HU	MMS	VF MMS	mms.vodafone.net						80.244.97.2	8080					http://mms.vodafone.hu/servlets/mms	
+216	70	vodafone HU	INTERNET	VF VitaMAX Internet	vitamax.internet.vodafone.net		vodawap	vodawap									
+218	3	ERONET	INTERNET	ERONET START	gprs.eronet.ba												
+218	3	ERONET	MMS	ERONET MMS	mms.eronet.ba						10.12.3.11	8080					http://mms.gprs.eronet.ba/mms/wapenc	
+218	5	Telekom Srpske	INTERNET	mobisgprs1	mobisgprs1												
+218	5	Telekom Srpske	MMS	mobismms	mobismms						192.168.061.011	80					http://mmsc.065mobis.com/mms/wapenc	
+218	90	BH Telecom	INTERNET	BHMobileInternet	active.bhmobile.ba												
+218	90	BH Telecom	MMS	BHMobileMMS	mms.bhmobile.ba						195.222.056.041	8080					http://mms.bhmobile.ba/cmmsc/post	
+219	1	T-Mobile HR	INTERNET	TM HR Internet	web.htgprs												
+219	1	T-Mobile HR	MMS	TM HR MMS	mms.htgprs						10.12.0.4	8080					http://mms.t-mobile.hr/servlets/mms	
+219	10	Vipnet	INTERNET	Start	gprs0.vipnet.hr						212.91.99.91	8080					
+219	10	Vipnet	MMS	MMS	mms.vipnet.hr						212.91.99.91	8080					http://mms.vipnet.hr/servlets/mms	
+220	05	Vip mobile	MMS	Vip MMS	vipmobile.mms		vipmobile	vipmobile			212.15.182.82	8080					http://mmsc.vipmobile.rs	
+220	1	Telenor SRB	INTERNET	Telenor Internet	internet		telenor	gprs									
+220	1	Telenor SRB	MMS	Telenor MMS	mms						217.65.192.33	8080					http://mms.telenor.co.yu/servlets/mms	
+220	2	ProMonte	INTERNET	ProGPRS	gprs.promonte.com		gprs	gprs			192.168.246.5	8080					
+220	2	ProMonte	MMS	ProMMS	mms.promonte.com		mms	mms			192.168.246.5	8080					http://mm.vor.promonte.com	
+220	3	MTS	INTERNET	MTS Internet	gprsinternet												
+220	3	MTS	MMS	MTS MMS	mms						172.017.085.131	8080					http://mms.mts064.telekom.yu/mms/wapenc	
+220	3	Telekom Srbija	INTERNET	Telekom Srbija Internet	gprsinternet		mts	"064"									
+220	3	Telekom Srbija	MMS	MMS	mms		mts	"064"			172.17.85.131	9201					http://mms.mts064.telekom.yu/mms/wapenc	
+220	4	T-Mobile	INTERNET	T-Mobile GPRS	internet-postpaid						10.0.5.19	8080					
+220	4	T-Mobile	MMS	T-Mobile MMS	mms						10.0.5.19	8080					http://192.168.180.100/servlets/mms	
+222	1	TIM	INTERNET	WAP TIM	wap.tim.it		WAPTIM	WAPTIM			213.26.205.1	80					
+222	1	TIM	MMS	iTIM	unico.tim.it						213.230.130.89	80					http://mms.tim.it/servlets/mms	
+222	10	PosteMobile	INTERNET	PosteMobile Internet	web.posteitaliane.it												
+222	10	PosteMobile	MMS	PosteMobile MMS	mms.postemobile.it						10.128.224.10	80					http://mms.postemobile.it/servlets/mms	
+222	10	vodafone IT	MMS	Vodafone MMS	mms.vodafone.it						10.128.224.10	80					http://mms.vodafone.it/servlets/mms	
+222	10	vodafone IT	INTERNET	Accesso a Internet da cellulare	mobile.vodafone.it												
+222	88	I WIND	INTERNET	WIND WEB	internet.wind												
+222	88	I WIND	MMS	WIND MMS	mms.wind						212.245.244.100	8080					http://mms.wind.it	
+222	99	3 ITA	INTERNET	3 Internet	tre.it		tre	tre									
+222	99	Fastweb	INTERNET	FW WEB	apn.fastweb.it												
+226	1	Vodafone RO	INTERNET	Vodafone RO Mobile Internet	internet.vodafone.ro		internet.vodafone.ro	vodafone						193.230.161.3	193.230.161.4		
+226	1	Vodafone RO	MMS	Vodafone MMS	mms.vodafone.ro		mms	vodafone			193.230.161.231	8080					http://multimedia/servlets/mms	
+226	10	Orange RO	INTERNET	Orange Internet	internet												
+226	10	Orange RO	MMS	Orange MMS	mms		mms	mms			62.217.247.252	8799					http://wap.mms.orange.ro:8002	
+228	1	Swisscom	INTERNET	Swisscom WEB	gprs.swisscom.ch												
+228	1	Swisscom	MMS	Swisscom MMS	event.swisscom.ch						192.168.210.2	8080					http://mms.natel.ch:8079	
+228	2	Sunrise	INTERNET	Sunrise internet	internet												
+228	2	Sunrise	MMS	Sunrise MMS	mms.sunrise.ch		mms	mms			212.35.34.75	8080					http://mmsc.sunrise.ch	
+228	3	Orange	INTERNET	Orange Internet	internet												
+228	3	Orange	MMS	Orange MMS	mms						192.168.151.2	8080					http://192.168.151.3:8002	
+230	1	T-Mobile CZ	INTERNET	T-Mobile Internet	internet.t-mobile.cz									62.141.000.001	62.141.000.002		
+230	1	T-Mobile CZ	MMS	T-Mobile MMS	mms.t-mobile.cz		mms	mms			10.0.0.10	80					http://mms	
+230	2	O2 CZ	INTERNET	O2 Internet	internet												
+230	2	O2 CZ	MMS	02 MMS	mms						160.218.160.218	8080					http://mms.o2active.cz:8002	
+230	3	Vodafone CZ	INTERNET	Vodafone CZ GPRS Web	internet												
+230	3	Vodafone CZ	MMS	MMS	mms		mms	mms			10.11.10.111	80					http://mms	
+231	1	Orange SK	INTERNET	Orange Internet	internet												
+231	1	Orange SK	MMS	Orange MMS	mms		wap	wap			213.151.208.145	8799					http://imms.orange.sk	
+231	2	T-Mobile SK	INTERNET	T-Mobil Internet	internet												
+231	2	T-Mobile SK	MMS	T-Mobile MMS	mms		mms	mms			192.168.1.1	8080					http://mms	
+231	5	Orange SK	INTERNET	Orange Internet	internet												
+231	5	Orange SK	MMS	Orange MMS	mms		wap	wap			213.151.208.145	8799					http://imms.orange.sk	
+231	6	O2 SK	MMS	O2 SK MMS	o2mms						10.97.1.11	8080					http://mms.o2world.sk:8002	
+232	1	A1	INTERNET	A1 live!	A1.net		ppp@A1plus.at	ppp									
+232	1	A1	MMS	A1MMS	free.A1.net		ppp@A1plus.at	ppp			gateway.A1.net	8001					http://mmsc.A1.net	
+232	10	3	INTERNET	Planet3 Internet	drei.at												
+232	12	YESSS!	INTERNET	YESSS!	web.yesss.at												
+232	2	T-Mobile A	INTERNET	T-Mobile Internet	gprsinternet		t-mobile	tm									
+232	2	T-Mobile A	MMS	T-Mobile MMS	gprsmms		t-mobile	tm			10.12.0.20	80					http://mmsc.t-mobile.at/servlets/mms	
+232	3	T-Mobile A	INTERNET	T-Mobile Internet	gprsinternet		t-mobile	tm									
+232	3	T-Mobile A	MMS	T-Mobile MMS	gprsmms		t-mobile	tm			10.12.0.20	80					http://mmsc.t-mobile.at/servlets/mms	
+232	5	Orange	INTERNET	Orange Web	orange.web		web	web									
+232	5	Orange	MMS	Orange MMS	orange.mms		mms	mms			194.024.128.118	8080					http://mmsc.orange.at/mms/wapenc	
+232	7	A tele.ring	INTERNET	tele ring web	web		web@telering.at	web									
+232	7	A tele.ring	MMS	tele ring mms	mms		wap@telering.at	wap			212.95.31.50	8080					http://relay.mms.telering.at	
+232	9	Tele2 A	MMS	Tele2 MMS	internet.tele2.at						193.12.40.59	8080					http://mmsc.tele2.at	
+234	10	O2 - UK	INTERNET	O2 Mobile Web	mobile.o2.co.uk		mobileweb	password						193.113.200.200	193.113.200.201		
+234	10	O2 - UK	MMS	O2 MMS	wap.o2.co.uk		o2wap	password			193.113.200.195	8080					http://mmsc.mms.o2.co.uk:8002	
+234	10	Tesco Mobile UK	MMS	Tesco MMS	prepay.tesco-mobile.com		tescowap	password			193.113.200.195	8080					http://mmsc.mms.o2.co.uk:8002	
+234	15	ASDA Mobile UK	INTERNET	ASDA mobile Internet	asdamobiles.co.uk		web	web									
+234	15	vodafone UK	INTERNET	Vodafone Internet GPRS	Internet		web	web									
+234	20	3	INTERNET	3	three.co.uk												
+234	30	T-Mobile UK	INTERNET	T-Mobile Internet	general.t-mobile.uk		t-mobile	tm									
+234	30	Virgin	INTERNET	Virgin ISP GPRS	goto.virginmobile.uk		user										
+234	31	T-Mobile	INTERNET	T-Mobile Internet	general.t-mobile.uk		t-mobile	tm			149.254.201.132	8080					
+234	31	T-Mobile UK	INTERNET	T-Mobile Internet	general.t-mobile.uk		t-mobile	tm									
+234	31	Virgin	INTERNET	Virgin ISP GPRS	goto.virginmobile.uk		user										
+234	32	T-Mobile	INTERNET	T-Mobile Internet	general.t-mobile.uk		t-mobile	tm			149.254.201.132	8080					
+234	32	T-Mobile UK	INTERNET	T-Mobile Internet	general.t-mobile.uk		t-mobile	tm									
+234	32	Virgin	INTERNET	Virgin ISP GPRS	goto.virginmobile.uk		user										
+234	33	Orange	INTERNET	Orange Internet	orangeinternet												
+234	33	Orange	MMS	Orange MMS	orangemms						192.168.224.10	8080					http://mms.orange.co.uk/	
+234	50	JT GSM	INTERNET	pepperInternet	pepper												
+234	50	JT GSM	MMS	pepperMMS	mms		mms				212.9.19.199	3130					http://mmsc.surfmail.com/mmsc	
+234	55	C&W	INTERNET	Lifestyle GPRS	mobilefunemail						10.0.3.101	80					
+234	55	C&W	MMS	Lifestyle MMS	mms						10.0.3.101	80					http://mmsc.gprs.cw.com/	
+234	58	Manx Pronto	INTERNET	Pronto Connect Web	web.manxpronto.net		gprs	gprs									
+234	58	Manx Pronto	MMS	Pronto MMS	mms.manxpronto.net		mms	mms			195.10.99.46	80					http://mms.manxpronto.net:8002	
+238	01	TELMORE	INTERNET	Telmore Internet	internet												
+238	01	TELMORE	MMS	Telmore MMS	mms						194.182.251.15	8080					http://192.168.241.114:8002	
+238	1	TDC Mobil	INTERNET	TDC www 3G+GPRS	internet												
+238	1	TDC Mobil	MMS	TDC MMS	MMS						194.182.251.015	8080					http://192.168.241.114:8002	
+238	1	TDC SONG	INTERNET	TDC Song Internet	internet.no												
+238	1	TDC SONG	MMS	TDC Song MMS	mms.no						194.182.251.15	8080					http://mms.tdcmobil.no:8002	
+238	2	Telenor DK	INTERNET	Telenor Internet	internet												
+238	2	Telenor DK	MMS	Telenor MMS	telenor						212.88.64.8						http://mms.telenor.dk	
+238	20	TELIA DK	INTERNET	Telia Internet	www.internet.mtelia.dk												
+238	20	TELIA DK	MMS	Telia MMS	www.mms.mtelia.dk						193.209.134.131	8080					http://mms.telia.dk	
+238	30	Orange	INTERNET	Orange Internet	web.orange.dk							9201					
+238	30	Orange	MMS	Orange MMS	mms.orange.dk						172.018.251.011	8080					http://mms.orange.dk:8002	
+238	30	TELIA DK	INTERNET	Telia Internet	www.internet.mtelia.dk												
+238	30	TELIA DK	MMS	Telia MMS	www.mms.mtelia.dk						193.209.134.131	8080					http://mms.telia.dk	
+238	6	3 Denmark	INTERNET	3 Internet	data.tre.dk												
+238	77	Tele2	MMS	Tele2 MMS	internet.tele2.dk						193.012.040.054	8080					http://mmsc.tele2.dk	
+238	77	Telenor DK	INTERNET	Telenor Internet	internet												
+238	77	Telenor DK	MMS	Telenor MMS	telenor						212.88.64.8						http://mms.telenor.dk	
+240	1	Halebop	INTERNET	Halebop Internet	halebop.telia.se												
+240	1	Halebop	MMS	Halebop MMS	mms.telia.se		mms	telia			193.209.134.132	80					http://mmss/	
+240	1	TELIA	INTERNET	Telia Internet	online.telia.se												
+240	1	TELIA	MMS	Telia MMS	mms.telia.se		mms	telia			193.209.134.132	80					http://mmss/	
+240	10	Spring Mobil	INTERNET	Spring GPRS	wap.springmobil.se												
+240	10	Spring Mobil	MMS	Spring MMS	mms.springmobil.se						213.088.184.037	8080					http://mms.springmobil.se	
+240	2	3 SE	INTERNET	3 Internet	data.tre.se												
+240	7	Tele2 NO	INTERNET	Tele2 Internet	internet.tele2.no												
+240	8	Telenor	INTERNET	Telenor Mobilsurf	services.telenor.se						172.030.253.241	8799					
+240	9	Djuice	INTERNET	djuice se Internet	internet.djuice.se		dj										
+240	9	Djuice	MMS	djuice se MMS	mms.djuice.se		dj				10.10.10.11	8080					http://mmsc/	
+242	1	TELENOR	INTERNET	Telenor internett	telenor		telenor	telenor									
+242	1	Ventelo	INTERNET	Ventelo Internet	internet.ventelo.no												
+242	1	Ventelo	MMS	Ventelo MMS	mms.ventelo.no		ventelo	1111			10.10.10.11	8080					http://mmsc/	
+242	2	Chess	INTERNET	Chess Internett	internet.netcom.no		chess	chess									
+242	2	Chess	MMS	Chess MMS	mms.netcom.no		chess	chess			212.169.66.4	8080					http://mms/	
+242	2	NetCom	INTERNET	NetCom Internett	netcom												
+242	2	NetCom	MMS	NetCom mms	mms.netcom.no		mms	netcom			212.169.66.4	8080					http://mms/	
+242	2	Tilleggskort	INTERNET	NetCom Internett	netcom												
+242	3	Teletopia	INTERNET	T3 IAP	www.teletopia.no												
+242	5	Network Norway	INTERNET	NWN Internett	internet												
+242	5	Network Norway	MMS	NWN MMS	mms						89.254.65.20	80					http://mms.nwn.no	
+244	12	TDC	INTERNET	TDC INTERNET	inet.tdc.fi									194.100.0.100	195.10.132.100		
+244	12	TDC	MMS	TDC MMS	mms.tdc.fi						10.1.12.2	8080					http://mmsc.tdc.fi	
+244	12	dna	INTERNET	DNA GPRS internet	internet												
+244	12	dna	MMS	dna MMS	mms		dna	mms			10.1.1.2	8080					http://mmsc.dnafinland.fi	
+244	14	AMT	INTERNET	GSMAland intgprs	internet												
+244	14	AMT	MMS	GSMAland MMS	mms						194.110.177.070	8080					http://mms.amt.aland.fi	
+244	21	SAUNALAHTI	INTERNET	Saunalahti Internet	internet.saunalahti												
+244	21	SAUNALAHTI	MMS	Saunalahti MMS	mms.saunalahti.fi						62.142.4.197	8080					http://mms.saunalahti.fi:8002/	
+244	3	dna	INTERNET	DNA GPRS internet	internet												
+244	3	dna	MMS	dna MMS	mms		dna	mms			10.1.1.2	8080					http://mmsc.dnafinland.fi	
+244	5	Elisa	INTERNET	Elisa Internet	internet												
+244	5	Elisa	MMS	Elisa MMS	mms						213.161.41.57	80					http://mms.elisa.fi	
+244	5	Kolumbus	INTERNET	Kolumbus Internet	internet			internet									
+244	5	Kolumbus	MMS	Kolumbus MMS	mms						213.161.41.57	80					http://mms.elisa.fi	
+244	5	MTV3	INTERNET	MTV3 Internet	internet.mtv3.fi												
+244	5	MTV3	MMS	MTV3 MMS	mms.mtv3.fi						213.161.41.59	80					http://mms.mtv3.fi	
+244	5	Song	INTERNET	Song Internet	internet.song.fi		song@internet	songnet						194.100.0.100	195.10.132.100		
+244	5	Song	MMS	Song MMS	mms.song.fi						213.161.41.58	80					http://mms.song.fi	
+244	5	Tele2	MMS	Tele2 MMS	internet.tele2.fi		wap	wap			193.12.40.19	80					http://mmsc.tele2.fi	
+244	91	ACN	INTERNET	ACN GPRS	wap.sonera.net						195.156.25.4	80					
+244	91	SONERA	INTERNET	SONERA Internet	internet												
+244	91	SONERA	MMS	Sonera MMS	wap.sonera.net						195.156.25.33	80					http://mms.sonera.net:8002/	
+244	91	TeleFinland	INTERNET	TeleFinland INTERNET	internet												
+244	91	TeleFinland	MMS	TeleFinland MMS	telefinland						195.156.25.33	8080					http://mms.sonera.net:8002	
+246	1	OMNITEL	INTERNET	Omnitel	omnitel		omni	omni									
+246	1	OMNITEL	MMS	Omnitel MMS	gprs.mms.lt		mms	mms			194.176.32.149	8080					http://mms.omnitel.net:8002/	
+246	2	BITE	INTERNET	BITE Plius	wap												
+246	2	BITE	MMS	BITE mms	mms		mms@mms	mms			192.168.150.2	8080					http://mmsc/servlets/mms	
+246	3	Tele 2	INTERNET	Tele2 GPRS Internet	internet.tele2.lt												
+246	3	Tele 2	MMS	Tele2 MMS	mms.tele2.lt		wap	wap			193.12.40.29	8080					http://mmsc.tele2.lt	
+247	1	LMT	INTERNET	LMT GPRS	internet.lmt.lv		lmt	lmt									
+247	1	LMT	MMS	LMT MMS	mms.lmt.lv		lmt	lmt									http://mmsc.lmt.lv/mmsc	
+247	2	Tele 2	INTERNET	Tele2 GPRS Internet	internet.tele2.lv												
+247	2	Tele 2	MMS	Tele2 MMS	mms.tele2.lv		wap	wap			193.12.40.38	8080					http://mmsc.tele2.lv	
+247	5	BITE	INTERNET	BITE Plus	wap												
+247	5	BITE	MMS	BITE mms	mms		mms@mms	mms			192.168.150.2	8080					http://mmsc/servlets/mms	
+248	1	EMT GSM	INTERNET	EMT Internet	internet.emt.ee												
+248	1	EMT GSM	MMS	EMT MMS	mms.emt.ee						217.71.32.82	8080					http://mms.emt.ee/servlets/mms	
+248	2	Elisa	INTERNET	Elisa internet	internet									194.204.0.1			
+248	2	Elisa	MMS	Elisa MMS	mms						194.204.2.6	8000					http://194.204.2.10	
+248	3	TELE2	INTERNET	TELE2 HTTP	internet.tele2.ee		wap	wap									
+248	3	TELE2	MMS	TELE2 MMS	mms.tele2.ee						193.12.40.6	8080					http://mmsc.tele2.ee	
+250	1	MTS	INTERNET	MTS Internet	internet.mts.ru		mts	mts						213.87.0.1	213.87.1.1		
+250	1	MTS	MMS	MTS MMS	mms.mts.ru		mts	mts			192.168.192.192	9201					http://mmsc/	
+250	12	BWC	MMS	MMS	mms.bwc.ru		bwc				010.010.017.002	9201					http://mmsc/mms	
+250	16	NTC	MMS	MMS	mms.ntc						080.243.064.068	8080					http://mmsc.vntc.ru/was	
+250	2	Megafon	INTERNET	Megafon Internet	internet												
+250	2	Megafon	MMS	MegaFon MMS	mms		mms	mms			10.10.10.10	8080					http://mmsc:8002	
+250	28	Extel	INTERNET	Extel Internet	inet.kng.beeline.ru		beeline	beeline									
+250	28	Extel	MMS	Extel MMS	mms.kng.beeline.ru		beeline	beeline			212.44.65.205	80					http://mms	
+250	39	UralTel	INTERNET	UralTel GPRS	mnc039.mcc250.gprs									212.120.160.130	195.161.151.009		
+250	7	Smarts	INTERNET	Smarts internet	internet.smarts.ru									194.84.5.129	194.84.23.125		
+250	7	Smarts	MMS	mms	mms.smarts.ru		wap	wap			172.024.128.005	8080					http://172.24.120.135/mms/wapenc	
+250	92	Primtel	INTERNET	Primtel Internet	internet.primtel.ru												
+250	99	Bee Line	INTERNET	BeeLine Internet	internet.beeline.ru		beeline	beeline									
+250	99	Bee Line	MMS	BeeLine MMS	mms.beeline.ru		beeline	beeline			192.168.94.23	8080					http://mms/	
+255	1	MTS	INTERNET	UMC NET GPRS	www.umc.ua												
+255	1	MTS	MMS	UMC MMS GPRS	mms.umc.ua						192.168.10.10	8080					http://mmsc:8002/	
+255	1	MTS Jeans	MMS	JEANS MMS GPRS	mms.jeans.ua						192.168.010.010	8080					http://mmsc:8002/	
+255	2	Beeline	INTERNET	Beeline Internet	Internet.beeline.ua												
+255	2	Beeline	MMS	Beeline MMS	mms.beeline.ua						10.11.8.18	8080					http://mms/	
+255	3	Kyivstar	INTERNET	Kyivstar Internet	www.kyivstar.net		igprs	internet									
+255	3	Kyivstar	MMS	Kyivstar MMS	mms.kyivstar.net		mms	mms			10.10.10.10	8080					http://mms.kyivstar.net	
+255	3	Kyivstar Ace&Base	MMS	Ace&Base MMS	mms.kyivstar.net		mms	mms			10.10.10.10	8080					http://mms.kyivstar.net	
+255	3	Kyivstar DJuice	MMS	DJUICE MMS	mms.djuice.com.ua		djuice	mms			10.10.10.10	8080					http://mms.kyivstar.net	
+255	6	life:)	INTERNET	life:) Internet	internet						212.058.162.230						
+255	6	life:)	MMS	life:) MMS	mms						212.058.162.230	8080					http://mms.life.com.ua/cmmsc/post	
+255	7	Utel	INTERNET	Utel Internet	3g.utel.ua												
+257	1	Velcom	INTERNET	Velcom GPRS Internet	web.velcom.by		web	web									
+257	1	Velcom	MMS	VELCOM MMS	mms.velcom.by						010.200.015.015	8080					http://mms.velcom.by/servlets/mms	
+259	1	Orange	INTERNET	Orange GPRS Modem	internet.orange.md												
+259	1	Orange	MMS	Orange MMS	mms.orange.md						192.168.127.125	3128					http://mms/mms	
+259	2	Moldcell	INTERNET	MoldcellGPRS	internet												
+259	2	Moldcell	MMS	Moldcell MMS	mms						010.000.010.010	9401					http://mms.moldcell.md/cmmsc/post	
+260	1	Plus GSM	INTERNET	Plus GSM INTERNET GPRS	internet												
+260	1	Plus GSM	MMS	MMS GPRS	mms.plusgsm.pl						212.2.96.16	8080					http://mms.plusgsm.pl:8002	
+260	2	Era	INTERNET	blueconnect	erainternet		erainternet	erainternet			213.158.194.226	8080					
+260	2	Era	MMS	Era MMS	eramms		eramms	eramms			213.158.194.229	8080					http://mms.era.pl/servlets/mms	
+260	2	HEYAH	INTERNET	HEYAH GPRS Internet	heyah.pl		heyah	heyah			213.158.194.194	8080					
+260	2	HEYAH	MMS	Heyahmms	heyahmms		heyah	heyah			213.158.194.057	8080					http://mms.heyah.pl/servlets/mms	
+260	3	Idea	MMS	MMS Idea GPRS	mms						192.168.006.104	8080					http://mms.idea.pl	
+260	3	ORANGE	INTERNET	ORANGE Internet	internet		internet										
+260	3	ORANGE	MMS	MMS Orange	mms		mms	mms			192.168.6.104	8080					http://mms.orange.pl	
+260	6	Play	INTERNET	Play INTERNET	internet												
+260	6	Play	MMS	MMS	mms						10.10.25.5	8080					http://10.10.28.164/mms/wapenc	
+262	1	T-Mobile D	INTERNET	T-Mobile Internet	internet.t-mobile		t-mobile	tm						193.254.160.001	193.254.160.130		
+262	2	Vodafone.de	INTERNET	VF DE Web	web.vodafone.de												
+262	2	Vodafone.de	MMS	VF DE MMS	event.vodafone.de						139.7.29.17	80					http://139.7.24.1/servlets/mms	
+262	3	E-Plus	INTERNET	E-Plus Internet	internet.eplus.de		eplus	web									
+262	3	E-Plus	MMS	E-plus MMS	mms.eplus.de		mms	eplus			212.23.97.153	5080					http://mms/eplus/	
+262	7	o2 - de	INTERNET	o2 Internet	internet						195.182.114.52	8080					
+262	8	o2 - de	INTERNET	o2 Internet	internet						195.182.114.52	8080					
+266	1	Gibtel	INTERNET	Gibtel WWW GPRS	www.gibtele.com												
+266	1	Gibtel	MMS	MMS GPRS	mms.gibtele.com						195.244.195.018	8080					http://mms:8081/3505	
+268	1	ZON	MMS	ZON MMS	vas.zon.pt		vas	vas			213.30.27.63	8799					http://mms/servlets/mms	
+268	1	vodafone P	INTERNET	Internet Vodafone	internet.vodafone.pt												
+268	1	vodafone P	MMS	Vodafone MMS	vas.vodafone.pt		vas	vas			213.30.27.63	8799					http://mms/servlets/mms	
+268	3	OPTIMUS	INTERNET	Optimus Internet	umts												
+268	3	OPTIMUS	MMS	Optimus MMS	mms						62.169.66.1	8799					http://mmsc:10021/mmsc	
+268	6	TMN	INTERNET	TMN Internet	internet												
+268	6	TMN	MMS	MMSgprs	mmsc.tmn.pt		tmn	tmnnet			10.111.2.16	8080					http://mmsc/	
+270	1	LUXGSM	INTERNET	LUXGSM ISP	web.pt.lu												
+270	1	LUXGSM	MMS	Luxgsm MMS	mms.pt.lu		mms	mms			194.154.192.88	8080					http://mmsc.pt.lu	
+270	77	Tango	INTERNET	Tango Internet	internet												
+270	77	Tango	MMS	Tango MMS	mms		tango	tango			212.066.075.003	8080					http://mms.tango.lu/	
+270	99	VOX Mobile	INTERNET	VOX internet	vox.lu												
+272	05	3 Ireland	INTERNET	3	3ireland.ie												
+272	1	Vodafone IE	INTERNET	Vodafone ISP	isp.vodafone.ie		vodafone	vodafone									
+272	1	Vodafone IE	MMS	Vodafone MMS	mms.vodafone.net		dublin	dublin			10.24.59.200	80					http://www.vodafone.ie/mms	
+272	2	O2 - IRL	INTERNET	O2 Internet	internet		o2	o2										
+272	3	METEOR	INTERNET	Meteor DATA	data.mymeteor.ie												
+272	3	METEOR	MMS	MMS over GPRS	mms.mymeteor.ie		my	wap			10.85.85.85	8799					http://mms.mymeteor.ie	
+274	1	Siminn	INTERNET	Siminn GPRS	wap.simi.is						213.167.138.200						
+274	1	Siminn	MMS	Siminn MMS	mms.simi.is						213.167.138.200	8080					http://mms.simi.is/servlets/mms	
+274	11	Nova	INTERNET	Nova Internet	net.nova.is												
+274	11	Nova	MMS	Nova MMS	mms.nova.is						10.10.2.60	8080					http://mmsc.nova.is	
+274	2	Vodafone IS	MMS	Vodafone MMS	mms.gprs.is						010.022.000.010	8080					http://mmsc.ogvodafone.is	
+274	3	Vodafone IS	MMS	Vodafone MMS	mms.gprs.is						010.022.000.010	8080					http://mmsc.ogvodafone.is	
+276	1	AMC	INTERNET	AMC-GPRS	internet												
+276	1	AMC	MMS	AMC-MMS	mms						010.010.010.020	8080					http://195.167.65.220:8002	
+276	2	Vodafone AL	INTERNET	VFAL Internet	vodafoneweb						010.000.009.002	9201					
+276	2	Vodafone AL	MMS	VFAL MMS	vfalmms						010.000.009.002	8080					http://mmsc.vodafone.al	
+278	1	Vodafone MT	INTERNET	Vodafone MT Internet	internet												
+278	1	Vodafone MT	MMS	MMS gprs	mms.vodafone.com.mt						10.12.0.3	8080					http://mms.vodafone.com.mt/servlets/mms	
+278	21	Go Mobile	INTERNET	Go Online	gosurfing												
+278	21	Go Mobile	MMS	go mms	gomms						010.020.020.129	8080					http://mmsc	
+280	1	CYTAGSM	INTERNET	CYTA Internet	cytanet.net												
+280	1	CYTAGSM	MMS	cytaMMS	cytamobile		user	pass			212.31.96.161	80					http://mmsc.cyta.com.cy	
+280	10	Areeba	INTERNET	areeba GPRS	gprs.areeba.com.cy												
+280	10	Areeba	MMS	areeba MMS	mms.areeba.com.cy		mms	mms			172.024.097.001	3130					http://mms.areeba.com.cy/mmsc	
+282	1	Geocell	INTERNET	Geocell GPRS Int	internet												
+282	1	Geocell	MMS	Geo MMS	mms						010.011.240.007	8080					http://mms.geocell.com.ge/cmmsc/post	
+282	2	Magti	INTERNET	Magti Internet	gprs.ge												
+282	2	Magti	MMS	Magti MMS	mms.ge						081.095.160.016	9401					http://mms.magtigsm.ge/	
+284	1	M-Tel BG	INTERNET	M-Tel Internet GPRS	wap-gprs.mtel.bg												
+284	1	M-Tel BG	MMS	MMS M-Tel GPRS	mms-gprs.mtel.bg		mtel	mtel			010.150.000.033	8080					http://mmsc/	
+284	3	vivatel	INTERNET	vivatel Internet	internet.vivatel.bg		vivatel	vivatel									
+284	3	vivatel	MMS	vivatel MMS	mms.vivatel.bg		mms	mms			192.168.123.123	8080					http://mmsc.vivatel.bg	
+284	5	BG GLOBUL	INTERNET	GLOBUL Internet	globul												
+284	5	BG GLOBUL	MMS	GLOBUL MMS GPRS	mms.globul.bg		mms				192.168.87.11	8004					http://mmsc1.mms.globul.bg:8002	
+286	1	TURKCELL	INTERNET	Turkcell Internet	internet												
+286	1	TURKCELL	MMS	Turkcell MMS	mms		mms	mms			212.252.169.217	8080					http://mms.turkcell.com.tr/servlets/mms	
+286	2	Vodafone	MMS	Vodafone MMS	mms		vodafone	vodafone			217.31.233.18	9401					http://217.31.233.18:6001/MM1Servlet	
+286	2	Vodafone TR	INTERNET	Vodafone Internet	internet		vodafone	vodafone				9401					
+286	3	AVEA	INTERNET	Avea Internet	internet												
+286	3	AVEA	MMS	Avea MMS	mms		mms	mms			213.161.151.201	8080					http://mms.avea.com.tr/servlets/mms	
+286	4	AVEA	INTERNET	Avea Internet	internet												
+286	4	AVEA	MMS	Avea MMS	mms		mms	mms			213.161.151.201	8080					http://mms.avea.com.tr/servlets/mms	
+293	40	SI.mobil	INTERNET	SI mobil Internet	internet.simobil.si		simobil	internet									
+293	40	SI.mobil	MMS	SI mobil MMS	mms.simobil.si		simobil	internet			80.95.224.46	9201					http://mmc/	
+293	41	Debitel	MMS	Debitel MMS	mms.mobitel.si		mobitel	internet			213.229.249.040	8080					http://mms.mobitel.si/servlets/mms	
+293	41	Mobitel	INTERNET	Planet	internet		mobitel	internet			213.229.249.040	8080					
+293	41	Mobitel	MMS	Mobitel MMS	internet		mobitel	internet			213.229.249.040	8080					http://mms.mobitel.si/servlets/mms	
+293	64	T-2	MMS	T2 MMS	mms.t-2.net						172.020.018.137	8080					http://www.mms.t-2.net:8002	
+293	70	Tusmobil	MMS	TUS MMS	mms.tusmobil.si		tusmobil	mms			091.185.221.085	8080					http://mms.tusmobil.si:8002	
+294	1	Mobimak	INTERNET	Mobimak Internet	internet		internet	mobimak									
+294	1	Mobimak	MMS	Mobimak MMS	mms		mms	mms			62.162.155.227	8080					http://mms.mobimak.com.mk	
+294	2	Cosmofon	MMS	Cosmofon MMS	mms						010.010.010.020	8080					http://195.167.65.220:8002	
+294	3	Vip MKD	INTERNET	Vip MKD Internet	Vipoperator		vipoperator	vipoperator			78.40.0.1	8080					
+294	3	Vip MKD	MMS	MMS	vipoperator.mms		vipoperator	vipoperator			78.40.0.1	8080					http://mmsc.vipoperator.com.mk	
+295	1	Swisscom Mobile	INTERNET	Swisscom	gprs.swisscom.ch												
+295	1	Swisscom Mobile	MMS	Swisscom MMS	event.swisscom.ch						192.168.210.002	8080					http://mms.natel.ch:8079/	
+295	2	Orange FL	INTERNET	Orange Internet	internet-ofl						192.168.010.002			213.55.128.1	213.55.128.2		
+295	2	Orange FL	MMS	Orange MMS	mms-ofl						192.168.151.002	8080					http://192.168.151.3:8002	
+295	5	FL1	INTERNET	FL1 Internet	mobilkom.li		gprs@a1plus.at	mobilkom									
+295	5	FL1	MMS	FL1 MMS	free.FL1.net		ppp@A1plus.at				194.48.124.71	8001					http://mmsc.a1.net	
+295	5	Mobilkom	INTERNET	FL1	mobilkom.li						194.048.124.071						
+295	5	Mobilkom	MMS	FL1 MMS	Free.FL1.net						194.048.124.071	8001					http://mmsc.a1.net	
+295	77	LI TANGO	MMS	Tango MMS	mms.li		tango1	tele2			212.66.75.9	80					http://mms.tele2.li	
+295	77	Tango	INTERNET	Tango Internet	internet.li						212.066.070.006						
+295	77	Tango	MMS	Tango MMS	mms.li						212.066.075.009	8080					mms.tele2.li	
+297	3	Mtel	INTERNET	mtelinternet	mtelinternet		internet	068									
+297	3	Mtel	MMS	mtelmms	mtelmms		mms	068			172.17.85.131	8080					http://mmsmtel.com/mms/wapenc	
+302	220	Telus	INTERNET	Telus Web	sp.telus.com						74.49.0.18	80					
+302	37	Fido	INTERNET	Fido GPRS	internet.fido.ca												
+302	37	Fido	MMS	Fido MMS	mms.fido.ca						mm1.fido.ca	80					http://mms.fido.ca	
+302	370	Fido	INTERNET	Fido GPRS	internet.fido.ca												
+302	370	Fido	MMS	Fido MMS	mms.fido.ca						mm1.fido.ca	80					http://mms.fido.ca	
+302	610	Bell	INTERNET	Bell Internet	pda.bell.ca						web.wireless.bell.ca	80					
+302	720	Rogers	INTERNET	Rogers Internet	internet.com												
+302	720	Rogers	MMS	Rogers Media	media.com						010.128.001.069	80					http://mms.gprs.rogers.com	
+310	130	Cell 1 Amarillo	MMS	My Multi Media	mms.c1.ama						010.010.000.097	9201					http://mms.iot1.com/amarillo/mms.php	
+310	150	AT&T	INTERNET	AT&T Internet	wap.cingular		WAP@CINGULARGPRS.COM	CINGULAR1									
+310	160	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	160	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.50	8080					http://216.155.174.84/servlets/mms	
+310	170	AT&T	INTERNET	AT&T Internet	wap.cingular		WAP@CINGULARGPRS.COM	CINGULAR1									
+310	200	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	200	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	210	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	210	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	220	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	220	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	230	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	230	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	240	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	240	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	250	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	250	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	260	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	260	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	270	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	270	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	280	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	280	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	290	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	290	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	300	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	300	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	310	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	310	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	320	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	320	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	330	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	330	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	380	AT&T	INTERNET	AT&T Internet	wap.cingular		WAP@CINGULARGPRS.COM	CINGULAR1									
+310	410	AT&T	INTERNET	AT&T Internet	wap.cingular		WAP@CINGULARGPRS.COM	CINGULAR1									
+310	420	Cincinnati Bell	INTERNET	Mobile Web	web.gocbw.com		cbw										
+310	420	Cincinnati Bell	MMS	CBW MMS	wap.gocbw.com		cbw				216.68.79.202	80					http://mms.gocbw.com:8088/mms	
+310	490	SunCom	INTERNET	SunCom data	internet												
+310	490	SunCom	MMS	SunCom MMS	mms						66.150.33.125	8080					http://mms.suncom.net:8088/mms	
+310	500	PSC Wireless	MMS	PSC Wireless	wap.psc.com						010.010.000.097	9200					http://beaker.interoptechnologies.com/mms/mms.php	
+310	580	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	580	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	590	Cellular One	MMS	CellularOne MMS	cellular1wap						172.023.001.252	8799					http://mmsc	
+310	660	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	660	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	70	Cellular One	MMS	Picture Message	MMS						066.255.055.023	80					http://mms.mycellonephone.com/highland/mms.php	
+310	80	Corr Wireless	MMS	CorrMMS	corrmms						066.255.055.023	80					http://mms.iot1.com/corr/mms.php	
+310	800	T-Mobile	INTERNET	T-Mobile Internet	epc.tmobile.com												
+310	800	T-Mobile	MMS	MMS	wap.voicestream.com		nokia	6600			216.155.165.050	8080					http://216.155.174.84/servlets/mms	
+310	890	Unicel	INTERNET	Unicel Info2Go	apn.unicel.com						063.099.231.135	8080					
+310	90	EDGE	INTERNET	Edge Data	isp												
+310	90	EDGE	MMS	Edge MMS	mms						012.108.012.013	3128					http://mms.edgemobile.net/mmsc	
+310	910	First Cellular	MMS	FirstCellularMMS	wap.firstcellular.com						010.101.001.005	3128					mms.firstcellular.net/mmsc	
+310	980	AT&T	INTERNET	AT&T Internet	wap.cingular		WAP@CINGULARGPRS.COM	CINGULAR1									
+311	180	AT&T	INTERNET	AT&T Internet	wap.cingular		WAP@CINGULARGPRS.COM	CINGULAR1									
+330	110	Claro Puerto Rico	INTERNET	INTERNET CLARO	internet.claropr.com												
+330	110	Claro Puerto Rico	MMS	MMS CLARO	mms.claropr.com						10.50.38.3	8799					http://mmsg.claropr.com:10021/mmsc	
+334	2	Telcel	INTERNET	Telcel Internet GPRS	internet.itelcel.com		webgprs	webgprs2002						158.043.240.004	158.043.240.003		
+334	2	Telcel	MMS	Mensajes Multimedia	mms.itelcel.com		mmsgprs	mmsgprs2003			148.233.151.240	8080					http://mms.itelcel.com/servlets/mms	
+334	20	TELCEL GSM	INTERNET	Telcel Internet	internet.itelcel.com		webgprs	webgprs2002									
+334	20	TELCEL GSM	MMS	Mensajes Multimedia	mms.itelcel.com		mmsgprs	mmsgprs2003			148.233.151.240	8080					http://mms.itelcel.com/servlets/mms	
+334	3	MOVISTAR	INTERNET	movistar INTERNET	internet.movistar.mx		movistar	movistar									
+334	3	MOVISTAR	MMS	movistar MMS	mms.movistar.mx		movistar	movistar			10.2.20.1	80					http://mms.movistar.mx	
+338	05	Digicel	MMS	Digicel MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+338	070	Claro JAM	INTERNET	INTERNET CLARO	internet.ideasclaro.com.jm												
+338	180	C&W Jamaica	INTERNET	LIME Mobile Internet	internet												
+338	180	C&W Jamaica	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+338	5	Digicel Antigua	INTERNET	Digicel Antigua	web.digicelantigua.com												
+338	5	Digicel Cayman	INTERNET	Digicel Cayman	web.digicelcayman.com												
+338	5	Digicel Jamaica	INTERNET	Digicel Jamaica	web.digiceljamaica.com												
+338	5	Digicel OECS	INTERNET	Digicel OECS	web.digiceloecs.com												
+338	5	Digicel Samoa	INTERNET	Digicel Samoa INTERNET	wap.digicelsamoa.ws												
+338	5	Digicel Samoa	MMS	Digicel Samoa MMS	wap.digicelsamoa.ws						10.148.122.12	8080					http://mms.digicelsamoa.net:8990	
+338	5	Digicel TCI	INTERNET	Digicel TCI	web.digiceltci.com												
+338	70	Claro JAM	INTERNET	INTERNET CLARO	internet.ideasclaro.com.jm												
+338	70	Claro JAM	MMS	MMS CLARO	mms.ideasclaro.com.jm						190.80.147.118	8080					http://mms.ideasclaro.com.jm/mms/wapenc	
+340	1	Orange	INTERNET	Orange WEB	orangeweb												
+340	1	Orange Caraibe	INTERNET	Orangeweb	orangeweb		orange	orange									
+340	1	Orange Caraibe	MMS	Orange MMS	orangewap		orange	orange			10.0.0.10	8082					http://193.251.160.246/servlets/mms	
+340	20	Digicel FWI	INTERNET	Digicel FWI	web.digicelfr.com												
+340	20	Digicel FWI	MMS	Digicel FWI MMS	wap.digicelfr.com		wap	wap			172.20.6.12	9201					http://mmc.digiceltt.com/servlets/mms	
+342	600	C&W Barbados	INTERNET	LIME Mobile Internet	internet												
+342	600	C&W Barbados	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+342	75	Digicel Barbados	INTERNET	Digicel Barbados	web.digicelbarbados.com												
+342	75	Digicel Barbados	MMS	Digicel Barbados MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+344	920	C&W Antigua	INTERNET	LIME Mobile Internet	internet												
+344	920	C&W Antigua	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+346	140	C&W Cayman	INTERNET	LIME Mobile Internet	internet												
+346	140	C&W Cayman	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+348	170	C&W British Virgin Islands	INTERNET	C&W British Virgin Islands Internet postpaid	internet												
+348	170	C&W British Virgin Islands	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+348	770	Digicel BVI	MMS	Digicel BVI MMS	wap.digicelbvi.com		wapbvi	wapbvi			172.016.007.012	9201					http://mmc.digiceljamaica.com/servlets/mms	
+352	110	C&W Grenada	INTERNET	LIME Mobile Internet	internet												
+352	110	C&W Grenada	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+352	3	Digicel OECS	INTERNET	Digicel OECS	web.digiceloecs.com												
+352	3	Digicel OECS	MMS	Digicel OECS MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+354	860	C&W Monseratt	INTERNET	LIME Mobile Internet	internet												
+354	860	C&W Monseratt	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+356	110	C&W St. Kitt's & Nevis	INTERNET	LIME Mobile Internet	internet												
+356	110	C&W St. Kitt's & Nevis	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+358	110	C&W St. Lucia	INTERNET	LIME Mobile Internet	internet												
+358	110	C&W St. Lucia	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+358	5	Digicel OECS	INTERNET	Digicel OECS	web.digiceloecs.com												
+358	5	Digicel OECS	MMS	Digicel OECS MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+360	110	C&W St. Vincent	INTERNET	LIME Mobile Internet	internet												
+360	110	C&W St. Vincent	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+360	7	Digicel OECS	INTERNET	Digicel OECS	web.digiceloecs.com												
+360	7	Digicel OECS	MMS	Digicel OECS MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+362	69	Digicel Curacao	MMS	Digicel Curacao MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+363	1	SETAR	INTERNET	SetarInternet	internet.setar.aw							0					
+363	1	SETAR	MMS	SetarMMS	mms.setar.aw						209.088.130.210	8081					http://mms.setar.aw	
+363	2	Digicel Aruba	INTERNET	Digicel Aruba	web.digicelaruba.com												
+363	2	Digicel Aruba	MMS	Digicel Aruba MMS	wap						172.016.007.012	9201					http://mms.digicelgroup.com	
+365	840	C&W Anguilla	INTERNET	LIME Mobile Internet	internet												
+365	840	C&W Anguilla	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+366	110	C&W Dominica	INTERNET	LIME Mobile Internet	internet												
+366	110	C&W Dominica	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+370	1	Orange Dominicana	INTERNET	Orange net	orangenet.com.do												
+370	1	Orange Dominicana	MMS	Orange MMS	orangeworld		orange	orange			172.016.126.070	8080					http://mmr.orangewi.com/servlets/mms	
+370	2	CLARO - DR	INTERNET	INTERNET CLARO	internet.ideasclaro.com.do												
+370	2	CLARO - DR	MMS	MMS CLARO	mms.ideasclaro.com.do						190.80.147.8	8080					http://mms.ideasclaro.com.do/mms/wapenc	
+372	2	Digicel Haiti	INTERNET	Digicel Haiti	web.digicelha.com												
+372	2	Digicel Haiti	MMS	Digicel Haiti MMS	wap.digicelha.com		wapha	wap01ha			172.20.200.012	9201					http://mmc.digicelhaiti.com/servlets/mms	
+374	12	TSTT	MMS	Bmobile mms	mms						192.168.210.104	8080					http://192.168.210.104/mmrelay.app	
+374	13	Digicel Trinidad	INTERNET	Digicel Trinidad	web.digiceltt.com												
+374	13	Digicel Trinidad	MMS	Digicel Trinidad MMS	wap.digiceltt.com		wap	wap			172.20.6.12	9201					http://mmc.digiceltt.com/servlets/mms	
+376	350	C&W Turks & Caicos	INTERNET	LIME Mobile Internet	internet												
+376	350	C&W Turks & Caicos	MMS	MMS Postpaid	multimedia						10.20.5.34	8799					http://mmsc	
+400	1	Azercell	INTERNET	Azercell GPRS	internet												
+400	1	Azercell	MMS	Azercell MMS	mms						010.000.154.101	8080					http://mms.azercell.com/cMMSC/post	
+401	1	Beeline KZ	INTERNET	M-Internet	internet.beeline.kz		@internet.beeline.kz	beeline									
+401	1	Beeline KZ	MMS	Beeline MMS	mms.beeline.kz		@mms.beeline	beeline			172.027.006.093	8080					http://mms.beeline.kz/mms/wapenc	
+401	2	KCell	MMS	kcell mms	mms						195.047.255.015	8080					http://192.168.75.10:6001/MM1Servlet	
+401	2	Kcell	INTERNET	Kcell Internet	internet												
+404	09	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	1	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	1	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	10	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	10	AirTel	MMS	Live! Messaging	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	11	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	11	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	12	IDEA	INTERNET	Idea Internet	internet												
+404	12	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	13	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	13	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	14	IDEA	INTERNET	idea internet	internet												
+404	14	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+404	15	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	15	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	16	AirTel	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	16	AirTel	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	17	AIRCEL	INTERNET	Aircel Online	aircelwebpost												
+404	17	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+404	18	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	19	IDEA	INTERNET	Idea Internet	internet												
+404	19	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	2	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	2	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	20	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	20	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	21	BPL	INTERNET	BPL INTERNET	bplgprs						10.0.0.10	9401					
+404	21	BPL	MMS	BPL MMS	mizone						10.0.0.10	9401					http://wap.mizone.bplmobile.com/8080	
+404	22	IDEA	INTERNET	Idea Internet	internet												
+404	22	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	24	IDEA	INTERNET	Idea Internet	internet												
+404	24	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	25	AIRCEL	INTERNET	Aircel Online	aircelwebpost												
+404	25	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+404	27	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	27	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	28	AIRCEL	INTERNET	Aircel Online	aircelwebpost												
+404	28	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+404	3	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	3	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	30	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	30	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	31	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	31	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	34	BSNL-Haryana	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	34	BSNL-Haryana	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	35	AIRCEL	INTERNET	Aircel Online	aircelwebpost												
+404	35	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+404	36	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	37	AIRCEL	INTERNET	Aircel Online	aircelwebpost												
+404	37	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+404	38	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	38	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	4	Idea	INTERNET	Idea Internet	internet												
+404	4	Idea	MMS	Idea MMS	mmsc						10.4.42.15	8080					http://10.4.42.21:8002	
+404	40	AirTel	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	40	AirTel	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	41	AIRCEL	INTERNET	Aircel Online	aircelgprs.po												
+404	41	AIRCEL	MMS	Aircel MMS	aircelmms.po						192.168.35.196	8081					http://mmsc/mmrelay.app	
+404	42	AIRCEL	INTERNET	Aircel Online	aircelgprs.po												
+404	42	AIRCEL	MMS	Aircel MMS	aircelmms.po						192.168.35.196	8081					http://mmsc/mmrelay.app	
+404	43	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	43	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	44	IDEA	INTERNET	idea internet	internet												
+404	44	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+404	45	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	45	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	46	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	46	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	49	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	49	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	5	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	5	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	50	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	51	AirTel	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	51	AirTel	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	51	BSNL-Himachal	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	51	BSNL-Himachal	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	52	AirTel	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	52	AirTel	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	52	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	53	Airtel Orissa	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	53	Airtel Orissa	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	53	BSNL-Punjab	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	53	BSNL-Punjab	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	54	BSNL-UPWest	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	54	BSNL-UPWest	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	55	AirTel	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	55	AirTel	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	55	BSNL-UPEast	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	55	BSNL-UPEast	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	56	Airtel Assam	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	56	Airtel Assam	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	56	IDEA UP West	INTERNET	Idea Internet	internet												
+404	56	IDEA UP West	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	59	BSNL-Rajasthan	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	59	BSNL-Rajasthan	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	60	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	60	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	62	BSNL-J&K	INTERNET	BSNL GPRS	gprsnorth.cellone.in												
+404	62	BSNL-J&K	MMS	BSNL MMS	mmsnorth.cellone.in						10.132.193.196	8080					http://10.132.193.197:8002/	
+404	64	BSNL South	INTERNET	BSNL Internet	bsnlsouth		Your Mobile no.	Your Mobile no.			010.031.054.002	9401					
+404	64	BSNL South	MMS	BSNL MMS	bsnlmms		ppp	ppp123			010.031.054.002	9401					http://10.31.53.18/mms/	
+404	67	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	68	MTNL	MMS	MTNL MMS	mmsmtnlmum						172.016.039.010	9201					http://172.16.39.140/mms/	
+404	69	MTNL	INTERNET	MTNL GPRS2	gprsmtnlmum		mtnl	mtnl123			172.16.39.10	9401					
+404	69	MTNL	MMS	MTNL MMS	mmsmtnlmum		mtnl	mtnl123			172.16.39.10	9401					http://172.16.39.140/mms/	
+404	7	IDEA	INTERNET	Idea Internet	internet												
+404	7	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	70	AirTel	INTERNET	Airtel MobOffice	airtelgprs.com												
+404	70	AirTel	MMS	Airtel MMS	airtelmms.com						100.001.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	71	BSNL South	INTERNET	BSNL Internet	bsnlsouth		Your Mobile no.	Your Mobile no.			010.031.054.002	9401					
+404	71	BSNL South	MMS	BSNL MMS	bsnlmms		ppp	ppp123			010.031.054.002	9401					http://10.31.53.18/mms/	
+404	72	BSNL South	INTERNET	BSNL Internet	bsnlsouth		Your Mobile no.	Your Mobile no.			010.031.054.002	9401					
+404	72	BSNL South	MMS	BSNL MMS	bsnlmms		ppp	ppp123			010.031.054.002	9401					http://10.31.53.18/mms/	
+404	73	BSNL South	INTERNET	BSNL Internet	bsnlsouth		Your Mobile no.	Your Mobile no.			010.031.054.002	9401					
+404	73	BSNL South	MMS	BSNL MMS	bsnlmms		ppp	ppp123			010.031.054.002	9401					http://10.31.53.18/mms/	
+404	74	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	74	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	75	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	75	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	76	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	76	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	77	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	77	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	78	IDEA	INTERNET	Idea Internet	internet												
+404	78	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	80	BSNL South	INTERNET	BSNL Internet	bsnlsouth		Your Mobile no.	Your Mobile no.			010.031.054.002	9401					
+404	80	BSNL South	MMS	BSNL MMS	bsnlmms		ppp	ppp123			010.031.054.002	9401					http://10.31.53.18/mms/	
+404	81	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	81	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	82	IDEA	INTERNET	Idea Internet	internet												
+404	82	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	83	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	84	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	84	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	85	Reliance	MMS	RMMS	mms						10.239.221.7	8080					http://10.239.221.47/mms/	
+404	86	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	86	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	87	IDEA	INTERNET	idea internet	internet												
+404	87	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+404	88	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+404	88	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+404	89	IDEA	INTERNET	Idea Internet	internet												
+404	89	IDEA	MMS	Idea MMS	mmsc						010.004.042.015	8080					http://10.4.42.21:8002/	
+404	90	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	90	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	91	AIRCEL	INTERNET	Aircel Online	aircelwebpost												
+404	91	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+404	91	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	91	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	91	BSNL East	INTERNET	BSNLEGPRS	www.e.po												
+404	91	BSNL East	MMS	BSNLEMMS	mmseast.cellone.in		bsnl	mmsc			10.210.10.11	8080					http://10.210.10.11:8514	
+404	91	BSNL North	INTERNET	BSNL Internet	www.n.po												
+404	91	BSNL North	MMS	BSNL MMS	mms.n.po						192.168.051.163	8080					http://192.168.51.166/servlets/mms	
+404	91	BSNL South	INTERNET	BSNL Internet	bsnlsouth						010.031.054.002	9401					
+404	91	BSNL South	MMS	BSNL MMS	bsnlmms		ppp	ppp123			010.031.054.002	9401					http://10.31.53.18/mms/	
+404	91	Idea	INTERNET	IDEA Internet	internet												
+404	91	Idea	MMS	IDEA MMS	mmsc						10.4.42.15	8080					http://10.4.42.21:8002	
+404	92	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	92	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	93	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	93	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	94	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	94	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	95	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	95	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	96	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	96	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	97	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	97	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+404	98	AirTel	INTERNET	Mobile Office	airtelgprs.com												
+404	98	AirTel	MMS	Airtel MMS	airtelmms.com						100.1.201.172	8799					http://100.1.201.171:10021/mmsc	
+405	025	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	027	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	029	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	030	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	031	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	032	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	034	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	035	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	036	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	037	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	038	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	039	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	041	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	042	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	043	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	044	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	045	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	046	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	047	TATA DOCOMO	MMS	TATA DOCOMO MMS	TATA.DOCOMO.MMS						10.124.26.94	8799					http://mmsc/	
+405	1	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	10	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	11	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	13	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	15	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	18	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	19	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	20	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	21	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	22	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	25	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	27	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	29	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	30	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	31	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	32	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	34	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	35	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	36	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	37	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	38	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	39	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	41	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	42	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	43	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	44	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	45	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	46	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	47	TATA DOCOMO	INTERNET	TATA DOCOMO INTERNET	TATA.DOCOMO.INTERNET												
+405	5	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	6	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	66	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	66	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	67	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	67	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	7	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+405	70	IDEA	INTERNET	idea internet	internet												
+405	70	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	750	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	750	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	751	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	751	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	752	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	752	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	753	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	753	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	754	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	754	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	755	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	755	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	756	Vodafone	INTERNET	Vodafone Mobile Connect	www												
+405	756	Vodafone	MMS	Vodafone MMS	portalnmms						10.10.1.100	9401		0.0.0.0	0.0.0.0		http://mms1.live.vodafone.in/mms/	
+405	799	IDEA	INTERNET	idea internet	internet												
+405	799	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	800	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	800	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+405	801	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	801	AIRCEL	MMS	Aircel MMS	aircelmms						192.168.35.196	8081					http://mmsc/mmrelay.app	
+405	803	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	803	AIRCEL	MMS	Aircel MMS	aircelmms						192.168.35.196	8081					http://mmsc/mmrelay.app	
+405	804	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	804	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+405	805	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	805	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+405	809	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	809	AIRCEL	MMS	Aircel MMS	aircelmms						192.168.35.196	8081					http://mmsc/mmrelay.app	
+405	810	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	810	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+405	811	AIRCEL	INTERNET	Aircel Online	aircelgprs												
+405	811	AIRCEL	MMS	Aircel MMS	aircelmms						172.17.83.69	8080					http://172.17.83.67/servlets/mms	
+405	845	IDEA	INTERNET	idea internet	internet												
+405	845	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	846	IDEA	INTERNET	idea internet	internet												
+405	846	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	848	IDEA	INTERNET	idea internet	internet												
+405	848	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	849	IDEA	INTERNET	idea internet	internet												
+405	849	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	850	IDEA	INTERNET	idea internet	internet												
+405	850	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	852	IDEA	INTERNET	idea internet	internet												
+405	852	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	853	IDEA	INTERNET	idea internet	internet												
+405	853	IDEA	MMS	idea mms	mmsc						10.4.42.15	8080					http://10.4.42.21:8002/	
+405	9	Reliance	MMS	Reliance MMS	rcommms						10.239.221.5	8080					http://mmsc.rcom.co.in/mms/	
+410	1	Mobilink PAK	INTERNET	Mobilink Internet	connect.mobilinkworld.com												
+410	1	Mobilink PAK	MMS	Mobilink MMS	mms.mobilinkworld.com		Mobilink	Mobilink			172.025.020.012	8080					http://mms/	
+410	3	Ufone PAK	INTERNET	Ufone Internet	ufone.internet		ufone	ufone						172.016.013.021	172.016.013.119		
+410	3	Ufone PAK	MMS	Ufone MMS	ufone.mms		ufone	ufone			172.16.13.27	8080					http://www.ufonemms.com:80	
+410	6	Telenor PAK	INTERNET	Telenor Internet	internet		Telenor	Telenor			172.018.019.011						
+410	6	Telenor PAK	MMS	Telenor MMS	mms		Telenor	Telenor			172.018.019.011	8080					http://mmstelenor	
+410	7	Warid Telecom PAK	INTERNET	Warid Internet	warid												
+410	7	Warid Telecom PAK	MMS	Warid MMS	mms.warid						010.004.002.001	8080					http://10.4.0.132/servlets/MMS	
+413	2	Dialog GSM	INTERNET	Dialog i	www.dialogsl.com						192.168.122.002						
+413	2	Dialog GSM	INTERNET	Dialog i for KIT	ppinternet						192.168.122.002			192.168.004.002			
+413	2	Dialog GSM	MMS	Go MMS for KIT	ppwap						192.168.122.002	8080					http://mms.dialog.lk:3130/mmsc	
+415	1	alfa LEB	INTERNET	Alfa GPRS	internet.mic1.com.lb		mic1	mic1									
+415	1	alfa LEB	MMS	Alfa MMS	mms.mic1.com.lb		mic1	mic1			192.168.023.051	8080					http://mms.mic1.com.lb	
+415	3	mtc touch LEB	INTERNET	mtctouch GPRS	gprs.mtctouch.com.lb												
+415	3	mtc touch LEB	MMS	mtctouch MMS	mms.mtctouch.com.lb		mtctouch				192.168.004.103	8080					http://mms:8088/mms/	
+416	1	Zain JOR	INTERNET	Zain-JO-Internet-Post	internet		zain	zain									
+416	1	Zain JOR	MMS	Zain-JO-MMS	mms		zain	zain			192.168.055.010						http://mms.jo.zain.com/	
+416	3	Umniah JOR	MMS	Umniah MMS	mms						010.001.001.010	8080					http://mms.umniah.com	
+416	77	Orange	INTERNET	Orange Internet	net.orange.jo		net	net				8080 or 9201					
+416	77	Orange	MMS	Orange MMS	mms.orange.jo		mms	mms			172.16.1.2	8080 or 9201						
+417	1	Syriatel SYR	INTERNET	DATA-GPRS	net.syriatel.com												
+417	1	Syriatel SYR	MMS	MMS-GPRS	mms.syriatel.com						172.020.005.006	80					http://mymms.syriatel.com/	
+418	20	MTC Atheer	INTERNET	MTC Atheer internet	internet	x						8080		209.8.244.18			
+418	20	MTC Atheer	MMS	MMS	mms	x	mms	mms			172.29.11.12	8080		10.0.1.1			http://mms:8002/	
+419	1	MTC-Vodafone KUW	INTERNET	MTC Internet	apn01												
+419	1	MTC-Vodafone KUW	MMS	MTC MMS	mms		annyway	online			176.000.000.065	8080					http://mms.mtc	
+419	3	Wataniya Kuwait	INTERNET	Wataniya Action Internet	action.wataniya.com	x											
+419	3	Wataniya Kuwait	MMS	MMS Action	mms.wataniya.com						194.126.53.64	8080					http://action.wataniya.com	
+420	1	STC AL JAWAL	INTERNET	JawalNet	jawalnet.com.sa												
+420	1	STC AL JAWAL	MMS	MMS	mms.net.sa						010.001.001.001	8080					http://mms.net.sa:8002	
+420	3	Mobily KSA	INTERNET	mobily Internet (Postpaid)	web1												
+420	3	Mobily KSA	MMS	mobily MMS (Postpaid)	mms1						010.003.002.133	8080					http://10.3.3.133:9090/was	
+420	4	Zain	INTERNET	Zain	Zain						10.122.200.10	8080	172.20.0.0/15	79.170.49.20	79.170.49.52		
+420	7	STC AL JAWAL	INTERNET	Jawalnet	jawalnet.com.sa						212.118.133.139	8080					
+420	7	STC AL JAWAL	MMS	ALJAWAL MMS	mms.net.sa						010.001.001.001	8080					http://mms.net.sa:8002	
+421	1	Sabafon YEM	INTERNET	Sabafon Internet	internet		internet	internet			192.168.006.193	3128					
+421	1	Sabafon YEM	MMS	Sabafon MMS	mms		wap	wap			192.168.030.174						http://mms.sabafon.com	
+421	2	MTN	INTERNET	MTN NET	fast-internet	x	net	net									
+421	2	MTN	MMS	MTN MMS	fast-mms		mms				192.168.97.1	3130					http://192.168.97.1/mmsc	
+422	02	Oman Mobile	INTERNET	Oman Mobile Taif	TAIF	x	TAIF	TAIF									
+422	02	Oman Mobile	MMS	Oman Mobile MMS	MMS	x	MMS	MMS			192.168.203.35	8080						
+422	3	Nawras	INTERNET	Nawras GPRS	isp.nawras.com.om						010.128.240.019	8080					
+422	3	Nawras	MMS	Nawras MMS	mms.nawras.com.om		test	test			010.128.240.019	8080					http://10.128.240.16/servlets/mms	
+424	1	etisalat UAE	INTERNET	Data Package	etisalat.ae												
+424	1	etisalat UAE	MMS	etisalat MMS	mms		mms	mms			10.12.0.30	8080					http://10.99.52.150/servlets/mms	
+424	2	etisalat UAE	INTERNET	Data Package	etisalat.ae												
+424	2	etisalat UAE	MMS	etisalat MMS	etisalat						010.012.000.032	8080					http://mms/servlets/mms	
+424	3	du	INTERNET	du internet	du												
+425	1	IL Orange	INTERNET	Internet 3G	uinternet												
+425	1	IL Orange	MMS	MMS 3G	uwap.orange.co.il		orange	mobile54			192.118.11.55	8080					http://192.168.220.15/servlets/mms	
+425	2	Cellcom	INTERNET	Games	games												
+425	2	Cellcom	MMS	Cellcom MMS	mms						vwapm2.ain.co.il	8080					http://mms.cellcom.co.il	
+425	3	Pelephone	INTERNET	Internet Pelephone	internet.pelephone.net.il		pcl@3g	pcl									
+425	3	Pelephone	MMS	Multimedia Pelephone	mms.pelephone.net.il		pcl@3g	pcl			10.170.9.54	9093					mmsu.pelephone.net.il	
+425	5	Jawwal PAL	INTERNET	Jawwal Internet	internet												
+425	5	Jawwal PAL	MMS	Jawwal MMS	mms						213.244.118.129	8080					http://mms.jawwal.ps/servlets/mms	
+426	1	Batelco BAH	INTERNET	Batelco Internet	internet.batelco.com												
+426	1	Batelco BAH	MMS	Batelco MMS	mms.batelco.com		wap	wap			192.168.1.2	80					http://192.168.36.10/servlets/mms	
+426	2	Zain Bahrain	INTERNET	Zain Bahrain internet	zain.com.bh		internet	internet									
+426	2	Zain Bahrain	MMS	mms	http://172.18.83.129		mms	mms			172.18.85.34	80					http://172.18.83.129	
+427	1	Qtel	INTERNET	Mozaic MOB	gprs.qtel		gprs	gprs			010.023.008.003	8080					
+427	1	Qtel	MMS	Qtel MMS	mms.qtel		mms	mms			010.023.008.003	8080					http://mmsr.qtelmms.qa	
+427	2	Vodafone Qatar	MMS	Vodafone Qatar MMS	vodafone.com.qa						10.101.97.102	80					http://mms.vodafone.com.qa/mmsc	
+428	99	MobiCom	INTERNET	Internet MobiCom	internet						010.010.010.010						
+428	99	MobiCom	MMS	MMS MobiCom	mms						010.010.010.010	80					http://mms	
+432	35	MTN Irancell	INTERNET	Irancell-GPRS	mtnirancell						10.131.26.138	9201					
+440	20	SoftBank Mobile Japan	INTERNET	Softbank Mobile Internet	softbank		ai@softbank	softbank									
+450	08	KT	MMS	KT-HSDPA MMS	leo.ktfwing.com												http://mmsc.ktfwing.com:9082	
+450	08	KTF	INTERNET	KT-HSDPA	r3-normal.ktfwing.com												
+450	5	SKT	INTERNET	SKT WEB	web.sktelecom.com												
+450	5	SKT	MMS	SKT MMS	mms.sktelecom.com						smart.nate.com	9093					http://omms.nate.com:9082/oma_mms	
+452	1	Mobifone	INTERNET	Mobifone internet	m-wap		mms	mms									http://wap.mobifone.com.vn	
+452	1	Mobifone	MMS	Mobifone MMS	m-i090		mms	mms			203.162.21.114	3130					http://203.162.21.114/mmsc	
+452	2	Vinaphone	INTERNET	Vinaphone Internet	m3-world		mms	mms									http://wap.vinaphone.com.vn	
+452	2	Vinaphone	MMS	Vinaphone MMS	m3-mms		mms	mms			10.1.10.46	8000					http://mms.vinaphone.com.vn	
+452	4	Viettel	INTERNET	Viettel Internet	v-internet												http://wap.viettelmobile.com.vn	
+452	4	Viettel	MMS	Viettel MMS	v-mms						192.168.233.10	8080					http://mms.viettelmobile.com.vn/mms/wapenc	
+452	5	Vietnamobile	INTERNET	Vietnamobile Internet	internet												http://wap.vietnamobile.com.vn	
+452	5	Vietnamobile	MMS	Vietnamobile MMS	mms						10.10.128.44	8080					http://10.10.128.58/servlets/mms	
+452	7	Beeline	INTERNET	Beeline Internet	internet												http://m.beeline.vn	
+452	7	Beeline	MMS	Beeline MMS	mms		mms	mms			10.16.70.199	8080					http://mms	
+454	0	CSL	INTERNET	CSL Data	hkcsl						192.168.59.51	8080					
+454	10	CSL	INTERNET	CSL Data	hkcsl						192.168.59.51	8080					
+454	12	China Mobile HK	INTERNET	CMHK GPRS	peoples.net						172.31.31.36	8080					
+454	12	China Mobile HK	MMS	CMHK MMS	peoples.mms						172.31.31.36	8080					http://mms.hk.chinamobile.com/mms	
+454	15	454-15	MMS	picturemail	Smartone-Vodafone						10.9.9.9	8080					http://mms.smartone-vodafone.com/server	
+454	16	PCCW	INTERNET	PCCW GPRS	pccwdata						10.131.2.8	8080					
+454	16	PCCW	MMS	PCCW MMS	pccwmms						10.131.2.8	8080					http://mmsc.mms.pccwmobile.com:8002/	
+454	19	PCCW	INTERNET	PCCW 3G	pccw						10.140.14.10	8080					
+454	3	3	INTERNET	3	mobile.three.com.hk												
+454	4	3-DUALBAND-	MMS	3-DB-MMS	mms-g.three.com.hk						10.30.15.53	8080					http://10.30.15.51:10021/mmsc	
+454	6	SmarToneVodafone	INTERNET	SmarTone iN!	SmarTone-Vodafone						10.9.9.9	8080					
+455	0	SmarTone Macau	INTERNET	SmarTone iN Macau	smartgprs						10.9.9.29	8080					
+455	1	CTM	INTERNET	CTMGPRS	ctm-mobile						192.168.99.2	8080					
+455	1	CTM	MMS	CTMMMS	ctmmms						192.168.99.3	8080					http://mms.wap.ctm.net:8002	
+455	3	Hutchison Macau	INTERNET	HutchPlus	web.hutchisonmacau.com		hutchison	1234			10.30.3.151	8080					
+455	3	Hutchison Macau	MMS	HutchisonMMS	mms.hutchisonmacau.com		hutchison	1234			10.30.15.53	8080					http://10.30.15.51:10021/mmsc	
+455	4	CTM	INTERNET	CTMGPRS	ctm-mobile						192.168.99.2	8080					
+455	4	CTM	MMS	CTMMMS	ctmmms						192.168.99.3	8080					http://mms.wap.ctm.net:8002	
+456	1	Mobitel	INTERNET	Mobitel 3G CELLCARD	3g		mobitel	mobitel									
+456	1	Mobitel	MMS	GPRS MMS	mms		mobitel	mobitel			203.144.095.098	3130					http://mms.mobitel.com.kh/mmsc	
+456	2	HelloGSM	INTERNET	Hellow WWW	hellowww												
+456	2	HelloGSM	MMS	Hellow MMS	hellomms						192.168.205.20	8088					http://mms.iq2mobile.com	
+460	0	中国移动	INTERNET	GPRS连接互联网	cmnet												
+460	0	中国移动	MMS	移动彩信	cmwap						10.0.0.172	80					http://mmsc.monternet.com	
+460	1	中国联通	INTERNET	联通GPRS连接互联网	uninet												
+460	1	中国联通	INTERNET	联通连接互联网	3gnet												
+460	1	中国联通	MMS	联通彩信	3gwap						10.0.0.172	80					http://mmsc.myuni.com.cn	
+460	2	中国移动	INTERNET	GPRS连接互联网	cmnet												
+460	2	中国移动	MMS	移动彩信	cmwap						10.0.0.172	80					http://mmsc.monternet.com	
+460	7	中国移动	INTERNET	GPRS连接互联网	cmnet												
+460	7	中国移动	MMS	移动彩信	cmwap						10.0.0.172	80					http://mmsc.monternet.com	
+466	1	FarEasTone	INTERNET	遠傳網際網路	internet												
+466	1	FarEasTone	MMS	遠傳影音訊息	fetnet01						210.241.199.199	9201					http://mms	
+466	88	KGT-online	INTERNET	和信電訊	internet												
+466	88	KGT-online	MMS	和信影音訊息	kgtmms						172.28.33.5	8080					http://mms.kgtmms.net.tw/mms/wapenc	
+466	89	威寶電信	INTERNET	VIBO行動網													
+466	89	威寶電信	MMS	VIBO行動網-MMS	vibo						172.24.128.36	8080					http://mms	
+466	89	震旦電信	INTERNET	震旦網際網路	auroraweb												
+466	89	震旦電信	MMS	震旦影音訊息	aurorawap						172.24.128.36	8080					http://auroramms	
+466	92	Chunghwa	INTERNET	Chunghwa internet	internet												
+466	92	Chunghwa	MMS	CHT MMS	emome						10.1.1.1	8080					http://mms.emome.net:8002	
+466	93	MOBITAI	INTERNET	Mobitai Internet	gprs2												
+466	93	MOBITAI	MMS	Mobitai MMS	gprs1		gprs	gprs			192.168.77.5	8080					http://mms.mobeelife.net/mms/wapenc	
+466	97	TW Mobile	INTERNET	CATCH Internet	internet												
+466	97	TW Mobile	MMS	TWM MMS	mms						10.1.1.2	80					http://mms.catch.net.tw	
+466	99	TransAsia	INTERNET	catch internet	internet												
+466	99	TransAsia	MMS	catch MMS	mms						211.78.224.100	8080					http://mms	
+470	1	GP	INTERNET	GP INTERNET	gpinternet												
+470	1	GP	MMS	GP MMS	gpmms						010.128.001.002	8080					http://mms.gpsurf.net/servlets/mms	
+470	2	Aktel	INTERNET	AKTEL-INTERNET	internet												
+470	2	Aktel	MMS	AKTEL-MMS 2 0	wap						192.168.23.7	9028					http://192.168.23.4/was	
+470	3	Banglalink	INTERNET	blweb	blweb												
+470	3	Banglalink	MMS	blmms	blmms						10.10.55.34	8799					http://mmsc1:10021/mmsc/01	
+472	1	DhiMobile	INTERNET	DhiInternet	internet.dhimobile						proxy.dhivehinet.net.mv			202.1.192.196	202.1.192.211		
+472	1	DhiMobile	MMS	DhiMMS	mms.dhimobile						172.024.097.004	8080					http://mmsc.dhimobile.com.mv	
+502	1	DiGi	INTERNET	DiGi Internet	diginet							9201					
+502	1	DiGi	MMS	DiGi MMS	digimms						203.092.128.160	80					http://mms.digi.com.my/servlets/mms	
+502	12	Maxis	INTERNET	Maxis 3G Internet	unet		maxis	wap									
+502	12	Maxis	MMS	Maxis 3G MMS	unet		maxis	wap			202.075.133.49	80					http://172.16.74.100:10021/mmsc	
+502	13	TM Touch	INTERNET	TM Touch Internet	internet												
+502	16	Digi	INTERNET	Diginet	diginet												
+502	16	Digi	MMS	DiGi MMS (WAP 2 0)	digimms		mms	mms			203.92.128.160	80					http://mms.digi.com.my/servlets/mms	
+502	18	U Mobile	INTERNET	U Mobile Internet	my3g												
+502	19	Celcom	INTERNET	Celcom 3G Internet	celcom3g												
+502	19	Celcom	MMS	Celcom MMS Postpaid	mms.celcom.net.my						10.128.1.242	8080					http://mms.celcom.net.my	
+502	60	Digi	INTERNET	DiGi Internet	diginet						203.92.128.188	80					
+502	60	Digi	MMS	DiGi MMS (WAP 2 0)	digimms		digi	mms			203.92.128.160	80					http://mms.digi.com.my/servlets/mms	
+505	1	Telstra	INTERNET	Telstra Internet	telstra.wap												
+505	1	Telstra	MMS	Telstra MMS	telstra.mms						10.1.1.180	80					http://mmsc.telstra.com:8002	
+505	14	AAPT	INTERNET	AAPT GPRS	vfinternet.au												
+505	14	AAPT	MMS	AAPT MMS	live.vodafone.com						10.202.2.60	9201					http://pxt.vodafone.net.au/pxtsend	
+505	2	Virgin Mobile Replace	INTERNET	Virgin Internet	virgininternet												
+505	2	Virgin Mobile Replace	MMS	Virgin MMS	virginmms						202.139.83.152	8070					http://mms.virginvibe.com.au:8002/	
+505	2	YES OPTUS	INTERNET	Optus Internet	internet												
+505	2	YES OPTUS	MMS	Optus MMS	mms						61.88.190.10	8070					http://mmsc.optus.com.au:8002/	
+505	3	Crazy John's	INTERNET	Crazy Internet	purtona.net												
+505	3	Crazy John's	MMS	Crazy MMS	purtona.wap						010.202.002.020	8080					http://purtona.mms/mmssend	
+505	3	GRLMobile	INTERNET	GRL Internet	purtona.net												
+505	3	GRLMobile	MMS	GRL MMS	purtona.wap						010.202.002.020	8080					http://purtona.mms/mmssend	
+505	3	vodafone AU	INTERNET	VF AU Internet	vfinternet.au												
+505	3	vodafone AU	MMS	VF AU PXT	live.vodafone.com						10.202.2.60	8080					http://pxt.vodafone.net.au/pxtsend	
+505	6	3	MMS	3 MMS	3services						mmscprox.three.net.au	8799					http://mmsc.three.net.au:10021/mmsc	
+510	1	Indosat	INTERNET	IndosatGPRS	indosatgprs		indosat	indosat			10.19.19.19	8080					
+510	1	Indosat	MMS	IndosatMMS	indosatmms		indosat	indosat			10.19.19.19	8080					http://mmsc.indosat.com	
+510	10	Telkomsel	INTERNET	TELKOMSEL	telkomsel		wap	wap123			10.1.89.130	8000					
+510	10	Telkomsel	MMS	TSEL-MMS	mms		wap	wap123			10.1.89.150	8000					http://mms.telkomsel.com	
+510	11	XL	INTERNET	XL-GPRS	www.xlgprs.net		xlgprs	proxl			202.152.240.50	8080					
+510	11	XL	MMS	XL-MMS	www.xlmms.net		xlgprs	proxl			202.152.240.50	8080					http://mmc.xl.net.id/servlets/mms	
+510	21	Indosat	INTERNET	IndosatGPRS	indosatgprs		indosat	indosat			10.19.19.19	8080					
+510	21	Indosat	MMS	IndosatMMS	indosatmms		indosat	indosat			10.19.19.19	8080					http://mmsc.indosat.com	
+510	8	AXIS	INTERNET	AXISinternet	AXIS		AXIS	123456									
+510	8	AXIS	MMS	AXISmms	AXISmms		AXIS	123456			10.8.3.8	8080					http://mmsc.axis	
+510	89	3	INTERNET	3gprs	3gprs		3gprs	3gprs			10.4.0.10	3128					
+510	89	3	MMS	3mms	3mms		3mms	3mms			10.4.0.10	3128					http://mms.three.co.id	
+515	18	RED	INTERNET	Red Internet	redinternet												
+515	18	RED	MMS	Red MMS	Redmms						10.138.3.35	8080					http://10.102.61.193:8002/mmsc	
+515	2	GLOBE	INTERNET	myGlobe Internet	internet.globe.com.ph												
+515	2	GLOBE	MMS	myGlobe MMS	mms.globe.com.ph						192.40.100.20	8080					http://192.40.100.22:10021/mmsc	
+515	3	SMART	INTERNET	SmartInternet	internet												
+515	3	SMART	MMS	SmartMMS	mms						10.102.61.46	8080					http://10.102.61.238:8002	
+515	5	SUN	INTERNET	Sun INTERNET	minternet												
+515	5	SUN	MMS	Sun MMS	mms						202.138.159.78	8080					http://mmscenter.suncellular.com.ph	
+520	1	AIS mobileLIFE	INTERNET	AIS-GPRS-2 Internet	internet												
+520	1	AIS mobileLIFE	MMS	AIS-GPRS-3 MMS	multimedia						203.170.229.34	8080					http://mms.mobilelife.co.th	
+520	18	DTAC	INTERNET	DTAC-GPRS-2 Internet	www.dtac.co.th												
+520	18	DTAC	MMS	DTAC-GPRS-3 MMS	mms						203.155.200.133	8080					http://mms.dtac.co.th:8002/	
+520	99	True Move	INTERNET	True GPRS 2 Inet	internet		true	true									
+520	99	True Move	MMS	True GPRS 3 MMS	mms		true	true			10.4.7.39	8080					http://mms.trueworld.net:8002/	
+525	1	SingTel	INTERNET	IDEAS Internet	internet												
+525	1	SingTel	MMS	IDEAS MMS	e-ideas		65IDEAS	IDEAS			165.21.42.84	8080					http://mms.singtel.com:10021/mmsc	
+525	2	SingTel	INTERNET	IDEAS Internet	internet												
+525	2	SingTel	MMS	IDEAS MMS	e-ideas		65IDEAS	IDEAS			165.21.42.84	8080					http://mms.singtel.com:10021/mmsc	
+525	3	M1-3GSM	INTERNET	Sunsurf Mobile	sunsurf												
+525	3	M1-3GSM	MMS	M1 MMS	miworld		+65	user123			172.16.14.10	8080					http://mmsgw:8002/	
+525	4	M1-3GSM	INTERNET	Sunsurf Mobile	sunsurf												
+525	4	M1-3GSM	MMS	M1 MMS	miworld		+65	user123			172.16.14.10	8080					http://mmsgw:8002/	
+525	5	STARHUB	INTERNET	StarHub Internet	shwapint												
+525	5	STARHUB	MMS	Gee! MMS	shmms						10.12.1.80	80					http://mms.starhubgee.com.sg:8002/	
+525	5	STARHUB PREPAID	MMS	Prepaid Gee! MMS	shppd						10.12.1.80	80					http://mms.starhubgee.com.sg:8002/	
+528	1	DST Mobile	MMS	DSTMMS	dst.mms		mms	mms			010.100.006.101	3130					http://mms.dst.com.bn/mmsc	
+528	11	DST Mobile	INTERNET	DSTInternet	dst.internet		internet	internet				9201					
+528	11	DST Mobile	MMS	DSTMMS	dst.mms		mms	mms			10.100.6.101	3130					http://mms.dst.com.bn/mmsc	
+528	2	B-Mobile	MMS	B-mobile MMS	bmobilemms						129.009.010.020	6500					http://mms.bmobile.com.bn/was	
+530	1	Black+White	INTERNET	Black+White INTERNET	wap.m2.net.nz												
+530	1	Black+White	MMS	Black+White MMS	wap.m2.net.nz						172.30.38.3	8080					http://m2.nzmms.net.nz/pxtsend	
+530	1	vodafone NZ	INTERNET	VF NZ Internet	www.vodafone.net.nz												
+530	1	vodafone NZ	MMS	VF NZ PXT	live.vodafone.com						172.30.38.3	8080					http://pxt.vodafone.net.nz/pxtsend	
+530	24	2 degrees	INTERNET	2 degrees internet	internet												
+530	24	2 degrees	MMS	mms	mms						118.148.1.118	8080					http://mms.2degrees.net.nz:48090	
+530	5	Telecom NZ	MMS	TelecomMMS	wap.telecom.co.nz						210.55.11.73	8080					http://lsmmsc.xtra.co.nz	
+537	3	Digicel Papua New Guinea	INTERNET	Digicel PNG INTERNET	internet.digicelpng.com												
+537	3	Digicel Papua New Guinea	MMS	Digicel PNG MMS	wap.digicelpng.com						10.149.83.116	8080					http://mms.digicelpacific.com:8990	
+539	88	Digicel Tonga	INTERNET	Digicel Tonga INTERNET	web.digicelpacific.com												
+539	88	Digicel Tonga	MMS	Digicel Tonga MMS	wap.digicelpacific.com						10.150.122.12	8080					http://mms.digicelpacific.com:8990	
+541	5	Digicel Vanuatu	INTERNET	Digicel Vanuatu INTERNET	web.digicelpacific.com												
+541	5	Digicel Vanuatu	MMS	Digicel Vanuatu MMS	wap.digicelpacific.com						10.150.122.12	8080					http://mms.digicelpacific.com:8990	
+542	2	Digicel Fiji	INTERNET	Digicel Fiji INTERNET	web.digicelpacific.com												
+542	2	Digicel Fiji	MMS	Digicel Fiji MMS	wap.digicelpacific.com						10.150.122.12	8080					http://mms.digicelpacific.com:8990	
+547	20	Vini Network	MMS	Vini MMS	mms						172.020.010.016	9201					http://mms.vini.pf/mmsc	
+602	1	MobiNil	INTERNET	MobiNil Internet	mobinilweb												
+602	1	MobiNil	MMS	MobiNil MMS	mobinilmms						62.241.155.45	8080					http://10.7.13.24:8002/	
+602	2	vodafone EG	INTERNET	VF internet	internet.vodafone.net		internet	internet									
+602	2	vodafone EG	MMS	VF MMS	mms.vodafone.com.eg		mms	mms			163.121.178.2	8080					http://mms.vodafone.com.eg/servlets/mms	
+602	3	Etisalat EG	INTERNET	Etisalat internet	etisalat												
+602	3	Etisalat EG	MMS	Etisalat MMS	etisalat						010.071.130.029	8080					http:10.71.131.7:38090	
+603	1	Mobilis	INTERNET	Mobilis internet	internet		internet	internet			0.0.0.0	9201					
+603	1	Mobilis	MMS	Mobilis MMS	mms		mms	mms			172.025.049.002	9201					http://172.25.49.9/servlets/mms	
+603	2	Djezzy	INTERNET	Djezzy Internet	Djezzy.internet												
+603	2	Djezzy	MMS	MMS djezzy	Djezzy.mms						172.24.97.158						http://172.24.97.152:10021/mmsc	
+603	3	Nedjma	MMS	Nedjma MMS	nedjmamms		mms	mms			192.168.52.3	3128					http://10.10.111.1	
+604	0	Medi Telecom	INTERNET	Medi Telecom Internet	internet1.meditel.ma		MEDINET	MEDINET									
+604	0	Medi Telecom	MMS	GPRS MMS	mms.meditel.ma		MEDIMMS	MEDIMMS			010.008.008.009	8080					http://mms.meditel.ma:8088/mms	
+604	1	Maroc Telecom	MMS	MMSIAM	Mmsiam						10.16.35.50	8080					http://mms:8002/	
+605	2	Tunisie Telecom	INTERNET	Mobinet	gprs.tn		gprs	gprs			213.150.186.106	8080					
+605	2	Tunisie Telecom	MMS	MMS	mms.tn		mms@tt1	mms			213.150.186.106	8080					http://mms	
+605	3	Tunisiana	INTERNET	internet tunisiana	internet.tunisiana.com		internet	internet			010.003.002.099						
+605	3	Tunisiana	MMS	mms tunisiana	mms.tunisiana.com		mms	mms			010.003.002.100	8080					mmsc.tunisiana.com	
+606	1	Libyana	MMS	MMS	MMS						192.168.8.148	8000					http://62.240.62.180:80	
+608	1	Alize	MMS	MMS1	mms		mms	mms			172.16.30.9						http://mmsalize/servlets/mms	
+608	2	Tigo	MMS	Tigo MMS	mms.sentelgsm.com		tigo	tigo			172.16.16.16	8080					http://mms.tigo.sn	
+612	1	Moov	INTERNET	Moov Internet	moov		web	web									
+612	5	MTN Ivory Cost	MMS	MTN CI MMS	mms.mtn.ci						172.16.100.5	8080					http://mms.mtn.ci/mms/wapenc	
+616	2	Moov 6 Benin	INTERNET	Moov Internet	moov		moov	moov				9201					
+620	1	MTN Ghana	INTERNET	MTN Ghana GPRS	internet.areeba.com.gh												
+620	2	Tigo Ghana	INTERNET	Tigo Ghana GPRS	web.tigo.com		web	web									
+621	20	Zain Nigeria	INTERNET	Zain Internet	internet.ng.zain.com												
+621	20	Zain Nigeria	MMS	Zain MMS	mms.ng.zain.com		mms	mms			172.018.254.005	9201					http://172.23.1.12/mms/wapenc	
+621	30	MTN Nigeria	INTERNET	MTN GPRS	web.gprs.mtnnigeria.net		web	web			010.199.212.002	8080					
+621	50	Globacom Nigeria	INTERNET	Glo Direct	glosecure		gprs	gprs									
+621	50	Globacom Nigeria	MMS	Glo MMS	glomms		mms	mms			10.100.82.4	9201					http://mms.gloworld.com/mmsc	
+621	60	Etisalat Nigeria	INTERNET	Etisalat Internet	etisalat												
+630	1	Vodacom DRC	INTERNET	Vodanet	Vodanet												
+630	1	Vodacom DRC	MMS	Vodalive	vodalive						172.024.097.001	3128					http://172.24.97.1/mmsc	
+630	2	Celtel DRC	MMS	Celtel WAP APN	mms.cd.celtel.com						10.108.6.3	9201					http://10.108.5.5/servlets/mms	
+630	89	Tigo DRC	MMS	Tigo MMS	tigo.mms						10.25.105.130	8080					http://mms.tigo.cd	
+634	1	MobiTel - Sudan	INTERNET	MobiTel - Sudan Internet	Internet							2109					
+634	2	Areeba - Sudan	INTERNET	Areeba GPRS	Internet												
+634	2	Areeba - Sudan	MMS	Areeba MMS	mms						172.24.97.20	8080					http://mms.areeba.sudan.com/mmsc	
+639	2	Safaricom	MMS	Safaricom MMS	mms.safaricom.com		saf	data			172.022.002.038	8080					http://mms.gprs.safaricom.com	
+639	3	Celtel Kenya	INTERNET	Celtel Internet APN	ke.celtel.com		internet	internet									
+639	3	Celtel Kenya	MMS	Celtel MMS APN	mms.ke.celtel.com		mms	mms			172.030.008.050	8080					http://mms.ke.celtel.com/servlets/mms	
+640	4	Vodacom Tanzania	INTERNET	Vodacom Internet	Internet												
+640	4	Vodacom Tanzania	MMS	Vodacom MMS	MMS						10.154.0.12							
+641	1	Celtel Uganda	INTERNET	CeltelGPRS	internet.ug.celtel.com						192.168.100.10	9401					
+641	1	Celtel Uganda	MMS	Celtel MMS	mms.ug.celtel.com						192.168.100.10	9201						
+641	10	MTN Uganda	MMS	yellopix	yellopix.mtn.co.ug						010.120.000.138	9201					http://mtn.mmsc/servlets/mms/	
+641	11	Uganda Telcom	INTERNET	Ug Telcom Web	utweb												
+641	11	Uganda Telcom	MMS	Ug Telcom MMS	utwap						10.76.101.51	8080					http://mmsc.ugandatelecom.com/	
+643	1	mcel	INTERNET	Netmovel	isp.mcel.mz												
+643	1	mcel	MMS	mCel MMS	mms.mcel.mz	x					10.1.4.35	8080					http://mcelmms	
+647	0	Orange	MMS	Orange MMS	orangerun.acte						192.168.010.200	8080					http://mms.orange.re	
+647	10	SRR	MMS	MMSGPRS	mmssfr		mms	mms			10.0.224.145						http://mms	
+649	3	Cell One	INTERNET	Cell One Internet	cellone		cellone	cellone									
+649	3	Cell One	MMS	Cell One MMS	mms		cellone	cellone			41.223.80.10	8080					mms.cellone.com.na	
+652	1	Mascom	INTERNET	Mascom Internet	internet.mascom							9201					
+652	1	Mascom	MMS	Mascom MMS	mms.mascom						192.168.033.138	8080					http://192.168.33.50/mms	
+655	1	Vodacom SA	INTERNET	Vlive!	vlive						196.6.128.12	8080					
+655	1	Vodacom SA	MMS	Vlive!MMS	mms.vodacom.net						196.6.128.13	8080					http://mmsc.vodacom4me.co.za	
+655	10	MTN	INTERNET	MTN-GPRS	myMTN												
+655	7	CellC	INTERNET	smartdata ISP	internet												
+655	7	CellC	MMS	CellC MMS	mms						196.031.116.250	8080					http://mms.cmobile.co.za/	
+655	7	Virgin	INTERNET	Virgin Internet	vdata						196.31.116.241	8080					
+655	7	Virgin	MMS	Virgin MMS	vmms						196.31.116.242	8080					http://mms.virginmobile.co.za	
+704	020	Tigo Guatemala	INTERNET	Internet TIGO	internet.tigo.gt												
+704	020	Tigo Guatemala	MMS	MMS TIGO	mms.tigo.gt						010.016.017.012	8888					http://mms	
+704	1	Claro Guatemala	INTERNET	Internet CLARO GT	internet.ideasclaro												
+704	1	Claro Guatemala	MMS	MMS CLARO GT	mms.ideasclaro						216.230.133.66	8080					http://mms.ideasclaro.com:8002	
+704	2	Tigo Guatemala	INTERNET	Internet TIGO	internet.tigo.gt												
+704	2	Tigo Guatemala	MMS	MMS TIGO	mms.tigo.gt						010.016.017.012	8888					http://mms	
+704	3	Movistar Guatemala	INTERNET	movistar INTERNET	internet.movistar.gt		movistargt	movistargt									
+704	3	Movistar Guatemala	MMS	movistar MMS	mms.movistar.gt		movistargt	movistargt			10.12.22.1	80					http://mms.movistar.gt	
+706	030	Tigo El Salvador	INTERNET	Internet TIGO SV	internet.tigo.sv												
+706	030	Tigo El Salvador	MMS	MMS TIGO SV	mms.tigo.sv						010.016.017.012	8888					http://mms	
+706	1	Claro El Salvador	INTERNET	Internet CLARO ESV	internet.ideasclaro												
+706	1	Claro El Salvador	MMS	MMS CLARO ESV	mms.ideasclaro						216.230.133.66	8080					http://mms.ideasclaro.com:8002	
+706	2	Digicel El Salvador	MMS	Digicel El Salvador MMS	wap.digicelsv.com						172.26.005.12	9201					http://172.26.5.132/servlets/mms	
+706	3	Tigo El Salvador	INTERNET	Internet TIGO SV	internet.tigo.sv												
+706	3	Tigo El Salvador	MMS	MMS TIGO SV	mms.tigo.sv						010.016.017.012	8888					http://mms	
+706	4	Movistar El Salvador	INTERNET	movistar INTERNET	internet.movistar.sv		movistarsv	movistarsv									
+706	4	Movistar El Salvador	MMS	movistar MMS	mms.movistar.sv		movistarsv	movistarsv			10.12.20.1	80					http://mms.movistar.sv	
+708	001	Claro Honduras	INTERNET	CLARO Web Honduras	web.megatel.hn		webmegatel	webmegatel									
+708	001	Claro Honduras	MMS	CLARO MMS Honduras	mms.megatel.hn		mmsmegatel	mmsmegatel			10.6.32.2	8080					http://10.6.32.27/servlets/mms	
+708	01	Claro Honduras	INTERNET	CLARO Web Honduras	web.megatel.hn		webmegatel	webmegatel									
+708	01	Claro Honduras	MMS	CLARO MMS Honduras	mms.megatel.hn		mmsmegatel	mmsmegatel			10.6.32.2	8080					http://10.6.32.27/servlets/mms	
+708	020	Tigo Honduras	INTERNET	Internet TIGO HN	internet.tigo.hn												
+708	020	Tigo Honduras	MMS	MMS TIGO HN	mms.tigo.hn						010.016.017.012	8888					http://mms	
+708	040	Digicel Honduras	MMS	Digicel Honduras MMS	wap.digicelhn.com						172.26.5.12	8080					http://172.026.005.132/servlets/mms	
+708	2	Tigo Honduras	INTERNET	Internet TIGO HN	internet.tigo.hn												
+708	2	Tigo Honduras	MMS	MMS TIGO HN	mms.tigo.hn						010.016.017.012	8888					http://mms	
+710	21	Claro Nicaragua	INTERNET	CLARO Web Enitel	web.emovil		webemovil	webemovil									
+710	21	Claro Nicaragua	MMS	CLARO MMS Enitel	mms.emovil		mmsemovil	mmsemovil			10.6.32.2	8080					http://10.6.32.27/servlets/mms	
+710	30	Movistar Nicaragua	INTERNET	movistar INTERNET	internet.movistar.ni		movistarni	movistarni				8080					
+710	30	Movistar Nicaragua	MMS	movistar MMS	mms.movistar.ni		movistarni	movistarni			10.12.23.1	80					http://mms.movistar.ni	
+710	73	Claro Nicaragua	INTERNET	CLARO Web Nicaragua	internet.ideasalo.ni		internet	internet									
+710	73	Claro Nicaragua	MMS	CLARO MMS Nicaragua	mms.ideasalo.ni		mms	mms			10.6.32.2	8080					http://10.6.32.27/servlets/mms	
+714	03	Claro Panamá	INTERNET	WEB Claro	web.claro.com.pa		CLAROWEB	CLAROWEB									
+714	03	Claro Panamá	MMS	MMS Claro	mms.claro.com.pa		CLAROMMS	CLAROMMS			10.240.3.129	8799					http://www.claro.com.pa/mms/	
+714	040	Digicel Panama	MMS	Digicel Panama MMS	wap.digicelpanama.com						172.27.99.99	9201					http://mmc.digicelpanama.com/servlets/mms	
+714	041	Digicel Panama	MMS	Digicel Panama MMS	wap.digicelpanama.com						172.27.99.99	9201					http://mmc.digicelpanama.com/servlets/mms	
+714	1	C&W Panama	INTERNET	C&W Panama Internet	apn01.cwpanama.com.pa												
+714	1	C&W Panama	MMS	MMS	apn02.cwpanama.com.pa						172.025.003.005	8080					http://mms.zonamovil.com.pa	
+714	2	Movistar Panama	INTERNET	movistar INTERNET	internet.movistar.pa		movistarpa	movistarpa				8080					
+714	2	Movistar Panama	MMS	movistar MMS	mms.movistar.pa		movistarpamms	movistarpa			10.12.21.1	80					http://mms.movistar.pa	
+716	06	Movistar Peru	INTERNET	movistar INTERNET	movistar.pe		movistar@datos	movistar									
+716	06	Movistar Peru	MMS	movistar MMS	mms.movistar.pe		movistar@mms	movistar			200.4.196.118	8080					http://mmsc.telefonicamovistar.com.pe:8088/mms/	
+716	10	Claro Peru	INTERNET	Claro Peru DATA GPRS	claro.pe		claro	claro									
+716	10	Claro Peru	MMS	CLARO MMS	mms.claro.pe		claro	claro			192.168.231.30	80					http://claro/servlets/mms	
+722	07	Movistar Argentina	INTERNET	movistar INTERNET	internet.gprs.unifon.com.ar		internet	internet									
+722	07	Movistar Argentina	MMS	movistar MMS	mms.gprs.unifon.com.ar		mms	mms			200.68.32.239	8080					http://mms.movistar.com.ar	
+722	31	Claro Argentina	INTERNET	Internet CTI	internet.ctimovil.com.ar		ctigprs	ctigprs999			170.051.255.240	9201					
+722	31	Claro Argentina	MMS	MMS CTI	mms.ctimovil.com.ar		ctimms	ctimms999			170.051.255.240	8080					http://mms.ctimovil.com.ar	
+722	310	Claro Argentina	INTERNET	CTI Internet	internet.ctimovil.com.ar		gprs	gprs999									
+722	310	Claro Argentina	MMS	CTI MMS	mms.ctimovil.com.ar		ctimms	ctimms999			170.51.255.240	8080					http://mms.ctimovil.com.ar/	
+722	34	Personal	INTERNET	Telecom Personal	gprs.personal.com		gprs	adgj									
+722	34	Personal	MMS	Personal MMS	mms		mms	mms			172.25.7.31	8080					http://mms.personal.com/	
+724	10	Vivo	INTERNET	Vivo Internet	zap.vivo.com.br		vivo	vivo									
+724	10	Vivo	MMS	Vivo MMS	mms.vivo.com.br		vivo	vivo			200.142.130.104	80					http://termnat.vivomms.com.br:8088/mms	
+724	11	Vivo	INTERNET	Vivo Internet	zap.vivo.com.br		vivo	vivo									
+724	11	Vivo	MMS	Vivo MMS	mms.vivo.com.br		vivo	vivo			200.142.130.104	80					http://termnat.vivomms.com.br:8088/mms	
+724	15	Sercomtel	INTERNET	SCTL Internet	sercomtel.com.br						200.233.096.069						
+724	15	Sercomtel	MMS	SCTL MMS	mms.sercomtel.com.br		sercomtel	sercomtel			200.169.126.010	8799					http://mms.claro.com.br	
+724	16	Brasil Telecom	INTERNET	BrT Internet	brt.br		brt	brt									
+724	16	Brasil Telecom	MMS	BrT MMS	mms.brt.br		brt	brt			200.96.8.29	8080					http://mms.brasiltelecom.com.br/	
+724	2	TIM	INTERNET	TIM CONNECT FAST	timbrasil.br		tim	tim									
+724	23	Vivo	INTERNET	Vivo Internet	zap.vivo.com.br		vivo	vivo									
+724	23	Vivo	MMS	Vivo MMS	mms.vivo.com.br		vivo	vivo			200.142.130.104	80					http://termnat.vivomms.com.br:8088/mms	
+724	24	Amazonia Celular	INTERNET	AmazoniaC GPRS	gprs.amazoniacelular.com.br		celular	celular									
+724	24	Amazonia Celular	MMS	AmazoniaC MMS	mmsgprs.amazoniacelular.com.br		celular	celular			200.192.230.142	8080					http://mms.amazoniacelular.com.br	
+724	3	TIM	INTERNET	TIM CONNECT FAST	timbrasil.br		tim	tim									
+724	31	Oi	INTERNET	Oi Internet	gprs.oi.com.br												
+724	31	Oi	MMS	Oi MMS	mmsgprs.oi.com.br		oimms	oioioi			192.168.10.50	3128					http://200.222.42.204:8002	
+724	32	CTBC	INTERNET	NetSuper GPRS	ctbc.br		ctbc	1212				8080					
+724	32	CTBC	MMS	CTBC MMS	mms.ctbc.br		ctbc	1212			172.029.007.070	8080					http://mms.ctbccelular.com.br/was	
+724	4	TIM	INTERNET	TIM CONNECT FAST	timbrasil.br		tim	tim									
+724	5	Claro	INTERNET	Claro Dados	claro.com.br		claro	claro									
+724	5	Claro	INTERNET	Claro Java & Jogos	java.claro.com.br		claro	claro									
+724	5	Claro	MMS	Claro Foto	mms.claro.com.br		claro	claro			200.169.126.10	8799					http://mms.claro.com.br/	
+724	6	Vivo	INTERNET	Vivo Internet	zap.vivo.com.br		vivo	vivo									
+724	6	Vivo	MMS	Vivo MMS	mms.vivo.com.br		vivo	vivo			200.142.130.104	80					http://termnat.vivomms.com.br:8088/mms	
+730	1	Entel PCS	INTERNET	Entel PCS Web	bam.entelpcs.cl		entelpcs	entelpcs									
+730	1	Entel PCS	MMS	MMS Entel PCS	mms.entelpcs.cl		entelmms	entelpcs			10.99.0.10	8080					http://mmsc.entelpcs.cl	
+730	10	Entel PCS	INTERNET	Entel PCS Web	bam.entelpcs.cl		entelpcs	entelpcs									
+730	10	Entel PCS	MMS	MMS Entel PCS	mms.entelpcs.cl		entelmms	entelpcs			10.99.0.10	8080					http://mmsc.entelpcs.cl	
+730	2	Movistar Chile	INTERNET	movistar APLICACIONES	wap.tmovil.cl		wap	wap									
+730	2	Movistar Chile	MMS	movistar MMS	mms.tmovil.cl		mms	mms			172.17.8.10	8080					http://mms.movistar.cl	
+730	3	Claro Chile	INTERNET	BAM CLARO	bam.clarochile.cl		clarochile	clarochile									
+730	3	Claro Chile	MMS	MMS CLARO	mms.clarochile.cl		clarochile	clarochile			172.23.200.200	8080					http://mms.clarochile.cl	
+732	101	Comcel	INTERNET	WEB Comcel 3GSM	internet.comcel.com.co												
+732	101	Comcel	MMS	MMS Comcel 3GSM	mms.comcel.com.co		COMCELMMS	COMCELMMS			198.228.90.225	8799					http://www.comcel.com.co/mms/	
+732	103	TIGO - CO	INTERNET	TIGO WEB	web.colombiamovil.com.co												
+732	103	TIGO - CO	MMS	TIGO multimedia	mms.colombiamovil.com.co		mms-cm1900	mms-cm1900			190.102.206.48	8080					http://mms.ola.com.co	
+732	111	TIGO - CO	INTERNET	TIGO WEB	web.colombiamovil.com.co												
+732	111	TIGO - CO	MMS	TIGO multimedia	mms.colombiamovil.com.co		mms-cm1900	mms-cm1900			190.102.206.48	8080					http://mms.ola.com.co	
+732	123	Movistar Colombia	INTERNET	movistar INTERNET	internet.movistar.com.co		movistar	movistar									
+732	123	Movistar Colombia	MMS	movistar MMS	mms.movistar.com.co		movistar	movistar			192.168.222.007	9001					http://mms.movistar.com.co	
+734	04	Movistar Venezuela	INTERNET	movistar INTERNET	internet.movistar.ve									200.35.65.3	200.35.65.4		
+734	04	Movistar Venezuela	MMS	movistar MMS	mms.movistar.ve						200.35.64.73	9001					http://mms.movistar.com.ve:8088/mms/	
+734	1	Digitel	MMS	MMS	expresate.digitel.ve						213.26.205.1	8080					http://expresate.digitel.com.ve/servlets/mms	
+734	2	Digitel	INTERNET	Digitel Internet	gprsweb.digitel.ve												
+734	2	Digitel	MMS	MMS	expresate.digitel.ve						213.26.205.1	8080					http://expresate.digitel.com.ve/servlets/mms	
+734	3	Digitel	MMS	MMS	expresate.digitel.ve						213.26.205.1	8080					http://expresate.digitel.com.ve/servlets/mms	
+734	6	Movilnet	INTERNET	MODEM	int.movilnet.com.ve												
+734	6	Movilnet	MMS	MMS	mm.movilnet.com.ve						192.168.16.12	8080					http://mms2.movilnet.com.ve/servlets/mms	
+736	2	Entel	INTERNET	ENTEL INT GPRS	int.movil.com.bo						172.027.007.010	9200					
+736	2	Entel	MMS	ENTEL MMS GPRS	mms.movil.com.bo						172.027.007.010	8080					http://mms.movil.com.bo/servlets/mms	
+738	1	Digicel Guyana	MMS	Digicel Guyana MMS	wap.digicelgy.com		wap	wap			172.20.6.12	9201					http://mmc.digicelgy.com/servlets/mms	
+740	00	Movistar Ecuador	INTERNET	movistar GPRS	internet.movistar.com.ec		movistar	movistar									
+740	00	Movistar Ecuador	MMS	movistar MMS	mms.movistar.com.ec		movistar	movistar			10.3.5.50	9001					http://mms.movistar.com.ec:8088/mms/	
+740	1	Conecel	INTERNET	Internetporta	internet.porta.com.ec												
+740	1	Conecel	MMS	MMS Porta	mms.porta.com.ec		portamms	portamms2003			216.250.208.94	8799					http://iesmms.porta.com.ec	
+744	1	Vox	INTERNET	VOXInternet	vox.internet												
+744	1	Vox	MMS	e-magen	vox.mms						172.024.097.029	8080					http:/mms.vox.com.py/mmsc	
+744	4	TIGO	INTERNET	Internet TIGO	internet.tigo.py												
+744	4	TIGO	MMS	MMS TIGO	mms.tigo.py						010.016.017.012	8888					http://mms	
+744	4	Telecel	MMS	MMS TIGO - Telecel	mms.tigo.py		tigo	tigo			10.16.17.12	80					http://mms	
+744	5	Personal	INTERNET	Personal Turbo	internet												
+744	5	Personal	MMS	MMS Personal	mms						172.016.192.007	8080					http://mms	
+746	3	Digicel Suriname	INTERNET	Digicel Suriname	wap.digicelsr.com		wap	wap			172.20.6.12	8080					
+748	07	Movistar Uruguay	INTERNET	movistar INTERNET	webapn.movistar.com.uy		movistar	movistar									
+748	07	Movistar Uruguay	MMS	movistar MMS	apnmms.movistar.com.uy		mmsuy	mmsuy			10.0.2.29	8080					http://mmsc.movistar.com.uy	
+748	1	ANCEL	MMS	mmsANCEL	mms						200.040.246.002	3128					http://mmsc.mms.ancelutil.com.uy	

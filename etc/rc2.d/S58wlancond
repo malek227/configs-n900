@@ -1,0 +1,59 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          wlancond
+# Required-Start:    $local_fs dbus
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4
+# Default-Stop:      0 1 5 6
+# Short-Description: Starts wlancond daemon
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/wlancond
+DAEMON_OPTIONS="-d"
+NAME=wlancond
+DESC="WLAN Connection Daemon"
+
+test -x $DAEMON || exit 0
+
+if test -x /usr/sbin/dsmetool; then
+        USE_DSMETOOL="yes"
+else
+        USE_DSMETOOL="no"
+fi
+
+set -e
+
+case "$1" in
+  start)
+	if [ ! -e /tmp/first-boot-flag-tmp ]; then
+	    echo -n "Starting $DESC: "
+	    if [ "$USE_DSMETOOL" = "yes" ]; then
+		dsmetool -n -1 -t "$DAEMON"
+	    else
+		start-stop-daemon --start --quiet --exec "$DAEMON" -- "$DAEMON_OPTIONS"
+	    fi
+	    echo "$NAME."
+	fi
+	;;
+  stop)
+	echo -n "Stopping $DESC: "
+	if [ "$USE_DSMETOOL" = "yes" ]; then
+	    dsmetool -k "$DAEMON"
+	else
+	    start-stop-daemon --stop --quiet --exec "$DAEMON" -- "$DAEMON_OPTIONS"
+	fi
+	echo "$NAME."
+	;;
+  restart|force-reload)
+	$0 stop
+	$0 start
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

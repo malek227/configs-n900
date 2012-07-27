@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="port" mtime="1284131094" type="schema" stype="int" owner="liblocation">
+		<local_schema locale="C" short_desc="The port number of the external SUPL server">
+			<default type="int" value="7275"/>
+			<longdesc>The port number of the external SUPL server. 
+        </longdesc>
+		</local_schema>
+	</entry>
+	<entry name="server" mtime="1284131094" type="schema" stype="string" owner="liblocation">
+		<local_schema locale="C" short_desc="The name of the external SUPL server">
+			<default type="string">
+				<stringvalue>supl.nokia.com</stringvalue>
+			</default>
+			<longdesc>The name of the external SUPL server. Used for A-GPS
+	and network based positioning.
+        </longdesc>
+		</local_schema>
+	</entry>
+</gconf>

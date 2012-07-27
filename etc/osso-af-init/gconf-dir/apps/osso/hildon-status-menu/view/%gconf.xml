@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="number_of_rows_portrait" mtime="1340094619" type="int" value="11"/>
+	<entry name="number_of_rows" mtime="1340094619" type="int" value="7"/>
+</gconf>

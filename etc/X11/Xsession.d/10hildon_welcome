@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# This file is part of hildon-welcome
+# 
+# Copyright (C) 2009 Nokia Corporation.
+#
+# Author: Gabriel Schulhof <gabriel.schulhof@nokia.com>
+# Contact: Karoliina T. Salminen <karoliina.t.salminen@nokia.com>
+# 
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+# 
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+# 
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+REASONS_TO_PLAY="pwr_key sw_rst"  
+BOOTREASON="$(cat /proc/bootreason)"
+NEED_TO_TOUCH_FLAG=1
+
+for Nix in $REASONS_TO_PLAY; do
+  if test "x$BOOTREASON" = "x$Nix"; then
+    /usr/bin/hildon-welcome --gst-disable-registry-update &
+    NEED_TO_TOUCH_FLAG=0
+    break
+  fi
+done
+
+if test $NEED_TO_TOUCH_FLAG -eq 1; then
+  touch /tmp/hildon-welcome-is-finished
+fi

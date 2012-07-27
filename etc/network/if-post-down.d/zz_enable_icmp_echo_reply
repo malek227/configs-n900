@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Enabling ICMP echo reply when GPRS interface is taken down.
+
+set -e
+
+if [ "$IFACE" = lo ]; then
+	exit 0
+fi
+
+if [ "$MODE" != stop ]; then
+	exit 0
+fi
+
+if [ "$ICD_CONNECTION_TYPE" != GPRS ]; then
+	exit 0
+fi
+
+echo 0 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+exit 0

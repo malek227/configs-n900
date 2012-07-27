@@ -1,0 +1,6 @@
+description "Starts the FMTX-daemon"
+
+start on started hildon-desktop
+stop on starting shutdown
+
+exec /etc/init.d/fmtx start

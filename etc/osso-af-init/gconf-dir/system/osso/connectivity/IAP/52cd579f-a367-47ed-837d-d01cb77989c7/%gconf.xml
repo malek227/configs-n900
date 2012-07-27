@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="name" mtime="1339938934" type="string">
+		<stringvalue>airportthru</stringvalue>
+	</entry>
+	<entry name="type" mtime="1339938872" type="string">
+		<stringvalue>WLAN_ADHOC</stringvalue>
+	</entry>
+	<entry name="wlan_ssid" mtime="1339938872" type="list" ltype="int">
+		<li type="int" value="97"/>
+		<li type="int" value="105"/>
+		<li type="int" value="114"/>
+		<li type="int" value="112"/>
+		<li type="int" value="111"/>
+		<li type="int" value="114"/>
+		<li type="int" value="116"/>
+		<li type="int" value="116"/>
+		<li type="int" value="104"/>
+		<li type="int" value="114"/>
+		<li type="int" value="117"/>
+	</entry>
+	<entry name="wlan_hidden" mtime="1339938872" type="bool" value="false"/>
+	<entry name="ipv4_type" mtime="1339938872" type="string">
+		<stringvalue>AUTO</stringvalue>
+	</entry>
+	<entry name="proxytype" mtime="1339938872" type="string">
+		<stringvalue>NONE</stringvalue>
+	</entry>
+	<entry name="wlan_security" mtime="1339938872" type="string">
+		<stringvalue>NONE</stringvalue>
+	</entry>
+</gconf>

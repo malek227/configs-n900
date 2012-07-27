@@ -1,0 +1,29 @@
+#!/bin/sh
+
+if [ -e /home/user/first-boot-flag ]
+then
+
+OSSO_PRODUCT_HARDWARE='RX-34'
+
+[ -x /usr/bin/osso-product-info ] && eval `/usr/bin/osso-product-info`
+[ "$1" == "force-reload" ] || [ "$1" == "restart" ] || [ "$1" == "stop" ] && exit 0
+[ "$1" == "start" ] || exit 1
+
+
+
+case "$OSSO_PRODUCT_HARDWARE" in
+	RX-34)
+		cp /usr/share/osso-applet-display/RX-34.schemas /etc/gconf/schemas/osso-applet-display.schemas
+		;;
+	RX-44)
+		cp /usr/share/osso-applet-display/RX-44.schemas /etc/gconf/schemas/osso-applet-display.schemas
+		;;
+	*)
+		cp /usr/share/osso-applet-display/RX-51.schemas /etc/gconf/schemas/osso-applet-display.schemas
+		;;
+esac
+
+GCONF_CONFIG_SOURCE="xml:merged:/etc/gconf/gconf.xml.defaults" gconftool-2 --makefile-install-rule /etc/gconf/schemas/osso-applet-display.schemas >&1 > /dev/null
+else
+	exit 0
+fi

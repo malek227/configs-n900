@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="selected-group" mtime="1340935687" type="string">
+		<stringvalue>OssoABookAllGroup</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,12 @@
+[tutorial-home.desktop]
+X-Desktop-File=/usr/share/applications/hildon-home/tutorial-home.desktop
+
+[ovi-promotion-widget.desktop]
+X-Desktop-File=/usr/share/applications/hildon-home/ovi-promotion-widget.desktop
+
+[google-search-widget.desktop]
+X-Desktop-File=/usr/share/applications/hildon-home/google-search-widget.desktop
+
+[calendar-home-applet.desktop]
+X-Desktop-File=/usr/share/applications/hildon-home/calendar-home-applet.desktop
+

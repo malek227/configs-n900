@@ -1,0 +1,2 @@
+stty ospeed 38400
+stty ispeed 38400

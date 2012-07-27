@@ -1,0 +1,10 @@
+description "starting Camera Daemon (video1)"
+author "Stefan Kost"
+
+console output
+
+start on started omap3camd0
+stop on starting shutdown
+
+exec /usr/sbin/omap3camd -d /dev/video1
+respawn

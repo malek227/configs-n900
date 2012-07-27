@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="mmc-corrupted" mtime="1340959173" type="bool" value="false"/>
+	<entry name="internal-mmc-corrupted" mtime="1340834445" type="bool" value="false"/>
+</gconf>

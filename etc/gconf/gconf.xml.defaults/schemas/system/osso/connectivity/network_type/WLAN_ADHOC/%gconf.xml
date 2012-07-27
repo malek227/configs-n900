@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="gettext_catalog" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Adhoc WLAN human readable name gettext catalog">
+			<default type="string">
+				<stringvalue>osso-connectivity-ui</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Adhoc WLAN human readable name">
+			<default type="string">
+				<stringvalue>conn_mngr_fi_type_wlan_adhoc</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="statusbar_dimmed_icon_name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN statusbar dimmed icon name">
+			<default type="string">
+				<stringvalue>statusarea_internetconnection_no</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="statusbar_icon_name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Infrastructure WLAN statusbar icon name">
+			<default type="string">
+				<stringvalue>general_adhocwlan</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+	<entry name="icon_name" mtime="1284131118" type="schema" stype="string" owner="connui-wlan">
+		<local_schema locale="C" short_desc="Adhoc WLAN icon name">
+			<default type="string">
+				<stringvalue>general_adhocwlan</stringvalue>
+			</default>
+		</local_schema>
+	</entry>
+</gconf>

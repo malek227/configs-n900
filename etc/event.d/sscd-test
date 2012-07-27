@@ -1,0 +1,13 @@
+description "Test Server"
+author "Philippe De Swert"
+
+start on starting testserver
+stop on starting shutdown
+
+console output
+
+exec /usr/sbin/sscd -f --wait-cmt-startup
+
+respawn
+respawn limit 10 1
+

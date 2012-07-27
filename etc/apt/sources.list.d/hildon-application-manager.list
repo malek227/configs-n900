@@ -1,0 +1,7 @@
+#deb https://downloads.maemo.nokia.com/fremantle/ssu/apps/ ./ 
+#deb https://downloads.maemo.nokia.com/fremantle/ssu/mr0 ./ 
+#deb https://downloads.maemo.nokia.com/fremantle1.2/ovi/ ./ 
+deb http://repository.maemo.org/extras/ fremantle-1.3 free non-free
+deb http://repository.maemo.org/community-testing/ fremantle free non-free
+deb http://repository.maemo.org/extras-devel/ fremantle free non-free
+#https://repo.codemages.net/opt/fcron_3.0.1-2_armel_opt.deb

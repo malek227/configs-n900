@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="wlan_tx_power" mtime="1284131099" type="schema" stype="int" owner="icd">
+		<local_schema locale="C">
+			<default type="int" value="8"/>
+			<longdesc>Transmit power level for WLAN chip</longdesc>
+		</local_schema>
+	</entry>
+	<entry name="flightmode_wlan" mtime="1284131099" type="schema" stype="bool" owner="icd">
+		<local_schema locale="C">
+			<default type="bool" value="false"/>
+			<longdesc>Whether the Wireless LAN can be used during flightmode</longdesc>
+		</local_schema>
+	</entry>
+</gconf>

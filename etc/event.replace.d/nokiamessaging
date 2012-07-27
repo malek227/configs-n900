@@ -1,0 +1,26 @@
+description "starting intellisyncd"
+author "Ville Vainio"
+
+start on started ke-recv
+start on SyncAllFolders
+stop on starting shutdown
+stop on ACT_DEAD
+
+console none
+
+script
+        if [ $UPSTART_EVENT = SyncAllFolders ]; then
+                logger -p user.debug -t NOKIAMESSAGING -- Starting Intellisyncd Sync
+                exec /usr/bin/launch-intellisyncd.sh -s
+        else
+                logger -p user.debug -t NOKIAMESSAGING -- Starting Intellisyncd normally
+                exec /usr/bin/launch-intellisyncd.sh
+        fi
+end script
+
+respawn
+
+# we respawn "normally" on account config - 10 respawns in 5 secs would be a real crash loop
+respawn limit 10 5
+
+normal exit 2

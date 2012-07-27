@@ -1,0 +1,17 @@
+description "DSP"
+author "Felipe Contreras"
+
+start on started dbus
+stop on starting shutdown
+
+console output
+
+pre-start script
+	modprobe bridgedriver
+end script
+
+post-stop script
+	rmmod bridgedriver
+end script
+
+service

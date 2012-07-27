@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="network_types" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/01_always_ask/network_types"/>
+	<entry name="gettext_catalog" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/01_always_ask/gettext_catalog"/>
+	<entry name="label" mtime="1284131118" schema="/schemas/system/osso/connectivity/ui/auto_connect/01_always_ask/label"/>
+</gconf>
